@@ -1,24 +1,3 @@
-{% assign currentTemplate = '' %}
-
-  {% case template %}
-  {% when 'index' %}
-  {% assign currentTemplate = 'index' %}    
-  {% when 'collection' %}
-  {% assign currentTemplate = 'collection' %}      
-  {% when 'product' %}
-  {% assign currentTemplate = 'product' %}  
-  {% when 'blog' %}
-  {% assign currentTemplate = 'blog' %}  
-  {% when 'article' %}
-  {% assign currentTemplate = 'article' %}  
-  {% when 'cart' %}
-  {% assign currentTemplate = 'cart' %}  
-  {% when 'customers/login' %}
-  {% assign currentTemplate = 'login' %} 
-  {% else %}
-  {% endcase %}
-
-
 <!doctype html>
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
@@ -135,10 +114,12 @@
 
   </head>
   
+{% render "rale-render" %}
 </head>
-<body class="custom-scrollbars {% currentTemplate %}">
 
-  <main id="MainContent" class="page" role="main" tabindex="-1">
+  <body>
+
+    <main id="MainContent" class="page" role="main" tabindex="-1">
 
      
       {% comment %}
@@ -202,74 +183,5 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-
-
-
-    <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
-      <symbol viewBox="0 0 15 15" id="svg-down">
-        <path d="M7.616,10.5l-5.117-6c0,0,2.718,2.64,5.117,2.64c2.573,0,4.885-2.64,4.885-2.64L7.616,10.5z"></path>
-      </symbol>
-      <symbol id="svg-chevron-down" viewBox="0 0 12 6">
-        <path id="chevron-down-down-chevron" d="M951,402.433l0.592-.437L957,407.013,962.408,402,963,402.433l-5.828,5.406L957,408Z" transform="translate(-951 -402)"></path>
-      </symbol>
-      <symbol id="svg-cart" viewBox="0 0 18 20">
-        <g id="menu-cart-Symbols" fill-rule="evenodd">
-          <path d="M9,0 C7.139025,0 5.625,1.49533333 5.625,3.33333333 L5.625,4.44444444 L1.6875,4.44444444 C1.39365,4.44444444 1.149075,4.668 1.126575,4.95733333 L0.00157499999,19.4017778 C-0.01035,19.556 0.0432,19.7082222 0.149625,19.822 C0.256275,19.9353333 0.4059,20 0.5625,20 L17.4375,20 C17.5941,20 17.743725,19.9353333 17.85015,19.822 C17.956575,19.7084444 18.010125,19.5562222 17.9982,19.4017778 L16.8732,4.95733333 C16.850925,4.668 16.60635,4.44444444 16.3125,4.44444444 L12.375,4.44444444 L12.375,3.33333333 C12.375,1.49533333 10.860975,0 9,0 Z M6.75,3.33333333 C6.75,2.108 7.75935,1.11111111 9,1.11111111 C10.24065,1.11111111 11.25,2.108 11.25,3.33333333 L11.25,4.44444444 L6.75,4.44444444 L6.75,3.33333333 Z M15.791625,5.55555556 L16.83,18.8888889 L1.17,18.8888889 L2.208375,5.55555556 L5.625,5.55555556 L5.625,7.22222222 C5.625,7.52911111 5.876775,7.77777778 6.1875,7.77777778 C6.498225,7.77777778 6.75,7.52911111 6.75,7.22222222 L6.75,5.55555556 L11.25,5.55555556 L11.25,7.22222222 C11.25,7.52911111 11.501775,7.77777778 11.8125,7.77777778 C12.123225,7.77777778 12.375,7.52911111 12.375,7.22222222 L12.375,5.55555556 L15.791625,5.55555556 Z" id="menu-cart-Shape"></path>
-        </g>
-      </symbol>
-      <symbol id="svg-favorites" viewBox="0 0 20 19">
-        <g stroke="none" stroke-width="1" fill-rule="evenodd">
-          <g fill-rule="nonzero">
-            <path d="M14.5914009,0 C13.2066258,0 11.8218507,0.564423077 10.7654597,1.69230769 L10.0005,2.50846154 L9.23554033,1.69230769 C8.17953028,0.564423077 6.79437423,0.00134615385 5.40959913,0.00134615385 C4.02596691,0.00134615385 2.64119182,0.564423077 1.5848008,1.69230769 C-0.527600268,3.94788462 -0.527600268,7.60519231 1.5848008,9.86211538 L2.34976047,10.6782692 L10.0005,18.8467308 L17.6512395,10.6769231 L18.4161992,9.86076923 C20.5286003,7.60519231 20.5286003,3.94788462 18.4161992,1.69096154 C17.3598082,0.564423077 15.9750331,0 14.5914009,0 M14.594258,1.25173077 C15.6938876,1.25173077 16.7327546,1.71365385 17.517524,2.55096154 C19.1826827,4.32961538 19.1826827,7.22346154 17.517524,8.99961538 L16.7527548,9.81692308 L10.0033572,17.0242308 L3.25376908,9.81826923 L2.48880941,9.00211538 C0.823650697,7.22346154 0.823650697,4.32961538 2.48880941,2.55211538 C3.27357879,1.71480769 4.31244583,1.25288462 5.41226583,1.25288462 C6.51322869,1.25288462 7.55209573,1.71480769 8.33686511,2.55211538 L9.10182477,3.36942308 L10.0031667,4.33096154 L10.9031753,3.36942308 L11.6692778,2.55211538 C12.4540472,1.71365385 13.4931047,1.25173077 14.5940676,1.25173077" id="favorites-outline-white-Shape"></path>
-          </g>
-        </g>
-      </symbol>
-      <symbol id="svg-user" viewBox="0 0 140 140" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
-        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-          <path d="M6.750 6.000 A5.250 5.250 0 1 0 17.250 6.000 A5.250 5.250 0 1 0 6.750 6.000 Z"></path>
-          <path d="M2.25,23.25a9.75,9.75,0,0,1,19.5,0"></path>
-        </g>
-      </symbol>
-      <symbol id="svg-search" viewBox="0 0 140 140" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
-        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-          <path d="M0.750 9.812 A9.063 9.063 0 1 0 18.876 9.812 A9.063 9.063 0 1 0 0.750 9.812 Z" transform="translate(-3.056 4.62) rotate(-23.025)"></path>
-          <path d="M16.221 16.22L23.25 23.25"></path>
-        </g>
-      </symbol>
-      <symbol id="svg-purse" viewBox="0 0 140 140" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" class="svg-icon">
-        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-          <path d="M21.6,8.366A1.062,1.062,0,0,0,20.549,7.5H3.45A1.062,1.062,0,0,0,2.4,8.366L.832,17.094A5.276,5.276,0,0,0,6.087,23.25H17.912a5.275,5.275,0,0,0,5.256-6.156Z"></path>
-          <path d="M6.75 12L17.25 12"></path>
-          <path d="M16.424,4.5a4.485,4.485,0,0,0-8.849,0"></path>
-        </g>
-
-      </symbol>
-      <symbol id="svg-cart-empty" viewBox="0 0 140 140" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.8">
-        <g transform="matrix(5.833333333333333,0,0,5.833333333333333,0,0)">
-          <path d="M8,5.5H3.5a2.5,2.5,0,0,1,0-5h17a2.5,2.5,0,0,1,0,5H17"></path>
-          <path d="M6,2.75A.25.25,0,1,1,5.75,3,.25.25,0,0,1,6,2.75"></path>
-          <path d="M19,2.75a.25.25,0,1,0,.25.25A.25.25,0,0,0,19,2.75"></path>
-          <path d="M4.047 19.5L20.953 19.5"></path>
-          <path d="M17,12.5,13.862,4.432a1.461,1.461,0,0,0-2.724,0L8,12.5"></path>
-          <path d="M20.953,19.5,20.1,10.5A1.1,1.1,0,0,0,19,9.5H6a1.1,1.1,0,0,0-1.095.995L4.047,19.5c-.031.331-.047.664-.047,1a3,3,0,0,0,3,3H18a3,3,0,0,0,3-3C21,20.167,20.984,19.834,20.953,19.5Z"></path>
-        </g>
-      </symbol> 
-      <symbol id="svg-arrow-right-long" viewBox="0 0 13 9">
-        <path d="M8.548 0l-.7.707L11.1 4H-.01v1H11.1L7.852 8.29l.7.708 4.44-4.5z"></path>
-      </symbol>
-      <symbol id="svg-cross" viewBox="0 0 30.167 30.167">
-        <g transform="translate(-381.04 -39.793)">
-          <line x1="28.753" y2="28.753" transform="translate(381.747 40.5)" fill="none" stroke="#fff" stroke-width="2" />
-          <line x2="28.753" y2="28.753" transform="translate(381.747 40.5)" fill="none" stroke="#fff" stroke-width="2" />
-        </g>
-      </symbol>
-      <symbol id="svg-burger" viewBox="0 0 40 24">
-        <g transform="translate(-369.5 -34.5)">
-          <line x2="40" transform="translate(369.5 46.5)" fill="none" stroke="#fff" stroke-width="2" />
-          <line x2="40" transform="translate(369.5 35.5)" fill="none" stroke="#fff" stroke-width="2" />
-          <line x2="40" transform="translate(369.5 57.5)" fill="none" stroke="#fff" stroke-width="2" />
-        </g>
-      </symbol>
-    </svg>
   </body>
 </html>
