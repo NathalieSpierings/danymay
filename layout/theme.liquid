@@ -116,9 +116,31 @@
   
 </head>
 
-  <body>
+<body>
 
-    <main id="MainContent" class="page" role="main" tabindex="-1">
+  {% assign currentTemplate = '' %}
+
+  {% case template %}
+  {% when 'index' %}
+  {% assign currentTemplate = 'index' %}    
+  {% when 'collection' %}
+  {% assign currentTemplate = 'collection' %}      
+  {% when 'product' %}
+  {% assign currentTemplate = 'product' %}  
+  {% when 'blog' %}
+  {% assign currentTemplate = 'blog' %}  
+  {% when 'article' %}
+  {% assign currentTemplate = 'article' %}  
+  {% when 'cart' %}
+  {% assign currentTemplate = 'cart' %}  
+  {% when 'customers/login' %}
+  {% assign currentTemplate = 'login' %} 
+  {% else %}
+  {% endcase %}
+
+
+
+    <main id="MainContent" class="page {% case currentTemplate %}" role="main" tabindex="-1">
 
      
       {% comment %}
