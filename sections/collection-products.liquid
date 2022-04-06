@@ -1,0 +1,333 @@
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+{%- assign pUrl = contentForQuerystring | split:'"pageurl":"' | last | split:'"' | first | split:'.myshopify.com' | last |
+   replace:'\/','/' | 
+   replace:'%20',' ' | 
+   replace:'\u0026','&'
+-%}
+
+{%- assign limit = section.settings.limit -%}
+{%- assign aView =  pUrl | split : "view=" -%}
+{%- if aView.size > 1 and aView[1] != blank-%}
+{%- assign limit = aView[1] | plus: 0  -%}
+{%- endif -%}
+{%- assign limit_string = limit | append: '' %}
+
+
+{%- assign layout = section.settings.layout %}
+{%- assign aLayout =  pUrl | split : "lo=" -%}
+{%- if aLayout.size > 1 and aLayout[1] != blank-%}
+{%- assign aLayout = aLayout[1] | split: "&" -%}
+{%- assign layout = aLayout[0] -%}
+{%- endif -%}
+
+
+<script>
+  console.log( {{ section.settings.limit | json }} );
+</script>
+
+
+{% paginate collection.products by limit %}
+
+<div class="section-{{ section.id }}" >
+  <div class="collection">
+    <div class="center center--wide">
+      <div class="row">
+
+        <aside id="SidebarProducts" class="col-lg-3 sidebar">
+          sidebar 
+        </aside>
+
+        <div class="col-lg-9">
+
+          <div class="toolbar">          
+            <div class="toolbar--left">
+              <div class="toolbar__item">
+                <a href="javascript:" data-layout="list" class="{% if layout == 'list' %} active{% endif %}">
+                  <svg class="svg-icon" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0H15V3H0V0Z"></path>
+                    <path d="M0 6H15V9H0V6Z"></path>
+                    <path d="M0 12H15V15H0V12Z"></path>
+                  </svg>
+                </a>
+                <a href="javascript:" data-layout="grid-2" class="{% if layout == 'grid-2' %} active{% endif %}">
+                  <svg class="svg-icon" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0H6V6H0V0Z"></path>
+                    <path d="M0 9H6V15H0V9Z"></path>
+                    <path d="M9 0H15V6H9V0Z"></path>
+                    <path d="M9 9H15V15H9V9Z"></path>
+                  </svg>
+                </a>
+                <a href="javascript:" data-layout="grid-3" class="{% if layout == 'grid-3' %} active{% endif %}">
+                  <svg class="svg-icon" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0H3V3H0V0Z"></path>
+                    <path d="M0 6H3V9H0V6Z"></path>
+                    <path d="M0 12H3V15H0V12Z"></path>
+                    <path d="M6 0H9V3H6V0Z"></path>
+                    <path d="M6 6H9V9H6V6Z"></path>
+                    <path d="M6 12H9V15H6V12Z"></path>
+                    <path d="M12 0H15V3H12V0Z"></path>
+                    <path d="M12 6H15V9H12V6Z"></path>
+                    <path d="M12 12H15V15H12V12Z"></path>
+                  </svg>
+                </a>
+                <a href="javascript:" data-layout="grid-5" class="{% if layout == 'grid-5' %} active{% endif %}">
+                  <svg class="svg-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0H2V2H0V0Z"></path>
+                    <path d="M0 4H2V6H0V4Z"></path>
+                    <path d="M0 8H2V10H0V8Z"></path>
+                    <path d="M0 12H2V14H0V12Z"></path>
+                    <path d="M4 0H6V2H4V0Z"></path>
+                    <path d="M4 4H6V6H4V4Z"></path>
+                    <path d="M4 8H6V10H4V8Z"></path>
+                    <path d="M4 12H6V14H4V12Z"></path>
+                    <path d="M8 0H10V2H8V0Z"></path>
+                    <path d="M8 4H10V6H8V4Z"></path>
+                    <path d="M8 8H10V10H8V8Z"></path>
+                    <path d="M8 12H10V14H8V12Z"></path>
+                    <path d="M12 0H14V2H12V0Z"></path>
+                    <path d="M12 4H14V6H12V4Z"></path>
+                    <path d="M12 8H14V10H12V8Z"></path>
+                    <path d="M12 12H14V14H12V12Z"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <div class="toolbar--right">
+
+              <a href="#" class="toolbar__item btn-glamour btn-xs" data-trigger="sidebar">
+                <svg class="svg-icon icon-arrow">
+                  <use xlink:href="#svg-arrow-right-long"></use>
+                </svg>
+                Filters
+              </a>
+
+
+              <!-- Sorting -->
+              {% if section.settings.enable_sorting %}
+              {% include 'collection-products-sorting' %}
+              {% endif %}
+              
+
+              <!-- PageSizes -->
+              {% render 'collection-products-pagesize',
+        		limit: section.settings.limit,
+              	limit_string: limit_string
+              %}
+
+              
+              
+              {%comment%}
+             {% include 'collection-products-pagesize' %}
+              {%endcomment%}
+            </div>
+          </div>
+
+
+
+          <div id="ProductGridContainer" class="products__container loaded" data-section-type="collection-template">
+
+
+          
+            {%- if collection.products.size == 0 -%}
+            <h2>
+              {{ 'sections.collection_template.empty' | t }}
+
+              <br>
+
+              {{ 'sections.collection_template.use_fewer_filters_html' | t: link: collection.url, class: "underlined-link link" }}
+            </h2>    
+            {%- else -%}
+
+            <div id="product-grid" data-id="{{ section.id }}" class="grid {{ layout }}">
+              <div class="loading-overlay gradient"></div>
+              {%- for product in collection.products -%}
+              {% assign lazy_load = false %}
+              {%- if forloop.index > 2 -%}
+              {%- assign lazy_load = true -%}
+              {%- endif -%}
+
+              {% render 'product-item',
+        		product: product,
+              	media_aspect_ratio: section.settings.image_ratio,
+              	show_secondary_image: section.settings.show_secondary_image,
+              	show_vendor: section.settings.show_vendor,
+              	show_rating: section.settings.show_rating,
+              	lazy_load: lazy_load
+              %}
+
+              {%- endfor -%}
+            </div>  
+
+
+
+            {%- if paginate.pages > 1 and section.settings.pagination != "infinite-scroll" -%}
+            {% include 'pagination', paginate: paginate, layout_type: layout %}
+            {%- endif -%}
+
+
+
+            {%- endif -%}
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endpaginate %}
+
+{% javascript %}
+
+   $(function(){
+
+      // Toggle layout
+      $('.toolbar__item a').on('click', function(){
+          var $grid = $('#product-grid'),
+              $items = $('.toolbar__item a'),
+              layout = $(this).data('layout');
+
+          $items.removeClass('active');
+          $(this).addClass('active');
+
+          if(layout == 'grid-5'){
+              $grid.removeClass().addClass('grid grid-5');
+          }else if(layout == 'grid-4'){
+              $grid.removeClass().addClass('grid grid-4');
+          }else if(layout == 'grid-3'){
+              $grid.removeClass().addClass('grid grid-3');
+          }
+          else if(layout == 'grid-2'){
+              $grid.removeClass().addClass('grid grid-2');
+          }else{
+              $grid.removeClass().addClass('grid list');
+          }
+      });
+  });
+
+{% endjavascript %}
+
+
+{% schema %}
+{
+  "name": "t:sections.collection-products.name",
+  "class": "product-grid-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.collection-products.settings.layout.content"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "t:sections.collection-products.settings.layout.label",
+      "options": [
+      {
+        "value": "grid-4",
+        "label": "t:sections.collection-products.settings.layout.layout1.label"
+      },
+      {
+        "value": "grid-3",
+        "label": "t:sections.collection-products.settings.layout.layout2.label"
+      },
+      {
+        "value": "grid-2",
+        "label": "t:sections.collection-products.settings.layout.layout3.label"
+      },
+      {
+        "value": "list",
+        "label": "t:sections.collection-products.settings.layout.layout4.label"
+      }
+      ],
+        "default": "grid-3"
+      },
+      {
+        "type": "range",
+        "id": "limit",
+        "min": 5,
+        "max": 50,
+        "step": 5,
+        "default": 25,
+        "label": "t:sections.collection-products.settings.products_per_page.label"
+      },
+      {
+        "type": "select",
+        "id": "pagination",
+        "label": "t:sections.collection-products.settings.pagination.label",
+        "options": [
+          {
+            "value": "",
+            "label": "t:sections.collection-products.settings.pagination.classic.label"
+          },
+          {
+            "value": "infinite-scroll",
+            "label": "t:sections.collection-products.settings.pagination.infinite.label"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "t:sections.collection-products.settings.header__3.content"
+      },
+      {
+        "type": "select",
+        "id": "image_ratio",
+        "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.collection-products.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.collection-products.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.collection-products.settings.image_ratio.options__3.label"
+        }
+      ],
+        "default": "adapt",
+        "label": "t:sections.collection-products.settings.image_ratio.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_secondary_image",
+        "default": false,
+        "label": "t:sections.collection-products.settings.show_secondary_image.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_rating",
+        "default": false,
+        "label": "t:sections.collection-products.settings.show_rating.label",
+        "info": "t:sections.collection-products.settings.show_rating.info"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.collection-products.settings.header__1.content"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_filtering",
+        "default": true,
+        "label": "t:sections.collection-products.settings.enable_filtering.label",
+        "info": "t:sections.collection-products.settings.enable_filtering.info"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_sorting",
+        "default": true,
+        "label": "t:sections.collection-products.settings.enable_sorting.label"
+      },
+      {
+        "type": "checkbox",
+        "id": "collapse_on_larger_devices",
+        "default": false,
+        "label": "t:sections.collection-products.settings.collapse_on_larger_devices.label"
+      }
+	]
+}
+{% endschema %}
