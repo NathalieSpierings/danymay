@@ -1,0 +1,185 @@
+<div class="header__action" data-trigger="basket">
+    <svg class="svg-icon">
+      <use xlink:href="#svg-cart"></use>
+    </svg>
+    <span class="basket__count">{{ cart.item_count }}</span>
+  </div>
+  
+  <!--Basket  -->
+  <div class="basket">
+    <div class="basket__overlay js-close-cartbox"></div>
+    <div class="basket__content">										
+      <div class="basket__header">
+        <div class="basket__header__title">{{ 'cart.general.title' | t }}</div> 
+        <div class="dismiss" data-dismiss="basket"></div>
+      </div>
+  
+      {% if cart.item_count < 1 %} 
+      
+  
+      <div class="basket__empty">
+        <div class="basket__empty__container">
+          <div class="basket__empty__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48px" height="48px" 
+                 viewBox="0 0 458.823 458.823" 
+                 xml:space="preserve">
+              <path d="M458.539,194.435L416.933,69.623c-0.569-1.706-1.941-3.029-3.664-3.53L190.581,0.833c-1.496-0.453-3.146-0.22-4.459,0.611   l-165.6,103.606c-1.377,0.861-2.299,2.285-2.522,3.899L0.053,237.839c-0.348,2.501,1.043,4.909,3.383,5.848l34.744,13.997   l0.009,89.812c0,2.138,1.253,4.094,3.192,4.989L266.13,455.744l0.009,0.015c0.191,0.317,0.401,0.682,0.733,0.984   c1.017,0.947,2.347,1.475,3.738,1.475c1.521,0,2.986-0.639,4.022-1.755l140.307-150.909c0.947-1.018,1.471-2.348,1.471-3.738   v-59.711l40.869-42.109C458.707,198.521,459.188,196.388,458.539,194.435z M34.362,109.342l153.557-96.065v143.828L34.362,109.342z    M242.449,339.945c1.521,0.602,3.276,0.499,4.704-0.294c1.456-0.798,2.455-2.194,2.754-3.832l14.641-81.226v188.335L49.173,343.973   l-0.009-81.87L242.449,339.945z M264.384,193.569l-24.091,133.667L11.524,235.095l16.19-116.318l236.978,73.712   C264.557,192.839,264.449,193.196,264.384,193.569z M397.699,72.974L270.148,182.683l-71.241-22.157V14.717L397.699,72.974z    M447.062,194.745L320.991,324.642l-45.938-131.688L408.275,78.374L447.062,194.745z M275.529,227.664l38.018,108.99   c0.621,1.788,2.156,3.15,4,3.557c1.802,0.396,3.817-0.191,5.129-1.54l82.748-85.258v46.241L275.529,439.368V227.664z"/>
+            </svg>
+          </div>
+          <div class="basket__empty__title">{{ 'cart.general.no_items' | t }}</div>
+          <a href="/">
+            <span>{{ 'cart.general.start_shopping' | t }}</span><svg>
+            <use xlink:href="#svg-down"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+  
+      {% else %}
+  
+      <div class="basket__body">
+       
+        <div class="cart-items">
+          <ul>
+            {% for item in cart.items %}
+            
+            <li class="cart-item ">
+              <div class="cart-item__image">
+                <img src="{{ item | img_url: '80x80' }}" alt="{{ item.title | escape }}">
+              </div>
+              <div class="cart-item__title">
+                <div>
+                  <a href="{{ item.url }}">{{ item.product.title }}</a>
+                </div>
+                <a href="javascript:void(0)" 
+                   onclick="cart.remove('{{ item.variant_id }}');"  
+                   data-id="{{ item.variant_id }}" 
+                   data-action="remove" class="cart-item__remove" 
+                   title="Remove from cart">{{ 'cart.general.remove'| t }}</a>
+              </div>
+              <div class="cart-item__cost">
+                <span>{{ item.quantity }}</span> x <span>{{ item.line_price | money }}</span>
+              </div>
+            </li>
+            
+            {% endfor %}
+          </ul>
+        </div>
+        
+      </div>
+  
+      <div class="basket__footer">
+        <div class="basket__subtotal">
+          <div class="basket__line">
+            <span>{{ 'cart.general.heading_subtotal' | t }}</span>
+            <span class="basket__price">€199</span>
+          </div>
+          
+          <!--
+          <div class="basket__line">
+          <span>{{ 'cart.general.heading_shipping' | t }}</span>
+          <span>{{ 'cart.general.heading_shipping' | t }}</span>
+          </div>
+          -->
+          
+        </div>
+        <div class="basket__total">
+          <div class="basket__line">
+            <span>{{ 'cart.general.heading_total' | t }}:</span>
+            <span class="basket__price">€199</span>
+          </div>
+        </div>
+  
+        <div class="basket__checkout">
+          <a href="javascript:" class="btn btn-secondary fluid">
+            {{ 'cart.general.proceed_checkout' | t }}
+          </a>
+        </div>
+  
+      </div>
+      {% endif %} 
+      
+    </div>
+  </div>
+  
+  
+  <script >
+    $(document).ready(function () {
+      
+      // Basket
+      $('[data-trigger="basket"]').on('click', function () {
+        $('.basket').addClass('shown');
+      });
+      
+      $('[data-dismiss="basket"]').on('click', function () {
+        $('.basket').removeClass('shown');
+      });
+  
+    });
+  </script>
+  
+  
+  <!--
+  <div id="cart" class="btn-group btn-block">
+    <button type="button" data-toggle="dropdown" data-loading-text="{{ 'products.product.loading' | t }}" class="btn dropdown-toggle">
+      <i class="ion-android-cart"></i> <span id="cart-total">{{ cart.item_count }}</span>
+      <span class="mycart"><span>{{ 'cart.general.my_cart'| t }}</span><span class="total-price">{{ cart.total_price | money }}</span><i class="ion-chevron-down"></i></span>
+    </button>
+    {% if cart.item_count < 1 %} 
+    <ul class="dropdown-menu pull-right">
+      <li>
+        <p class="text-center cart-empty">{{ 'cart.general.no_items'| t }}</p>
+      </li>
+    </ul>
+    {% else %}
+    <ul class="dropdown-menu pull-right">
+      <li class="has-scroll">
+        <table class="table">
+          <tbody>
+            {% for item in cart.items %}
+            <tr>
+              <td class="text-center">
+                <a href="{{ item.url }}">
+                  <img class="cart-image" src="{{ item | img_url: '80x80' }}"  alt="{{ item.title | escape }}" title="{{ item.title | escape }}"/>
+                </a>
+              </td>
+              <td class="text-left info-item">
+                <a class="cart-name" href="{{ item.url }}">{{ item.product.title }}</a>
+                <p class="cart-quantity">&times;{{ item.quantity }}</p>
+                <p class="cart-price">{{ item.line_price | money }}</p>
+              </td>
+              <td class="text-center cart-close">
+                <button type="button" onclick="cart.remove('{{ item.variant_id }}');" title="Remove" class="btn btn-danger btn-xs">
+                  <i class="ion-android-close"></i>
+                </button>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </li>
+      <li>
+        <table class="table">
+          <tr>
+            <td class="text-left">{{ 'cart.general.subtotal' | t }} :</td>
+            <td class="text-right">{{ cart.total_price | money }}</td>
+          </tr>
+        </table>
+        <p class="text-center cart-button">
+          <a href="/cart">{{ 'cart.general.view_cart' | t }}</a> 
+          <a href="/checkout">{{ 'cart.general.checkout' | t }}</a>
+        </p>
+      </li>
+    </ul>
+    {% endif %}
+  </div>
+  
+  <script >
+    $(document).ready(function () {
+      var total = $('#cart .table .text-right').html();
+      $('#cart .total-price').html(total);
+    });
+  </script>
+  
+  -->
+  

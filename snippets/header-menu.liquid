@@ -1,0 +1,55 @@
+
+<!-- Mobile only -->
+<div class="menu__header">
+    <div class="dismiss" data-dismiss="menu"></div>
+    <span class="menu__header__title">Menu</span>
+  </div>
+  
+  
+  
+  
+  <nav class="menu__container" role="menu">
+      <div class="menu">  
+          <!-- First level -->
+          <ul class="level-1">
+          {% for link in linklists.main-menu.links %}
+              {% if link.links.size > 0 %}
+                  {% assign item_title = link.title | remove: '|megamenu' | remove: '| megamenu' | split: '|' | first | escape %}
+      
+                  <!-- has children -->
+                  <li class="menu-item has-children">
+                      <a href="{{ link.url }}" class="has-submenu">{{ item_title }}</a>
+                      {% if link.links.size > 0 %}
+                      <div class="megamenu">
+                          <div class="megamenu__container">
+                              <div class="megamenu__content">
+                                  <ul class="level-2 mega-submenu submenu"> 
+                                  {% for child_link in link.links %}
+                                      <li class="menu-item has-children">
+                                          <a href="{{ child_link.url }}" class="menu__heading has-submenu">{{ child_link.title }}</a>
+                                          {% if child_link.links.size > 0 %}
+                                              <ul class="level-3 submenu"> 
+                                                  {% for grandchild_link in child_link.links %}
+                                                      <li class="menu-item"><a href="{{ grandchild_link.url }}">{{ grandchild_link.title }}</a></li>
+                                                  {% endfor %}
+                                              </ul>
+                                          {% endif %}
+                                      </li>
+                                  {% endfor %}
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      {% endif %}
+                  </li>
+              {% else %}
+                  <li class="menu-item"><a href="{{ link.url }}">{{ link.title }}</a></li>
+              {% endif %}
+          {% endfor %}
+          </ul>
+    </div>
+  </nav>
+  
+  
+  <!-- Mobile only -->
+  <div class="menu__footer">acties</div>

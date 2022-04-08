@@ -1,0 +1,177 @@
+{% comment %}
+Renders a product card
+
+Accepts:
+- produc: {Object} Product Liquid object (optional)
+- media_aspect_ratio: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
+- show_secondary_image: {Boolean} Show the secondary image on hover. Default: false (optional)
+- show_vendor: {Boolean} Show the product vendor. Default: false
+- show_rating: {Boolean} Show the product rating. Default: false
+- extend_height: {Boolean} Card height extends to available container space. Default: true (optional)
+- lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
+
+Usage:
+{% render 'product', show_vendor: section.settings.show_vendor %}
+{% endcomment %}
+
+
+
+{% comment %}Represents a product item of the gridview.{% endcomment %}
+
+
+{%- if product and product != empty -%}
+{%- liquid
+    assign ratio = 1
+    if product.featured_media and media_aspect_ratio == 'portrait'
+      assign ratio = 0.8
+    elsif product.featured_media and media_aspect_ratio == 'adapt'
+      assign ratio = product.featured_media.aspect_ratio
+    endif
+    if ratio == 0 or ratio == nil
+      assign ratio = 1
+    endif
+  -%}
+
+{%- endif -%}
+
+
+
+{% assign on_sale = false %}
+{% if product.compare_at_price > product.price %}
+{% assign on_sale = true %}
+{% endif %}
+
+{% assign sold_out = true %}
+{% if product.available  %}
+{% assign sold_out = false %}
+{% endif %}
+
+<div class="product"  style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;">
+
+  {%- if product.featured_media -%}
+  <figure>
+    <a href="{{ product.url }}" class="media media--transparent media--portrait media--hover-effect">
+      <img
+           srcset="{%- if product.featured_media.width >= 165 -%}{{ product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
+                   {%- if product.featured_media.width >= 360 -%}{{ product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
+                   {%- if product.featured_media.width >= 533 -%}{{ product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
+                   {%- if product.featured_media.width >= 720 -%}{{ product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
+                   {%- if product.featured_media.width >= 940 -%}{{ product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
+                   {%- if product.featured_media.width >= 1066 -%}{{ product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
+                   {{ product.featured_media | image_url }} {{ product.featured_media.width }}w"
+           src="{{ product.featured_media | image_url: width: 533 }}"
+           sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+           alt="{{ product.featured_media.alt | escape }}"
+           class="motion-reduce"
+           {% unless lazy_load == false %}loading="lazy"{% endunless %}
+           width="{{ product.featured_media.width }}"
+           height="{{ product.featured_media.height }}"
+           >
+
+      {%- if product.media[1] != nil and show_secondary_image -%}
+      <img
+           srcset="{%- if product.media[1].width >= 165 -%}{{ product.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
+                   {%- if product.media[1].width >= 360 -%}{{ product.media[1] | image_url: width: 360 }} 360w,{%- endif -%}
+                   {%- if product.media[1].width >= 533 -%}{{ product.media[1] | image_url: width: 533 }} 533w,{%- endif -%}
+                   {%- if product.media[1].width >= 720 -%}{{ product.media[1] | image_url: width: 720 }} 720w,{%- endif -%}
+                   {%- if product.media[1].width >= 940 -%}{{ product.media[1] | image_url: width: 940 }} 940w,{%- endif -%}
+                   {%- if product.media[1].width >= 1066 -%}{{ product.media[1] | image_url: width: 1066 }} 1066w,{%- endif -%}
+                   {{ product.media[1] | image_url }} {{ product.media[1].width }}w"
+           src="{{ product.media[1] | image_url: width: 533 }}"
+           sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+           alt="{{ product.media[1].alt | escape }}"
+           class="motion-reduce"
+           loading="lazy"
+           width="{{ product.media[1].width }}"
+           height="{{ product.media[1].height }}"
+           >
+      {%- endif -%}
+    </a>
+        
+    <div class="badge-container">
+      {%- if product.available == false -%}
+      <span class="badge" style="color:{{ settings.badge_sold_out_foreground }}; background:{{ settings.badge_sold_out_background }};">
+        {{ 'products.product.sold_out' | t }}</span>
+      {%- elsif product.compare_at_price > product.price and product.available -%}
+      <span class="badge" style="color:{{ settings.badge_sale_foreground }}; background:{{ settings.badge_sale_background }};">
+        {{ 'products.product.on_sale' | t }}</span>
+      {%- endif -%}
+    </div>
+    
+    
+    <div class="quick-actions">
+        <a href="#" class="quick-action js-addwishlist">
+          <svg class="stroke-protected" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.84165 10.8333L2.56665 10.5583C2.14697 10.1403 1.81374 9.64369 1.58598 9.09686C1.35822 8.55004 1.2404 7.96371 1.23924 7.37135C1.23689 6.17502 1.70988 5.02676 2.55415 4.17917C3.39843 3.33159 4.54482 2.8541 5.74115 2.85176C6.93748 2.84941 8.08574 3.3224 8.93332 4.16667L9.99999 5.25001L11.0667 4.16667C11.4808 3.73383 11.9772 3.38803 12.5268 3.14956C13.0763 2.91109 13.6679 2.78475 14.267 2.77794C14.866 2.77113 15.4603 2.884 16.0152 3.10992C16.57 3.33584 17.0741 3.67026 17.498 4.09359C17.9219 4.51691 18.257 5.0206 18.4836 5.57513C18.7102 6.12966 18.8239 6.72386 18.8179 7.32289C18.8118 7.92192 18.6863 8.51372 18.4485 9.06358C18.2108 9.61344 17.8656 10.1103 17.4333 10.525L17.1583 10.8L9.99999 17.975L5.05832 13.0333L2.84165 10.8333Z" stroke-width="1.5" stroke-miterlimit="10"></path>
+          </svg>
+        </a>
+        <a href="{{ product.url }}" 
+           class="quick-action js-addcompare" 
+           data-bs-toggle="tooltip" 
+           title="{{ 'products.product.view_details' | t }}"
+           data-tooltip="Add to Compare">
+          <svg class="stroke-protected" width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.1467 6.77026V15.2199" stroke="#191919" stroke-miterlimit="10"></path>
+            <path d="M6.0733 0V15.22" stroke="#191919" stroke-miterlimit="10"></path>
+            <path d="M1 3.38525V15.2201" stroke="#191919" stroke-miterlimit="10"></path>
+          </svg>
+        </a>
+        <a href="#" class="quick-action js-quickview" title="Quick view">
+          <svg class="stroke-protected" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.61667 13.9833C11.1329 13.9833 13.9833 11.1329 13.9833 7.61667C13.9833 4.10045 11.1329 1.25 7.61667 1.25C4.10045 1.25 1.25 4.10045 1.25 7.61667C1.25 11.1329 4.10045 13.9833 7.61667 13.9833Z" stroke="#191919" stroke-width="1.5" stroke-miterlimit="10"></path>
+            <path d="M18.75 18.75L11.9917 11.9916" stroke="#191919" stroke-width="1.5" stroke-miterlimit="10"></path>
+          </svg>
+        </a>
+      </div>
+    
+    {%- if product.available == true -%}
+    <div class="cta">
+      <a href="#" 
+         class="btn btn-primary fluid {% if sold_out %} disabled {% endif %}" 
+         data-bs-toggle="tooltip" 
+         title="{{ 'products.product.add_to_cart' | t }}"
+         {% if sold_out == false %} onclick="cart.add('{{ product.variants.first.id }}');"{% endif %}>
+        {{ 'products.product.add_to_cart' | t }}
+      </a>
+    </div>
+    {%- endif -%}
+
+
+  </figure>
+  {%- endif -%}
+
+  <div class="product__content">
+    <div class="product__info">
+      
+        {%- if show_vendor -%}
+        	<div class="product__vendor">{{ card_product.vendor }}</div>
+        {%- endif -%}
+
+    	<h2 class="product__title"> 
+          <a href="{{ product.url }}">{{ product.title | escape }}</a>
+        </h2>
+      
+      	<div class="product__price">                             
+          {% if product.compare_at_price > product.price %}
+          	<ins class="new-price">{{ product.price | money }}</ins>
+          	<del class="old-price">{{ product.compare_at_price_max | money }}</del>          
+          {% else %}
+          	<ins class="new-price">{{ product.price | money }}</ins>
+          {% endif %}         
+        </div>
+      
+       <p class="product__short__desc">
+          {{ product.content | strip_html | truncatewords: 15 }}
+        </p>
+           
+      
+      {% if show_rating %}
+        <div class="ratings">
+          <span class="shopify-product-reviews-badge" data-id="{% if template == 'search' %}{{ item.id }}{% else %}{{ product.id }}{% endif %}"></span>
+        </div>
+      {% endif %}           
+      
+      
+    </div>
+  </div>
+</div>

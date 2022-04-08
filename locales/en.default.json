@@ -1,5 +1,7 @@
 {
   "general": {
+    "loading": "Laden..",
+    "general": "Algemeen",
     "password_page": {
       "login_form_heading": "Enter store using password:",
       "login_password_button": "Enter using password",
@@ -7,7 +9,7 @@
       "login_form_password_placeholder": "Your password",
       "login_form_error": "Wrong password!",
       "login_form_submit": "Enter",
-      "admin_link_html": "Are you the store owner? <a href=\"/admin\" class=\"link underlined-link\">Log in here</a>",
+      "admin_link_html": "Are you the store owner? <a href=\"\/admin\" class=\"link underlined-link\">Log in here<\/a>",
       "powered_by_shopify_html": "This shop will be powered by {{ shopify }}"
     },
     "social": {
@@ -30,10 +32,10 @@
     },
     "continue_shopping": "Continue shopping",
     "pagination": {
-      "label": "Pagination",
-      "page": "Page {{ number }}",
+      "previous": "Previous page",
       "next": "Next page",
-      "previous": "Previous page"
+      "current_page": "Page {{ current }} of {{ total }}",
+      "status_html": "Showing <span>{{current_count}} of {{total}}<\/span> Items"
     },
     "search": {
       "search": "Search"
@@ -101,6 +103,35 @@
     "collection_title": "Your collection's name"
   },
   "products": {
+    "general": {
+      "sort_by_label": "Sort by:",
+      "show_label": "Show",
+      "show_all_label": "All",
+      "apply": "Toepassen",
+      "clear": "Wissen",
+      "clear_all": "Alles wissen",
+      "from": "Van",
+      "filter_and_sort": "Filteren en sorteren",
+      "filter_by_label": "Filter:",
+      "filter_button": "Filter",
+      "filters_selected": {
+        "one": "{{ count }} geselecteerd",
+        "other": "{{ count }} geselecteerd"
+      },
+      "max_price": "De hoogste prijs is {{ price }}",
+      "product_count": {
+        "one": "{{ product_count }} korting op {{ count }} producten",
+        "other": "{{ product_count }} korting op {{ count }} producten"
+      },
+      "product_count_simple": {
+        "one": "{{ count }} product",
+        "other": "{{ count }} producten"
+      },
+      "reset": "Opnieuw instellen",
+      "sort_button": "Sorteren",
+      "to": "Aan",
+      "clear_filter": "Filters wissen"
+    },
     "product": {
       "add_to_cart": "Add to cart",
       "description": "Description",
@@ -126,8 +157,8 @@
         "view_store_info": "View store information",
         "check_other_stores": "Check availability at other stores",
         "pick_up_available": "Pickup available",
-        "pick_up_available_at_html": "Pickup available at <span class=\"color-foreground\">{{ location_name }}</span>",
-        "pick_up_unavailable_at_html": "Pickup currently unavailable at <span class=\"color-foreground\">{{ location_name }}</span>",
+        "pick_up_available_at_html": "Pickup available at <span class=\"color-foreground\">{{ location_name }}<\/span>",
+        "pick_up_unavailable_at_html": "Pickup currently unavailable at <span class=\"color-foreground\">{{ location_name }}<\/span>",
         "unavailable": "Couldn't load pickup availability",
         "refresh": "Refresh"
       },
@@ -146,7 +177,7 @@
       "xr_button": "View in your space",
       "xr_button_label": "View in your space, loads item in augmented reality window",
       "include_taxes": "Tax included.",
-      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout."
+      "shipping_policy_html": "<a href=\"{{ link }}\">Shipping<\/a> calculated at checkout."
     },
     "modal": {
       "label": "Media gallery"
@@ -234,9 +265,9 @@
       "empty": "Your cart is empty",
       "cart_error": "There was an error while updating your cart. Please try again.",
       "cart_quantity_error_html": "You can only add {{ quantity }} of this item to your cart.",
-      "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping</a> calculated at checkout",
+      "taxes_and_shipping_policy_at_checkout_html": "Taxes and <a href=\"{{ link }}\">shipping<\/a> calculated at checkout",
       "taxes_included_but_shipping_at_checkout": "Tax included and shipping calculated at checkout",
-      "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
+      "taxes_included_and_shipping_policy_html": "Tax included. <a href=\"{{ link }}\">Shipping<\/a> calculated at checkout.",
       "taxes_and_shipping_at_checkout": "Taxes and shipping calculated at checkout",
       "headings": {
         "product": "Product",
@@ -247,7 +278,7 @@
       "update": "Update",
       "login": {
         "title": "Have an account?",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in</a> to check out faster."
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">Log in<\/a> to check out faster."
       }
     },
     "footer": {
@@ -268,7 +299,7 @@
     "collection_template": {
       "empty": "No products found",
       "title": "Collection",
-      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">clear all</a>"
+      "use_fewer_filters_html": "Use fewer filters or <a class=\"{{ class }}\" href=\"{{ link }}\">clear all<\/a>"
     },
     "video": {
       "load_video": "Load video: {{ description }}"
@@ -287,10 +318,10 @@
     }
   },
   "localization": {
-    "country_label": "Country/region",
+    "country_label": "Country\/region",
     "language_label": "Language",
     "update_language": "Update language",
-    "update_country": "Update country/region"
+    "update_country": "Update country\/region"
   },
   "customer": {
     "account": {
@@ -319,9 +350,9 @@
       "address1": "Address 1",
       "address2": "Address 2",
       "city": "City",
-      "country": "Country/region",
+      "country": "Country\/region",
       "province": "Province",
-      "zip": "Postal/ZIP code",
+      "zip": "Postal\/ZIP code",
       "phone": "Phone",
       "set_default": "Set as default address",
       "add": "Add address",

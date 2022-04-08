@@ -122,8 +122,7 @@
 
 
 
-    {{ 'jquery-3.6.0.min.js' | asset_url | script_tag }}  
-    {{ 'bootstrap.min.js' | asset_url | script_tag }}
+   
 
     <script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
     if (Shopify.designMode) {
@@ -131,7 +130,7 @@
     }
     </script>
 
-    {{ 'danymay.js' | asset_url | script_tag }}
+   
 
   </head>
   
@@ -163,13 +162,14 @@
       </div>     
     </main>
 
-
-
-   
-
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
     </ul>
+
+
+    {{ 'jquery-3.6.0.min.js' | asset_url | script_tag }}  
+    {{ 'bootstrap.min.js' | asset_url | script_tag }}
+    {{ 'danymay.js' | asset_url | script_tag }}
 
     <script>
       window.shopUrl = '{{ request.origin }}';
@@ -202,8 +202,6 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-
-
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
       <symbol viewBox="0 0 15 15" id="svg-down">
