@@ -1,3 +1,33 @@
+/* General 
+*********************************/
+img {
+  max-width: 100%;
+}
+
+.center {
+  padding: 0 1rem;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .center {
+    padding: 0 1.25rem;
+    margin: 0 auto;
+    max-width: 1345px !important;
+  }
+  .center--slim {
+    max-width: 1010px !important;
+  }
+  .center--narrow {
+    max-width: 1150px !important;
+  }
+  .center--wide {
+    max-width: 1440px !important;
+  }
+}
+
+/* Footer 
+*********************************/
 .footer {
   background: #151414;
   display: -webkit-box;
