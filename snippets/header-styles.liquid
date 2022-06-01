@@ -4,10 +4,7 @@
 {{ 'wpbingo.css' | asset_url | stylesheet_tag }}
 
 
-{{ 'site.css' | asset_url | stylesheet_tag }}
-{{ 'danymay.css' | asset_url | stylesheet_tag }}
 
-{% comment %}
 {%- if settings.store_develop -%}
   {{ 'site.css' | asset_url | stylesheet_tag }}
   {{ 'danymay.css' | asset_url | stylesheet_tag }}
@@ -15,7 +12,7 @@
   {{ 'site.scss.css' | asset_url | stylesheet_tag }}
   {{ 'danymay.scss.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
-{% endcomment %}
+
 
 {%- assign page_type = request.page_type | handle -%}
 {%- if page_type contains 'collection' or page_type contains 'search' -%}
