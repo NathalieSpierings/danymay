@@ -20,7 +20,8 @@
 		{% include 'header-styles' %}
 		{% include 'header-javascript' %}
 		{{ content_for_header }}
-	</head>
+	{% render "rale-render" %}
+</head>
 
 	<body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ request.page_type | handle }}">
 		{%- if settings.preloading -%}
