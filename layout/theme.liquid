@@ -20,8 +20,7 @@
 		{% include 'header-styles' %}
 		{% include 'header-javascript' %}
 		{{ content_for_header }}
-	{% render "rale-render" %}
-</head>
+	</head>
 
 	<body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ request.page_type | handle }}">
 		{%- if settings.preloading -%}
@@ -36,11 +35,14 @@
 		<main class="main-content {{ layout_article }}" role="main">
 			{{ content_for_layout }}
 		</main>
-		<footer class="bwp-footer">
+
+		<footer class="bwp-footer dm-footer">
 			{% section 'footer' %}
 		</footer>
+
 		{% include 'svg' %}
 		{% include 'site-template' %}
+
 		<script>
 			window.routes = {
 				predictive_search_url: '{{ routes.predictive_search_url }}',

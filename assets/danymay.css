@@ -1,1 +1,56 @@
-/* No CSS *//*# sourceMappingURL=danymay.css.map */
+.dm-footer {
+  background: #151414;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dm-footer__top {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  padding: 2rem 0;
+}
+
+.dm-footer__top__container {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.dm-footer__center {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  padding: 2rem 0;
+}
+
+.dm-footer__center__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.dm-footer__bottom {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  background: #202020;
+  padding: 2rem 0;
+}
+
+.dm-footer__bottom__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+/*# sourceMappingURL=danymay.css.map */
