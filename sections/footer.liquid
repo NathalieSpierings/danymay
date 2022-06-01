@@ -1,31 +1,84 @@
+
 <div class="footer__top">		
-  <div class="footer__top__container center center--wide">
-    <div>
-      <p>Meld je aan voor onze nieuwsbrief</p>
-      <form>
-        form goes here...
-      </form>
-    </div>				
+  {%- if section.settings.show_newsletter -%}
+    <div class="footer__top__container center center--wide">
+      <div>
+        <p>Meld je aan voor onze nieuwsbrief</p>
+        <form>
+          form goes here...
+        </form>
+      </div>				
+    </div>
+  {%- endif -%}  
+</div>
+{%- if section.settings.show_information or section.settings.footer_link_list != blank or section.settings.footer_link_list_2 != blank or section.settings.footer_link_list_3 != blank -%}
+<div class="footer__center">
+  <div class="footer__center__container center center--wide">  
+    
+    {%- assign footer_menu_id = 'footer-block-4' -%}
+    {%- if section.settings.show_information -%}
+      <div>
+        {% include 'footer-html' %}
+      </div>
+    {%- endif -%}
+
+
+    {%- assign footer_menu_title = section.settings.footer_link_title -%}
+    {%- assign footer_menu = section.settings.footer_link_list -%}
+    {%- if footer_menu != blank -%}
+      <div>
+        {% include 'footer-menu' %}
+      </div>
+    {%- endif -%}
+
+
+    {%- assign footer_menu_id = 'footer-block-2' -%}
+    {%- assign footer_menu_title = section.settings.footer_link_title_2 -%}
+    {%- assign footer_menu = section.settings.footer_link_list_2 -%}
+    {%- if footer_menu != blank -%}
+      <div>
+        {% include 'footer-menu' %}
+      </div>
+    {%- endif -%}
+
+
+    {%- assign footer_menu_id = 'footer-block-3' -%}
+    {%- assign footer_menu_title = section.settings.footer_link_title_3 -%}
+    {%- assign footer_menu = section.settings.footer_link_list_3 -%}
+    {%- if footer_menu != blank -%}
+      <div>
+        {% include 'footer-menu' %}
+      </div>
+    {%- endif -%}
   </div>
 </div>
-<div class="footer__center">
-  <div class="footer__center__container center center--wide">
-    <div>A</div>
-    <div>B</div>
-    <div>C</div>
-    <div>D</div>
-  </div>		
-</div>
+{%- endif -%}
+
 <div class="footer__bottom">
   <div class="footer__bottom__container center center--wide">
-    <div class="copyright">
-      <p>Copyright &copy; 2022, All Right Reserved <a href="#">dany-may</a></p>
-    </div>
-    <div class="payment-methods">B</div>
+
+    {%- if section.settings.show_copyright -%}
+      {%- if section.settings.show_copyright != blank -%}
+        <div class="copyright">
+          <p>{{ section.settings.copyright }}</p>
+        </div>
+      {%- endif -%}
+      {%- else -%}
+        <div class="copyright">
+          <p>&copy; {{ 'now' | date: '%Y' }} {{ shop.name | link_to: routes.root_url }}. {{ powered_by_link }}</p>
+        </div>
+    {%- endif -%}
+    
+    {%- assign payment_image = section.settings.payment_image -%}
+    {%- if payment_image -%}
+      <div class="payment-methods">
+        <img class="payment-image__img img-fluid" src="{{ payment_image | img_url: 'master' }}" alt="{{ payment_image.alt | escape }}"/>
+      </div>
+    {%- endif -%}
   </div>
 </div>
 
-
+{% comment %}
 {%- if section.settings.show_information or section.settings.footer_link_list != blank or section.settings.footer_link_list_2 != blank or section.settings.footer_link_list_3 != blank -%}
 <div class="footer-top">
     <div class="container">
@@ -91,6 +144,7 @@
 		</div>
 	</div>
 </div>
+{% endcomment %}
 
 {% include 'view-gallery' %}
 
@@ -101,6 +155,12 @@
     {
       "type": "header",
       "content": "Information"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_newsletter",
+      "label": "Show Newsletter",
+      "default": true
     },
     {
       "type": "checkbox",
@@ -126,12 +186,7 @@
       "label": "Show Social",
       "default": true
     },
-    {
-      "type": "checkbox",
-      "id": "show_newsletter",
-      "label": "Show Newsletter",
-      "default": true
-    },
+    
     {
       "type": "header",
       "content": "Payment methods"
