@@ -1,4 +1,4 @@
-.dm-footer {
+.footer {
   background: #151414;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9,13 +9,13 @@
           flex-direction: column;
 }
 
-.dm-footer__top {
+.footer__top {
   -webkit-transition: all 1s;
   transition: all 1s;
   padding: 2rem 0;
 }
 
-.dm-footer__top__container {
+.footer__top__container {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: center;
@@ -25,13 +25,13 @@
       align-content: center;
 }
 
-.dm-footer__center {
+.footer__center {
   -webkit-transition: all 1s;
   transition: all 1s;
   padding: 2rem 0;
 }
 
-.dm-footer__center__container {
+.footer__center__container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
@@ -39,14 +39,14 @@
   gap: 1rem;
 }
 
-.dm-footer__bottom {
+.footer__bottom {
   -webkit-transition: all 1s;
   transition: all 1s;
   background: #202020;
   padding: 2rem 0;
 }
 
-.dm-footer__bottom__container {
+.footer__bottom__container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
