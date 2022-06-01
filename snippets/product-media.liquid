@@ -1,0 +1,105 @@
+{%- assign current_variant 					= product.selected_or_first_available_variant -%}
+{%- assign featured_media 					= current_variant.featured_media | default: product.featured_media -%}
+{%- assign first_3d_model 					= product.media | where: 'media_type', 'model' | first -%}
+{%- assign stacked 							= false -%}
+{% if section.settings.media_layout 		== "stacked" %}{% assign stacked = true %}{% endif %}
+{% if section.settings.media_layout 		== "gird" %}{% assign gird = true %}{% endif %}
+{% if section.settings.media_layout 		== "gird-two" %}{% assign gird-two = true %}{% endif %}
+{% if section.settings.media_layout 		== "lagre-gallery" %}{% assign lagre-gallery = true %}{% endif %}
+{% if section.settings.media_layout 		== "slider" %}{% assign slider = true %}{% endif %}
+{% if section.settings.media_layout 		== "thumbnails" %}{% assign thumbnails = true %}{% endif %}
+{% if section.settings.position_thumbnails 	== "outside" %}{% assign outside = true %}{% endif %}
+{% if section.settings.position_thumbnails 	== "left" or section.settings.position_thumbnails == "right" %}{% assign vertical = true %}{% endif %}
+
+<div class="js-product-single-media product-single__media product-single__media--{{ section.settings.media_layout }}">
+	<div class="row">
+		<div class="{% if vertical and thumbnails %}col-md-10 {{ section.settings.position_thumbnails }} {% else %}col-md-12{% endif %}">
+			<div class="product-single__main-media">
+				<div class="js-product-media-group js-product-media-group-{{ section.id }} product-single__media-group" {%- if slider -%} data-infinite="true"{%- endif -%}>
+					{%- assign enable_image_zoom = section.settings.enable_image_zoom -%}
+					{%- assign width = 770 -%}
+					{%- assign height = 770 -%}
+					{%- assign first_3d_model = product.media | where: 'media_type', 'model' | first -%}
+					{%- for media in product.media -%}
+						{%- assign featured = false -%}
+						{%- if media == featured_media -%}
+							{%- assign featured = true -%}
+						{%- endif -%}
+						{%- capture thumbnail_alt -%}
+							{%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
+								{{ 'products.product.video_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+							{%- elsif media.media_type == 'model' -%}
+								{{ 'products.product.model_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+							{%- else -%}
+								{{ 'products.product.gallery_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+							{%- endif -%}
+						{%- endcapture -%}
+						<div class="js-product-media-item product-single__media-item" data-slick-media-label="{{ thumbnail_alt }}">
+							{%- include 'media' with media, enable_image_zoom: enable_image_zoom, featured: featured, width: width, height: height -%}
+						</div>
+					{%- endfor -%}
+				</div>
+				{%- unless thumbnails -%}
+					<div class="main-media__slick-controls">
+						<button class="slick__arrow slick__arrow--previous" aria-label="{{ 'home_page.slideshow.previous_slide' | t }}" data-slick-previous>
+							<span class="fa fa-angle-left" aria-hidden="true"></span>
+						</button>
+						<button class="slick__arrow slick__arrow--next" aria-label="{{ 'home_page.slideshow.next_slide' | t }}" data-slick-next>
+							<span class="fa fa-angle-right" aria-hidden="true"></span>
+						</button>
+					</div>
+				{%- endunless -%}
+			</div>
+		</div>
+		{%- if first_3d_model -%}
+			{%- include 'xr-button' with model_id: first_3d_model.id, multi: false -%}
+		{%- endif -%}
+		{%- unless stacked or gird or lagre-gallery or slider or outside or gird-two -%}
+			<div class="{% if vertical and thumbnails %}col-md-2 {% else %}col-md-12{% endif %}">
+				<div class="js-product-thumbnails js-product-thumbnails-{{ section.id }} product-single__thumbnails" data-columns="{{ section.settings.thumbnail_count }}" {% if vertical and thumbnails %}data-vertical="true"{% endif %}>
+					{%- if videoId != blank -%}
+						<div class="product-single__thumbnail-wrapper">
+							<img src="http://img.youtube.com/vi/{{ videoId[1] }}/sddefault.jpg"/>
+						</div>
+					{% endif %}
+					{% for media in product.media %}
+						{% if product.media.size > 1 %}
+							<div class="product-single__thumbnail-wrapper">
+								<div class="product-media__wrapper">
+									{%- capture thumbnail_alt -%}
+										{%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
+											{{ 'products.product.video_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+										{%- elsif media.media_type == 'model' -%}
+											{{ 'products.product.model_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+										{%- else -%}
+											{{ 'products.product.gallery_thumbnail_alt' | t: imageAlt: media.alt | escape }}
+										{%- endif -%}
+									{%- endcapture -%}
+									<a href="javascript:void(0)"
+										class="{%- if media.media_type == 'video' or media.media_type == 'external_video' or media.media_type == 'model' -%}
+										product-single__video{%- else -%}product-single__thumbnail{% endif %}
+										{% if media == featured_media %} active-thumb{% endif %}"
+										data-media="{{ media | img_url: 'grande' }}"
+										data-media-id="{{ section.id }}-{{ media.id }}"
+										data-product-thumbnail>
+										<img class="product-image__thumb" src="{{ media | img_url: '150x' }}" alt="{{ thumbnail_alt }}">
+										{%- if media.media_type == 'video' or media.media_type == 'external_video' or media.media_type == 'model' -%}
+											<div class="product-single__thumbnail-badge  {{ media.media_type }}">
+												{%- if media.media_type == 'model' -%}
+													<i class="wpb-icon-d-design"></i>
+												{%- else -%}
+													<i class="feather-play"></i>
+												{%- endif -%}
+											</div>
+										{%- endif -%}
+									</a>
+								</div>
+							</div>
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		{%- endunless -%}
+		<div class="slick__dots-wrapper" data-slick-dots></div>
+	</div>
+</div>

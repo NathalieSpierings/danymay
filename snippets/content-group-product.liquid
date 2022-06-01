@@ -1,0 +1,145 @@
+{% assign group_product_array	= group_product | split: "," %}
+<div class="price-container">
+	{% for group_ids in group_product_array %}
+		{% assign product_id = group_ids | plus: 0 %}
+		{% for product in collections.all.products %}
+			{%- if product.id == product_id -%}
+				{%- for variant in product.variants -%}
+					{% assign prices =  prices | append: variant.price | append: ',' %}
+				{% endfor %}
+			{%- endif -%}
+		{% endfor %}
+	{% endfor %}
+	{% assign operator_prices	= prices | split: "," %}
+	{% assign min_price = operator_prices[0] | plus: 0 %}
+	{% assign max_price = operator_prices[0] | plus: 0 %}
+	{% for operator_price in operator_prices %}
+		{% assign operator = operator_price | plus: 0 %}
+		{% assign min_price		 = min_price | plus: 0 %}
+		{% assign max_price		 = max_price | plus: 0 %}
+		{% if operator < min_price %}
+			{% assign min_price = operator %}
+		{% endif %}
+		{% if operator > max_price %}
+			{% assign max_price = operator %}
+		{% endif %}		
+	{% endfor %}
+	{{  min_price | money_without_trailing_zeros }} - {{  max_price | money_without_trailing_zeros }}
+</div>
+<div class="content-form">
+	{%- if shop.taxes_included or shop.shipping_policy.body != blank -%}
+		<div class="product-single__policies">
+			{%- if shop.taxes_included -%}
+				{{ 'products.general.include_taxes' | t }}
+			{%- endif -%}
+			{%- if shop.shipping_policy.body != blank -%}
+				{{ 'products.general.shipping_policy_html' | t: link: shop.shipping_policy.url }}
+			{%- endif -%}
+		</div>
+	{%- endif -%}
+	{% comment %}Product short description{% endcomment %}
+	{%- if short_description != blank -%}
+		<div class="product-single__short-description">
+			{{ short_description }}
+		</div>
+	{%- endif -%}
+	{%- if countdowns != blank -%}
+	<div class="countdown-single">
+		<h2><i class="feather-clock"></i>{{ 'products.product.label_countdown' | t }}</h2>
+		<div class="countdown" data-countdown="{{ countdowns }}"></div>
+	</div>
+	{%- endif -%}
+	<form method="post" id="group_table_product" action="/cart/add"  enctype="multipart/form-data" novalidate="novalidate">
+		<input type="hidden" name="form_type" value="product">
+		<div class="group_table">
+			{% for group_ids in group_product_array %}
+				{% assign product_id = group_ids | plus: 0 %}
+				{% for product in collections.all.products %}
+					{%- if product.id == product_id -%}
+						<div data-product_id="{{ product_id }}" class="item-product-group">
+							<div class="product-content">
+								<div class="product-thumb">
+									<a href="{{ product.url }}"><img class="featured-banner__img" src="{{ product.featured_image | img_url: '300x' }}" alt="{{ image.alt | escape }}"/>
+									</a>
+								</div>
+								<div class="product-info">
+									<h3 class="product-title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
+									{% assign number_variant = 0 %}
+									{%- for variant in product.variants -%}
+										{% assign number_variant = number_variant | plus: 1 %}
+									{%- endfor -%}
+									{%- if number_variant == 1 -%}
+										{%- for variant in product.variants -%}
+											{% if variant.inventory_management == "shopify" and variant.inventory_policy != "continue" %}
+												{% if variant.inventory_quantity == 0 %}
+													{% assign out_stock = true %}
+												{%- endif -%}
+											{%- endif -%}
+											<div class="product-price">{{ product.price | money_without_trailing_zeros }}</div>
+											<input name="items[][id]" type="hidden" value="{{ variant.id  }}" {% if out_stock %}disabled="disabled"{%- endif -%}>
+											{% if out_stock %}
+												<div class="stock">{{'products.product.out_stock' | t }}</div>
+											{%- endif -%}
+										{%- endfor -%}
+									{%- else -%}
+										<select name="items[][id]" class="js-product-btp--{{ section.id }} product-single__variants">
+											{%- for variant in product.variants -%}
+												{%- if variant.available -%}
+													<option {% if variant == product.selected_or_first_available_variant %}
+														selected="selected" {% endif %}
+														data-price="{{ variant.price }}"
+														value="{{ variant.id }}">
+														{{ variant.title }} - {{ variant.price | money_with_currency }}
+													</option>
+												{%- else -%}
+													<option disabled="disabled">
+														{{ variant.title }} - {{ 'products.product.sold_out' | t }}
+													</option>
+												{%- endif -%}
+											{%- endfor -%}
+										</select>
+									{%- endif -%}
+								</div>
+							</div>
+							<div class="quantity-content">
+								{%- if out_stock -%}
+									<div class="wpbingo-qty">
+										<button type="button" class="js-qty-adjust wpbingo-qty__adjust wpbingo-qty__adjust--minus" aria-label="{{ 'cart.general.reduce_quantity' | t }}" disabled="disabled">
+											<i class="feather-minus"></i>
+										</button>
+										<input type="text" name="items[][quantity]" class="js-qty-number wpbingo-qty__number" value="0" min="0" aria-label="quantity" pattern="[0-9]*" disabled="disabled">
+										<button type="button" class="js-qty-adjust wpbingo-qty__adjust wpbingo-qty__adjust--plus" aria-label="{{ 'cart.general.increase_quantity' | t }}" disabled="disabled">
+											<i class="feather-plus"></i>
+										</button>
+									</div>
+								{%- else -%}
+									<div class="wpbingo-qty">
+										<button type="button" class="js-qty-adjust wpbingo-qty__adjust wpbingo-qty__adjust--minus" aria-label="{{ 'cart.general.reduce_quantity' | t }}">
+											<i class="feather-minus"></i>
+										</button>
+										<input type="text" name="items[][quantity]" class="js-qty-number wpbingo-qty__number" value="1" min="0" aria-label="quantity" pattern="[0-9]*">
+										<button type="button" class="js-qty-adjust wpbingo-qty__adjust wpbingo-qty__adjust--plus" aria-label="{{ 'cart.general.increase_quantity' | t }}">
+											<i class="feather-plus"></i>
+										</button>
+									</div>
+								{%- endif -%}
+							</div>
+						</div>
+					{%- endif -%}
+				{% endfor %}
+			{% endfor %}
+		</div>
+		{% comment %}Add to cart button{% endcomment %}
+		<div class="product-group__add-to-cart product-single__buttons">
+			<button type="submit" class="add-group-to-cart">
+				{{ 'products.product.add_to_cart' | t }}
+			</button>
+			{%- if product.handle != blank -%}
+				<div class="button-wishlist">
+					<button type="button" aria-label="Add to wishlist" class="" button-wishlist data-product-handle="{{ product.handle }}">
+					</button>
+				</div>
+			{%- endif -%}
+		</div>
+	</form>
+</div>

@@ -1,0 +1,123 @@
+{%- liquid
+  assign sort_by = results.sort_by | default: results.default_sort_by
+  assign total_active_values = 0
+  if results.url
+    assign results_url = results.url
+  else 
+    assign terms = results.terms | escape
+    assign results_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
+  endif
+-%}
+{%- assign select_columns 	=  settings.select_columns -%}
+
+<div class="page-collection-header__left">
+	{%- if settings.sidebar_enable or settings.layout_filter == 'dropdown' -%}
+		<div class="collection-filter">
+			<button class="js-sidebar-toggle collection-filter__button" type="button">
+				<i class="wpb-icon-levels"></i>
+			</button>
+		</div>
+	{%- endif -%}
+</div>
+<div class="page-collection-header__right">
+	{%- if settings.views_enable -%}
+		{%- assign view_grid_2 = 'grid-2' -%}
+		{%- assign view_grid_3 = 'grid-3' -%}
+		{%- assign view_grid_4 = 'grid-4' -%}
+		{%- assign view_list = 'list' -%}
+		<div class="collection-view">
+			<div class="collection-view__item">
+				<a 	class="{% if select_columns == 'grid-2' %}active {% endif %}two js-change-view collection-view__btn collection-view__btn--grid"
+					href="javascript:void(0);"
+					title="{{ 'collections.general.grid_view' | t }}"
+					data-view="{{ view_grid_2 }}">
+					<span class="icon-column">
+						<span class="layer first">
+							<span></span>
+							<span></span>
+						</span>
+						<span class="layer middle">
+							<span></span>
+							<span></span>
+						</span>
+						<span class="layer last">
+							<span></span>
+							<span></span>
+						</span>
+					</span>
+				</a>
+			</div>
+			<div class="collection-view__item">
+				<a 	class="{% if select_columns == 'grid-3' %}active {% endif %}three js-change-view collection-view__btn collection-view__btn--grid"
+					href="javascript:void(0);"
+					title="{{ 'collections.general.grid_view' | t }}"
+					data-view="{{ view_grid_3 }}">
+					<span class="icon-column">
+						<span class="layer first">
+							<span></span>
+							<span></span>
+							<span></span>
+						</span>
+						<span class="layer middle">
+							<span></span>
+							<span></span>
+							<span></span>
+						</span>
+						<span class="layer last">
+							<span></span>
+							<span></span>
+							<span></span>
+						</span>
+					</span>
+				</a>
+			</div>
+			<div class="collection-view__item">
+				<a 	class="{% if select_columns == 'grid-4' %}active {% endif %}four js-change-view collection-view__btn collection-view__btn--grid"
+					href="javascript:void(0);"
+					title="{{ 'collections.general.grid_view' | t }}"
+					data-view="{{ view_grid_4 }}">
+					<span class="icon-column">
+						<span class="layer first">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</span>
+						<span class="layer middle">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</span>
+						<span class="layer last">
+							<span></span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</span>
+					</span>
+				</a>
+			</div>
+			<div class="collection-view__item">
+				<a 	class="{% if select_columns == 'list' %}active {% endif %}js-change-view collection-view__btn collection-view__btn--list"
+					title="{{ 'collections.general.grid_view' | t }}"
+					data-view="{{ view_list }}">
+					<span class="icon-column">
+						<span class="layer first">
+							<span></span>
+							<span></span>
+						</span>
+						<span class="layer middle">
+							<span></span>
+							<span></span>
+						</span>
+						<span class="layer last">
+							<span></span>
+							<span></span>
+						</span>
+					</span>
+				</a>
+			</div>
+		</div>
+	{%- endif -%}
+</div>

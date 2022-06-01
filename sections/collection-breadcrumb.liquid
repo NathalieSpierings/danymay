@@ -1,0 +1,261 @@
+{%- assign nav = section.settings.navigation -%}
+{%- assign infinite = section.settings.infinite -%}
+{%- assign autoplay = section.settings.autoplay -%}
+{%- assign autoplay_speed = section.settings.autoplay_speed | escape -%}
+{%- assign columns = section.settings.columns -%}
+{%- assign column1440 = section.settings.column1440 -%}
+{%- assign column1 = section.settings.column1 -%}
+{%- assign column2 = section.settings.column2 -%}
+{%- assign column3 = section.settings.column3 -%}
+{%- assign column4 = section.settings.column4 -%}
+
+{%- if section.settings.enable -%}
+	{%- assign is_bg_image = section.settings.bgimage -%}
+	{%- if is_bg_image -%}
+		{%- assign class_name = 'wpbingo-breadcrumbs--image' -%}
+	{%- else -%}
+		{%- assign class_name = 'wpbingo-breadcrumbs--no-image' -%}
+	{%- endif -%}
+	<section class="wpbingo-breadcrumbs {{ class_name }}{% if section.settings.enable_collection %} have-collection{% endif %}">
+		{%- assign bg_image = section.settings.image -%}
+		{%- if section.blocks.size > 0 -%}
+			{%- for block in section.blocks -%}
+				{%- if block.settings.collection == collection.handle -%}
+					{%- assign bg_image = block.settings.bgimage -%}
+					{%- break -%}
+				{%- endif -%}
+			{%- endfor -%}
+		{%- endif -%}
+		<div class="wpbingo-breadcrumbs__image"
+			{%- if is_bg_image -%}
+			style="background-image: url('{{ bg_image | img_url: '' }}');background-size:cover; background-position:center center"{%- endif -%}>
+			<div class="container">
+				<div class="wpbingo-breadcrumbs__inner">
+					<h2 class="wpbingo-breadcrumbs__title">{{ collection.title }}</h2>
+					<ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+						<li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+							<a class="breadcrumb__link" href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}" itemprop="item">
+								<span itemprop="name">{{ 'general.breadcrumbs.home_link_title' | t }}</span>
+							</a>
+							<meta itemprop="position" content="1" />
+						</li>
+						{%- if collection.handle == 'all' -%}
+						<li class="breadcrumb__item active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+							<span class="breadcrumb__text">
+								<span itemprop="name">{{ collection.title }}</span>
+							</span>
+							<meta itemprop="position" content="2" />
+						</li>
+						{%- else -%}
+						<li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+							<a class="breadcrumb__link" href="/collections/all" title="{{ 'general.breadcrumbs.all_products_title' | t }}" itemprop="item">
+								<span itemprop="name">{{ 'general.breadcrumbs.all_products_title' | t }}</span>
+							</a>
+							<meta itemprop="position" content="3" />
+						</li>
+						{%- if current_tags -%}
+						  {% capture url %}/collections/{{ collection.handle }}{% endcapture %}
+							<li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+								<a class="breadcrumb__link" href="{{ url }}" title="{{ collection.title }}" itemprop="item">
+									<span itemprop="name">{{ collection.title }}</span>
+								</a>
+								<meta itemprop="position" content="3" />
+							</li>
+							<li class="breadcrumb__item active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+								<span class="breadcrumb__text">
+									<span itemprop="name">{{ current_tags | join: " + " }}</span>
+								</span>
+								<meta itemprop="position" content="4" />
+							</li>
+						{%- else -%}
+							<li class="breadcrumb__item active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+								<span class="breadcrumb__text">
+									<span itemprop="name">{{ collection.title }}</span>
+								</span>
+								<meta itemprop="position" content="3" />
+							</li>
+						{%- endif -%}
+					  {%- endif -%}
+					</ol>
+				</div>
+				{%- if section.settings.enable_collection -%}
+					<div class="bwp_slider-carousel">
+						<div class="js-carousel slick-carousel" data-nav="{{ nav }}" data-infinite="{{ infinite }}"
+							data-columns="{{ columns }}"
+							data-column1440="{{ column1440 }}"
+							data-column1="{{ column1 }}"
+							data-column2="{{ column2 }}"
+							data-column3="{{ column3 }}"
+							data-column4="{{ column4 }}">
+							{%- for collection in collections -%}
+								<div class="item-collection">
+									{%- if collection.image -%}
+										{%- assign collection_image = collection.image -%}
+									{%- elsif collection.products.first and collection.products.first.images != empty -%}
+										{%- assign collection_image = collection.products.first.featured_image -%}
+									{%- else -%}
+										{%- assign collection_image = blank -%}
+									{%- endif -%}
+									<a href="{{ collection.url }}">
+										<div class="image">
+											<img src="{{ collection_image | img_url: '115x' }}" alt="">
+										</div>
+										<h2>{{ collection.title }}</h2>
+									</a>
+								</div>
+							{%- endfor -%}
+						</div>
+					</div>
+				{%- endif -%}
+			</div>
+		</div>
+	</section>
+{%- endif -%}
+{% schema %}
+  {
+    "name": "Breadcrumb",
+    "settings": [
+		{
+			"type": "header",
+			"content": "Settings"
+		},
+		{
+			"type": "checkbox",
+			"id": "enable",
+			"label": "Enable",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "bgimage",
+			"label": "Use background image"
+		},
+		{
+			"type": "image_picker",
+			"id": "image",
+			"label": "Background image default",
+			"info": "Default size: 1920x480 pixels"
+		},
+		{
+			"type": "checkbox",
+			"id": "enable_collection",
+			"label": "Enable Collection",
+			"default": true
+		},
+		{
+			"type": "header",
+			"content": "Carousel Settings"
+		},
+		{
+			"type": "checkbox",
+			"id": "navigation",
+			"label": "Show navigation",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "infinite",
+			"label": "Infinite loop sliding",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "autoplay",
+			"label": "Enable autoplay",
+			"default": false
+		},
+		{
+			"type": "text",
+			"id": "autoplay_speed",
+			"label": "Autoplay speed",
+			"info": "Autoplay speed in milliseconds. Type: int(ms)",
+			"default": "10000"
+		},
+		{
+			"type": "range",
+			"id": "columns",
+			"min": 1,
+			"max": 5,
+			"step": 1,
+			"label": "Number of Columns >1440px",
+			"default": 4,
+			"info": "Desktops"
+		},
+		{
+			"type": "range",
+			"id": "column1440",
+			"min": 1,
+			"max": 5,
+			"step": 1,
+			"label": "Number of Columns 1200px to 1440px",
+			"default": 4,
+			"info": "Desktops"
+		},
+		{
+			"type": "range",
+			"id": "column1",
+			"min": 1,
+			"max": 5,
+			"step": 1,
+			"label": "Number of Columns on 992px to 1199px",
+			"default": 4,
+			"info": "Desktops"
+		},
+		{
+			"type": "range",
+			"id": "column2",
+			"min": 1,
+			"max": 5,
+			"step": 1,
+			"label": "Number of Columns on 768px to 991px",
+			"default": 3,
+			"info": "Laptop"
+		},
+		{
+			"type": "range",
+			"id": "column3",
+			"min": 1,
+			"max": 5,
+			"step": 1,
+			"label": "Number of Columns on 480px to 767px",
+			"default": 1,
+			"info": "Tablets"
+		},
+		{
+			"type": "range",
+			"id": "column4",
+			"min": 1,
+			"max": 5,
+			"step": 1,
+			"label": "Number of Columns in 480px or less than",
+			"default": 1,
+			"info": "Mobile phone"
+		}
+    ],
+    "blocks": [
+      {
+        "type": "item",
+        "name": "Background image",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "placeholder": "Title"
+          },
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          },
+          {
+            "type": "image_picker",
+            "id": "bgimage",
+            "label": "Background image",
+            "info": "Image will be used in this collection"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

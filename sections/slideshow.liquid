@@ -1,0 +1,426 @@
+{%- if section.blocks.size > 0 -%}
+{%- style -%}
+	{%- if section.settings.navigation != blank -%}
+		#shopify-section-{{ section.id }} .wpbingo-slideshow .slick-arrow{
+			border-width:{{ section.settings.border_arrow }};
+			border-radius:{{ section.settings.border_radius_arrow }};
+			border-color:{{ section.settings.border_color_arrow }};
+			border-style:solid;
+			background:{{ section.settings.bg_arrow }};
+			color:{{ section.settings.color_arrow }};
+		}
+		#shopify-section-{{ section.id }} .wpbingo-slideshow .slick-arrow:hover{
+			border-color:{{ section.settings.border_color_arrow_hover }};
+			background:{{ section.settings.bg_arrow_hover }};
+			color:{{ section.settings.color_arrow_hover }};
+		}
+	{%- endif -%}
+	{%- if section.settings.pagination != blank -%}
+		#shopify-section-{{ section.id }} .wpbingo-slideshow .slick-dots button{
+			border-width:{{ section.settings.border_dots }};
+			border-radius:{{ section.settings.border_radius_dots }};
+			border-color:{{ section.settings.border_color_dots }};
+			border-style:solid;
+			background:{{ section.settings.bg_dots }};
+		}
+		#shopify-section-{{ section.id }} .wpbingo-slideshow .slick-dots button:hover{
+			border-color:{{ section.settings.border_color_dots_hover }};
+			background:{{ section.settings.bg_dots_hover }};
+		}
+		#shopify-section-{{ section.id }} .wpbingo-slideshow .slick-dots li.slick-active button{
+			border-color:{{ section.settings.border_color_dots_hover }};
+			background:{{ section.settings.bg_dots_hover }};
+		}
+		#shopify-section-{{ section.id }} .wpbingo-slideshow .slideshow-caption__btn:hover{
+			border-color:{{ section.settings.border_color_button_hover }} !important;
+			background:{{ section.settings.bg_button_hover }} !important;
+			color:{{ section.settings.color_button_hover }} !important;
+		}
+	{%- endif -%}
+	{% assign min_height_slider 	= section.settings.min_height_slider | split: "|" %}
+	{%- if min_height_slider[0] != blank -%}
+		#shopify-section-{{ section.id }} .wpbingo-slideshow__item-image{
+			min-height:{{ min_height_slider[0] }};
+			object-fit: cover;
+		}
+	{%- endif -%}
+	{%- if min_height_slider[1] != blank -%}
+		@media (max-width:1200px){
+			#shopify-section-{{ section.id }} .wpbingo-slideshow__item-image{
+				min-height:{{ min_height_slider[1] }};
+				object-fit: cover;
+			}
+		}
+	{%- endif -%}
+	{%- if min_height_slider[2] != blank -%}
+		@media (max-width:991px){
+			#shopify-section-{{ section.id }} .wpbingo-slideshow__item-image{
+				min-height:{{ min_height_slider[2] }};
+				object-fit: cover;
+			}
+		}
+	{%- endif -%}
+	{%- if min_height_slider[3] != blank -%}
+		@media (max-width:767px){
+			#shopify-section-{{ section.id }} .wpbingo-slideshow__item-image{
+				min-height:{{ min_height_slider[3] }};
+				object-fit: cover;
+			}
+		}
+	{%- endif -%}
+{%- endstyle -%}
+<section class="wpbingo-section wpbingo-section--slideshow">
+    <div class="wpbingo-slideshow__inner">
+		<div class="js-wpbingo-slideshow wpbingo-slideshow"
+			data-autoplay="{{ section.settings.autoplay }}"
+			data-autoplayinterval="{{ section.settings.autoplay_speed }}"
+			data-navigation="{{ section.settings.navigation }}"
+			data-pagination="{{ section.settings.pagination }}"
+			data-fade="{{ section.settings.fade }}" >
+			{%- for block in section.blocks -%}
+				<div class="wpbingo-slideshow__item">
+					{%- if block.settings.link != blank -%}
+						<a href="{{ block.settings.link }}" class="wpbingo-slideshow__item-link">
+					{%- endif -%}
+						{%- if block.settings.image == blank -%}
+							<div class="placeholder-background">
+								{%- capture current -%}{% cycle 1, 2 %}{%- endcapture -%}
+								{{ 'lifestyle-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+							</div>
+						{%- else -%}
+						{%- assign img_url = block.settings.image | img_url: '' -%}
+							<img class="wpbingo-slideshow__item-image" 
+								src="{{ img_url }}"
+								data-sizes="auto" 
+								alt="{{ block.settings.image.alt | escape }}"/>
+						{%- endif -%}
+					{%- if block.settings.link != blank -%}
+						</a>
+					{%- endif -%}
+					<div class="slideshow-caption slideshow-caption--{{ block.settings.alignment }} slideshow-text--{{ block.settings.align_text }}">
+						<div class="container">
+							<div class="slideshow-caption__inner">
+								<div class="slideshow-caption__content">
+									{%- unless block.settings.title == blank -%}
+										<h2 class="slideshow-caption__heading {{ block.settings.effect }}-1" style="color: {{ block.settings.slide_heading_color }};">
+											{{ block.settings.title }}
+										</h2>
+									{%- endunless -%}
+									{%- unless block.settings.slide_subheading == blank -%}
+										<div class="slideshow-caption__subheading {{ block.settings.effect }}-2" style="color: {{ block.settings.slide_subheading_color }};">
+											{{ block.settings.slide_subheading }}
+										</div>
+									{%- endunless -%}
+									{%- unless block.settings.button_label == blank -%}
+										<a class="btn slideshow-caption__btn {{ block.settings.effect }}-3" 
+											style="color: {{ block.settings.color_button }};background: {{ block.settings.bg_button }};"
+											href="{{ block.settings.button_link }}" >
+											{{ block.settings.button_label }}
+										</a>
+									{%- endunless -%}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			{%- endfor -%}
+		</div>
+    </div>
+</section>
+{%- endif -%}
+
+{% schema %}
+{
+    "name": "Slideshow",
+    "class": "wpbingo-framework",
+    "settings": [
+		{
+			"type": "checkbox",
+			"id": "navigation",
+			"label": "Show Prev/Next arrows",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "pagination",
+			"label": "Show dot indicators",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "fade",
+			"label": "Fade effect",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "autoplay",
+			"label": "Autoplay",
+			"default": true
+		},
+		{
+			"type": "text",
+			"id": "autoplay_speed",
+			"label": "Change slides every",
+			"info": "Required field number. Ex: 8000",
+			"default": "8000"
+		},
+		{
+			"type": "text",
+			"id": "min_height_slider",
+			"label": "Min height slider",
+			"placeholder": "600px",
+			"info":"Screen: desktop | 1200px | 991px | 767px"
+		},
+		{
+			"type": "header",
+			"content": "Button hover"
+		},
+		{
+			"type": "color",
+			"id": "bg_button_hover",
+			"label": "Background button hover",
+			"default": "#000000"
+		},
+		{
+			"type": "header",
+			"content": "Slick arrow"
+		},
+		{
+			"type": "text",
+			"id": "border_arrow",
+			"label": "Border arrow",
+			"default": "0px 0px 0px 0px",
+			"info": "Ex: 0px 0px 0px 0px"
+		},
+		{
+			"type": "text",
+			"id": "border_radius_arrow",
+			"label": "Border radius arrow",
+			"default": "0px 0px 0px 0px",
+			"info": "Ex: 0px 0px 0px 0px"
+		},
+		{
+			"type": "color",
+			"id": "bg_arrow",
+			"label": "Background arrow",
+			"default": "#000000"
+		},
+		{
+			"type": "color",
+			"id": "border_color_arrow",
+			"label": "border arrow",
+			"default": "#000000"
+		},
+		{
+			"type": "color",
+			"id": "color_arrow",
+			"label": "Color arrow",
+			"default": "#000000"
+		},
+		{
+			"type": "color",
+			"id": "bg_arrow_hover",
+			"label": "Background arrow hover",
+			"default": "#000000"
+		},
+		{
+			"type": "color",
+			"id": "border_color_arrow_hover",
+			"label": "border arrow hover",
+			"default": "#000000"
+		},
+		{
+			"type": "color",
+			"id": "color_arrow_hover",
+			"label": "Color arrow hover",
+			"default": "#000000"
+		},
+		{
+			"type": "header",
+			 "content": "Slick dots"
+		},
+		{
+			"type": "text",
+			"id": "border_dots",
+			"label": "Border dots",
+			"default": "0px 0px 0px 0px",
+			"info": "Ex: 0px 0px 0px 0px"
+		},
+		{
+			"type": "text",
+			"id": "border_radius_dots",
+			"label": "Border radius dots",
+			"default": "0px 0px 0px 0px",
+			"info": "Ex: 0px 0px 0px 0px"
+		},
+		{
+			"type": "color",
+			"id": "bg_dots",
+			"label": "Background dots",
+			"default": "#000000"
+		},
+		{
+			"type": "color",
+			"id": "border_color_dots",
+			"label": "border dots",
+			"default": "#000000"
+		},
+		{
+			"type": "color",
+			"id": "bg_dots_hover",
+			"label": "Background dots hover",
+			"default": "#000000"
+		},
+		{
+			"type": "color",
+			"id": "border_color_dots_hover",
+			"label": "border dots hover",
+			"default": "#000000"
+		}
+    ],
+    "blocks": [
+		{
+			"type": "image",
+			"name": "Slide",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Image"
+				},
+				{
+					"type": "url",
+					"id": "link",
+					"label": "Slide URL"
+				},
+				{
+					"type": "header",
+					"content": "Caption"
+				},
+				{
+					"type": "select",
+					"id": "alignment",
+					"label": "Caption alignment",
+					"default": "center",
+					"options": [
+						{
+							"value": "center",
+							"label": "Center"
+						},
+						{
+							"value": "left",
+							"label": "Left"
+						},
+						{
+							"value": "right",
+							"label": "Right"
+						}
+					]
+				},
+				{
+					"type": "select",
+					"id": "align_text",
+					"label": "Text align",
+					"default": "left",
+					"options": [
+						{
+							"value": "center",
+							"label": "Center"
+						},
+						{
+							"value": "left",
+							"label": "Left"
+						},
+						{
+							"value": "right",
+							"label": "Right"
+						}
+					]
+				},
+				{
+					"type": "select",
+					"id": "effect",
+					"label": "Caption effect",
+					"options": [
+						{
+							"value": "default",
+							"label": "Default"
+						},
+						{
+							"value": "leftright",
+							"label": "Left to Right"
+						},
+						{
+							"value": "rightleft",
+							"label": "Right to Left"
+						},
+						{
+							"value": "topbottom",
+							"label": "Top to Bottom"
+						},
+						{
+							"value": "bottomtop",
+							"label": "Bottom to Top"
+						}
+					],
+					"default": "leftright"
+				},
+				{
+					"type": "text",
+					"id": "title",
+					"label": "Heading"
+				},
+				{
+					"type": "html",
+					"id": "slide_subheading",
+					"label": "Subheading"
+				},
+				{
+					"type": "text",
+					"id": "button_label",
+					"label": "Button label"
+				},
+				{
+					"type": "url",
+					"id": "button_link",
+					"label": "Button URL"
+				},
+				{
+					"type": "color",
+					"id": "bg_button",
+					"label": "Background button",
+					"default": "#000000"
+				},
+				{
+					"type": "color",
+					"id": "color_button",
+					"label": "Color button",
+					"default": "#000000"
+				},
+				{
+					"type": "color",
+					"id": "slide_heading_color",
+					"label": "Heading color",
+					"default": "#ffffff"
+				},
+				{
+					"type": "color",
+					"id": "slide_subheading_color",
+					"label": "Subheading color",
+					"default": "#ffffff"
+				}
+			]
+		}
+    ],
+    "presets": [
+		{
+			"name": "Slideshow",
+			"category": "1. Wpbingo Slider",
+			"settings": {
+				"autoplay": true
+			}
+		}
+    ]
+}
+{% endschema %}

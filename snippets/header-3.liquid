@@ -1,0 +1,84 @@
+{%- if section.settings.headertop_enable -%}
+<div class="header-top">
+	<div class="container">
+		<div class="header-top__inner">
+			<div class="header-top__content">
+				{%- if section.settings.headertop_text != blank -%}
+					<div class="header-text">{{ section.settings.headertop_text }}</div>
+				{%- endif -%}
+				{%- if section.settings.headertop_text2 != blank -%}
+					<div class="header-text">{{ section.settings.headertop_text2 }}</div>
+				{%- endif -%}
+			</div>
+			<div class="header-top__content">
+				{%- if linklists[section.settings.headertop_link_list].links != blank -%}
+					<ul class="header-top__nav">
+					{%- for link in linklists[section.settings.headertop_link_list].links -%}
+						<li><a href="{{ link.url }}">{{ link.title }}</a></li>
+					{%- endfor -%}
+					</ul>
+				{%- endif -%}
+				{%- if section.settings.show_currency_selector -%}
+					{% include 'currency-selector' %}
+				{%- endif -%}
+				{%- if section.settings.show_locale_selector -%}
+					{% include 'locale-selector' %}
+				{%- endif -%}
+			</div>
+		</div>
+	</div>
+</div>
+{%- endif -%}
+<div class="header-desktop">
+	<div class="container">
+		<div class="header-center__inner">
+			<div class="header-left">
+				{%- if section.settings.show_header_search -%}
+					<div class="search-toggle"><i class="icon-search"></i></div>
+					{% include 'header-search-toggle' %}
+				{%- endif -%}
+			</div>
+			<div class="header-logo" itemscope itemtype="http://schema.org/Organization">
+				{%- if section.settings.logo -%}
+					<a href="/" itemprop="url" class="header-logo__link">
+						{%- if section.settings.logo_homepage and template.name == "index" -%}
+							<img class="header-logo__img"
+								src="{{ section.settings.logo_homepage | img_url: 'master' }}" 
+								srcset="{{ section.settings.logo_homepage | img_url: 'master' }}"
+								alt="{{ section.settings.logo_homepage.alt | default: shop.name }}"
+								itemprop="logo">
+						{%- else -%}
+							<img class="header-logo__img"
+								src="{{ section.settings.logo | img_url: 'master' }}" 
+								srcset="{{ section.settings.logo | img_url: 'master' }}"
+								alt="{{ section.settings.logo.alt | default: shop.name }}"
+								itemprop="logo">
+						{%- endif -%}
+					</a>
+				{%- else -%}
+					<a href="/" itemprop="url" class="header-logo__link header-logo__link--text">{{ shop.name }}</a>
+				{%- endif -%}
+				<h1 class="d-none" itemprop="legalName">{{ shop.name }}</h1>
+			</div>
+			<div class="header-right">
+				<div class="header-page-link">
+					{%- if section.settings.show_header_user -%}
+						{% include 'header-account' %}
+					{%- endif -%}
+					{%- if section.settings.show_header_cart -%}
+						{% include 'header-cart' %}
+					{%- endif -%}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-bottom">
+		<div class="container">
+			<div class="header-main">
+				{%- if section.settings.menu_enable -%}
+					{% include 'header-menu' %}
+				{%- endif -%}
+			</div>
+		</div>
+	</div>
+</div>

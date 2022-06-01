@@ -1,0 +1,90 @@
+{%- style -%}
+	{%- for block in section.blocks -%}
+		{%- assign image_bg 	=  block.settings.color_image | img_url: 'master' -%}
+		{%- assign variant_name =  block.settings.color_name -%}
+		{%- assign show_image 	=  block.settings.show_image -%}
+		{%- assign color_bg_2 	=  block.settings.select_color_2 -%}
+		{%- assign color_bg_1 	=  block.settings.select_color_1 -%}
+		{%- assign is_label 	=  block.settings.is_label -%}
+		
+		{%- if image_bg != blank and show_image -%}
+			.wpb-variants-swatch .{{ variant_name }}{
+				background:url('{{ image_bg }}') !important;
+				background-size:cover !important;
+			}
+		{%- endif -%}
+		
+		{%- if color_bg_2 != blank and color_bg_1 != blank and color_bg_2 != 'rgba(0,0,0,0)' -%}
+			.wpb-variants-swatch .{{ variant_name }}{
+				background: linear-gradient(to bottom, {{ color_bg_1 }} 50%,{{ color_bg_2 }} 50%) !important;
+			}
+		{%- endif -%}
+		
+		{%- if color_bg_1 != blank and color_bg_2 == blank and color_bg_1 != 'rgba(0,0,0,0)' -%}
+			.wpb-variants-swatch .{{ variant_name }}{
+				background-color: {{ color_bg_1 }} !important;
+			}
+		{%- endif -%}
+		
+		{%- if is_label -%}
+			.wpb-variants-swatch .{{ variant_name }}{
+				display:none !important;
+			}
+		{%- endif -%}
+		
+	{%- endfor -%}
+{%- endstyle -%}
+{% schema %}
+{
+  "name": "Custom Variant",
+  "settings": [
+		{
+			"type": "header",
+			"content": "Custom Variant",
+			"info":"Tutorial Creat Variant [Document](https:\/\/shopify.wpbingosite.com\/document\/custom_variant.html#sectionCreat\) Tutorial Type Option [Document](https:\/\/shopify.wpbingosite.com\/document\/custom_variant.html#sectiontype\) Tutorial Custom Variant [Document](https:\/\/shopify.wpbingosite.com\/document\/custom_variant.html#sectionTwo\)"
+		}
+  ],
+  "blocks": [
+      {
+        "type": "item",
+        "name": "Custom Variant",
+        "settings": [
+			{
+				"type": "text",
+				"id": "color_name",
+				"label": "Variant Name",
+				"info":"eg: yellow"
+			},
+			{
+				"type": "checkbox",
+				"id": "is_label",
+				"label": "Hidden Variant",
+				"default": false
+			},
+			{
+				"type": "color",
+				"id": "select_color_1",
+				"label": "Select Color"
+			},
+			{
+				"type": "color",
+				"id": "select_color_2",
+				"label": "Select Color 2"
+			},
+			{
+				"type": "checkbox",
+				"id": "show_image",
+				"label": "Show Image",
+				"default": false
+			},
+			{
+				"type": "image_picker",
+				"id": "color_image",
+				"label": "Variant Image",
+				"info": "Will be displayed when you select Swatch Image"
+			}
+        ]
+      }
+    ]
+}
+{% endschema %}

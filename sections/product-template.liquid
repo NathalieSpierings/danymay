@@ -1,0 +1,413 @@
+{%- assign current_variant 			= product.selected_or_first_available_variant -%}
+{%- assign media_layout 			= section.settings.media_layout -%}
+{%- assign size 					= settings.size_option -%}
+{%- assign border 					= settings.style_option -%}
+{%- assign countdowns 				= product.metafields.bwp_fields.countdowns -%}
+{%- assign external 				= product.metafields.bwp_fields.external -%}
+{%- assign group_product 			= product.metafields.bwp_fields.group_product -%}
+{%- assign size_chart 			= product.metafields.bwp_fields.size_chart -%}
+
+{%- assign filter_name_1 			= settings.filter_name_1 -%}
+{%- assign select_filter_1 			= settings.select_filter_1 -%}
+{%- assign filter_name_2 			= settings.filter_name_2 -%}
+{%- assign select_filter_2 			= settings.select_filter_2 -%}
+{%- assign filter_name_3 			= settings.filter_name_3 -%}
+{%- assign select_filter_3 			= settings.select_filter_3 -%}
+{%- assign short_description 		= product.metafields.bwp_fields.shortdesc -%}
+
+{%- assign first_3d_model 			= product.media | where: "media_type", "model" | first -%}
+{%- assign full_width 				= false -%}
+
+{%- if media_layout == "lagre-gallery" or media_layout == "slider" -%}
+	{%- assign full_width 			= true -%}
+{%- endif -%}
+
+{%- assign nothum = false -%}
+{%- if media_layout == "lagre-gallery" or media_layout == "slider" -%}
+	{%- assign nothum 				= true -%}
+{%- endif -%}
+
+<div class="prev_next_buttons_product">
+	{% assign nextprevCount = 0 %}
+	{% if collection.previous_product %}
+		{% assign nextprevCount = nextprevCount | plus: 1 %}
+		<div class="prev_button">
+			<a href="{{collection.previous_product.url}}" rel="prev"><i class=" feather-arrow-left"></i></a>			
+			<div class="image">
+				{{ collection.previous_product.featured_image | product_img_url: '180x120' | img_tag }}		
+				<a href="{{collection.previous_product.url}}" rel="prev"><h2 class="title">{{ collection.previous_product.title }}</h2></a>			
+			</div>
+		</div>
+	{% endif %}
+	{% if collection.next_product %}
+		{% assign nextprevCount = nextprevCount | plus: 1 %}
+		{% assign img_url = collection.next_product.media | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+		<div class="next_button">
+			<a href="{{collection.next_product.url}}" rel="next"><i class="feather-arrow-right"></i></a>			
+			<div class="image">
+				{{ collection.next_product.featured_image | product_img_url: '180x120' | img_tag }}
+				<a href="{{collection.next_product.url}}" rel="next"><h2 class="title">{{ collection.next_product.title }}</h2></a>			
+			</div>
+		</div>
+	{% endif%}
+	{% if collection %}
+	<div class="continue-shop">
+		<a href="{{ collection.url }}"><i class="feather-grid"></i></a>
+		<span>{{ collection.title }}</span>
+	</div>
+	{% endif%}
+</div>
+<div class="container{% if full_width  %} container-full-image{% endif %}">
+	<div class="product" itemscope itemtype="http://schema.org/Product"
+    data-section-id="{{ section.id }}"
+    data-section-type="product-template"
+    data-enable-history-state="true"
+	data-nothum="{{ nothum }}"
+    data-stacked-layout="{% if media_layout == "stacked" or media_layout == "gird" or media_layout == "gird-two" %}true{% else %}false{% endif %}"
+    {% if first_3d_model %}data-has-model="true"{% endif %}>
+		<div class="product-single product__primary {{ media_layout }}" data-layout_thumb="{{ media_layout }}" data-popup="false">
+			<div class="row">
+				{% if media_layout == "slider" %}
+					{% include 'product-template-slider' %}
+				{% else %}
+				<div class="bwp-single-image col-lg-7 col-md-12 col-12">
+					{% include 'product-media' %}
+				</div>
+				<div class="bwp-single-info col-lg-5 col-md-12 col-12 ">
+					{% include 'product-breadcrumb' %}
+					<div class="product-single__metas">
+						{%- if settings.product_reviews_enable -%}
+							{%- if section.settings.product_reviews_enable -%}
+								<div class="product-single__reviews product-review">
+									<span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+								</div>
+							{%- endif -%}
+						{%- endif -%}
+						<h1 class="product-single__title" itemprop="name">{{ product.title }}</h1>
+						{%- if group_product == blank -%}
+							{% include 'content-simple-product' %}
+						{%- else -%}
+							{% include 'content-group-product' %}
+						{%- endif -%}
+						{%- if section.settings.product_sku_enable -%}
+							<div class="product__organization">
+								<div class="product__organization__label">{{ 'products.product.sku' | t }}</div>
+								<div class="js-variant-sku product__organization__text">{{ product.selected_or_first_available_variant.sku }}</div>
+							</div>
+						{%- endif -%}
+						{%- if section.settings.product_type_enable -%}
+							<div class="product__organization">
+								<div class="product__organization__label">{{ 'products.product.type' | t }}</div>
+								<div class="product__organization__text">{{ product.type }}</div>
+							</div>
+						{%- endif -%}
+						{%- if section.settings.product_vendor_enable -%}
+							<div class="product__organization">
+								<div class="product__organization__label">{{ 'products.product.vendor' | t }}</div>
+								<div class="product__organization__text">{{ product.vendor }}</div>
+							</div>
+						{%- endif -%}
+
+						{% comment %}Product collections{% endcomment %}
+						{%- if section.settings.product_collection_enable -%}
+							{%- assign limit = section.settings.product_coll_limit | plus:0 -%}
+							<div class="product__organization">
+								{%- if section.settings.product_collection_title != blank -%}
+									<div class="product__organization__label">{{ section.settings.product_collection_title }}</div>
+								{%- endif -%}
+								{% for collection in product.collections limit:limit %}
+									{%- if forloop.last -%}
+										<a href="{{ collection.url }}" title="{{ collection.title | escape }}">{{ collection.title }}</a>
+									{%- else -%}
+										<a href="{{ collection.url }}" title="{{ collection.title | escape }}">{{ collection.title }},</a> 
+									{%- endif -%}
+								{% endfor %}
+							</div>
+						{%- endif -%}
+
+						{% comment %}Product tabs{% endcomment %}
+						{%- if section.settings.product_tags_enable -%}
+							{%- assign limit = section.settings.product_tags_limit -%}
+							<div class="product__organization">
+								{%- if section.settings.product_tags_title != blank -%}
+									<div class="product__organization__label">{{ section.settings.product_tags_title }}</div>
+								{%- endif -%}
+								{% for tag in product.tags limit:limit %}
+									{%- if forloop.last -%}
+										<span>{{ tag }}</span>
+									{%- else -%}
+										<span>{{ tag }}, </span>
+									{%- endif -%}
+								{% endfor %}
+							</div>
+						{%- endif -%}
+						{% if section.settings.social_sharing_products %}
+							<div class="product__organization">
+								<div class="product__organization__label">{{ section.settings.product_share_title }}</div> 
+								{% include 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product.featured_media %}
+							</div>
+						{% endif %}
+					</div>
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</div>
+{% if section.settings.show_sticky_cart %}
+	{% include 'sticky-cart' %}
+{% endif %}
+<div id="JsQty"></div>
+<div id="CartTemplate"></div>
+{% unless product == empty %}
+  <script type="application/json" id="ProductJson-{{ section.id }}">
+    {{ product | json }}
+  </script>
+  <script type="application/json" id="ModelJson-{{ section.id }}">
+    {{ product.media | where: 'media_type', 'model' | json }}
+  </script>
+{% endunless %}
+
+{% schema %}
+{
+  "name": "Product pages",
+  "settings": [
+	{
+		"type": "checkbox",
+		"id": "show_breadcrumb",
+		"label": "Show  Breadcrumb",
+		"default": true
+	},
+	 {
+      "type": "checkbox",
+      "id": "product_reviews_enable",
+      "label": "Show product review",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "product_available_enable",
+      "label": "Show product available",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "product_type_enable",
+      "label": "Show product type",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "product_vendor_enable",
+      "label": "Show product vendor",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "product_sku_enable",
+      "label": "Show product SKU",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "social_sharing_products",
+      "label": "Enable product sharing",
+      "default": true
+    },
+	{
+      "type": "checkbox",
+      "id": "show_sticky_cart",
+      "label": "Enable sticky cart",
+      "default": true
+    },
+	{
+      "type": "header",
+      "content": "Media",
+      "info": "Learn more about [media types](https://help.shopify.com/manual/products/product-media)"
+    },
+    {
+      "type": "select",
+      "id": "media_layout",
+      "label": "Gallery layout",
+      "default": "thumbnails",
+      "options": [
+        {
+          "value": "stacked",
+          "label": "One Column"
+        },
+        {
+          "value": "gird",
+          "label": "Gird Mix"
+        },
+		{
+          "value": "gird-two",
+          "label": "Gird 2 Column"
+        },
+		{
+          "value": "slider",
+          "label": "Slider"
+        },
+		{
+          "value": "lagre-gallery",
+          "label": "Lagre Gallery"
+        },
+		{
+          "value": "thumbnails",
+          "label": "Thumbnails"
+        }
+      ]
+    },
+	{
+      "type": "select",
+      "id": "position_thumbnails",
+      "label": "Position Thumbnails of Gallery layout Thumbnails",
+      "default": "left",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        },
+		{
+          "value": "bottom",
+          "label": "Bottom"
+        },
+		{
+          "value": "outside",
+          "label": "Outside"
+        }
+      ]
+    },
+	{
+	  "type": "range",
+	  "id": "thumbnail_count",
+	  "min": 1,
+	  "max": 5,
+	  "step": 1,
+	  "label": "Thumbnail Count",
+	  "default": 4
+	},
+    {
+      "type": "checkbox",
+      "id": "enable_video_looping",
+      "label": "Enable video looping",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Product options form"
+    },
+    {
+      "type": "select",
+      "id": "product_selector",
+      "label": "Picker type",
+      "options": [
+        {
+          "value": "radio",
+          "label": "Button"
+        },
+        {
+          "value": "select",
+          "label": "Dropdown"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Product quantity form"
+    },
+    {
+      "type": "checkbox",
+      "id": "quantity_enabled",
+      "label": "Show quantity picker"
+    },
+    {
+      "type": "select",
+      "id": "quantity_selector",
+      "label": "Quantity type",
+      "options": [
+        {
+          "value": "text",
+          "label": "Text"
+        },
+        {
+          "value": "select",
+          "label": "Dropdown"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Add to cart button"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_payment_button",
+      "label": "Show dynamic checkout button",
+      "info": "Each customer will see their preferred payment method from those available on your store, such as PayPal or Apple Pay. [Learn more](https://help.shopify.com/manual/using-themes/change-the-layout/dynamic-checkout)",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Product Collections"
+    },
+    {
+      "type": "checkbox",
+      "id": "product_collection_enable",
+      "label": "Show product collections",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "product_collection_title",
+      "label": "Heading",
+      "default": "Categories:"
+    },
+    {
+      "type": "range",
+      "id": "product_coll_limit",
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "unit": "pcs",
+      "label": "Limit",
+      "default": 6
+    },
+    {
+      "type": "header",
+      "content": "Product Box Tags"
+    },
+    {
+      "type": "checkbox",
+      "id": "product_tags_enable",
+      "label": "Show box",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "product_tags_title",
+      "label": "Heading",
+      "default": "Tags:"
+    },
+    {
+      "type": "range",
+      "id": "product_tags_limit",
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "unit": "pcs",
+      "label": "Limit",
+      "default": 6
+    },
+	{
+      "type": "text",
+      "id": "product_share_title",
+      "label": "Heading",
+      "default": "Share:"
+    }
+  ]
+}
+{% endschema %}

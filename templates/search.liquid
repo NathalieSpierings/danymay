@@ -1,0 +1,26 @@
+{%- assign product_check = 0 -%}
+{% section 'search-breadcrumb' %}
+{% for item in search.results %}
+{% if item.object_type == 'product' %}
+	{% assign product_check = product_check | plus: 1 %}
+{% endif %}
+{% endfor %}
+{% if product_check == 0 %}
+	<section class="page-search">
+		<div class="container">
+			<div class="page-blog__inner">
+				<div class="row">
+					<div class="col-xl-3 col-lg-3 col-md-12 col-12">
+						{% section 'blog-sidebar-search' %}
+					</div>
+					<div class="col-xl-9 col-lg-9 col-md-12 col-12 cate-post-content">
+						{% section 'blog-template-search' %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% else %}
+	{% section 'main-search' %}
+{% endif %}
+

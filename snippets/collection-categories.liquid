@@ -1,0 +1,19 @@
+<ul>
+	{%- for collection in collections -%}
+    <li>
+		{%- if collection.image -%}
+			{%- assign collection_image = collection.image -%}
+		{%- elsif collection.products.first and collection.products.first.images != empty -%}
+			{%- assign collection_image = collection.products.first.featured_image -%}
+		{%- else -%}
+			{%- assign collection_image = blank -%}
+		{%- endif -%}
+		<a href="{{ collection.url }}">
+			<label class="name">{{ collection.title }}</label>
+			{%- if show_count -%}
+				<div class="count">{{ collection.products_count }}</div>
+			{%- endif -%}
+		</a>
+    </li>
+	{%- endfor -%}
+</ul>

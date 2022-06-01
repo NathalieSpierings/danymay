@@ -1,0 +1,99 @@
+{%- assign social_enable = false -%}
+{% if
+  settings.social_twitter_link != blank
+  or settings.social_facebook_link != blank
+  or settings.social_pinterest_link != blank
+  or settings.social_google_plus_link != blank
+  or settings.social_instagram_link != blank
+  or settings.social_tumblr_link != blank
+  or settings.social_youtube_link != blank
+  or settings.social_vimeo_link != blank
+  or settings.social_fancy_link != blank
+  or settings.social_snapchat_link != blank
+%}
+  {%- assign social_enable = true -%}
+{% endif %}
+{%- if social_enable -%}
+  <ul class="social-icons">
+    {%- if settings.social_facebook_link != blank -%}
+      <li>
+        <a href="{{ settings.social_facebook_link | escape }}" title="{{ 'general.social_platform.social_platform' | t: name: shop.name, platform: 'Facebook' }}">
+          <i class="fa fa-facebook"></i>
+          <span>Facebook</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if settings.social_twitter_link != blank -%}
+      <li>
+        <a href="{{ settings.social_twitter_link | escape }}" title="{{ 'general.social_platform.social_platform' | t: name: shop.name, platform: 'Twitter' }}">
+          <i class="fa fa-twitter"></i>
+          <span>Twitter</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if settings.social_pinterest_link != blank -%}
+      <li>
+        <a href="{{ settings.social_pinterest_link | escape }}" title="{{ 'general.social_platform.social_platform' | t: name: shop.name, platform: 'Pinterest' }}">
+          <i class="fa fa-pinterest"></i>
+          <span>Pinterest</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if settings.social_instagram_link != blank -%}
+      <li>
+        <a href="{{ settings.social_instagram_link | escape }}" title="{{ 'general.social_platform.social_platform' | t: name: shop.name, platform: 'Instagram' }}">
+          <i class="fa fa-instagram"></i>
+          <span>Instagram</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if settings.social_snapchat_link != blank -%}
+      <li>
+        <a href="{{ settings.social_snapchat_link | escape }}" title="{{ 'general.social_platform.social_platform' | t: name: shop.name, platform: 'Snapchat' }}">
+          <i class="fa fa-snapchat"></i>
+          <span>Snapchat</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if settings.social_google_plus_link != blank -%}
+      <li>
+        <a href="{{ settings.social_google_plus_link | escape }}" rel="publisher" title="{{ 'general.social_platform.social_platform' | t: name: shop.name, platform: 'Google Plus' }}">
+          <i class="fa fa-google-plus"></i>
+          <span>Google Plus</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if settings.social_tumblr_link != blank -%}
+      <li>
+        <a href="{{ settings.social_tumblr_link | escape }}" title="{{ 'general.social_platform.social_platform' | t: name: shop.name, platform: 'Tumblr' }}">
+          <i class="fa fa-tumblr"></i>
+          <span>Tumblr</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if settings.social_youtube_link != blank -%}
+      <li>
+        <a href="{{ settings.social_youtube_link | escape }}" title="{{ 'general.social_platform.social_platform' | t: name: shop.name, platform: 'YouTube' }}">
+          <i class="fa fa-youtube"></i>
+          <span>YouTube</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if settings.social_vimeo_link != blank -%}
+      <li>
+        <a href="{{ settings.social_vimeo_link | escape }}" title="{{ 'general.social_platform.social_platform' | t: name: shop.name, platform: 'Vimeo' }}">
+          <i class="fa fa-vimeo"></i>
+          <span>Vimeo</span>
+        </a>
+      </li>
+    {%- endif -%}
+    {%- if settings.social_fancy_link != blank -%}
+      <li>
+        <a class="social-fancy" href="{{ settings.social_fancy_link | escape }}" title="{{ 'general.social_platform.social_platform' | t: name: shop.name, platform: 'Fancy' }}">
+          {% include 'svg-definitions' with 'fancy' %}
+          <span>Fancy</span>
+        </a>
+      </li>
+    {%- endif -%}
+  </ul>
+{%- endif -%}

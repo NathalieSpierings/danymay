@@ -1,0 +1,113 @@
+{% section 'article-breadcrumb' %}
+{%- assign number_of_comments = article.comments_count -%}
+{%- assign layout_article = settings.layout_article -%}
+<section class="page-article">
+	{%- if layout_article =='sidebar' or layout_article =='one_column' -%}
+		<div class="container">
+			<div class="page-article__inner">
+				<div class="content-image-single">
+					<div class="content-info">
+						<h1 class="page-title">{{ article.title }}</h1>
+						<div class="article__meta article__meta--post">
+							<span class="article__meta-author"><i class="wpb-icon-user"></i> {{ article.author }}</span>
+							{%- if blog.comments_enabled? -%}
+								<span class="article__meta-comment"><a href="#comments"><i class="wpb-icon-chat"></i> {{ 'blogs.comments.with_count' | t: count: number_of_comments }} </a></span>
+							{%- endif -%}
+						</div>
+					</div>
+				</div>
+				<div class="article__image">
+					<div class="article__featured-image-wrapper" style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100}}%;">
+						{% assign img_url = article.image | img_url: '' %}
+						<img class="article__featured-image" src="{{ img_url }}" data-sizes="auto" alt="{{ article.title | escape }}">
+					</div>
+				</div>
+				<div class="row">
+					{%- if layout_article =='sidebar' -%}
+						<div class="col-xl-3 col-lg-3 col-md-12 col-12">
+							{% section 'blog-sidebar' %}
+						</div>
+						<div class="col-xl-9 col-lg-9 col-md-12 col-12 post-single {{ layout_article }}">
+							{% section 'article-template' %}
+						</div>
+					{%- endif -%}
+					{%- if layout_article =='one_column' -%}
+						<div class="col-xl-12 col-lg-12 col-md-12 col-12 post-single {{ layout_article }}">
+							{% section 'article-template' %}
+						</div>
+					{%- endif -%}
+				</div>
+			</div>
+		</div>
+	{%- endif -%}
+	{%- if layout_article =='prallax_image' -%}
+		{% assign img_url = article.image | img_url: '' %}
+		<div class="page-article__inner {{ layout_article }}">
+			<div class="content-image-single">
+				<div class="article__image" style="background-image:url('{{ img_url }}')">
+				</div>
+				<div class="content-info">
+					<h1 class="page-title">{{ article.title }}</h1>
+					<div class="article__meta article__meta--post">
+						<span class="article__meta-author"><i class="wpb-icon-user"></i> {{ article.author }}</span>
+						{%- if blog.comments_enabled? -%}
+							<span class="article__meta-comment"><a href="#comments"><i class="wpb-icon-chat"></i> {{ 'blogs.comments.with_count' | t: count: number_of_comments }} </a></span>
+						{%- endif -%}
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-12 col-lg-12 col-md-12 col-12 post-single">
+						{% section 'article-template' %}
+					</div>
+				</div>
+			</div>
+		</div>
+	{%- endif -%}
+	{%- if layout_article =='sticky_title' -%}
+		{% assign img_url = article.image | img_url: '' %}
+		<div class="page-article__inner {{ layout_article }}">
+			<div class="content-image-single">
+				<div class="article__image" style="background-image:url('{{ img_url }}')">
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="content-info">
+						<h1 class="page-title">{{ article.title }}</h1>
+						<div class="article__meta article__meta--post">
+							<span class="article__meta-author"><i class="wpb-icon-user"></i> {{ article.author }}</span>
+							{%- if blog.comments_enabled? -%}
+								<span class="article__meta-comment"><a href="#comments"><i class="wpb-icon-chat"></i> {{ 'blogs.comments.with_count' | t: count: number_of_comments }} </a></span>
+							{%- endif -%}
+						</div>
+					</div>
+					<div class="post-single">
+						{% section 'article-template' %}
+					</div>
+				</div>
+			</div>
+		</div>
+	{%- endif -%}
+	{%- if layout_article =='simple_title' -%}
+		<div class="page-article__inner {{ layout_article }}">
+			<div class="content-title">
+				<div class="content-info">
+					<h1 class="page-title">{{ article.title }}</h1>
+					<div class="article__meta article__meta--post">
+						<span class="article__meta-author"><i class="wpb-icon-user"></i> {{ article.author }}</span>
+						{%- if blog.comments_enabled? -%}
+							<span class="article__meta-comment"><a href="#comments"><i class="wpb-icon-chat"></i> {{ 'blogs.comments.with_count' | t: count: number_of_comments }} </a></span>
+						{%- endif -%}
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="post-single">
+					{% section 'article-template' %}
+				</div>
+			</div>
+		</div>
+	{%- endif -%}
+</section>

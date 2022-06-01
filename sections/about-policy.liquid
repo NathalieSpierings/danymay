@@ -1,0 +1,367 @@
+{%- if section.settings.fullwidth -%}
+	{%- assign container = 'container-full' -%}
+{%- elsif section.settings.max_width != blank -%}
+	{%- assign container = 'bwp-container' -%}
+{%- else -%}
+	{%- assign container = 'container' -%}
+{%- endif -%}
+
+{%- assign max_width = '' -%}
+{%- if section.settings.fullwidth == blank and section.settings.max_width != blank -%}
+	{%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
+{%- endif -%}
+
+{%- assign bg_setting = '' -%}
+{%- if section.settings.bg_image != blank -%}
+	{%- capture bg_setting -%}
+		background-position:{{ section.settings.bg_position }};background-size:{{ section.settings.bg_size }};
+		{%- if section.settings.bg_fixed != blank -%}
+			background-attachment: fixed;
+		{%- endif -%}
+	{%- endcapture -%}
+{%- endif -%}
+
+{%- assign bg_full = '' -%}
+{%- if section.settings.bg_image != blank and section.settings.bg_width == 'full' -%}
+	{%- capture bg_full -%}
+		style="background-image: url('{{ section.settings.bg_image | img_url: ''}}');{{ bg_setting }}"
+	{%- endcapture -%}
+{%- endif -%}
+
+{%- assign bg_content = '' -%}
+{%- if section.settings.bg_image != blank and section.settings.bg_width == 'content' -%}
+	{%- capture bg_content -%}
+		style="background-image: url('{{ section.settings.bg_image | img_url: ''}}');{{ bg_setting }}"
+	{%- endcapture -%}
+{%- endif -%}
+
+{% assign margin 	= section.settings.margin | split: "|" %}
+{% assign padding 	= section.settings.padding | split: "|" %}
+{%- style -%}
+	{%- if margin[0] != blank or padding[0] != blank or section.settings.align_text -%}
+		#shopify-section-{{ section.id }} .bwp-widget-about_policy{
+			{%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
+			{%- if padding[0] != blank -%}padding:{{ padding[0] }};{%- endif -%}
+			{%- if section.settings.align_text != blank -%}text-align:{{ section.settings.align_text }};{%- endif -%}
+		}
+	{%- endif -%}
+	#shopify-section-{{ section.id }} .bwp-widget-about_policy .bwp-image{
+		{%- if section.settings.align_text == 'right' -%}
+			margin-right:0;
+		{%- elsif section.settings.align_text == 'center' -%}
+			margin-left:auto;margin-right:auto;
+		{%- endif -%}
+	}
+	{%- if section.blocks.size > 0 -%}
+		{% for block in section.blocks %}
+			{% assign width_image 		= block.settings.width_image | split: "|" %}
+			{% assign padding_image 	= block.settings.padding_image | split: "|" %}
+			{%- if padding_image[0] != blank or width_image[0] != blank -%}
+				#shopify-section-{{ section.id }} .bwp-widget-about_policy .col-banner.banner-{{ forloop.index }}{
+					{%- if width_image[0] != blank -%}max-width: {{ width_image[0] }};flex:0 0 {{ width_image[0] }};{%- endif -%}
+					{%- if padding_image[0] != blank -%}padding:{{ padding_image[0] }};{%- endif -%}
+				}
+			{%- endif -%}
+		{% endfor %}
+	{%- endif -%}
+	@media (max-width:1200px){
+		{%- if margin[1] != blank or padding[1] != blank -%}
+			#shopify-section-{{ section.id }} .bwp-widget-about_policy{
+				{%- if margin[1] != blank -%}margin: {{ margin[1] }};{%- endif -%}
+				{%- if padding[1] != blank -%}padding:{{ padding[1] }};{%- endif -%}
+			}
+		{%- endif -%}
+		{%- if section.blocks.size > 0 -%}
+			{% for block in section.blocks %}
+				{% assign width_image 		= block.settings.width_image | split: "|" %}
+				{% assign padding_image 	= block.settings.padding_image | split: "|" %}
+				{%- if padding_image[1] != blank or width_image[1] != blank -%}
+					#shopify-section-{{ section.id }} .bwp-widget-about_policy .col-banner.banner-{{ forloop.index }}{
+						{%- if width_image[1] != blank -%}max-width: {{ width_image[1] }};flex:0 0 {{ width_image[1] }};{%- endif -%}
+						{%- if padding_image[1] != blank -%}padding:{{ padding_image[1] }};{%- endif -%}
+					}
+				{%- endif -%}
+			{% endfor %}
+		{%- endif -%}
+	}
+	@media (max-width:991px){
+		{%- if margin[2] != blank or padding[2] != blank -%}
+			#shopify-section-{{ section.id }} .bwp-widget-about_policy{
+				{%- if margin[2] != blank -%}margin: {{ margin[2] }};{%- endif -%}
+				{%- if padding[2] != blank -%}padding:{{ padding[2] }};{%- endif -%}
+			}
+			{%- if section.blocks.size > 0 -%}
+				{% for block in section.blocks %}
+					{% assign width_image 		= block.settings.width_image | split: "|" %}
+					{% assign padding_image 	= block.settings.padding_image | split: "|" %}
+					{%- if padding_image[2] != blank or width_image[2] != blank -%}
+						#shopify-section-{{ section.id }} .bwp-widget-about_policy .col-banner.banner-{{ forloop.index }}{
+							{%- if width_image[2] != blank -%}max-width: {{ width_image[2] }};flex:0 0 {{ width_image[2] }};{%- endif -%}
+							{%- if padding_image[2] != blank -%}padding:{{ padding_image[2] }};{%- endif -%}
+						}
+					{%- endif -%}
+				{% endfor %}
+			{%- endif -%}
+		{%- endif -%}
+	}
+	@media (max-width:767px){
+		{%- if margin[3] != blank or padding[3] != blank -%}
+			#shopify-section-{{ section.id }} .bwp-widget-about_policy{
+				{%- if margin[3] != blank -%}margin: {{ margin[3] }};{%- endif -%}
+				{%- if padding[3] != blank -%}padding:{{ padding[3] }};{%- endif -%}
+			}
+		{%- endif -%}
+		{%- if section.blocks.size > 0 -%}
+			{% for block in section.blocks %}
+				{% assign width_image 		= block.settings.width_image | split: "|" %}
+				{% assign padding_image 	= block.settings.padding_image | split: "|" %}
+				{%- if padding_image[3] != blank or width_image[3] != blank -%}
+					#shopify-section-{{ section.id }} .bwp-widget-about_policy .col-banner.banner-{{ forloop.index }}{
+						{%- if width_image[3] != blank -%}max-width: {{ width_image[3] }};flex:0 0 {{ width_image[3] }};{%- endif -%}
+						{%- if padding_image[3] != blank -%}padding:{{ padding_image[3] }};{%- endif -%}
+					}
+				{%- endif -%}
+			{% endfor %}
+		{%- endif -%}
+	}
+{%- endstyle -%}
+
+{%- if section.settings.show -%}
+<section class="wpbingo-section bwp-widget-about_policy wpbingo-section--{{ section.id }} overflow-hidden" {{ bg_full }}>
+	<div class="{{ container }}" {{ max_width }}>
+		<div class="wpbingo-section__inner" {{ bg_content }}>
+			<div class="wpbingo-section__content">
+				<div class="content-width">
+					{%- if section.blocks.size > 0 -%}
+						<div class="row--banners">
+							{%- for block in section.blocks -%}
+								{%- assign style_image 		= block.settings.style_image -%}
+								{%- assign poli_image 		= block.settings.poli_image -%}
+								{%- assign poli_svg 		= block.settings.poli_svg -%}
+								{%- assign poli_title 		= block.settings.poli_title -%}
+								{%- assign poli_description = block.settings.poli_description -%}
+								<div class="col-banner banner-{{ forloop.index }}">
+									<div class="featured-banner">
+										<div class="bwp-image" style="fill:{{ block.settings.color_svg }};max-width:{{ block.settings.font_icon }};" >
+											{%- if style_image == 'image' -%}
+												{%- if poli_image -%}
+													<img class="featured-banner__img" src="{{ poli_image | img_url: '' }}" alt="{{ poli_image.alt | escape }}"/>
+												{%- endif -%}
+											{%- else -%}
+												{%- if poli_svg -%}
+													{{ poli_svg }}
+												{%- endif -%}
+											{%- endif -%}
+										</div>
+										<div class="banner-wrapper-infor">
+											<div class="info">
+												<div class="content">
+													{%- if poli_title != blank -%}
+														<div class="title-banner" style="color:{{ block.settings.color_poli_title }}">{{ poli_title }}</div>
+													{%- endif -%}
+													{%- if poli_description != blank -%}
+														<div class="bwp-image-description" style="color:{{ block.settings.color_poli_description }}">{{ poli_description }}</div>
+													{%- endif -%}
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							{%- endfor -%}
+						</div>
+					{%- endif -%}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{%- endif -%}
+{% schema %}
+{
+	"name": "Wpbingo Policy",
+	"class": "wpbingo-framework",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Layout settings"
+		},
+		{
+			"type": "checkbox",
+			"id": "show",
+			"label": "Show Section",
+			"default": true
+		},
+		{
+			"type": "image_picker",
+			"id": "bg_image",
+			"label": "Background Image"
+		},
+		{
+			"type": "checkbox",
+			"id": "bg_fixed",
+			"label": "Background Fixed"
+		},
+		{
+			"type": "text",
+			"id": "bg_position",
+			"label": "Background position",
+			"default": "center"
+		},
+		{
+			"type": "text",
+			"id": "bg_size",
+			"label": "Background size",
+			"default": "cover"
+		},
+		{
+			"type": "select",
+			"id": "bg_width",
+			"label": "Background Width",
+			"options": [
+				{
+					"value": "full",
+					"label": "Full"
+				},
+				{
+					"value": "content",
+					"label": "Content"
+				}
+			],
+			"default": "full"
+		},
+		{
+			"type": "text",
+			"id": "max_width",
+			"label": "Width container",
+			"info": "Default: 1440px"
+		},
+		{
+			"type": "checkbox",
+			"id": "fullwidth",
+			"label": "Fullwidth"
+		},
+		{
+			"type": "text",
+			"id": "padding",
+			"label": "Padding",
+			"placeholder": "0px 0px 0px 0px",
+			"info":"Screen: desktop | 1200px | 991px | 767px"
+		},
+		{
+			"type": "text",
+			"id": "margin",
+			"label": "Margin",
+			"placeholder": "0px 0px 0px 0px",
+			"info":"Screen: desktop | 1200px | 991px | 767px"
+		},
+		{
+			"type": "select",
+			"id": "align_text",
+			"label": "Text align",
+			"default": "left",
+			"options": [
+				{
+					"value": "center",
+					"label": "Center"
+				},
+				{
+					"value": "left",
+					"label": "Left"
+				},
+				{
+					"value": "right",
+					"label": "Right"
+				}
+			]
+		}
+	],
+	"blocks": [
+		{
+			"type": "image",
+			"name": "Policy",
+			"settings": [
+				{
+					"type": "select",
+					"id": "style_image",
+					"label": "Style Image",
+					"options": [
+						{
+							"value": "svg",
+							"label": "SVG"
+						},
+						{
+							"value": "image",
+							"label": "Image"
+						}
+					],
+					"default": "svg"
+				},
+				{
+					"type": "html",
+					"id": "poli_svg",
+					"label": "SVG"
+				},
+				{
+					"type": "image_picker",
+					"id": "poli_image",
+					"label": "Image"
+				},
+				{
+					"type": "text",
+					"id": "font_icon",
+					"label": "Font size Icon",
+					"default": "25px"
+				},
+				{
+					"type": "color",
+					"id": "color_svg",
+					"label": "Color Svg",
+					"default": "#000000"
+				},
+				{
+					"type": "text",
+					"id": "poli_title",
+					"label": "Title"
+				},
+				{
+					"type": "color",
+					"id": "color_poli_title",
+					"label": "Color Title",
+					"default": "#000000"
+				},
+				{
+					"type": "textarea",
+					"id": "poli_description",
+					"label": "Description"
+				},
+				{
+					"type": "color",
+					"id": "color_poli_description",
+					"label": "Color Description",
+					"default": "#000000"
+				},
+				{
+					"type": "header",
+					"content": "Box settings"
+				},
+				{
+					"type": "text",
+					"id": "padding_image",
+					"label": "Padding item",
+					"default": "0 15px",
+					"placeholder": "0px 0px 0px 0px",
+					"info":"Screen: desktop | 1200px | 991px | 767px"
+				},
+				{
+					"type": "text",
+					"id": "width_image",
+					"label": "Width item",
+					"default": "100%",
+					"placeholder": "0px 0px 0px 0px",
+					"info":"Screen: desktop | 1200px | 991px | 767px"
+				}
+			]
+		}
+	]
+}
+{% endschema %}

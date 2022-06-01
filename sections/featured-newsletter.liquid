@@ -1,0 +1,165 @@
+{%- if section.settings.fullwidth -%}
+	{%- assign container = 'container-full' -%}
+{%- elsif section.settings.max_width != blank -%}
+	{%- assign container = 'bwp-container' -%}
+{%- else -%}
+	{%- assign container = 'container' -%}
+{%- endif -%}
+
+{%- assign max_width = '' -%}
+{%- if section.settings.fullwidth == blank and section.settings.max_width != blank -%}
+	{%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
+{%- endif -%}
+
+{%- assign color_text = section.settings.color_text -%}
+{%- assign color_bg = section.settings.color_bg -%}
+{%- assign heading = section.settings.title | escape -%}
+{%- assign mailchimp = section.settings.mailchimp -%}
+{%- assign mailchimp_action = section.settings.form_action | replace: '/post?', '/post-json?' | append: '&amp;c=?' -%}
+{% assign margin 	= section.settings.margin | split: "|" %}
+{% assign padding 	= section.settings.padding | split: "|" %}
+{%- style -%}
+	{%- if margin[0] != blank or padding[0] != blank -%}
+		#shopify-section-{{ section.id }} .wpbingo-section--newsletter{
+			{%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
+			{%- if padding[0] != blank -%}padding:{{ padding[0] }};{%- endif -%}
+		}
+	{%- endif -%}
+	{%- if margin[1] != blank or padding[1] != blank -%}
+		@media (max-width:1200px){
+			#shopify-section-{{ section.id }} .wpbingo-section--newsletter{
+				{%- if margin[1] != blank -%}margin: {{ margin[1] }};{%- endif -%}
+				{%- if padding[1] != blank -%}padding:{{ padding[1] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[2] != blank or padding[2] != blank -%}
+		@media (max-width:991px){
+			#shopify-section-{{ section.id }} .wpbingo-section--newsletter{
+				{%- if margin[2] != blank -%}margin: {{ margin[2] }};{%- endif -%}
+				{%- if padding[2] != blank -%}padding:{{ padding[2] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[3] != blank or padding[3] != blank -%}
+		@media (max-width:767px){
+			#shopify-section-{{ section.id }} .wpbingo-section--newsletter{
+				{%- if margin[3] != blank -%}margin: {{ margin[3] }};{%- endif -%}
+				{%- if padding[3] != blank -%}padding:{{ padding[3] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+{%- endstyle -%}
+<section class="wpbingo-section wpbingo-section--newsletter">
+    <div class="{{ container }}" {{ max_width }}>
+		<div class="wpbingo-section__inner">
+			<div class="newsletter">
+				<div class="newsletter__inner">
+					{%- if heading != blank -%}
+						<h3 class="newsletter__title">{{ heading }}</h3>
+					{%- endif -%}
+					<div class="newsletter__content">
+						<div class="newsletter-form">
+							{%- if mailchimp -%}
+								<form class="js-wpbingo-newsletter" action="{{ mailchimp_action }}" method="post" name="mc-embedded-subscribe-form" target="_blank">
+									<div class="newsletter-form__wrap">
+										<input class="js-input-newsletter form-control newsletter-form__input" type="email" name="EMAIL"
+											value="{% if customer %}{{ customer.email }}{% endif %}"
+											placeholder="{{ 'general.newsletter_form.newsletter_placeholder' | t }}" required />
+										<button class="btn newsletter-form__submit" type="submit">
+											<span>{{ 'general.newsletter_form.submit' | t }}</span>
+										</button>
+									</div>
+								</form>
+							{%- else -%}
+								{% form 'customer' %}
+									{{ form.errors | default_errors }}
+									{%- if form.posted_successfully? -%}
+										<div class="alert alert-success">{{ 'general.newsletter_form.newsletter_confirmation' | t }}</div>
+									{%- else -%}
+										<input type="hidden" name="contact[tags]" value="newsletter">
+										<div class="newsletter-form__wrap">
+											<input value="{% if customer %}{{ customer.email }}{% endif %}"
+												placeholder="{{ 'general.newsletter_form.newsletter_placeholder' | t }}"
+												name="contact[email]" class="form-control newsletter-form__input" type="email" 
+												autocorrect="off" autocapitalize="off"/>
+											<button class="btn newsletter-form__submit" type="submit">
+												<span>{{ 'general.newsletter_form.submit' | t }}</span>
+											</button>
+										</div>
+									{%- endif -%}
+								{% endform %}
+							{%- endif -%}
+						</div>
+					</div>
+				</div>
+				{%- if section.settings.social -%}
+					{% include 'social-media' %}
+				{%- endif -%}
+			</div>
+		</div>
+    </div>
+</section>
+{% schema %}
+{
+	"name": "Wpbingo Newsletter",
+	"class": "wpbingo-framework",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Layout settings"
+		},
+		{
+			"type": "text",
+			"id": "max_width",
+			"label": "Width container",
+			"info": "Default: 1440px"
+		},
+		{
+			"type": "checkbox",
+			"id": "fullwidth",
+			"label": "Fullwidth"
+		},
+		{
+			"type": "text",
+			"id": "padding",
+			"label": "Padding",
+			"placeholder": "0px 0px 0px 0px",
+			"info":"Screen: desktop | 1200px | 991px | 767px"
+		},
+		{
+			"type": "text",
+			"id": "margin",
+			"label": "Margin",
+			"placeholder": "0px 0px 0px 0px",
+			"info":"Screen: desktop | 1200px | 991px | 767px"
+		},
+		{
+			"type": "header",
+			"content": "General Settings"
+		},
+		{
+			"type": "header",
+			"content": "Mailchimp Settings"
+		},
+		{
+			"type": "checkbox",
+			"id": "mailchimp",
+			"label": "Use mailchimp",
+			"default": true
+		},
+		{
+			"type": "text",
+			"id": "form_action",
+			"label": "MailChimp form action URL",
+			"info": "[Where do I find my MailChimp form action URL?](http:\/\/wpbingo.com\/guide\/wpbingo\/homepage.html#sectionFour)"
+		}
+	],
+	"presets": [
+		{
+			"name": "Wpbingo Newslettert",
+			"category": "5. Newsletter"
+		}
+	]
+}
+{% endschema %}

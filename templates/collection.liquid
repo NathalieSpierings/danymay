@@ -1,0 +1,54 @@
+{%- assign sidebar_enable = settings.sidebar_enable -%}
+{%- assign layout_filter = settings.layout_filter -%}
+{%- assign shop_full = settings.shop_full -%}
+{%- assign sidebar_left_class = 'col-12' -%}
+{%- assign sidebar_right_class = 'col-12' -%}
+{%- if sidebar_enable and layout_filter == 'sidebar' -%}
+	{%- assign sidebar_left_class = 'col-12 col-lg-3' -%}
+	{%- assign sidebar_right_class = 'col-12 col-lg-9' -%}
+{%- endif -%}
+{% section 'collection-breadcrumb' %}
+<section class="js-page-collection page-collection {{ layout_filter }}{% if shop_full %} shop_full{% endif %}">
+	<div class="container">
+		<div class="page-collection__inner">
+			<div class="row">
+				{%- if sidebar_enable and layout_filter == 'sidebar' -%}
+					<aside class="collection-sidebar {{ sidebar_left_class }}">
+						<button class="js-sidebar-toggle collection-sidebar__close" type="button">
+							{% include 'svg-definitions' with 'close' %}
+							<span>{{ 'collections.sidebar.close' | t }}</span>
+						</button>
+						<div class="collection-sidebar__overlay"></div>
+						<div class="collection-sidebar__wapper">
+							{% section 'collection-sidebartop' %}
+							{% section 'collection-sidebarbottom' %}
+						</div>
+					</aside>
+				{%- elsif sidebar_enable and layout_filter == 'dropdown' -%}
+					<aside class="collection-sidebar">
+						<button class="js-sidebar-toggle collection-sidebar__close" type="button">
+							{% include 'svg-definitions' with 'close' %}
+							<span>{{ 'collections.sidebar.close' | t }}</span>
+						</button>
+						<div class="collection-sidebar__overlay"></div>
+					</aside>
+				{%- elsif sidebar_enable -%}
+					<aside class="collection-sidebar">
+						<button class="js-sidebar-toggle collection-sidebar__close" type="button">
+							{% include 'svg-definitions' with 'close' %}
+							<span>{{ 'collections.sidebar.close' | t }}</span>
+						</button>
+						<div class="collection-sidebar__overlay"></div>
+						<div class="collection-sidebar__wapper">
+							{% section 'collection-sidebartop' %}
+							{% section 'collection-sidebarbottom' %}
+						</div>
+					</aside>
+				{%- endif -%}
+				<div class="collection-content {{ sidebar_right_class }}">
+					{% section 'collection-template' %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

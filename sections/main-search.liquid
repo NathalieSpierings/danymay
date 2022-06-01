@@ -1,0 +1,129 @@
+{%- liquid
+  assign sort_by = search.sort_by | default: search.default_sort_by
+  assign terms = search.terms | escape
+  assign search_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
+-%}
+
+{%- assign select_columns 	=  settings.select_columns -%}
+{%- assign sidebar_enable = settings.sidebar_enable -%}
+{%- assign layout_filter = settings.layout_filter -%}
+{%- assign sidebar_left_class = 'col-12' -%}
+{%- assign sidebar_right_class = 'col-12' -%}
+{%- if sidebar_enable and layout_filter == 'sidebar' -%}
+	{%- assign sidebar_left_class = 'col-12 col-lg-3' -%}
+	{%- assign sidebar_right_class = 'col-12 col-lg-9' -%}
+{%- endif -%}
+
+<div class="js-page-collection page-collection template-search {{ settings.layout_filter }} {% unless search.performed and search.results_count > 0 %} template-search--empty{% endunless %}">
+	<div class="container">
+		<div class="template-search__header page-width center">
+			{%- if search.results_count == 0 and search.filters == empty -%}        
+				<p role="status">{{ 'templates.search.no_results_html' | t: terms: search.terms }}</p>
+			{%- endif -%}
+		</div>
+		<div id="JsCollectionProduct" class="{{ select_columns }}">
+			{%- if search.results.size == 0 and search.filters != empty -%}
+				<div class="template-search__results collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
+					<div class="loading-overlay gradient"></div>
+					<div class="title-wrapper center">
+						<h2 class="title title--primary">
+							{{ 'sections.collection_template.empty' | t }}<br>
+							{{ 'sections.collection_template.use_fewer_filters_html' | t: link: search_url, class: "underlined-link link" }}
+						</h2>
+					</div>
+				</div>
+			{%- else -%}
+				<div class="row">
+					{%- if sidebar_enable and layout_filter == 'sidebar' -%}
+						<div class="collection-sidebar {{ sidebar_left_class }}">
+							<button class="js-sidebar-toggle collection-sidebar__close" type="button">
+								{% include 'svg-definitions' with 'close' %}
+								<span>{{ 'collections.sidebar.close' | t }}</span>
+							</button>
+							<div class="collection-sidebar__overlay"></div>
+							<div class="collection-sidebar__wapper">
+								{% include 'filter-sidebar', results: search %}
+							</div>
+						</div>
+					{%- elsif sidebar_enable and layout_filter != 'dropdown' -%}
+						<div class="collection-sidebar">
+							<button class="js-sidebar-toggle collection-sidebar__close" type="button">
+								{% include 'svg-definitions' with 'close' %}
+								<span>{{ 'collections.sidebar.close' | t }}</span>
+							</button>
+							<div class="collection-sidebar__overlay"></div>
+							<div class="collection-sidebar__wapper">
+								{% include 'filter-sidebar', results: search %}
+							</div>
+						</div>
+					{%- endif -%}
+					<div class="collection-content {{ sidebar_right_class }}">
+						{% include 'filter-dropdown', results: search %}
+						<div class="page-collection-header">
+							{% include 'collection-header' %}
+						</div>
+						{% paginate search.results by section.settings.page_item %}
+							<div class="template-search__results collection page-width" id="product-grid" data-id="{{ section.id }}">
+								<div class="loading-overlay gradient"></div>
+								<div class="products__row row negative-margin product-grid">
+									{%- for item in search.results -%}
+										<div class="grid__item{% if item.object_type == 'product' %} products__col{% endif %}">
+											{%- if item.object_type == 'product' -%}
+												{%- capture product_settings -%}{%- if section.settings.product_show_vendor -%}vendor,{%- endif -%}title,price{%- endcapture -%}
+												{% render 'product-card',
+													product_card_product: item
+												%}
+											{%- endif -%}
+										</div>
+									{%- endfor -%}
+								</div>
+								{%- if paginate.pages > 1 -%}
+									<div class="js-collection-paginations page-collection-footer">
+										{% capture previous_label %}
+										  <span class="pagination__navigation">
+											<i class="fa fa-long-arrow-left"></i>
+											<span class="sr-only">{{ 'general.pagination.previous' | t }}</span>
+										  </span>
+										{% endcapture %}
+										{% capture next_label %}
+										  <span class="pagination__navigation">
+											<i class="fa fa-long-arrow-right"></i>
+											<span class="sr-only">{{ 'general.pagination.next' | t }}</span>
+										  </span>
+										{% endcapture %}
+										<div class="pagination">
+										  {{ paginate | default_pagination: previous: previous_label, next: next_label }}
+										</div>
+									</div>
+								{%- endif -%}
+							</div>
+						{% endpaginate %}  
+					</div>
+				</div>
+			{%- endif -%}
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+  "name": "Search Page",
+  "tag": "section",
+  "class": "spaced-section",
+  "settings": [
+    {
+		"type": "header",
+		"content": "Product"
+    },
+    {
+		"type": "range",
+		"id": "page_item",
+		"label": "Number of products in a page search",
+		"min": 1,
+		"max": 24,
+		"step": 1,
+		"default": 12
+	}
+  ]
+}
+{% endschema %}

@@ -1,0 +1,180 @@
+{%- if section.settings.show_information or section.settings.footer_link_list != blank or section.settings.footer_link_list_2 != blank or section.settings.footer_link_list_3 != blank -%}
+<div class="footer-top">
+    <div class="container">
+		<div class="footer-center__inner">
+			<div class="row justify-content-center">
+        {%- assign footer_menu_title = section.settings.footer_link_title -%}
+				{%- assign footer_menu = section.settings.footer_link_list -%}
+				{%- if footer_menu != blank -%}
+          <div class="col-lg-3 col-md-6 col-12">
+						{% include 'footer-menu' %}
+					</div>
+				{%- endif -%}
+				{%- assign footer_menu_id = 'footer-block-2' -%}
+				{%- assign footer_menu_title = section.settings.footer_link_title_2 -%}
+				{%- assign footer_menu = section.settings.footer_link_list_2 -%}
+				{%- if footer_menu != blank -%}
+					<div class="col-lg-3 col-md-6 col-12">
+						{% include 'footer-menu' %}
+					</div>
+				{%- endif -%}
+				{%- assign footer_menu_id = 'footer-block-3' -%}
+				{%- assign footer_menu_title = section.settings.footer_link_title_3 -%}
+				{%- assign footer_menu = section.settings.footer_link_list_3 -%}
+				{%- if footer_menu != blank -%}
+					<div class="col-lg-3 col-md-6 col-12">
+						{% include 'footer-menu' %}
+					</div>
+				{%- endif -%}
+				{%- assign footer_menu_id = 'footer-block-4' -%}
+				{%- if section.settings.show_information -%}
+					<div class="col-lg-3 col-md-6 col-12">
+						{% include 'footer-html' %}
+					</div>
+				{%- endif -%}
+			</div>
+		</div>
+    </div>
+</div>
+{%- endif -%}
+<div class="footer-bottom">
+	<div class="container">
+		<div class="footer-bottom__inner">
+			{%- if section.settings.show_copyright -%}
+				{%- if section.settings.show_copyright != blank -%}
+				  <div class="footer-copyright">{{ section.settings.copyright }}</div>
+				{%- endif -%}
+			{%- else -%}
+				<div class="footer-copyright">&copy; {{ 'now' | date: '%Y' }} {{ shop.name | link_to: routes.root_url }}. {{ powered_by_link }}</div>
+			{%- endif -%}
+      {%- assign payment_image = section.settings.payment_image -%}
+      {%- if payment_image -%}
+        <div class="payment-image">
+          <img class="payment-image__img img-fluid" src="{{ payment_image | img_url: 'master' }}" alt="{{ payment_image.alt | escape }}"/>
+        </div>
+      {%- endif -%}
+		</div>
+	</div>
+</div>
+{% include 'view-gallery' %}
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Information"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_information",
+      "label": "Show information",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "information_title",
+      "label": "CONTACT US",
+      "default": "Contact information"
+    },
+    {
+      "type": "html",
+      "id": "information_code",
+      "label": "HTML",
+      "default": "<div><h2>Use HTML to format your text so it can be easily read.</h2>This text can be used to share information about your brand with customers.</div>"
+    },
+	  {
+      "type": "checkbox",
+      "id": "show_social",
+      "label": "Show Social",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_newsletter",
+      "label": "Show Newsletter",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Payment methods"
+    },
+    {
+      "type": "image_picker",
+      "id": "payment_image",
+      "label": "Payment image"
+    },
+    {
+      "type": "header",
+      "content": "Menu"
+    },
+    {
+      "type": "text",
+      "id": "footer_link_title",
+      "label": "Heading",
+      "default": "CUSTOMER SERVICES"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_link_list",
+      "label": "Footer menu",
+      "default": "footer"
+    },
+    {
+      "type": "header",
+      "content": "Menu"
+    },
+    {
+      "type": "text",
+      "id": "footer_link_title_2",
+      "label": "Heading",
+      "default": "ABOUT US"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_link_list_2",
+      "label": "Footer menu",
+      "default": "footer"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "Image URL",
+      "default": "/"
+    },
+	  {
+      "type": "text",
+      "id": "footer_link_title_3",
+      "label": "Heading",
+      "default": "CATALOG"
+    },
+    {
+      "type": "link_list",
+      "id": "footer_link_list_3",
+      "label": "Footer menu",
+      "default": "footer"
+    },
+    {
+      "type": "header",
+      "content": "Copyright"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_copyright",
+      "label": "Show custom text",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "copyright",
+      "label": "Text",
+      "default": "Copyright &copy; 2020 Wpbingo. All Rights Reserved"
+    }
+  ]
+}
+{% endschema %}

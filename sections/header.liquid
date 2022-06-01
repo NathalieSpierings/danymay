@@ -1,0 +1,593 @@
+{%- style -%}
+	{%- assign padding = section.settings.padding -%}
+	{%- assign logo_max_width = section.settings.logo_max_width -%}
+	{%- assign headertop_color = section.settings.color_headertop_text -%}
+	{%- assign headertop_bg = section.settings.color_headertop_bg -%}
+	{%- assign headerbottom_bg = section.settings.color_headerbottom_bg -%}
+	{% assign header_type = section.settings.select_header %}
+	{% assign padding_headerbottom = section.settings.padding-headerbottom %}
+	{% assign margin_headerbottom = section.settings.margin-headerbottom %}	
+	.header-top {color: {{ headertop_color }};background-color: {{ headertop_bg }};}
+	.header-top a {color: {{ headertop_color }};}
+	{% if padding != blank %}.header-desktop {padding: {{ padding }};}{% endif %}
+	.header-logo img {max-width: {{ logo_max_width | append: 'px' }};}
+	{% if section.settings.header_absolute %}
+		@media (min-width:991px){
+			body.template-index .bwp-header .header-desktop{position:absolute;width:100%;z-index: 2;}
+			{% if section.settings.color_homepage_text %}
+				body.template-index .bwp-header .header-desktop .main-menu__nav-item>a{
+					color:{{ section.settings.color_homepage_text }}
+				}
+				body.template-index .bwp-header .header-desktop .search-toggle{
+					color:{{ section.settings.color_homepage_text }}
+				}
+				body.template-index .bwp-header .header-desktop .header-account__title{
+					color:{{ section.settings.color_homepage_text }}
+				}
+				body.template-index .bwp-header .header-desktop  .header-cart__link{
+					color:{{ section.settings.color_homepage_text }}
+				}
+			{% endif %}
+		}
+	{% endif %}
+	.bwp-header .header-bottom{
+		padding: {{ padding_headerbottom }};
+		margin: {{ margin_headerbottom }};
+		{% if headerbottom_bg != blank %}
+		background-color: {{ headerbottom_bg }};
+		{% endif %}
+	}
+{%- endstyle -%}
+
+<div data-section-id="{{ section.id }}" data-section-type="header-section" class="bwp-header {{ header_type }}" data-sticky_header="{{ section.settings.header_sticky }}">
+	{%- if section.settings.header_sticky != blank -%}
+		{% include 'header-sticky' %}
+	{%- endif -%}
+	{%- if header_type == 'header-1' -%}
+		{% include 'header-1' %}
+	{%- endif -%}
+	{%- if header_type == 'header-2' -%}
+		{% include 'header-2' %}
+	{%- endif -%}
+	{%- if header_type == 'header-3' -%}
+		{% include 'header-3' %}
+	{%- endif -%}
+	{% include 'header-mobile' %}
+</div>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+		"type": "header",
+		"content": "Layout Settings"
+    },
+    {
+		"type": "text",
+		"id": "padding",
+		"label": "Padding",
+		"placeholder": "60px 0px 60px 0px",
+		"default": "60px 0"
+    },
+	{
+		"type": "select",
+		"id": "select_header",
+		"label": "Select Header",
+		"options": [
+			{
+				"value": "header-1",
+				"label": "Header 1"
+			},
+			{
+				"value": "header-2",
+				"label": "Header 2"
+			},
+			{
+				"value": "header-3",
+				"label": "Header 3"
+			}
+		],
+		"default": "header-1"
+	},
+	{
+		"type": "text",
+		"id": "padding-headerbottom",
+		"label": "Padding Header Bottom",
+		"placeholder": "17px 0px 17px 0px",
+		"default": "17px 0",
+		"info": "Only use for Header 3"
+    },
+	{
+		"type": "text",
+		"id": "margin-headerbottom",
+		"label": "Margin Header Bottom",
+		"placeholder": "17px 0px 17px 0px",
+		"default": "17px 0",
+		"info": "Only use for Header 3"
+    },
+	{
+      "type": "color",
+      "id": "color_headerbottom_bg",
+      "label": "Background color header bottom",
+      "default": "#1b1b1b"
+    },
+	{
+      "type": "checkbox",
+      "id": "header_sticky",
+      "label": "Header Sticky"
+    },
+	{
+      "type": "checkbox",
+      "id": "header_absolute",
+      "label": "Header absolute",
+	  "info": "Only use for homepage"
+    },
+	{
+      "type": "color",
+      "id": "color_homepage_text",
+      "label": "Header color",
+      "default": "#fff",
+	  "info": "Only use for Header absolute"
+    },
+    {
+      "type": "header",
+      "content": "Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_homepage",
+      "label": "Logo Homepage",
+	  "info":"use if you want to enter a different logo for homepage"
+    },
+    {
+      "type": "range",
+      "id": "logo_max_width",
+      "label": "Custom logo width",
+      "min": 50,
+      "max": 260,
+      "step": 5,
+      "unit": "px",
+      "default": 135
+    },
+    {
+      "type": "header",
+      "content": "Header Top"
+    },
+    {
+      "type": "checkbox",
+      "id": "headertop_enable",
+      "label": "Show header top",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "color_headertop_text",
+      "label": "Text color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "color_headertop_bg",
+      "label": "Background color",
+      "default": "#1b1b1b"
+    },
+    {
+      "type": "textarea",
+      "id": "headertop_text",
+      "label": "Text",
+      "default": "Header top text"
+    },
+    {
+      "type": "textarea",
+      "id": "headertop_text2",
+      "label": "Text",
+      "default": "Header top text"
+    },
+    {
+      "type": "link_list",
+      "id": "headertop_link_list",
+      "label": "Header top menu",
+      "default": "footer"
+    },
+    {
+      "type": "header",
+      "content": "Currency Selector",
+      "info": "To add a currency, go to your [currency settings.](/admin/settings/payments)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_currency_selector",
+      "label": "Show currency selector",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Language Selector",
+      "info": "To add a language, go to your [language settings.](/admin/settings/languages)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_locale_selector",
+      "label": "Show language selector",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_header_search",
+      "label": "Show search box",
+      "default": true
+    },
+	{
+      "type": "checkbox",
+      "id": "show_header_wishlist",
+      "label": "Show wishlist",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Header User"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_header_user",
+      "label": "Show header user",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "header_user_title",
+      "label": "Heading",
+      "default": "Account"
+    },
+    {
+      "type": "link_list",
+      "id": "header_user_link_list",
+      "label": "Menu"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_header_cart",
+      "label": "Show header cart",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Main menu"
+    },
+    {
+      "type": "checkbox",
+      "id": "menu_enable",
+      "label": "Show main menu",
+      "default": true
+    },
+    {
+      "type": "link_list",
+      "id": "menu_link_list",
+      "label": "Menu",
+      "default": "main-menu"
+    },
+	{
+      "type": "link_list",
+      "id": "menu_link_list2",
+      "label": "Menu 2",
+      "default": "main-menu",
+	  "info": "Only use when you select header 2"
+    },
+	{
+      "type": "link_list",
+      "id": "menu_link_mobile",
+      "label": "Menu Mobile",
+      "default": "main-menu",
+	  "info": "Only use for mobile"
+    },
+    {
+      "type": "text",
+      "id": "menu_title",
+      "label": "Menu heading",
+      "placeholder": "Heading",
+      "default": "Main Menu"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu",
+      "name": "Megamenu Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Menu item name",
+          "info": "Menu item of main-menu. Menu item has dropdown megamenu."
+        },
+        {
+          "type": "header",
+          "content": "1. Block Menu 1"
+        },
+        {
+          "type": "checkbox",
+          "id": "menu1",
+          "label": "Enable"
+        },
+        {
+          "type": "select",
+          "id": "menu_col_1",
+          "label": "Block width",
+          "options": [
+            {
+              "value": "20",
+              "label": "20%"
+            },
+            {
+              "value": "25",
+              "label": "25%"
+            },
+            {
+              "value": "33",
+              "label": "33%"
+            },
+            {
+              "value": "50",
+              "label": "50%"
+            },
+            {
+              "value": "66",
+              "label": "66%"
+            },
+            {
+              "value": "75",
+              "label": "75%"
+            },
+            {
+              "value": "80",
+              "label": "80%"
+            },
+            {
+              "value": "100",
+              "label": "100%"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "menu_heading_1",
+          "label": "Heading"
+        },
+        {
+		  "type": "link_list",
+		  "id": "menu_link_list_1",
+		  "label": "Menu"
+		},
+		{
+          "type": "header",
+          "content": "2. Block Menu 2"
+        },
+        {
+          "type": "checkbox",
+          "id": "menu2",
+          "label": "Enable"
+        },
+        {
+          "type": "select",
+          "id": "menu_col_2",
+          "label": "Block width",
+          "options": [
+            {
+              "value": "20",
+              "label": "20%"
+            },
+            {
+              "value": "25",
+              "label": "25%"
+            },
+            {
+              "value": "33",
+              "label": "33%"
+            },
+            {
+              "value": "50",
+              "label": "50%"
+            },
+            {
+              "value": "66",
+              "label": "66%"
+            },
+            {
+              "value": "75",
+              "label": "75%"
+            },
+            {
+              "value": "80",
+              "label": "80%"
+            },
+            {
+              "value": "100",
+              "label": "100%"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "menu_heading_2",
+          "label": "Heading"
+        },
+        {
+		  "type": "link_list",
+		  "id": "menu_link_list_2",
+		  "label": "Menu"
+		},
+		{
+          "type": "header",
+          "content": "3. Block Menu 3"
+        },
+        {
+          "type": "checkbox",
+          "id": "menu3",
+          "label": "Enable"
+        },
+        {
+          "type": "select",
+          "id": "menu_col_3",
+          "label": "Block width",
+          "options": [
+            {
+              "value": "20",
+              "label": "20%"
+            },
+            {
+              "value": "25",
+              "label": "25%"
+            },
+            {
+              "value": "33",
+              "label": "33%"
+            },
+            {
+              "value": "50",
+              "label": "50%"
+            },
+            {
+              "value": "66",
+              "label": "66%"
+            },
+            {
+              "value": "75",
+              "label": "75%"
+            },
+            {
+              "value": "80",
+              "label": "80%"
+            },
+            {
+              "value": "100",
+              "label": "100%"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "menu_heading_3",
+          "label": "Heading"
+        },
+        {
+		  "type": "link_list",
+		  "id": "menu_link_list_3",
+		  "label": "Menu"
+		},
+        {
+          "type": "header",
+          "content": "4. Block banner"
+        },
+		{
+          "type": "checkbox",
+          "id": "widget",
+          "label": "Enable"
+        },
+        {
+		  "type": "radio",
+		  "id": "banner",
+		  "label": "Widget",
+		  "options": [
+			{
+			  "value": "image",
+			  "label": "Banner"
+			},
+			{
+			  "value": "blog",
+			  "label": "Blog"
+			},
+			{
+			  "value": "product",
+			  "label": "Product"
+			}
+		  ],
+		  "default": "image"
+		},
+        {
+          "type": "select",
+          "id": "banner_col",
+          "label": "Block width",
+          "options": [
+            {
+              "value": "20",
+              "label": "20%"
+            },
+            {
+              "value": "25",
+              "label": "25%"
+            },
+            {
+              "value": "33",
+              "label": "33%"
+            },
+			{
+              "value": "40",
+              "label": "40%"
+            },
+            {
+              "value": "50",
+              "label": "50%"
+            },
+            {
+              "value": "66",
+              "label": "66%"
+            },
+            {
+              "value": "75",
+              "label": "75%"
+            },
+            {
+              "value": "80",
+              "label": "80%"
+            },
+            {
+              "value": "100",
+              "label": "100%"
+            }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Banner image"
+        },
+		{
+          "type": "text",
+          "id": "banner_title",
+          "label": "Banner Title"
+        },
+		{
+          "type": "text",
+          "id": "banner_subtitle",
+          "label": "Banner Sub Title"
+        },
+		{
+          "type": "text",
+          "id": "banner_button",
+          "label": "Banner Button"
+        },
+		{
+          "type": "url",
+          "id": "banner_link",
+          "label": "Banner URL"
+        },
+		{
+		  "type": "collection",
+		  "id": "collection_widget",
+		  "label": "Collection"
+		},
+		{
+		  "type": "blog",
+		  "id": "blog_widget",
+		  "label": "Blog"
+		}
+      ]
+    }
+  ]
+}
+{% endschema %}

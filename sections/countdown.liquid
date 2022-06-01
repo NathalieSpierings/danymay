@@ -1,0 +1,101 @@
+{%- assign padding = section.settings.padding -%}
+{%- assign translate = section.settings.translate_y -%}
+{%- assign color_text = section.settings.color_text -%}
+{%- assign color_bg = section.settings.color_bg -%}
+{%- assign image_bg = section.settings.image_bg -%}
+{%- assign heading = section.settings.title | escape -%}
+{%- assign final_date = section.settings.final_date | escape -%}
+{%- style -%}
+  #shopify-section-{{ section.id }} {position: relative;z-index: -1;margin-bottom: -{{ translate | append: 'px' }};transform: translateY(-{{ translate | append: 'px' }});}
+  .wpbingo-section--{{ section.id }} { {% if padding != blank %}padding: {{ padding }};{% endif %}color: {{ color_text }};background-color: {{ color_bg }};}
+  .wpbingo-section--{{ section.id }} .wpbingo-title__heading {color: {{ color_text }};}
+  .wpbingo-section--{{ section.id }} .wpbingo-title--bg-img::after { {% if image_bg %}background-color: transparent;{% else %}background-color: {{ color_bg }};{% endif %}}
+{%- endstyle -%}
+<section class="wpbingo-section wpbingo-section--countdown wpbingo-section--{{ section.id }} overflow-hidden"
+  {% unless image_bg == blank %}
+    style="background-image: url('{{ image_bg | img_url: '300x' }});"
+  {% endunless %}
+  data-bgset="{% include 'bgset', image: image_bg %}"
+  data-sizes="auto"
+  data-parent-fit="cover">
+  <div class="container">
+    <div class="wpbingo-section__inner">
+      {%- if heading != blank -%}
+        <div class="wpbingo-title{% if settings.show_title_bg %} wpbingo-title--bg-img{% endif %}">
+          <h3 class="wpbingo-title__heading">{{ heading }}</h3>
+        </div>
+      {%- endif -%}
+      <div class="countdown" data-countdown="{{ final_date }}"></div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Countdown",
+  "class": "wpbingo-framework",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout settings"
+    },
+    {
+      "type": "text",
+      "id": "padding",
+      "label": "Padding",
+      "placeholder": "0px 0px 0px 0px",
+      "info": "Default: 0px 0px 0px 0px",
+      "default": "403px 0 98px"
+    },
+    {
+      "type": "range",
+      "id": "translate_y",
+      "min": 0,
+      "max": 390,
+      "step": 30,
+      "label": "Translate top",
+      "unit": "px",
+      "default": 360
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "label": "Text color",
+      "default": "#fff"
+    },
+    {
+      "type": "color",
+      "id": "color_bg",
+      "label": "Background color",
+      "default": "#333"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_bg",
+      "label": "Background image"
+    },
+    {
+      "type": "header",
+      "content": "General Settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Countdown"
+    },
+    {
+      "type": "text",
+      "id": "final_date",
+      "label": "Final date",
+      "info": "Format: yyyy/MM/dd hh:mm:ss",
+      "default": "2021/01/01 00:00:00"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Countdown",
+      "category": "6. Text"
+    }
+  ]
+}
+{% endschema %}

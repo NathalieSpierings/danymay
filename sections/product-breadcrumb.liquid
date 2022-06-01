@@ -1,0 +1,121 @@
+{%- if section.settings.enable -%}
+  {%- assign is_bg_image = section.settings.bgimage -%}
+  {%- if is_bg_image != blank -%}
+    {%- assign class_name = 'wpbingo-breadcrumbs--image' -%}
+  {%- else -%}
+    {%- assign class_name = 'wpbingo-breadcrumbs--no-image' -%}
+  {%- endif -%}
+  <section class="wpbingo-breadcrumbs {{ class_name }}">
+    {%- if is_bg_image -%}
+      {%- assign bg_image = section.settings.image -%}
+      {%- if section.blocks.size > 0 -%}
+        {%- for block in section.blocks -%}
+          {%- if block.settings.product == product.handle -%}
+            {%- assign bg_image = block.settings.bgimage -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+      <div class="wpbingo-breadcrumbs__image"
+        style="background-image: url('{{ bg_image | img_url: '300x300' }});"
+        data-bgset="{% include 'bgset', image: bg_image %}"
+        data-sizes="auto"
+        data-parent-fit="cover">
+      </div>
+    {%- endif -%}
+    <div class="container">
+      <div class="wpbingo-breadcrumbs__inner">
+        <ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+          <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a class="breadcrumb__link" href="/" title="{{ 'general.breadcrumbs.home_link_title' | t }}" itemprop="item">
+              <span itemprop="name">{{ 'general.breadcrumbs.home_link_title' | t }}</span>
+            </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          {%- if collection -%}
+            {%- if collection.handle -%}
+              {%- capture url -%}/collections/{{ collection.handle }}{%- endcapture -%}
+              <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                <a class="breadcrumb__link" href="{{ url }}" title="{{ collection.title }}" itemprop="item">
+                  <span itemprop="name">{{ collection.title }}</span>
+                </a>
+                <meta itemprop="position" content="2" />
+              </li>
+            {%- endif -%}
+          {%- else -%}
+            {%- assign collection = product.collections | first -%}
+            <li class="breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+              <a class="breadcrumb__link" href="{{ collection.url }}" title="{{ collection.title }}" itemprop="item">
+                <span itemprop="name">{{ collection.title }}</span>
+              </a>
+              <meta itemprop="position" content="2" />
+            </li>
+          {%- endif -%}
+          <li class="breadcrumb__item active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <span class="breadcrumb__text"><span itemprop="name">{{ product.title }}</span></span>
+            {%- if collection -%}
+              {% if collection.handle %}
+                <meta itemprop="position" content="3" />
+              {% endif %}
+            {%- else -%}
+              <meta itemprop="position" content="2" />
+            {%- endif -%}
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+{%- endif -%}
+{% schema %}
+  {
+    "name": "Wpbingo breadcrumb",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Settings"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "bgimage",
+        "label": "Use background image"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Background image",
+        "info": "Default size: 1920x480 pixels"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "item",
+        "name": "Background image",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "placeholder": "Title"
+          },
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Product"
+          },
+          {
+            "type": "image_picker",
+            "id": "bgimage",
+            "label": "Background image",
+            "info": "Image will be used in this product page"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

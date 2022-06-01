@@ -1,0 +1,545 @@
+{%- if section.settings.fullwidth -%}
+	{%- assign container = 'container-full' -%}
+{%- elsif section.settings.max_width != blank -%}
+	{%- assign container = 'bwp-container' -%}
+{%- else -%}
+	{%- assign container = 'container' -%}
+{%- endif -%}
+
+{%- assign max_width = '' -%}
+{%- if section.settings.fullwidth == blank and section.settings.max_width != blank -%}
+	{%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
+{%- endif -%}
+
+{%- assign bg_setting = '' -%}
+{%- if section.settings.bg_image != blank -%}
+	{%- capture bg_setting -%}
+		background-position:{{ section.settings.bg_position }};background-size:{{ section.settings.bg_size }};
+		{%- if section.settings.bg_fixed != blank -%}
+			background-attachment: fixed;
+		{%- endif -%}
+	{%- endcapture -%}
+{%- endif -%}
+
+{%- assign bg_full = '' -%}
+{%- if section.settings.bg_image != blank and section.settings.bg_width == 'full' -%}
+	{%- capture bg_full -%}
+		style="background-image: url('{{ section.settings.bg_image | img_url: ''}}');{{ bg_setting }}"
+	{%- endcapture -%}
+{%- endif -%}
+
+{%- assign bg_content = '' -%}
+{%- if section.settings.bg_image != blank and section.settings.bg_width == 'content' -%}
+	{%- capture bg_content -%}
+		style="background-image: url('{{ section.settings.bg_image | img_url: ''}}');{{ bg_setting }}"
+	{%- endcapture -%}
+{%- endif -%}
+
+{%- assign effect = section.settings.effect -%}
+{% assign margin 	= section.settings.margin | split: "|" %}
+{% assign padding 	= section.settings.padding | split: "|" %}
+{%- assign title 	= section.settings.title | escape -%}
+{%- assign title_color 	= section.settings.title_color | escape -%}
+{%- assign sub_title 	= section.settings.sub_title | escape -%}
+{%- assign sub_title_color 	= section.settings.sub_title_color | escape -%}
+
+{%- style -%}
+	{%- if margin[0] != blank or padding[0] != blank -%}
+		#shopify-section-{{ section.id }} .bwp-widget-banner{
+			{%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
+			{%- if padding[0] != blank -%}padding:{{ padding[0] }};{%- endif -%}
+		}
+	{%- endif -%}
+	{%- if section.blocks.size > 0 -%}
+		{% for block in section.blocks %}
+			{% assign width_image 		= block.settings.width_image | split: "|" %}
+			{% assign padding_image 	= block.settings.padding_image | split: "|" %}
+			{% assign padding_content 	= block.settings.padding_content | split: "|" %}
+			#shopify-section-{{ section.id }} .bwp-widget-banner .col-banner.banner-{{ forloop.index }}{
+				max-width: {{ width_image[0] }};flex:0 0 {{ width_image[0] }};
+				{%- if padding_image[0] != blank -%}padding:{{ padding_image[0] }};{%- endif -%}
+			}
+			#shopify-section-{{ section.id }} .bwp-widget-banner .col-banner.banner-{{ forloop.index }} .banner-wrapper-infor{
+				{%- if padding_content[0] != blank -%}
+					padding: {{ padding_content[0] }};
+				{%- endif -%}
+				{%- if block.settings.vertical_position == 'middle' -%}
+					top: 50%;transform: translateY(-50%);
+				{%- elsif block.settings.vertical_position == 'top' -%}
+					top: 0;
+				{%- elsif block.settings.vertical_position == 'bottom' -%}
+					bottom: 0;
+				{%- endif -%}
+				justify-content: {{ block.settings.horizontal_position }};text-align: {{ block.settings.text_align }};
+			}
+		{% endfor %}
+	{%- endif -%}
+	@media (max-width:1200px){
+		{%- if margin[1] != blank or padding[1] != blank -%}
+			#shopify-section-{{ section.id }} .bwp-widget-banner{
+				{%- if margin[1] != blank -%}margin: {{ margin[1] }};{%- endif -%}
+				{%- if padding[1] != blank -%}padding:{{ padding[1] }};{%- endif -%}
+			}
+		{%- endif -%}
+		{%- if section.blocks.size > 0 -%}
+			{%- for block in section.blocks -%}
+				{%- assign width_image 		= block.settings.width_image | split: "|" -%}
+				{% assign padding_content 	= block.settings.padding_content | split: "|" %}
+				{% assign padding_image 	= block.settings.padding_image | split: "|" %}
+				{%- if width_image[1] != blank or padding_image[1] != blank -%}
+					#shopify-section-{{ section.id }} .bwp-widget-banner .col-banner.banner-{{ forloop.index }}{
+						{%- if width_image[1] != blank -%}max-width: {{ width_image[1] }};flex:0 0 {{ width_image[1] }};{%- endif -%}
+						{%- if padding_image[1] != blank -%}padding:{{ padding_image[1] }};{%- endif -%}
+					}
+				{%- endif -%}
+				{%- if padding_content[1] != blank -%}
+					#shopify-section-{{ section.id }} .bwp-widget-banner .col-banner.banner-{{ forloop.index }} .banner-wrapper-infor{
+						padding:{{ padding_content[1] }};
+					}
+				{%- endif -%}
+			{%- endfor -%}
+		{%- endif -%}
+	}
+	@media (max-width:991px){
+		{%- if margin[2] != blank or padding[2] != blank -%}
+			#shopify-section-{{ section.id }} .bwp-widget-banner{
+				{%- if margin[2] != blank -%}margin: {{ margin[2] }};{%- endif -%}
+				{%- if padding[2] != blank -%}padding:{{ padding[2] }};{%- endif -%}
+			}
+		{%- endif -%}
+		{%- if section.blocks.size > 0 -%}
+			{%- for block in section.blocks -%}
+				{%- assign width_image 		= block.settings.width_image | split: "|" -%}
+				{% assign padding_content 	= block.settings.padding_content | split: "|" %}
+				{% assign padding_image 	= block.settings.padding_image | split: "|" %}
+				{%- if width_image[2] != blank or  padding_image[2] != blank -%}
+					#shopify-section-{{ section.id }} .bwp-widget-banner .col-banner.banner-{{ forloop.index }}{
+						{%- if width_image[2] != blank -%}max-width: {{ width_image[2] }};flex:0 0 {{ width_image[2] }};{%- endif -%}
+						{%- if padding_image[2] != blank -%}padding:{{ padding_image[2] }};{%- endif -%}
+					}
+				{%- endif -%}
+				{%- if padding_content[2] != blank -%}
+					#shopify-section-{{ section.id }} .bwp-widget-banner .col-banner.banner-{{ forloop.index }} .banner-wrapper-infor{
+						padding: {{ padding_content[2] }};
+					}
+				{%- endif -%}
+			{%- endfor -%}
+		{%- endif -%}
+	}
+	@media (max-width:767px){
+		{%- if margin[3] != blank or padding[3] != blank -%}
+			#shopify-section-{{ section.id }} .bwp-widget-banner{
+				{%- if margin[3] != blank -%}margin: {{ margin[3] }};{%- endif -%}
+				{%- if padding[3] != blank -%}padding:{{ padding[3] }};{%- endif -%}
+			}
+		{%- endif -%}
+		{%- if section.blocks.size > 0 -%}
+			{%- for block in section.blocks -%}
+				{%- assign width_image 		= block.settings.width_image | split: "|" -%}
+				{% assign padding_content 	= block.settings.padding_content | split: "|" %}
+				{% assign padding_image 	= block.settings.padding_image | split: "|" %}
+				{%- if width_image[3] != blank or padding_image[3] != blank -%}
+					#shopify-section-{{ section.id }} .bwp-widget-banner .col-banner.banner-{{ forloop.index }}{
+						{%- if width_image[3] != blank -%}max-width: {{ width_image[3] }};flex:0 0 {{ width_image[3] }};{%- endif -%}
+						{%- if padding_image[3] != blank -%}padding:{{ padding_image[3] }};{%- endif -%}
+					}
+				{%- endif -%}
+				{%- if padding_content[3] != blank -%}
+					#shopify-section-{{ section.id }} .bwp-widget-banner .col-banner.banner-{{ forloop.index }} .banner-wrapper-infor{
+						padding: {{ padding_content[3] }};
+					}
+				{%- endif -%}
+			{%- endfor -%}
+		{%- endif -%}
+	}
+{%- endstyle -%}
+
+{%- if section.settings.show -%}
+<section class="wpbingo-section bwp-widget-banner wpbingo-section--{{ section.id }} overflow-hidden {{ section.settings.layout }}" {{ bg_full }}>
+	<div class="{{ container }}" {{ max_width }}>
+		<div class="wpbingo-section__inner" {{ bg_content }}>
+			{%- if title != blank -%}
+				<div class="wpbingo-title">
+					<span class="wpbingo-title__sub-heading" style="color: {{ sub_title_color }};">
+						{{ sub_title }}
+					</span>
+					<h1 class="wpbingo-title__heading" style="color: {{ title_color }};">
+						{{ title }}
+					</h1>
+				</div>
+			{%- endif -%}
+			<div class="wpbingo-section__content">
+				{%- if section.blocks.size > 0 -%}
+					<div class="row--banners">
+						{%- for block in section.blocks -%}
+							{%- assign image 		= block.settings.image -%}
+							{%- assign title 		= block.settings.title -%}
+							{%- assign image_url 	= block.settings.url -%}
+							{%- assign subtitle		= block.settings.sub_title -%}
+							{%- assign description 	= block.settings.description -%}
+							{%- assign button 		= block.settings.button -%}
+							<div class="col-banner banner-{{ forloop.index }}">
+								<div class="featured-banner {{ effect }}">
+									<div class="bwp-image" >
+										<a href="{{ image_url }}">
+											{%- if image -%}
+												<img class="featured-banner__img lazyload" src="{{ image | img_url: 'master' }}" alt="{{ image.alt | escape }}"/>
+											{%- else -%}
+												{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+											{%- endif -%}
+										</a>
+									</div>
+									<div class="banner-wrapper-infor" style="{{ content_custome }}">
+										<div class="info">
+											<div class="content">
+												{%- if subtitle != blank -%}
+													<div class="bwp-image-subtitle" style="color:{{ block.settings.color_sub_title }}">{{ subtitle }}</div>
+												{%- endif -%}
+												{%- if title != blank -%}
+													<h3 class="title-banner" style="color:{{ block.settings.color_title }}">{{ title }}</h3>
+												{%- endif -%}
+												{%- if description != blank -%}
+													<div class="bwp-image-description" style="color:{{ block.settings.color_description }}">{{ description }}</div>
+												{%- endif -%}
+												{%- if button != blank -%}
+													<a class="bwp-button {{ block.settings.style_button }}" href="{{ image_url }}">{{ button }}</a>
+												{%- endif -%}
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						{%- endfor -%}
+					</div>
+				{%- endif -%}
+			</div>
+		</div>
+	</div>
+</section>
+{%- endif -%}
+
+{% schema %}
+{
+	"name": "Wpbingo Banner",
+	"class": "wpbingo-framework",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Layout settings"
+		},
+		{
+			"type": "checkbox",
+			"id": "show",
+			"label": "Show Banner",
+			"default": true
+		},
+		{
+		"type": "image_picker",
+		"id": "bg_image",
+		"label": "Background Image"
+		},
+		{
+			"type": "checkbox",
+			"id": "bg_fixed",
+			"label": "Background Fixed"
+		},
+		{
+			"type": "text",
+			"id": "bg_position",
+			"label": "Background position",
+			"default": "center"
+		},
+		{
+			"type": "text",
+			"id": "bg_size",
+			"label": "Background size",
+			"default": "cover"
+		},
+		{
+			"type": "select",
+			"id": "bg_width",
+			"label": "Background Width",
+			"options": [
+				{
+					"value": "full",
+					"label": "Full"
+				},
+				{
+					"value": "content",
+					"label": "Content"
+				}
+			],
+			"default": "full"
+		},
+		{
+			"type": "text",
+			"id": "max_width",
+			"label": "Width container",
+			"info": "Default: 1440px"
+		},
+		{
+			"type": "checkbox",
+			"id": "fullwidth",
+			"label": "Fullwidth"
+		},
+		{
+			"type": "text",
+			"id": "padding",
+			"label": "Padding",
+			"placeholder": "0px 0px 0px 0px",
+			"info":"Screen: desktop | 1200px | 991px | 767px"
+		},
+		{
+			"type": "text",
+			"id": "margin",
+			"label": "Margin",
+			"placeholder": "0px 0px 0px 0px",
+			"info":"Screen: desktop | 1200px | 991px | 767px"
+		},
+		{
+		"type": "text",
+		"id": "title",
+		"label": "Title",
+		"default": "Top Categories"
+		},
+		{
+			"type": "color",
+			"id": "title_color",
+			"label": "Title color",
+			"default": "#000"
+		},
+		{
+			"type": "text",
+			"id": "sub_title",
+			"label": "Sub Title",
+			"default": "Top Categories"
+		},
+		{
+			"type": "color",
+			"id": "sub_title_color",
+			"label": "Sub Title color",
+			"default": "#000"
+		},
+		{
+			"type": "header",
+			"content": "General Settings"
+		},
+		{
+			"type": "select",
+			"id": "effect",
+			"options": [
+				{
+					"value": "none",
+					"label": "None"
+				},
+				{
+					"value": "effect-one",
+					"label": "Zoom in"
+				},
+				{
+					"value": "effect-two",
+					"label": "Zoom out"
+				},
+				{
+					"value": "effect-three",
+					"label": "Shine"
+				},
+				{
+					"value": "effect-four",
+					"label": "White outline"
+				}
+			],
+			"label": "Effect",
+			"default": "none"
+		},
+		{
+			"type": "select",
+			"id": "layout",
+			"options": [
+				{
+					"value": "layout-1",
+					"label": "Layout 1"
+				},
+				{
+					"value": "layout-2",
+					"label": "Layout 2"
+				}
+			],
+			"label": "Layout",
+			"default": "layout-1"
+		}
+	],
+	"blocks": [
+		{
+			"type": "image",
+			"name": "Image",
+			"settings": [
+				{
+					"type": "url",
+					"id": "url",
+					"label": "Image URL",
+					"default": "/"
+				},
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Image"
+				},
+				{
+					"type": "text",
+					"id": "sub_title",
+					"label": "Sub Title"
+				},
+				{
+					"type": "color",
+					"id": "color_sub_title",
+					"label": "Color Sub Title",
+					"default": "#000000"
+				},
+				{
+					"type": "text",
+					"id": "title",
+					"label": "Title"
+				},
+				{
+					"type": "color",
+					"id": "color_title",
+					"label": "Color Title",
+					"default": "#000000"
+				},
+				{
+					"type": "textarea",
+					"id": "description",
+					"label": "Description"
+				},
+				{
+					"type": "color",
+					"id": "color_description",
+					"label": "Color Description",
+					"default": "#000000"
+				},
+				{
+					"type": "text",
+					"id": "button",
+					"label": "button"
+				},
+				{
+					"type": "select",
+					"id": "style_button",
+					"label": "Style Button",
+					"options": [
+						{
+							"value": "style_1",
+							"label": "Style 1"
+						},
+						{
+							"value": "style_2",
+							"label": "Style 2"
+						},
+						{
+							"value": "style_3",
+							"label": "Style 3"
+						}
+					],
+					"default": "style_1"
+				},
+				{
+					"type": "header",
+					"content": "Content settings"
+				},
+				{
+					"type": "select",
+					"id": "vertical_position",
+					"label": "Vertical position",
+					"options": [
+						{
+							"value": "top",
+							"label": "Top"
+						},
+						{
+							"value": "middle",
+							"label": "Middle"
+						},
+						{
+							"value": "bottom",
+							"label": "Bottom"
+						}
+					],
+					"default": "middle"
+				},
+				{
+					"type": "select",
+					"id": "horizontal_position",
+					"label": "Horizontal position",
+					"options": [
+						{
+							"value": "left",
+							"label": "Left"
+						},
+						{
+							"value": "center",
+							"label": "Center"
+						},
+						{
+							"value": "right",
+							"label": "Right"
+						}
+					],
+					"default": "center"
+				},
+				{
+					"type": "select",
+					"id": "text_align",
+					"label": "Text align",
+					"options": [
+						{
+							"value": "left",
+							"label": "Left"
+						},
+						{
+							"value": "center",
+							"label": "Center"
+						},
+						{
+							"value": "right",
+							"label": "Right"
+						}
+					],
+					"default": "center"
+				},
+				{
+					"type": "textarea",
+					"id": "padding_content",
+					"label": "Padding content",
+					"default": "0 15px",
+					"info":"Screen: desktop | 1200px | 991px | 767px"
+				},
+				{
+					"type": "header",
+					"content": "Box settings"
+				},
+				{
+					"type": "text",
+					"id": "padding_image",
+					"label": "Padding item",
+					"default": "0 15px",
+					"info":"Screen: desktop | 1200px | 991px | 767px"
+				},
+				{
+					"type": "text",
+					"id": "width_image",
+					"label": "Width item",
+					"default": "100%",
+					"info":"Screen: desktop | 1200px | 991px | 767px"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Wpbingo Banner",
+			"category": "2. Wpbingo Banner"
+		}
+	]
+}
+{% endschema %}

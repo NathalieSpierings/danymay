@@ -1,0 +1,200 @@
+{%- if section.settings.fullwidth -%}
+	{%- assign container = 'container-full' -%}
+{%- elsif section.settings.max_width != blank -%}
+	{%- assign container = 'bwp-container' -%}
+{%- else -%}
+	{%- assign container = 'container' -%}
+{%- endif -%}
+
+{%- assign max_width = '' -%}
+{%- if section.settings.fullwidth == blank and section.settings.max_width != blank -%}
+	{%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
+{%- endif -%}
+
+{%- assign margin = '' -%}
+{%- if section.settings.margin != blank -%}
+  {%- capture margin -%}margin: {{ section.settings.margin }};{%- endcapture -%}
+{%- endif -%}
+
+{%- assign display_map = false -%}
+{%- assign onboarding = false -%}
+{%- if section.settings.api_key == blank -%}
+  {%- assign onboarding = true -%}
+{%- endif -%}
+{%- if section.settings.api_key != blank -%}
+  {%- assign display_map = true -%}
+{%- endif -%}
+
+{% assign margin 	= section.settings.margin | split: "|" %}
+{% assign padding 	= section.settings.padding | split: "|" %}
+{%- style -%}
+	{%- if margin[0] != blank or padding[0] != blank -%}
+		#shopify-section-{{ section.id }} .wpbingo-section--contact_info{
+			{%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
+			{%- if padding[0] != blank -%}padding:{{ padding[0] }};{%- endif -%}
+		}
+	{%- endif -%}
+	{%- if margin[1] != blank or padding[1] != blank -%}
+		@media (max-width:1200px){
+			#shopify-section-{{ section.id }} .wpbingo-section--contact_info{
+				{%- if margin[1] != blank -%}margin: {{ margin[1] }};{%- endif -%}
+				{%- if padding[1] != blank -%}padding:{{ padding[1] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[2] != blank or padding[2] != blank -%}
+		@media (max-width:991px){
+			#shopify-section-{{ section.id }} .wpbingo-section--contact_info{
+				{%- if margin[2] != blank -%}margin: {{ margin[2] }};{%- endif -%}
+				{%- if padding[2] != blank -%}padding:{{ padding[2] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[3] != blank or padding[3] != blank -%}
+		@media (max-width:767px){
+			#shopify-section-{{ section.id }} .wpbingo-section--contact_info{
+				{%- if margin[3] != blank -%}margin: {{ margin[3] }};{%- endif -%}
+				{%- if padding[3] != blank -%}padding:{{ padding[3] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+{%- endstyle -%}
+
+<section class="wpbingo-section wpbingo-section--contact_info wpbingo-section--{{ section.id }} overflow-hidden">
+	<div class="{{ container }}" {{ max_width }}>
+		<div class="wpbingo-section__inner">
+			<div class="wpbingo-section__content">
+				{%- if section.settings.svg_icon != blank -%}
+					<div class="icon-svg">{{ section.settings.svg_icon }}</div>
+				{%- endif -%}
+				{%- if section.settings.heading != blank -%}
+					<h2 class="heading">{{ section.settings.heading }}</h2>
+				{%- endif -%}
+				<div class="row">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-12">
+						{%- if section.settings.heading_info_1 != blank -%}
+							<div class="title">{{ section.settings.heading_info_1 }}</div>
+						{%- endif -%}
+						{%- if section.settings.content_info_1 != blank -%}
+							<div class="content">{{ section.settings.content_info_1 }}</div>
+						{%- endif -%}
+					</div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-12">
+						{%- if section.settings.heading_info_2 != blank -%}
+							<div class="title">{{ section.settings.heading_info_2 }}</div>
+						{%- endif -%}
+						{%- if section.settings.content_info_2 != blank -%}
+							<div class="content">{{ section.settings.content_info_2 }}</div>
+						{%- endif -%}
+					</div>
+					<div class="col-xl-4 col-lg-4 col-md-4 col-12">
+						{%- if section.settings.heading_info_3 != blank -%}
+							<div class="title">{{ section.settings.heading_info_3 }}</div>
+						{%- endif -%}
+						{%- if section.settings.content_info_3 != blank -%}
+							<div class="content">{{ section.settings.content_info_3 }}</div>
+						{%- endif -%}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% schema %}
+{
+	"name": "Contact Info",
+	"class": "wpbingo-framework",
+	"settings": [
+		{
+			"type": "header",
+			"content": "Layout settings"
+		},
+		{
+			"type": "text",
+			"id": "max_width",
+			"label": "Width container",
+			"info": "Default: 1440px"
+		},
+		{
+			"type": "checkbox",
+			"id": "fullwidth",
+			"label": "Fullwidth"
+		},
+		{
+			"type": "text",
+			"id": "padding",
+			"label": "Padding",
+			"placeholder": "0px 0px 0px 0px",
+			"info":"Screen: desktop | 1200px | 991px | 767px"
+		},
+		{
+			"type": "text",
+			"id": "margin",
+			"label": "Margin",
+			"placeholder": "0px 0px 0px 0px",
+			"info":"Screen: desktop | 1200px | 991px | 767px"
+		},
+		{
+			"type": "header",
+			"content": "General Settings"
+		},
+		{
+			"type": "text",
+			"id": "heading",
+			"label": "Heading",
+			"default": "Need Help?"
+		},
+		{
+			"type": "html",
+			"id": "svg_icon",
+			"label": "SVG Icon"
+		},
+		{
+			"type": "header",
+			"content": "Column 1"
+		},
+		{
+			"type": "text",
+			"id": "heading_info_1",
+			"label": "Heading",
+			"default": "Phone"
+		},
+		{
+			"type": "richtext",
+			"id": "content_info_1",
+			"label": "Content"
+		},
+		{
+			"type": "header",
+			"content": "Column 2"
+		},
+		{
+			"type": "text",
+			"id": "heading_info_2",
+			"label": "Heading",
+			"default": "CUSTOMER SERVICE"
+		},
+		{
+			"type": "richtext",
+			"id": "content_info_2",
+			"label": "Content"
+		},
+		{
+			"type": "header",
+			"content": "Column 3"
+		},
+		{
+			"type": "text",
+			"id": "heading_info_3",
+			"label": "Heading",
+			"default": "RETURNS"
+		},
+		{
+			"type": "richtext",
+			"id": "content_info_3",
+			"label": "Content"
+		}
+	]
+}
+{% endschema %}

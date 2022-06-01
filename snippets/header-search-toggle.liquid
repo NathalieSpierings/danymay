@@ -1,0 +1,51 @@
+<div class="content-search-toggle">
+	<div class="close-search-toggle"></div>
+	<div class="contents-search">
+		<div class="contents-search-top">
+			<div class="header-logo" itemscope itemtype="http://schema.org/Organization">
+				{%- if section.settings.logo -%}
+					<a href="/" itemprop="url" class="header-logo__link">
+						<img class="header-logo__img"
+							src="{{ section.settings.logo | img_url: 'master' }}" 
+							srcset="{{ section.settings.logo | img_url: 'master' }}"
+							alt="{{ section.settings.logo.alt | default: shop.name }}"
+							itemprop="logo">
+					</a>
+				{%- endif -%}
+			</div>
+			<details-modal class="header__search">
+				<div class="search-modal">
+					<div class="modal-overlay"></div>
+					<div class="search-modal__content" tabindex="-1">
+						<predictive-search class="search-modals__form">
+							<form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+								<div class="field">
+									<input type="hidden" name="type" value="product" />
+									<input type="hidden" name="options[prefix]" value="last" />
+									<input class="search__input field__input" name="q" value="" placeholder="{{ 'general.search.submit' | t }}..." aria-haspopup="listbox" aria-autocomplete="list" autocomplete="off" autocapitalize="off" spellcheck="false">
+									<button class="search__button field__button" aria-label="{{ 'general.search.submit' | t }}">{{ 'general.search.submit' | t }}<i class="icon-search"></i></button>
+								</div>
+								<div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+									<div class="predictive-search__loading-state"></div>
+								</div>
+								<span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+							</form>
+						</predictive-search>
+					</div>
+				</div>
+			</details-modal>
+			<div class="header-center__right">
+				{%- if section.settings.show_header_user -%}
+					<a class="login-account" rel="nofollow" href="{{ routes.account_url }}"><i class="icon-user"></i></a>
+				{%- endif -%}
+				{%- if section.settings.show_header_wishlist -%}
+					<a class="wishlist" href="/pages/wishlist"><i class="icon-heart"></i></a>
+				{%- endif -%}
+				{%- if section.settings.show_header_cart -%}
+					{% include 'header-cart' %}
+				{%- endif -%}
+				<div class="close-search-toggle">{{ 'general.search.close_search' | t }}<i class="feather-x"></i></div>
+			</div>
+		</div>
+	</div>
+</div>

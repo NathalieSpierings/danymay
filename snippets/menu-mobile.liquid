@@ -1,0 +1,178 @@
+{%- assign main_menu = section.settings.menu_link_mobile -%}
+<div class="menu-mobile">
+	<div class="menu-mobile__overlay"></div>
+	<div class="menu-mobile__inner">
+		<button class="js-menu-mobile btn menu-mobile__btn" type="button">
+			{{ 'collections.sidebar.close' | t }}<i class="feather-x"></i>
+		</button>
+		<div class="menu-mobile__nav">
+			{%- for menu_link in linklists[main_menu].links -%}
+				{%- for block in section.blocks -%}
+					{%- assign is_mega = false -%}
+					{%- assign menu_item = menu_link.title -%}
+					{%- if block.settings.title contains menu_item -%}
+						{%- assign is_mega = true -%}
+						{%- break -%}
+					{%- endif -%}
+				{%- endfor -%}
+				{%- if is_mega == true -%}
+					<div class="menu-mobile__nav-item">
+						<div class="mm-nav__wrapper">
+							<a href="{{ menu_link.url }}" title="{{ menu_link.title | escape }}">{{ menu_link.title }}</a>
+							<button class="js-mm-nav-item mm-nav__btn" type="button"><i class="feather-chevron-right"></i></button>
+						</div>
+						<div class="mm-nav__links">
+							<div class="mm-nav__links-header">
+								<a class="js-mm-nav-item mm-nav__prev" href="javascript:void(0)">
+									<i class="feather-chevron-left"></i>
+									<span>{{ menu_link.title }}</span>
+								</a>
+								{{  block.settings.menu1 }}
+							</div>
+							<div class="mm-nav__links-wrapper">
+								{%- for block in section.blocks -%}
+									{%- if block.settings.title contains menu_item -%}
+										{%- if block.settings.menu1 -%}
+											<div class="menu-mobile__nav-item megamenu">
+												{%- assign menu_heading_1 = block.settings.menu_heading_1 -%}
+												{%- assign menu_link_list_1 = block.settings.menu_link_list_1 -%}
+												<div class="megamenu-products">
+													{%- if menu_heading_1 != blank -%}
+														<div class="megamenu-products__heading megamenu-heading"><span>{{ menu_heading_1 }}</span></div>
+													{%- endif -%}
+													{%- if menu_link_list_1 != blank -%}
+													<ul class="menu-list">
+														{% for link in linklists[menu_link_list_1].links %}
+															<li class="footer-menu__item">
+																<a class="footer-menu__link" href="{{ link.url }}" title="{{ link.title | escape }}">{{ link.title }}</a>
+															</li>
+														{% endfor %}
+													</ul>
+													{%- endif -%}
+												</div>
+											</div>
+										{%- endif -%}
+										{%- if block.settings.menu2 -%}
+											<div class="menu-mobile__nav-item megamenu">
+												{%- assign menu_heading_2 = block.settings.menu_heading_2 -%}
+												{%- assign menu_link_list_2 = block.settings.menu_link_list_2 -%}
+												<div class="megamenu-products">
+													{%- if menu_heading_2 != blank -%}
+														<div class="megamenu-products__heading megamenu-heading"><span>{{ menu_heading_2 }}</span></div>
+													{%- endif -%}
+													{%- if menu_link_list_2 != blank -%}
+													<ul class="menu-list">
+														{% for link in linklists[menu_link_list_2].links %}
+															<li class="footer-menu__item">
+																<a class="footer-menu__link" href="{{ link.url }}" title="{{ link.title | escape }}">{{ link.title }}</a>
+															</li>
+														{% endfor %}
+													</ul>
+													{%- endif -%}
+												</div>
+											</div>
+										{%- endif -%}
+										{%- if block.settings.menu3 -%}
+											<div class="menu-mobile__nav-item megamenu">
+												{%- assign menu_heading_3 = block.settings.menu_heading_3 -%}
+												{%- assign menu_link_list_3 = block.settings.menu_link_list_3 -%}
+												<div class="megamenu-products">
+													{%- if menu_heading_3 != blank -%}
+														<div class="megamenu-products__heading megamenu-heading"><span>{{ menu_heading_3 }}</span></div>
+													{%- endif -%}
+													{%- if menu_link_list_3 != blank -%}
+													<ul class="menu-list">
+														{% for link in linklists[menu_link_list_3].links %}
+															<li class="footer-menu__item">
+																<a class="footer-menu__link" href="{{ link.url }}" title="{{ link.title | escape }}">{{ link.title }}</a>
+															</li>
+														{% endfor %}
+													</ul>
+													{%- endif -%}
+												</div>
+											</div>
+										{%- endif -%}
+									{%- endif -%}
+								{%- endfor -%}
+							</div>
+						</div>
+					</div>
+				{%- elsif menu_link.links != blank and is_mega == false -%}
+					<div class="menu-mobile__nav-item">
+						<div class="mm-nav__wrapper">
+							<a href="{{ menu_link.url }}" title="{{ menu_link.title | escape }}">{{ menu_link.title }}</a>
+							<button class="js-mm-nav-item mm-nav__btn" type="button"><i class="feather-chevron-right"></i></button>
+						</div>
+						<div class="mm-nav__links">
+							<div class="mm-nav__links-header">
+								<a class="js-mm-nav-item mm-nav__prev" href="javascript:void(0)">
+									<i class="feather-chevron-left"></i>
+									<span>{{ menu_link.title }}</span>
+								</a>
+							</div>
+							<div class="mm-nav__links-wrapper">
+								{%- for menu_link_child in menu_link.links -%}
+									{%- if menu_link_child.links != blank -%}
+										<div class="menu-mobile__nav-item">
+											<div class="mm-nav__wrapper">
+												<a href="{{ menu_link_child.url }}" title="{{ menu_link_child.title | escape }}">{{ menu_link_child.title }}</a>
+												<button class="js-mm-nav-item mm-nav__btn" type="button"><i class="feather-chevron-right"></i></button>
+											</div>
+											<div class="mm-nav__links">
+												<div class="mm-nav__links-header">
+													<a class="js-mm-nav-item mm-nav__prev" href="javascript:void(0)">
+														<i class="feather-chevron-left"></i>
+														<span>{{ menu_link_child.title }}</span>
+													</a>
+												</div>
+												<div class="mm-nav__links-wrapper 1">
+													{%- for menu_link_child1 in menu_link_child.links -%}
+														{%- if menu_link_child1.links != blank -%}
+															<div class="menu-mobile__nav-item">
+																<div class="mm-nav__wrapper">
+																	<a href="{{ menu_link_child1.url }}" title="{{ menu_link_child1.title | escape }}">{{ menu_link_child1.title }}</a>
+																	<button class="js-mm-nav-item mm-nav__btn" type="button"><i class="feather-chevron-right"></i></button>
+																</div>
+																<div class="mm-nav__links">
+																	<div class="mm-nav__links-header">
+																		<a class="js-mm-nav-item mm-nav__prev" href="javascript:void(0)">
+																			<i class="fa fa-long-arrow-left"></i>
+																			<span>{{ menu_link_child1.title }}</span>
+																		</a>
+																	</div>
+																	<div class="mm-nav__links-wrapper 2">
+																		{%- for menu_link_child2 in menu_link_child1.links -%}
+																			<div class="menu-mobile__nav-item">
+																				<a href="{{ menu_link_child2.url }}" title="{{ menu_link_child2.title | escape }}">{{ menu_link_child2.title }}</a>
+																			</div>
+																		{%- endfor -%}
+																	</div>
+																</div>
+															</div>
+														{%- else -%}
+															<div class="menu-mobile__nav-item">
+																<a href="{{ menu_link_child1.url }}" title="{{ menu_link_child1.title | escape }}">{{ menu_link_child1.title }}</a>
+															</div>
+														{%- endif -%}
+													{%- endfor -%}
+												</div>
+											</div>
+										</div>
+									{%- else -%}
+										<div class="menu-mobile__nav-item">
+											<a href="{{ menu_link_child.url }}" title="{{ menu_link_child.title | escape }}">{{ menu_link_child.title }}</a>
+										</div>
+									{%- endif -%}
+								{%- endfor -%}
+							</div>
+						</div>
+					</div>
+				{%- else -%}
+					<div class="menu-mobile__nav-item">
+						<a href="{{ menu_link.url }}" title="{{ menu_link.title | escape }}">{{ menu_link.title }}</a>
+					</div>
+				{%- endif -%}
+			{%- endfor -%}
+		</div>
+	</div>
+</div>

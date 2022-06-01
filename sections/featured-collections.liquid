@@ -1,0 +1,357 @@
+{%- if section.settings.fullwidth -%}
+	{%- assign container = 'container-full' -%}
+{%- elsif section.settings.max_width != blank -%}
+	{%- assign container = 'bwp-container' -%}
+{%- else -%}
+	{%- assign container = 'container' -%}
+{%- endif -%}
+
+{%- assign max_width = '' -%}
+{%- if section.settings.fullwidth == blank and section.settings.max_width != blank -%}
+	{%- capture max_width -%}style="max-width: {{ section.settings.max_width }};"{%- endcapture -%}
+{%- endif -%}
+
+{%- assign bg_setting = '' -%}
+{%- if section.settings.bg_image != blank -%}
+	{%- capture bg_setting -%}
+		background-position:{{ section.settings.bg_position }};background-size:{{ section.settings.bg_size }};
+		{%- if section.settings.bg_fixed != blank -%}
+			background-attachment: fixed;
+		{%- endif -%}
+	{%- endcapture -%}
+{%- endif -%}
+
+{%- assign bg_full = '' -%}
+{%- if section.settings.bg_image != blank and section.settings.bg_width == 'full' -%}
+	{%- capture bg_full -%}
+		style="background-image: url('{{ section.settings.bg_image | img_url: ''}}');{{ bg_setting }}"
+	{%- endcapture -%}
+{%- endif -%}
+
+{%- assign bg_content = '' -%}
+{%- if section.settings.bg_image != blank and section.settings.bg_width == 'content' -%}
+	{%- capture bg_content -%}
+		style="background-image: url('{{ section.settings.bg_image | img_url: ''}}');{{ bg_setting }}"
+	{%- endcapture -%}
+{%- endif -%}
+
+{%- assign title 	= section.settings.title | escape -%}
+{%- assign title_color 	= section.settings.title_color | escape -%}
+{%- assign sub_title 	= section.settings.sub_title | escape -%}
+{%- assign sub_title_color 	= section.settings.sub_title_color | escape -%}
+{%- assign nav 		= section.settings.navigation -%}
+{%- assign infinite = section.settings.infinite -%}
+{%- assign autoplay = section.settings.autoplay -%}
+{%- assign autoplay_speed = section.settings.autoplay_speed | escape -%}
+{%- assign columns 	= section.settings.columns -%}
+{%- assign column1440 = section.settings.column1440 -%}
+{%- assign column1 	= section.settings.column1 -%}
+{%- assign column2 	= section.settings.column2 -%}
+{%- assign column3 	= section.settings.column3 -%}
+{%- assign column4 	= section.settings.column4 -%}
+
+{% assign margin 	= section.settings.margin | split: "|" %}
+{% assign padding 	= section.settings.padding | split: "|" %}
+{%- style -%}
+	{%- if margin[0] != blank or padding[0] != blank -%}
+		#shopify-section-{{ section.id }} .wpbingo-section--collections{
+			{%- if margin[0] != blank -%}margin: {{ margin[0] }};{%- endif -%}
+			{%- if padding[0] != blank -%}padding:{{ padding[0] }};{%- endif -%}
+		}
+	{%- endif -%}
+	{%- if margin[1] != blank or padding[1] != blank -%}
+		@media (max-width:1200px){
+			#shopify-section-{{ section.id }} .wpbingo-section--collections{
+				{%- if margin[1] != blank -%}margin: {{ margin[1] }};{%- endif -%}
+				{%- if padding[1] != blank -%}padding:{{ padding[1] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[2] != blank or padding[2] != blank -%}
+		@media (max-width:991px){
+			#shopify-section-{{ section.id }} .wpbingo-section--collections{
+				{%- if margin[2] != blank -%}margin: {{ margin[2] }};{%- endif -%}
+				{%- if padding[2] != blank -%}padding:{{ padding[2] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+	{%- if margin[3] != blank or padding[3] != blank -%}
+		@media (max-width:767px){
+			#shopify-section-{{ section.id }} .wpbingo-section--collections{
+				{%- if margin[3] != blank -%}margin: {{ margin[3] }};{%- endif -%}
+				{%- if padding[3] != blank -%}padding:{{ padding[3] }};{%- endif -%}
+			}
+		}
+	{%- endif -%}
+{%- endstyle -%}
+
+<section class="wpbingo-section wpbingo-section--collections overflow-hidden" {{ bg_full }} >
+	<div class="{{ container }}" {{ max_width }}>
+		<div class="wpbingo-section__inner" {{ bg_content }} >
+			{%- if title != blank -%}
+				<div class="wpbingo-title">
+					<span class="wpbingo-title__sub-heading" style="color: {{ sub_title_color }};">
+						{{ sub_title }}
+					</span>
+					<h1 class="wpbingo-title__heading" style="color: {{ title_color }};">
+						{{ title }}
+					</h1>
+				</div>
+			{%- endif -%}
+			<div class="wpbingo-section__content bwp_slider-carousel">
+				{%- if section.blocks.size > 0 -%}
+					<div class="js-carousel slick-carousel"  data-nav="{{ nav }}" data-infinite="{{ infinite }}" data-autoplay="{{ autoplay }}"
+						data-autoplayspeed="{{ autoplay_speed }}"
+						data-columns="{{ columns }}"
+						data-column1440="{{ column1440 }}"
+						data-column1="{{ column1 }}"
+						data-column2="{{ column2 }}"
+						data-column3="{{ column3 }}"
+						data-column4="{{ column4 }}">
+						{%- for block in section.blocks -%}
+							{%- assign collection = collections[block.settings.collection] -%}
+							{%- assign collection_handle = collection.handle -%}
+							<div class="slick-carousel__item">
+								{% include 'collection-grid-item' %}
+							</div>
+						{%- endfor -%}
+					</div>
+				{%- else -%}
+					<div class="wpbingo-section__empty">
+						<div class="rte text-center">
+							{{ 'home_page.onboarding.no_content' | t }}
+						</div>
+					</div>
+				{%- endif -%}
+			</div>
+		</div>
+	</div>
+</section>
+{% schema %}
+{
+  "name": "Collection list",
+  "class": "wpbingo-framework",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout settings"
+    },
+	{
+		"type": "image_picker",
+		"id": "bg_image",
+		"label": "Background Image"
+	},
+	{
+		"type": "checkbox",
+		"id": "bg_fixed",
+		"label": "Background Fixed"
+	},
+	{
+		"type": "text",
+		"id": "bg_position",
+		"label": "Background position",
+		"default": "center"
+	},
+	{
+		"type": "text",
+		"id": "bg_size",
+		"label": "Background size",
+		"default": "cover"
+	},
+	{
+		"type": "select",
+		"id": "bg_width",
+		"label": "Background Width",
+		"options": [
+			{
+				"value": "full",
+				"label": "Full"
+			},
+			{
+				"value": "content",
+				"label": "Content"
+			}
+		],
+		"default": "full"
+	},
+    {
+		"type": "text",
+		"id": "max_width",
+		"label": "Width container",
+		"info": "Default: 1440px"
+	},
+	{
+		"type": "checkbox",
+		"id": "fullwidth",
+		"label": "Fullwidth"
+	},
+	{
+		"type": "text",
+		"id": "padding",
+		"label": "Padding",
+		"placeholder": "0px 0px 0px 0px",
+		"info":"Screen: desktop | 1200px | 991px | 767px"
+	},
+	{
+		"type": "text",
+		"id": "margin",
+		"label": "Margin",
+		"placeholder": "0px 0px 0px 0px",
+		"info":"Screen: desktop | 1200px | 991px | 767px"
+	},
+	{
+		"type": "text",
+		"id": "title",
+		"label": "Title",
+		"default": "Top Categories"
+	},
+	{
+		"type": "color",
+		"id": "title_color",
+		"label": "Title color",
+		"default": "#000"
+	},
+	{
+		"type": "text",
+		"id": "sub_title",
+		"label": "Sub Title",
+		"default": "Top Categories"
+	},
+	{
+		"type": "color",
+		"id": "sub_title_color",
+		"label": "Sub Title color",
+		"default": "#000"
+	},
+    {
+      "type": "header",
+      "content": "General Settings"
+    },
+    {
+      "type": "header",
+      "content": "Carousel Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "navigation",
+      "label": "Show navigation",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "infinite",
+      "label": "Infinite loop sliding",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Enable autoplay",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "autoplay_speed",
+      "label": "Autoplay speed",
+      "info": "Autoplay speed in milliseconds. Type: int(ms)",
+      "default": "10000"
+    },
+    {
+		"type": "range",
+		"id": "columns",
+		"min": 1,
+		"max": 5,
+		"step": 1,
+		"label": "Number of Columns >1440px",
+		"default": 4,
+		"info": "Desktops"
+	},
+	{
+		"type": "range",
+		"id": "column1440",
+		"min": 1,
+		"max": 5,
+		"step": 1,
+		"label": "Number of Columns 1200px to 1440px",
+		"default": 4,
+		"info": "Desktops"
+	},
+	{
+		"type": "range",
+		"id": "column1",
+		"min": 1,
+		"max": 5,
+		"step": 1,
+		"label": "Number of Columns on 992px to 1199px",
+		"default": 4,
+		"info": "Desktops"
+	},
+	{
+		"type": "range",
+		"id": "column2",
+		"min": 1,
+		"max": 5,
+		"step": 1,
+		"label": "Number of Columns on 768px to 991px",
+		"default": 3,
+		"info": "Laptop"
+	},
+	{
+		"type": "range",
+		"id": "column3",
+		"min": 1,
+		"max": 5,
+		"step": 1,
+		"label": "Number of Columns on 480px to 767px",
+		"default": 1,
+		"info": "Tablets"
+	},
+	{
+		"type": "range",
+		"id": "column4",
+		"min": 1,
+		"max": 5,
+		"step": 1,
+		"label": "Number of Columns in 480px or less than",
+		"default": 1,
+		"info": "Mobile phone"
+	}
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "id": "collection",
+          "type": "collection",
+          "label": "Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection list",
+      "category": "2. Collection",
+      "blocks": [
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        },
+        {
+          "type": "collection"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

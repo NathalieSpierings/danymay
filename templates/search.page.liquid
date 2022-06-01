@@ -1,0 +1,24 @@
+{% layout none %}
+{%- paginate search.results by 6 -%}
+  {%- if search.performed -%}
+    {%- if search.results_count != 0 -%}
+      <div class="search-results__items">
+        <h2 class="search-results__heading wpbingo-title__heading">{{ 'general.search.page_title' | t }} <span>({{ search.results_count }})</span></h2>
+        <div class="search-results__grid row">
+          {% for item in search.results %}
+            <div class="search-results__item col-12 col-lg-4">
+              {% include 'search-item' %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- if paginate.pages > 1 -%}
+      <div class="search-pagination">
+        {% include 'pagination' %}
+      </div>
+    {%- endif -%}
+  {%- endif -%}
+
+{%- endpaginate -%}

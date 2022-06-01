@@ -1,0 +1,68 @@
+{% paginate blog.articles by section.settings.limit %}
+{%- assign layout_blog = settings.layout_blog -%}
+<div class="article__list">
+	{% for article in blog.articles %}
+		{%- assign index = forloop.index | modulo: 3 -%}
+		{%- if layout_blog =='standar' -%}
+			{% include 'blog-template-standar' %}
+		{%- endif -%}
+		{%- if layout_blog =='list' -%}
+			{% include 'blog-template-list' %}
+		{%- endif -%}
+		{%- if layout_blog =='modern' -%}
+			{%- if index == 1 or index == 2 -%}
+				<div class="content-{%- if index == 1 -%}modern{%- else -%}moderns{%- endif -%}">
+			{%- endif -%}
+				{% include 'blog-template-modern' %}
+			{%- if index == 1 or index == 0 -%}
+				</div>
+			{%- endif -%}
+		{%- endif -%}
+		{%- if layout_blog =='grid' -%}
+			{% include 'blog-template-grid' %}
+		{%- endif -%}
+	{% endfor %}
+</div>
+{% if paginate.pages > 1 %}
+	{% capture previous_label %}
+		<span class="pagination__navigation">
+			<i class="fa fa-long-arrow-left"></i>
+			<span class="sr-only">{{ 'general.pagination.previous' | t }}</span>
+		</span>
+	{% endcapture %}
+	{% capture next_label %}
+		<span class="pagination__navigation">
+			<i class="fa fa-long-arrow-right"></i>
+			<span class="sr-only">{{ 'general.pagination.next' | t }}</span>
+		</span>
+	{% endcapture %}
+	<div class="pagination">
+		{{ paginate | default_pagination: previous: previous_label, next: next_label }}
+	</div>
+{% endif %}
+{% endpaginate %}
+{% schema %}
+{
+  "name": "Blog pages",
+  "settings": [
+    {
+      "type": "range",
+      "id": "limit",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "label": "Number of posts in a page",
+      "default": 5
+    },
+	{
+      "type": "range",
+      "id": "limit-coloumn",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "label": "Number of posts in a coloumn. Use when you use blog grid",
+      "default": 3
+    }
+  ]
+}
+{% endschema %}

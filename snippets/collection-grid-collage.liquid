@@ -1,0 +1,31 @@
+<div class="collection-card">
+	<a href="{{ collections[collection_handle].url }}" class="collection-card__link">
+		{%- if collection == blank -%}
+			{%- assign collection_title = 'home_page.onboarding.collection_title' | t -%}
+		{%- else -%}
+			{%- assign collection_title = collections[collection_handle].title | escape -%}
+		{%- endif -%}
+		{%- if collection.image -%}
+			{%- assign collection_image = collection.image -%}
+		{%- elsif collection.products.first and collection.products.first.featured_media != empty -%}
+			{%- assign collection_image = collection.products.first.featured_media.preview_image -%}
+		{%- else -%}
+			{%- assign collection_image = blank -%}
+		{%- endif -%}
+		{%- if collection == blank -%}
+			{% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+			<div class="collection-card__placeholder">{{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}</div>
+		{%- else -%}
+			<div class="collection-card__image" >
+				{% unless collection_image == blank %}
+					<img class="collection-banner__img" src="{{ collection_image | img_url: '' }}" alt="{{ collection_image.alt | escape }}"/>
+				{% endunless %}
+			</div>
+		{% endif %}
+	</a>
+	<div class="collection-card__title">
+		<h2>{{ collection_title }}</h2>
+		<div class="count-product">{{ collection.products_count }} {{ 'templates.search.products' | t }}</div>
+		<div class="view-all"><a href="{{ collections[collection_handle].url }}">{{ 'collections.general.btn_collections' | t }}</a></div>
+	</div>
+</div>

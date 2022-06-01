@@ -1,0 +1,89 @@
+{%- assign page_item 		= section.settings.page_item | plus: 0 -%}
+{%- assign select_columns 	=  settings.select_columns -%}
+
+
+<div id="JsCollectionProduct" class="load_collection {{ select_columns }}">
+	<div class="page-width" id="main-collection-filters" data-id="{{ section.id }}">
+	   {% include 'filter-dropdown', results: collection %}
+	</div>
+	<div class="js-collection-content-product">
+		<div id="ProductGridContainer">
+			{%- paginate collection.products by page_item -%}
+				<div class="page-collection-header">
+					{% include 'collection-header' %}
+				</div>
+				{%- if collection.products.size == 0 -%}
+					<div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
+						<div class="title-wrapper center">
+							<h2 class="title title--primary">
+								{{ 'collection_template.empty' | t }}<br>
+								{{ 'collection_template.use_fewer_filters_html' | t: link: collection.url, class: "underlined-link link" }}
+							</h2>
+						</div>
+					</div>
+				{%- else -%}
+					<div class="collection page-width">
+						<div id="product-grid" data-id="{{ section.id }}" class="{{ class_products }}">
+							<div class="products__row row">
+								{%- for product in collection.products -%}
+									<div class="products__col">
+									  {% include 'product-grid-item' %}
+									</div>
+								{%- else -%}
+									<div class="products__no-matches">{{ 'collections.general.no_matches' | t }}</div>
+								{%- endfor -%}
+								{%- assign min_page = 1 -%}
+								{%- assign max_page = paginate.page_size | times:paginate.current_page -%}
+								{%- if paginate.current_page > 1 -%}
+									{%- assign current_page = paginate.current_page | minus:1 -%}
+									{%- endif -%}
+								{%- if max_page > paginate.items -%}
+									{%- assign max_page = paginate.items -%}
+								{%- endif -%}
+								{% assign percent =  max_page | times: 100 | divided_by: paginate.items %}
+								{%- if max_page < paginate.items -%}
+									<div class="js-collection-{{ settings.select_pagination }} page-collection-footer">
+										{%- if section.settings.numproduct_enable and settings.select_pagination == 'loadmore' -%}
+											<div class="collection-product-count">{{ 'collections.general.product_count_html' | t: min_page:min_page, max_page:max_page, items_page:paginate.items }}</div>
+											{%- if percent < 100 -%}
+												<div class="content-percent"><div class="percent" style="width:{{percent}}%"></div></div>
+											{%- endif -%}
+										{%- endif -%}
+										{%- if paginate.pages > 1 -%}
+											{% include 'pagination' %}
+										{%- endif -%}
+									</div>
+								{%- endif -%}
+							</div>
+						</div>
+					</div>
+				{%- endif -%}
+			{%- endpaginate -%}
+		</div>
+	</div>	
+</div>
+
+{% schema %} {
+    "name": "Collection pages",
+    "settings": [
+		{
+			"type": "range",
+			"id": "page_item",
+			"label": "Number of products in a page",
+			"min": 1,
+			"max": 24,
+			"step": 1,
+			"default": 12
+		},
+		{
+			"type": "header",
+			"content": "Product Count"
+		},
+		{
+			"type": "checkbox",
+			"id": "numproduct_enable",
+			"label": "Enable",
+			"default": true
+		}
+    ]
+} {% endschema %}

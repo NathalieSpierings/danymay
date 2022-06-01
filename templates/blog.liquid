@@ -1,0 +1,23 @@
+{% section 'blog-breadcrumb' %}
+{%- assign sidebar_position = settings.sidebar_position -%}
+{%- assign layout_blog = settings.layout_blog -%}
+<section class="page-blog {{ sidebar_position }} {{ layout_blog }}">
+	<div class="container">
+		<div class="page-blog__inner">
+			<div class="row">
+				{%- if sidebar_position !='without' -%}
+					<div class="col-xl-3 col-lg-3 col-md-12 col-12">
+						{% section 'blog-sidebar' %}
+					</div>
+					<div class="col-xl-9 col-lg-9 col-md-12 col-12 cate-post-content {{ sidebar_position }} {{ layout_blog }}">
+						{% section 'blog-template' %}
+					</div>
+				{%- else -%}
+					<div class="col-xl-12 col-lg-12 col-md-12 col-12 cate-post-content {{ sidebar_position }} {{ layout_blog }}">
+						{% section 'blog-template' %}
+					</div>
+				{%- endif -%}
+			</div>
+		</div>
+	</div>
+</section>

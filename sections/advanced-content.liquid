@@ -1,0 +1,170 @@
+{%- if section.settings.fullwidth -%}
+  {%- assign container = 'container-fluid' -%}
+{%- else -%}
+  {%- assign container = 'container' -%}
+{%- endif -%}
+{%- assign margin = '' -%}
+{%- if section.settings.margin != blank -%}
+  {%- capture margin -%}margin: {{ section.settings.margin }};{%- endcapture -%}
+{%- endif -%}
+{%- assign heading = section.settings.title | escape -%}
+
+<section
+  class="wpbingo-section wpbingo-section--rich-text wpbingo-section--{{ section.id }} overflow-hidden"
+  style="{{ margin }}">
+  <div class="{{ container }}">
+    <div class="wpbingo-section__inner">
+      {%- if heading != blank -%}
+        <div class="wpbingo-title{% if settings.show_title_bg %} wpbingo-title--bg-img{% endif %}">
+          <h3 class="wpbingo-title__heading">{{ heading }}</h3>
+        </div>
+      {%- endif -%}
+      <div class="wpbingo-section__content">
+        <div class="custom-content">
+          {% for block in section.blocks %}
+            <div class="custom__item {% if block.settings.alignment %}custom__item--{{ block.settings.alignment }}{% endif %}"
+              style="max-width: {{ block.settings.width }};"
+              {{ block.shopify_attributes }}>
+              <div class="custom__item-inner custom__item-inner--{{ block.type }}">
+                {% case block.type %}
+                  {% when 'html' %}
+                    {% if block.settings.code != blank %}
+                      <div class="rte" data-section-id="{{ section.id }}" data-section-type="featured-content-section">
+                        {{ block.settings.code }}
+                      </div>
+                    {% else %}
+                      <div class="wpbingo-section__empty">
+                        <div class="rte text-center">
+                          {{ 'home_page.onboarding.no_content' | t }}
+                        </div>
+                      </div>
+                    {% endif %}
+                {% endcase %}
+              </div>
+            </div>
+          {% endfor %}
+          {%- if section.blocks.size == 0 -%}
+            <div class="wpbingo-section__empty">
+              <div class="rte text-center">
+                {{ 'home_page.onboarding.no_content' | t }}
+              </div>
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Custom HTML",
+  "class": "wpbingo-framework",
+  "max_blocks": 9,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "fullwidth",
+      "label": "Fullwidth"
+    },
+    {
+      "type": "text",
+      "id": "margin",
+      "label": "Margin",
+      "placeholder": "0px 0px 0px 0px",
+      "info": "Default: 0px 0px 0px 0px"
+    },
+    {
+      "type": "header",
+      "content": "General Settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Custom HTML"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "html",
+      "name": "Custom HTML",
+      "settings": [
+        {
+          "type": "html",
+          "id": "code",
+          "label": "HTML",
+          "default": "<div style='text-align:center;'><h2>Use HTML to format your text so it can be easily read.</h2>This text can be used to share information about your brand with customers.</div>"
+        },
+        {
+          "type": "select",
+          "id": "width",
+          "label": "Container width",
+          "default": "100%",
+          "options": [
+            {
+              "value": "25%",
+              "label": "25%"
+            },
+            {
+              "value": "33%",
+              "label": "33%"
+            },
+            {
+              "value": "50%",
+              "label": "50%"
+            },
+            {
+              "value": "66%",
+              "label": "66%"
+            },
+            {
+              "value": "75%",
+              "label": "75%"
+            },
+            {
+              "value": "100%",
+              "label": "100%"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Horizontal alignment",
+          "default": "center",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom HTML",
+      "category": "6. Text",
+      "blocks": [
+        {
+          "type": "html"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

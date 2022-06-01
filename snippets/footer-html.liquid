@@ -1,0 +1,38 @@
+{%- assign heading = section.settings.information_title -%}
+{%- assign content = section.settings.information_code -%}
+{%- if heading != bank -%}
+	{% capture block_heading %}
+		<h4 class="footer-block__title collapsed" data-toggle="collapse" data-target="#footer-block-1">{{ heading }}</h4>
+	{% endcapture %}
+	{% capture block_content %}
+		<div id="footer-block-1" class="footer-block__content collapse">
+			<div class="footer-html">{{ content }}</div>
+			{%- if section.settings.show_newsletter -%}
+				<form class="js-wpbingo-newsletter" action="{{ mailchimp_action }}" method="post" name="mc-embedded-subscribe-form" target="_blank">
+					<div class="newsletter-form__wrap">
+						<input class="js-input-newsletter form-control newsletter-form__input" type="email" name="EMAIL"
+							value="{% if customer %}{{ customer.email }}{% endif %}"
+							placeholder="{{ 'general.newsletter_form.newsletter_placeholder' | t }}" required />
+						<button class="btn newsletter-form__submit" type="submit">
+							<span>{{ 'general.newsletter_form.submit' | t }}</span>
+						</button>
+					</div>
+				</form>
+			{%- endif -%}
+			{%- if section.settings.show_social -%}
+				{% include 'social-media' %}
+			{%- endif -%}
+		</div>
+	{% endcapture %}
+{%- else -%}
+	{% capture block_heading %}{% endcapture %}
+	{% capture block_content %}
+    <div class="footer-block__content">
+		<div class="footer-html">{{ content }}</div>
+    </div>
+	{% endcapture %}
+{%- endif -%}
+<div class="footer-block footer-block--html">
+	{{ block_heading }}
+	{{ block_content }}
+</div>

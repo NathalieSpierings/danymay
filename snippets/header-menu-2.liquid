@@ -1,0 +1,65 @@
+{%- assign main_menu = section.settings.menu_link_list2 -%}
+<div class="main-menu">
+	<nav class="main-menu__wrap">
+		<ul class="main-menu__nav">
+			{%- for menu_link in linklists[main_menu].links -%}
+				{%- assign is_mega = false -%}
+				{%- for block in section.blocks -%}
+					{%- assign menu_item = menu_link.title -%}
+					{%- if block.settings.title contains menu_item -%}
+						{%- assign is_mega = true -%}
+						{% include 'header-megamenu' %}
+						{%- break -%}
+					{%- endif -%}
+				{%- endfor -%}
+				{%- if is_mega == false -%}
+					{%- if menu_link.links != blank -%}
+						{% comment %}====== MENU DROPDOWN LEVEL I ======{% endcomment %}
+						<li class="main-menu__nav-item menu-dropdown menu-dropdown--basic{% if menu_link.active %} active{% endif %}">
+							<a href="{{ menu_link.url }}" title="{{ menu_link.title | escape }}">{{ menu_link.title }}</a>
+							<ul class="menu-dropdown__content">
+								{%- for menu_link_child in menu_link.links -%}
+									{%- if menu_link_child.links != blank -%}
+										{% comment %}====== MENU DROPDOWN LEVEL II ======{% endcomment %}
+										<li class="menu-dropdown menu-dropdown--basic{% if menu_link_child.active %} active{% endif %}">
+											<a href="{{ menu_link_child.url }}" title="{{ menu_link_child.title | escape }}">{{ menu_link_child.title }}</a>
+											<ul class="menu-dropdown__content">
+												{%- for menu_link_child1 in menu_link_child.links -%}
+													{%- if menu_link_child1.links != blank -%}
+														{% comment %}====== MENU DROPDOWN LEVEL III ======{% endcomment %}
+														<li class="menu-dropdown menu-dropdown--basic{% if menu_link_child1.active %} active{% endif %}">
+															<a href="{{ menu_link_child1.url }}" title="">{{ menu_link_child1.title }}</a>
+															<ul class="menu-dropdown__content">
+																{%- for menu_link_child2 in menu_link_child1.links -%}
+																	<li class="{% if menu_link_child2.active %}active{% endif %}">
+																		<a href="{{ menu_link_child2.url }}" title="{{ menu_link_child2.title | escape }}">{{ menu_link_child2.title }}</a>
+																	</li>
+																{%- endfor -%}
+															</ul>
+														</li>
+													{%- else -%}
+														<li class="{% if menu_link_child1.active %}active{% endif %}">
+															<a href="{{ menu_link_child1.url }}" title="{{ menu_link_child1.title | escape }}">{{ menu_link_child1.title }}</a>
+														</li>
+													{%- endif -%}
+												{%- endfor -%}
+											</ul>
+										</li>
+									{%- else -%}
+										<li class="{% if menu_link_child.active %}active{% endif %}">
+											<a href="{{ menu_link_child.url }}" title="{{ menu_link_child.title | escape }}">{{ menu_link_child.title }}</a>
+										</li>
+									{%- endif -%}
+								{%- endfor -%}
+							</ul>
+						</li>
+					{%- else -%}
+						<li class="main-menu__nav-item{% if menu_link.active %} active{% endif %}">
+							<a href="{{ menu_link.url }}" title="{{ menu_link.title | escape }}">{{ menu_link.title }}</a>
+						</li>
+					{%- endif -%}
+				{%- endif -%}
+			{%- endfor -%}
+		</ul>
+	</nav>
+</div>

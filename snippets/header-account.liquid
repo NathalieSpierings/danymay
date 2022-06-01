@@ -1,0 +1,37 @@
+{%- if shop.customer_accounts_enabled or section.settings.header_user_link_list != blank -%}
+<div class="header-account">
+	{%- if customer -%}
+		{%- if section.settings.header_user_title != blank -%}
+			<div class="header-account__title dropdown-toggle" data-toggle="dropdown">
+				<span class="d-none">{{ section.settings.header_user_title | escape }}</span>
+				<i class="icon-user"></i>
+			</div>
+		{%- endif -%}
+		<div class="header-account__content dropdown-menu dropdown-menu-right">
+			<ul class="header-account__list">
+				{%- if shop.customer_accounts_enabled -%}
+					{% capture fullname %}{{ customer.first_name }} {{ customer.last_name }}{% endcapture %}
+					{%- assign login_html = 'layout.header.login_html' | t:fullname:fullname -%}
+					{%- assign logout = 'layout.header.logout' | t -%}
+					<li class="header-account__user">
+						<a class="account" rel="nofollow" href="{{ routes.account_url }}" title="{{ fullname }}">{{ login_html }}</a>
+					</li>
+					<li class="header-account__user">
+						<a href="{{ routes.account_logout_url }}" title="{{ logout }}">{{ logout }}</a>
+					</li>
+				{%- endif -%}
+				{%- assign header_user_menu = section.settings.header_user_link_list -%}
+				{%- for menu_link in linklists[header_user_menu].links -%}
+					<li><a href="{{ menu_link.url }}" title="{{ menu_link.title | escape }}">{{ menu_link.title }}</a></li>
+				{%- endfor -%}
+			</ul>
+		</div>
+	{%- else -%}
+		<a class="login-account" href="#">
+			<i class="icon-user"></i>
+		</a>
+		<div class="remove-form-login-register"></div>
+		{% include 'login-register' with is_loginpage: true %}
+	{%- endif -%}
+</div>
+{%- endif -%}

@@ -1,0 +1,50 @@
+<div class="header-mobile">
+	<div class="header-top-mobile">
+		<div class="container">
+			<div class="header-center__inner">
+				<div class="button-menu">
+					<button class="js-menu-mobile btn menu-mobile__btn" type="button">
+						<i class="wpb-icon-menu-vertical"></i>
+					</button>
+				</div>
+				<div class="header-logo" itemscope itemtype="http://schema.org/Organization">
+					{%- if section.settings.logo -%}
+						<a href="/" itemprop="url" class="header-logo__link">
+							<img class="header-logo__img"
+								src="{{ section.settings.logo | img_url: 'master' }}" 
+								srcset="{{ section.settings.logo | img_url: 'master' }}"
+								alt="{{ section.settings.logo.alt | default: shop.name }}"
+								itemprop="logo">
+						</a>
+					{%- else -%}
+						<a href="/" itemprop="url" class="header-logo__link header-logo__link--text">{{ shop.name }}</a>
+					{%- endif -%}
+					<h1 class="d-none" itemprop="legalName">{{ shop.name }}</h1>
+				</div>
+				<div class="header-right">
+					{%- if section.settings.show_header_cart -%}
+						{% include 'header-cart' %}
+					{%- endif -%}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-bottom-fixed">
+		<div class="home-mobile">
+			<a href="\" title="home"><i class="feather-home"></i></a>
+		</div>
+		<div class="shop-mobile">
+			<a href="{{ routes.all_products_collection_url }}" title="shop"><i class="feather-shopping-bag"></i></a>
+		</div>
+		<div class="search-mobile">
+			{%- if section.settings.show_header_search -%}
+				<div class="search-toggle"><i class="feather-search"></i></div>
+				{% include 'header-search-toggle' %}
+			{%- endif -%}
+		</div>
+		<div class="account-mobile">
+			<a href="{{ routes.account_login_url }}" title="my account"><i class="feather-user"></i></a>
+		</div>
+	</div>
+	{% include 'menu-mobile' %}
+</div>

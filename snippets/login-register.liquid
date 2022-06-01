@@ -1,0 +1,135 @@
+<div class="login-register" data-section-id="login-register" data-section-type='login-register'>
+	{%- if is_loginpage -%}
+		<h1 class="d-none">{{ 'customer.login.title' | t }}</h1>
+	{%- else -%}
+		<h1 class="d-none">{{ 'customer.register.title' | t }}</h1>
+	{%- endif -%}
+	<ul class="nav nav-tabs login-register__nav" role="tablist">
+		<li class="login-register__nav-item" role="presentation">
+			<a class="login-register__nav-link{% if is_loginpage %} active{% endif %}" href="#customers-login" data-toggle="tab" role="tab">
+				{{ 'customer.login.title' | t }}
+			</a>
+		</li>
+		<li class="login-register__nav-item" role="presentation">
+			<a class="login-register__nav-link{% unless is_loginpage %} active{% endunless %}" href="#customers-register" data-toggle="tab" role="tab">
+				{{ 'customer.register.title' | t }}
+			</a>
+		</li>
+	</ul>
+	<div class="tab-content login-register__tab-content">
+		<div class="tab-pane{% if is_loginpage %} active{% endif %}" id="customers-login" role="tabpanel">
+			<div class="js-login-form login-form">
+				<div class="js-recover-password-success recover-password__success alert alert-success d-none">
+					{{ 'customer.recover_password.success' | t }}
+				</div>
+				{% form 'customer_login' %}
+					{{ form.errors | default_errors }}
+					<div class="form-group">
+						<label class="d-none" for="customerEmail">{{ 'customer.login.email' | t }}</label>
+						<input id="customerEmail" class="form-control{% if form.errors contains 'email' %} is-invalid{% endif %}" name="customer[email]"
+							type="email" placeholder="{{ 'customer.login.email' | t }}" required autocorrect="off" autocapitalize="off" autofocus/>
+					</div>
+					{%- if form.password_needed -%}
+						<div class="form-group form-group--pasword">
+							<label class="d-none" for="customerPassword">{{ 'customer.login.password' | t }}</label>
+							<input id="customerPassword" class="form-control{% if form.errors contains 'password' %} is-invalid{% endif %}"
+								name="customer[password]" type="password" placeholder="{{ 'customer.login.password' | t }}" autocomplete="on" required/>
+							<a href="javascript:void(0)" class="js-password-toggle password-toggle">
+								<span class="text-show-password"><i class="feather-eye"></i></span>
+								<span class="text-hide-password"><i class="feather-eye-off"></i></span>
+							</a>
+						</div>
+					{%- endif -%}
+					<div class="form-button">
+						<input type="submit" class="btn btn-primary" value="{{ 'customer.login.sign_in' | t }}">
+					</div>
+					{%- if form.password_needed -%}
+						<div class="form-link">
+							<a class="js-forget-password" href="#recover">{{ 'customer.login.forgot_password' | t }}</a>
+						</div>
+					{%- endif -%}
+				{% endform %}
+			</div>
+			<div class="js-recover-password recover-password d-none">
+				<h2 class="login-register__heading recover-password__heading">{{ 'customer.recover_password.title' | t }}</h2>
+				<p class="recover-password__summary">{{ 'customer.recover_password.subtext' | t }}</p>
+				<div class="recover-password__form">
+					{% form 'recover_customer_password' %}
+						{{ form.errors | default_errors }}
+						{%- if form.posted_successfully? -%}
+							<script>
+								window.resetPassword = true;
+							</script>
+						{%- endif -%}
+						<div class="form-group">
+							<label class="d-none" for="recoverEmail">{{ 'customer.login.password' | t }}</label>
+							<input id="recoverEmail" class="form-control" type="email" name="email" value="" placeholder="{{ 'customer.recover_password.email' | t }}"
+							required/>
+						</div>
+						<div class="form-button">
+							<input type="submit" class="btn btn-primary" value="{{ 'customer.recover_password.submit' | t }}">
+						</div>
+						<div class="form-link">
+							<a class="js-forget-password" href="#customers-login">{{ 'customer.recover_password.cancel' | t }}</a>
+						</div>
+					{% endform %}
+				</div>
+			</div>
+			{%- if shop.checkout.guest_login -%}
+				<div class="guest-form">
+					<h2 class="login-register__heading guest-form__heading">{{ 'customer.login.guest_title' | t }}</h2>
+					{% form 'guest_login' %}
+						<input type="submit" class="btn" value="{{ 'customer.login.guest_continue' | t }}">
+					{% endform %}
+				</div>
+			{%- endif -%}
+		</div>
+		<div class="tab-pane{% unless is_loginpage %} active{% endunless %}" id="customers-register" role="tabpanel">
+			<div class="register-form">
+				{% form 'create_customer' %}
+					{{ form.errors | default_errors }}
+					<div class="form-row">
+						<div class="col-12 col-md-6">
+							<div class="form-group">
+								<label class="d-none" for="firstName">{{ 'customer.register.first_name' | t }}</label>
+								<input id="firstName" class="form-control" type="text" name="customer[first_name]"
+									{% if form.first_name %}value="{{ form.first_name }}"{% endif %}
+									placeholder="{{ 'customer.register.first_name' | t }}"
+									autocapitalize="words"
+									autofocus/>
+							</div>
+						</div>
+						<div class="col-12 col-md-6">
+							<div class="form-group">
+								<label class="d-none" for="lastName">{{ 'customer.register.last_name' | t }}</label>
+								<input id="lastName" class="form-control" type="text" name="customer[last_name]"
+									{% if form.last_name %}value="{{ form.last_name }}"{% endif %}
+									placeholder="{{ 'customer.register.last_name' | t }}"
+									autocapitalize="words"/>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="d-none" for="registerEmail">{{ 'customer.login.password' | t }}</label>
+						<input id="registerEmail" class="form-control{% if form.errors contains 'email' %} is-invalid{% endif %}"
+							type="email" name="customer[email]" placeholder="{{ 'customer.register.email' | t }}"
+							{% if form.email %} value="{{ form.email }}"{% endif %}
+							autocorrect="off" autocapitalize="off" required/>
+					</div>
+					<div class="form-group form-group--pasword">
+						<label class="d-none" for="registerPassword">{{ 'customer.register.email' | t }}</label>
+						<input id="registerPassword" class="form-control{% if form.errors contains 'password' %} is-invalid{% endif %}"
+							name="customer[password]" type="password" placeholder="{{ 'customer.register.password' | t }}" required/>
+						<a href="javascript:void(0)" class="js-password-toggle password-toggle">
+							<span class="text-show-password"><i class="feather-eye"></i></span>
+							<span class="text-hide-password"><i class="feather-eye-off"></i></span>
+						</a>
+					</div>
+					<div class="form-button">
+						<input type="submit" class="btn btn-primary" value="{{ 'customer.register.submit' | t }}">
+					</div>
+				{% endform %}
+			</div>
+		</div>
+	</div>
+</div>

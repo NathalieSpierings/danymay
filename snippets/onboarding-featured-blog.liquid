@@ -1,0 +1,39 @@
+{%- assign show_date = section.settings.blog_show_date -%}
+{%- assign show_author = section.settings.blog_show_author -%}
+{%- assign show_image = section.settings.blog_show_image -%}
+{%- assign show_excerpt = section.settings.blog_show_excerpt -%}
+
+{% for i in (1..3) %}
+  <div class="slick-carousel__item">
+    <div class="featured-blog__post">
+      <article class="article">
+        {%- if show_image -%}
+          <div class="article__image">
+            <a class="article__featured-image-link" href="{{ article.url }}">
+              <div class="article__featured-image-wrapper" style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100}}%;">
+                {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                {{ 'collection-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+              </div>
+            </a>
+          </div>
+        {%- endif -%}
+
+        <div class="article__content">
+          <h2 class="article__heading">
+            <a class="article__heading-link" href="{{ article.url }}">{{ 'home_page.onboarding.blog_title' | t }}</a>
+          </h2>
+          <div class="article__meta">
+            <span class="article__meta-date"><time datetime="{{ 'now' | date: '%Y-%m-%dT%H:%M:%SZ' }}" class="date">{{ 'now' | date: format: 'date' }}</time></span>
+            <span class="article__meta-author">Wpbingo</span>
+            <span class="article__meta-comment">0 <i class="fa fa-comments-o"></i></span>
+          </div>
+          {%- if show_excerpt -%}
+            <div class="rte article__excerpt">
+              {{ 'home_page.onboarding.blog_excerpt' | t }}
+            </div>
+          {%- endif -%}
+        </div>
+      </article>
+    </div>
+  </div>
+{% endfor %}

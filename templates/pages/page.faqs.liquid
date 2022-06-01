@@ -1,0 +1,15 @@
+<section class="page-faqs">
+	<div class="container">
+		<div class="page__inner">
+			<header class="page-header">
+				<h1 class="page-title">{{ page.title }}</h1>
+			</header>
+			<div class="page__content">
+				<div class="rte">
+					{{ page.content }}
+				</div>
+				{% section 'faq-template' %}
+			</div>
+		</div>
+	</div>
+</section>

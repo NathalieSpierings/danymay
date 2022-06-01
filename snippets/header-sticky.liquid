@@ -1,0 +1,39 @@
+<div class="header-sticky">
+	<div class="container">
+		<div class="header-center__inner">
+			<div class="header-logo" itemscope itemtype="http://schema.org/Organization">
+				{%- if section.settings.logo -%}
+					<a href="/" itemprop="url" class="header-logo__link">
+						<img class="header-logo__img"
+							src="{{ section.settings.logo | img_url: 'master' }}" 
+							srcset="{{ section.settings.logo | img_url: 'master' }}"
+							alt="{{ section.settings.logo.alt | default: shop.name }}"
+							itemprop="logo">
+					</a>
+				{%- else -%}
+					<a href="/" itemprop="url" class="header-logo__link header-logo__link--text">{{ shop.name }}</a>
+				{%- endif -%}
+				<h1 class="d-none" itemprop="legalName">{{ shop.name }}</h1>
+			</div>
+			<div class="header-main">
+				{%- if section.settings.menu_enable -%}
+					{% include 'header-menu' %}
+				{%- endif -%}
+			</div>
+			<div class="header-right">
+				<div class="header-page-link">
+					{%- if section.settings.show_header_search -%}
+						<div class="search-toggle"><i class="icon-search"></i></div>
+						{% include 'header-search-toggle' %}
+					{%- endif -%}
+					{%- if section.settings.show_header_user -%}
+						{% include 'header-account' %}
+					{%- endif -%}
+					{%- if section.settings.show_header_cart -%}
+						{% include 'header-cart' %}
+					{%- endif -%}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
