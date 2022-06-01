@@ -127,14 +127,16 @@ img {
     }
 
     &__bottom{		
-        transition: all 1s;
-        background: #202020;
-        padding: 1rem 0;
-        
-        &__container{
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-        }
-    }
+		transition: all 1s;
+		background: #202020;
+		padding: 1rem 0;
+
+		&__container{
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1rem;
+			justify-content: center;
+			align-content: center;
+		}
+	}
 }
