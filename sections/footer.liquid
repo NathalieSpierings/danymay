@@ -1,4 +1,4 @@
-
+{% comment %}
 <div class="footer__top">		
   {%- if section.settings.show_newsletter -%}
     <div class="footer__top__container center center--wide">
@@ -67,8 +67,8 @@
     {%- endif -%}
   </div>
 </div>
+{% endcomment %}
 
-{% comment %}
 {%- if section.settings.show_information or section.settings.footer_link_list != blank or section.settings.footer_link_list_2 != blank or section.settings.footer_link_list_3 != blank -%}
 <div class="footer-top">
     <div class="container">
@@ -134,7 +134,7 @@
 		</div>
 	</div>
 </div>
-{% endcomment %}
+
 
 {% include 'view-gallery' %}
 
