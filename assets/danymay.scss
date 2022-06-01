@@ -132,11 +132,23 @@ img {
 		padding: 1rem 0;
 
 		&__container{
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			gap: 1rem;
-			justify-content: center;
-			align-content: center;
+			display:flex;
 		}
+	}
+}
+
+.copyright{
+	flex:1;
+}
+.payment-methods{
+	display:flex;
+
+	p {		
+		display: inline-block;
+		height: 22px;
+		width: auto;
+		margin: 0 5px;
+		
+		img{height: 24px;}
 	}
 }
