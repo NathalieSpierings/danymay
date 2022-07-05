@@ -32,7 +32,7 @@ $purple: #8E72B0;
 $pink: #E56F89;
 $red: #ED344E;
 $orange: #FF8D6B;
-$yellow: #F6C160;
+$yellow: #292929;
 $green: #65B688;
 $teal: #009688;
 $cyan: #67D1E1;
@@ -5744,10 +5744,10 @@ button {
 	display: inline-block;
 	margin-left: 10px;
 	padding: 0;
-	color: green;
+	color: $green;
 	background-color: $nocolor;
 	border: none;
-	border-bottom: 1px solid green;
+	border-bottom: 1px solid $green;
 	border-radius: 0;
 	font-size: $font-size - 2;
 	line-height: 14px;
@@ -5758,7 +5758,8 @@ button {
 			margin-left: 0;
 		}
 	}
-	&:hover,&:focus {
+	&:hover,
+	&:focus {
 		color: $theme-color;
 		border-bottom-color: $theme-color;
 		outline: 0;
@@ -5766,8 +5767,8 @@ button {
 		text-decoration: none;
 	}
 	&.cart-product-info__btn--remove{
-		color:red;
-		border-color:red;
+		color:$red;
+		border-color:$red;
 	}
 }
 .cart-table__footer {

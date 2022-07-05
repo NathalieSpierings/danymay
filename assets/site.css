@@ -1,6 +1,3 @@
-@import '//cdn.shopify.com/s/files/1/0013/2661/2531/t/48/assets/bootstrap.min.css?v=590406394553346998';
-@import '//cdn.shopify.com/s/files/1/0013/2661/2531/t/48/assets/vendor.css?v=2634437305221666887';
-
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @font-face {
   font-family: Roboto;
@@ -6963,10 +6960,10 @@ button.mfp-arrow:focus, button.mfp-close:focus {
   display: inline-block;
   margin-left: 10px;
   padding: 0;
-  color: green;
+  color: #65B688;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid green;
+  border-bottom: 1px solid #65B688;
   border-radius: 0;
   font-size: 12px;
   line-height: 14px;
@@ -6991,8 +6988,8 @@ button.mfp-arrow:focus, button.mfp-close:focus {
 }
 
 .cart-product-info__btn.cart-product-info__btn--remove {
-  color: red;
-  border-color: red;
+  color: #ED344E;
+  border-color: #ED344E;
 }
 
 .cart-table__footer {
