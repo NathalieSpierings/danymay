@@ -276,7 +276,7 @@
       "recover_password": {
         "title": "Wachtwoord opnieuw instellen",
         "email": "E-mail",
-        "submit": "Indienen",
+        "submit": "Wachtwoord instellen",
         "cancel": "Annuleren",
         "subtext": "Wij sturen u een e-mail om uw wachtwoord opnieuw in te stellen.",
         "success": "We hebben u een e-mail gestuurd met een link om uw wachtwoord opnieuw in te stellen."
