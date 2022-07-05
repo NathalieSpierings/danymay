@@ -1501,6 +1501,22 @@
           "btn_text": "Terug naar home",
           "btn_url": "\/"
         }
+      },
+      "password-template": {
+        "type": "password-template",
+        "settings": {
+          "title": "Opening Soon",
+          "logo_max_width": 135,
+          "newsletter_enable": true,
+          "newsletter_form_heading": "Wees de eerste die weet wanneer we lanceren.",
+          "newsletter_form_subheading": "<p>Wij laten u per e-mail weten wanneer wij onze winkel openen.<\/p>",
+          "newsletter_placeholder": "E-mailadres",
+          "newsletter_button_text": "Verzenden",
+          "show_share_buttons": true,
+          "social_message": "Spread the word",
+          "show_copyright": true,
+          "copyright": "Copyright &copy; 2022 DANYMAY. Alle rechten voorbehouden"
+        }
       }
     },
     "content_for_index": [
