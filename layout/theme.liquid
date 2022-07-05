@@ -35,14 +35,11 @@
 		<main class="main-content {{ layout_article }}" role="main">
 			{{ content_for_layout }}
 		</main>
-
-		<footer class="bwp-footer footer">
+		<footer class="bwp-footer">
 			{% section 'footer' %}
 		</footer>
-
 		{% include 'svg' %}
 		{% include 'site-template' %}
-
 		<script>
 			window.routes = {
 				predictive_search_url: '{{ routes.predictive_search_url }}',

@@ -2,18 +2,11 @@
 {{ 'icomoon.css' | asset_url | stylesheet_tag }}
 {{ 'feather.css' | asset_url | stylesheet_tag }}
 {{ 'wpbingo.css' | asset_url | stylesheet_tag }}
-
-
-
 {%- if settings.store_develop -%}
   {{ 'site.css' | asset_url | stylesheet_tag }}
-  {{ 'danymay.css' | asset_url | stylesheet_tag }}
 {%- else -%}
   {{ 'site.scss.css' | asset_url | stylesheet_tag }}
-  {{ 'danymay.css' | asset_url | stylesheet_tag }}
 {%- endif -%}
-
-
 {%- assign page_type = request.page_type | handle -%}
 {%- if page_type contains 'collection' or page_type contains 'search' -%}
   {{ 'collection.scss.css' | asset_url | stylesheet_tag }}
