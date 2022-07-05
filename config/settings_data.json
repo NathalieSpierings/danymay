@@ -1,1 +1,1509 @@
-{"current":{"theme-color":"#cb8161","text-color":"#868686","color_border":"#e7e7e7","color_menu_text":"#000000","color_menu_text_hover":"#cb8161","color_submenu_text":"#868686","color_submenu_text_hover":"#cb8161","select-font-second":"google","font-family-second-google-link":"<link href=\"https:\/\/fonts.googleapis.com\/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap\" rel=\"stylesheet\">","font-family-second-google":"Cormorant Garamond","font-family-base":"lato_n4","shop_full":false,"layout_filter":"dropdown","sidebar_enable":true,"select_columns":"grid-3","sortby_enable":true,"select_pagination":"infinity","hover_style":"hover_style_3","product_vendor_enable":false,"product_card_review":true,"quickview_enable":true,"quickview_availability":true,"quickview_quantity_selector":"text","quickview_variant_selector":"radio","show_size_chart":false,"style_option":"circle","filter_name_1":"Size","filter_name_2":"Color","select_filter_2":"color","filter_name_3":"Image","select_filter_3":"image","cart_type":"drawer","cart_notes_enable":true,"cart_coupon_enable":true,"cart_shipping_enable":true,"sidebar_position":"left","layout_blog":"modern","layout_article":"simple_title","social_facebook_link":"#","social_twitter_link":"#","social_instagram_link":"#","social_youtube_link":"#","favicon":"shopify:\/\/shop_images\/cropped-80x80-1-192x192.png","newsletter_popup_image":"shopify:\/\/shop_images\/newsletter-image.jpg","checkout_logo_image":"shopify:\/\/shop_images\/logo_6c2c83c7-d9df-4e56-bdfb-2f8cda3894ce.png","checkout_logo_size":"small","sections":{"header":{"type":"header","blocks":{"dfb5649e-1bea-4b69-b96e-f8857c612922":{"type":"menu","settings":{"title":"Shop","menu1":true,"menu_col_1":"20","menu_heading_1":"Shop Style","menu_link_list_1":"shop-menu-1","menu2":true,"menu_col_2":"20","menu_heading_2":"Filter Layout","menu_link_list_2":"shop-menu-2","menu3":true,"menu_col_3":"20","menu_heading_3":"Shop Loader","menu_link_list_3":"shop-menu-3","widget":true,"banner":"image","banner_col":"40","image":"shopify:\/\/shop_images\/mega.jpg","banner_title":"JOIN THE LAYERING GANG","banner_subtitle":"Suspendisse faucibus nunc et pellentesque","banner_button":"Shop now","banner_link":"shopify:\/\/collections\/all","collection_widget":"","blog_widget":""}},"45d1c512-239e-487b-b9e8-cc414eb63a14":{"type":"menu","settings":{"title":"Product","menu1":true,"menu_col_1":"20","menu_heading_1":"Product Featured","menu_link_list_1":"product-menu-1","menu2":true,"menu_col_2":"20","menu_heading_2":"Product Type","menu_link_list_2":"product-menu-2","menu3":true,"menu_col_3":"20","menu_heading_3":"Product Gallery","menu_link_list_3":"product-menu-3","widget":true,"banner":"product","banner_col":"40","banner_title":"Best seller","banner_subtitle":"","banner_button":"","banner_link":"","collection_widget":"furniture","blog_widget":""}},"82d437e4-5ebd-4678-9443-0aee1819b8ec":{"type":"menu","settings":{"title":"Blog","menu1":true,"menu_col_1":"20","menu_heading_1":"Blog Layout","menu_link_list_1":"blog-menu-1","menu2":true,"menu_col_2":"20","menu_heading_2":"Blog Style","menu_link_list_2":"blog-menu-2","menu3":true,"menu_col_3":"20","menu_heading_3":"Post Layout","menu_link_list_3":"blog-menu-3","widget":true,"banner":"blog","banner_col":"40","banner_title":"","banner_subtitle":"","banner_button":"","banner_link":"","collection_widget":"","blog_widget":"necklaces"}}},"block_order":["dfb5649e-1bea-4b69-b96e-f8857c612922","45d1c512-239e-487b-b9e8-cc414eb63a14","82d437e4-5ebd-4678-9443-0aee1819b8ec"],"settings":{"padding":"20px 0","select_header":"header-1","padding-headerbottom":"","margin-headerbottom":"","color_headerbottom_bg":"#cb8161","header_sticky":false,"header_absolute":false,"color_homepage_text":"#ffffff","logo":"shopify:\/\/shop_images\/logo_6c2c83c7-d9df-4e56-bdfb-2f8cda3894ce.png","logo_max_width":90,"headertop_enable":true,"color_headertop_text":"#ffffff","color_headertop_bg":"#1b1b1b","headertop_text":"","headertop_text2":"","headertop_link_list":"","show_currency_selector":true,"show_locale_selector":true,"show_header_search":true,"show_header_wishlist":true,"show_header_user":true,"header_user_title":"Account","header_user_link_list":"","show_header_cart":true,"menu_enable":true,"menu_link_list":"main-menu","menu_link_list2":"","menu_link_mobile":"main-menu","menu_title":"Main Menu"}},"footer":{"type":"footer","settings":{"show_information":true,"information_title":"OUR NEWSLETTER","information_code":"<span>Sign up for the latest Ice offers and exclusives.<\/span>","show_social":true,"show_newsletter":true,"payment_image":"shopify:\/\/shop_images\/payment.png","footer_link_title":"CUSTOMER SERVICES","footer_link_list":"footer","footer_link_title_2":"ABOUT US","footer_link_list_2":"footer-menu-2","url":"\/","footer_link_title_3":"CATALOG","footer_link_list_3":"footer-menu-3","show_copyright":true,"copyright":"Copyright © 2022 Mojuri Jewellery"}},"product-breadcrumb":{"type":"product-breadcrumb","settings":{"enable":true,"bgimage":false}},"product-template":{"type":"product-template","settings":{"show_breadcrumb":true,"product_reviews_enable":true,"product_available_enable":true,"product_type_enable":false,"product_vendor_enable":true,"product_sku_enable":true,"social_sharing_products":true,"show_sticky_cart":false,"media_layout":"thumbnails","position_thumbnails":"outside","thumbnail_count":4,"enable_video_looping":false,"product_selector":"radio","quantity_enabled":true,"quantity_selector":"text","enable_payment_button":true,"product_collection_enable":true,"product_collection_title":"Categories:","product_coll_limit":4,"product_tags_enable":true,"product_tags_title":"Tags:","product_tags_limit":6,"product_share_title":"Share:"}},"product-information":{"type":"product-information","settings":{"enable":true,"tab_bundler":"Frequently Bought Together","tab_title1":"Description","tab_enable_2":false,"tab_title2":"Tab 2","tab_content2":"","tab_enable_3":false,"tab_title3":"Tab 3","tab_content3":"","tab_title4":"Review"}},"product-recommendations":{"type":"product-recommendations","settings":{"show_product_recommendations":true,"heading":"You may also like","navigation":true,"infinite":true,"autoplay":false,"autoplay_speed":"10000","columns":4,"column1440":4,"column1":4,"column2":3,"column3":1,"column4":1}},"collection-breadcrumb":{"type":"collection-breadcrumb","blocks":{"e96cbeb1-636d-4eed-a4db-6ac51efe46fa":{"type":"item","settings":{"title":"","collection":"furniture","bgimage":"shopify:\/\/shop_images\/2-1.jpg"}}},"block_order":["e96cbeb1-636d-4eed-a4db-6ac51efe46fa"],"settings":{"enable":true,"bgimage":true,"image":"shopify:\/\/shop_images\/bg-breadcrumb.jpg","enable_collection":true,"navigation":true,"infinite":true,"autoplay":false,"autoplay_speed":"10000","columns":4,"column1440":4,"column1":4,"column2":3,"column3":1,"column4":1}},"collection-sidebartop":{"type":"collection-sidebartop","settings":{"categories_enable":true,"categories_title":"Categories","show_count":true,"enable_filtering":true}},"collection-sidebarbottom":{"type":"collection-sidebarbottom","settings":{"products_enbale":true,"products_title":"FEATURE PRODUCT","collection_handle":"furniture","products_limit":"3","sidebar_banner_enable":false,"link":"\/"}},"collection-template":{"type":"collection-template","settings":{"page_item":12,"numproduct_enable":true}},"customer-variant":{"type":"customer-variant","blocks":{"0fbeb7b2-b117-47a8-8dea-73ee4c3416a2":{"type":"item","settings":{"color_name":"Antique","is_label":false,"select_color_1":"#d4937d","select_color_2":"","show_image":false}},"1178deca-7595-4fd0-b71f-85e57fa9daa5":{"type":"item","settings":{"color_name":"Bone","is_label":false,"select_color_1":"#e5d4c2","select_color_2":"","show_image":false}},"eb1a4f30-9787-4fd0-8d9f-70b78c8443cc":{"type":"item","settings":{"color_name":"Chestnut","is_label":false,"select_color_1":"#9d443e","select_color_2":"","show_image":false}},"ff2fa5d3-2abd-43a1-af36-60633e5f3c1b":{"type":"item","settings":{"color_name":"Eggshell","is_label":false,"select_color_1":"#f1ead7","select_color_2":"","show_image":false}},"acda3872-ad3a-4969-bccb-03b5ad3b11c3":{"type":"item","settings":{"color_name":"PineTree","is_label":false,"select_color_1":"#2c2f1e","select_color_2":"","show_image":false}},"fafbf59b-1bb1-40d2-8bc5-b37358e7ad58":{"type":"item","settings":{"color_name":"Gadien","is_label":false,"select_color_1":"#a19d80","select_color_2":"#f1ead7","show_image":false}},"f35a5b07-84b6-4b75-aef2-44119068ef5c":{"type":"item","settings":{"color_name":"Golden","is_label":false,"select_color_1":"","select_color_2":"","show_image":true,"color_image":"shopify:\/\/shop_images\/8.jpg"}},"bb277eac-78f5-46bd-ad76-948ad1344598":{"type":"item","settings":{"color_name":"Crimson","is_label":false,"select_color_1":"","select_color_2":"","show_image":true,"color_image":"shopify:\/\/shop_images\/13.jpg"}},"dca75787-328d-4604-916d-772cf517c367":{"type":"item","settings":{"color_name":"Grullo","is_label":false,"select_color_1":"#a19d80","select_color_2":"","show_image":false}}},"block_order":["0fbeb7b2-b117-47a8-8dea-73ee4c3416a2","1178deca-7595-4fd0-b71f-85e57fa9daa5","eb1a4f30-9787-4fd0-8d9f-70b78c8443cc","ff2fa5d3-2abd-43a1-af36-60633e5f3c1b","acda3872-ad3a-4969-bccb-03b5ad3b11c3","fafbf59b-1bb1-40d2-8bc5-b37358e7ad58","f35a5b07-84b6-4b75-aef2-44119068ef5c","bb277eac-78f5-46bd-ad76-948ad1344598","dca75787-328d-4604-916d-772cf517c367"],"settings":{}},"main-search":{"type":"main-search","settings":{"page_item":12}},"search-breadcrumb":{"type":"search-breadcrumb","settings":{"enable":true,"bgimage":true,"image":"shopify:\/\/shop_images\/bg-breadcrumb.jpg"}},"blog-breadcrumb":{"type":"blog-breadcrumb","settings":{"enable":true,"bgimage":true,"image":"shopify:\/\/shop_images\/bg-breadcrumb.jpg"}},"blog-template":{"type":"blog-template","settings":{"limit":2,"limit-coloumn":3}},"blog-sidebar":{"type":"blog-sidebar","settings":{"search_enable":true,"categories_enable":true,"categories_title":"Categories","menu_categories":"categories-blog","relatedarticles_enable":true,"relatedarticles_title":"Related Posts","relatedarticles_limit":6,"tags_enable":true,"tags_title":"Tags","tags_limit":10}},"article-template":{"type":"article-template","settings":{"show_article_tags":true,"social_sharing_blog":true,"show_prev_next":true}},"article-breadcrumb":{"type":"article-breadcrumb","settings":{"enable":true}},"blog-sidebar-search":{"type":"blog-sidebar-search","settings":{"search_enable":true,"categories_enable":true,"categories_title":"Categories","menu_categories":"categories-blog","relatedarticles_enable":true,"relatedarticles_title":"Related Articles","relatedarticles_limit":6}},"blog-template-search":{"type":"blog-template-search","settings":{"limit":5}},"164463561378a9b8a5":{"type":"slideshow","blocks":{"4952ae0f-04d3-4451-b4e8-09ee1ab5f7cd":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/slider-10.jpg","link":"","alignment":"center","align_text":"center","effect":"leftright","title":"Now up to 70% off*","slide_subheading":"MID YEAR SALE","button_label":"Explore Bestseller","button_link":"#","bg_button":"rgba(0,0,0,0)","color_button":"#ffffff","slide_heading_color":"#ffffff","slide_subheading_color":"#ffffff"}},"cac82e3f-c382-4555-bdab-84630efb7808":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/slider-10-1.jpg","link":"","alignment":"center","align_text":"center","effect":"leftright","title":"Oh, Hello Newness!","slide_subheading":"MID YEAR SALE","button_label":"Explore Bestseller","button_link":"shopify:\/\/collections","bg_button":"rgba(0,0,0,0)","color_button":"#ffffff","slide_heading_color":"#ffffff","slide_subheading_color":"#ffffff"}},"e9a18693-c847-4d26-b62e-22a7f9eed045":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/slider-10-2.jpg","link":"","alignment":"center","align_text":"center","effect":"leftright","title":"Best of the Best","slide_subheading":"MID YEAR SALE","button_label":"Explore Bestseller","button_link":"shopify:\/\/collections\/all","bg_button":"rgba(0,0,0,0)","color_button":"#ffffff","slide_heading_color":"#ffffff","slide_subheading_color":"#ffffff"}}},"block_order":["4952ae0f-04d3-4451-b4e8-09ee1ab5f7cd","cac82e3f-c382-4555-bdab-84630efb7808","e9a18693-c847-4d26-b62e-22a7f9eed045"],"settings":{"navigation":true,"pagination":true,"fade":true,"autoplay":false,"autoplay_speed":"8000","min_height_slider":"700px | 600px | 500px | 400px","bg_button_hover":"#cb8161","border_arrow":"1px","border_radius_arrow":"50%","bg_arrow":"rgba(0,0,0,0)","border_color_arrow":"#ffffff","color_arrow":"#ffffff","bg_arrow_hover":"#cb8161","border_color_arrow_hover":"#cb8161","color_arrow_hover":"#ffffff","border_dots":"0","border_radius_dots":"50%","bg_dots":"#8e8e8e","border_color_dots":"#000000","bg_dots_hover":"#ffffff","border_color_dots_hover":"#000000"}},"16449184201e02756c":{"type":"featured-policy","blocks":{"4903fc68-d7e9-4f8c-91eb-d60c40c69279":{"type":"image","settings":{"style_image":"svg","poli_svg":"","color_svg":"#ffffff","text_align":"left","poli_title":"","color_poli_title":"#000000","poli_description":"Behind our 15-year success is our panel of expert jewellers who have been scouring the entire globe in pursuit of the best and most stunning jewellery that can be offered at affordable price for you.","color_poli_description":"#868686","padding_image":"0 0 5px 0","width_image":"100%"}},"06d326d6-7670-4dfc-af39-e5e8d8ab8ae2":{"type":"image","settings":{"style_image":"svg","poli_svg":"","color_svg":"#ffffff","text_align":"left","poli_title":"","color_poli_title":"#000000","poli_description":"Visit our online catalogue and shop for the finest earrings, rings, bracelets, watches, silver, and the most luxurious gemstones.","color_poli_description":"#868686","padding_image":"0 0 35px 0","width_image":"100%"}}},"block_order":["4903fc68-d7e9-4f8c-91eb-d60c40c69279","06d326d6-7670-4dfc-af39-e5e8d8ab8ae2"],"settings":{"bg_fixed":false,"bg_position":"center","bg_size":"cover","bg_width":"full","max_width":"","fullwidth":false,"padding":"75px 0 | | 60px 0","margin":"","image_content":"shopify:\/\/shop_images\/banner-12.jpg","title":"Jewellery Online <br> at the Most Affordable Price","button":"READ MORE","link_button":"shopify:\/\/collections","style_button":"style_1","width_content_image":"50% | | | 100%","width_content_policy":"50% | | | 100%"}},"map":{"type":"map","settings":{"max_width":"960px","fullwidth":false,"padding":"0 15px","margin":"0 0 30px","api_key":"","html_map":"<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d158857.7281086143!2d-0.24167978096635917!3d51.52877184031897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2zTHXDom4gxJDDtG4sIFbGsMahbmcgUXXhu5FjIEFuaA!5e0!3m2!1svi!2s!4v1648610183581!5m2!1svi!2s\" width=\"auto\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe>"}},"contact-info":{"type":"contact-info","settings":{"max_width":"","fullwidth":false,"padding":"","margin":"0 0 65px","heading":"Need Help?","svg_icon":"<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 511.985 511.985\"><g><g><path d=\"m256.002 19.995c-4.193 0-8.038-2.714-9.438-6.667-1.415-3.996-.091-8.565 3.231-11.192 3.218-2.545 7.81-2.846 11.333-.741 3.587 2.144 5.493 6.408 4.697 10.512-.902 4.643-5.097 8.088-9.823 8.088z\"><\/path><path d=\"m486.898 258.449c12.552-6.567 20.748-20.113 19.768-35.14-.641-9.838-5.073-18.839-12.478-25.343-4.91-4.312-10.737-7.185-16.974-8.444-14.109-91.307-83.346-165.063-174.016-184.544-5.399-1.16-10.723 2.277-11.883 7.68-1.162 5.402 2.278 10.723 7.68 11.884 82.042 17.628 144.813 84.063 158.199 166.49-14.984 5.483-25.248 20.366-24.158 37.083.64 9.831 5.066 18.824 12.46 25.326-8.551 4.454-14.918 11.927-17.963 21.102-3.64 10.962-1.835 22.447 3.935 31.503-1.269-.047-2.548-.03-3.833.054-9.835.642-18.83 5.079-25.331 12.493-7.141 8.146-10.047 18.579-8.897 28.58-.57-.221-1.148-.429-1.732-.623-9.356-3.111-19.359-2.388-28.169 2.032-8.947 4.489-15.278 12.151-18.315 20.944l-81.746-89.114-.161-.16c-4.044-4.041-10.602-4.025-14.626.035l-.032.032c-.002.002-81.832 89.207-81.832 89.207-3.037-8.793-9.368-16.455-18.315-20.944-8.81-4.42-18.817-5.144-28.169-2.032-.584.194-1.162.402-1.732.623 1.15-10.002-1.756-20.435-8.897-28.581-6.501-7.413-15.496-11.85-25.331-12.492-1.284-.085-2.563-.103-3.831-.056 5.769-9.056 7.574-20.539 3.935-31.5-3.046-9.176-9.413-16.649-17.964-21.103 7.394-6.502 11.819-15.495 12.46-25.326 1.09-16.717-9.173-31.6-24.157-37.083 13.363-82.19 76.353-148.774 157.896-166.426 5.366-1.162 9.066-6.345 8.026-11.735-1.066-5.526-6.455-9.066-11.928-7.893-90.28 19.398-159.919 93.388-174.016 184.542-6.234 1.26-12.064 4.135-16.973 8.446-7.405 6.504-11.838 15.504-12.479 25.343-.98 15.028 7.216 28.573 19.768 35.14-10.777 9.503-15.465 24.89-10.66 39.366 3.107 9.358 9.668 16.946 18.478 21.365 5.21 2.614 10.837 3.935 16.5 3.935.477 0 .955-.01 1.433-.028-8.588 13.487-7.683 31.584 3.374 44.198 6.501 7.413 15.496 11.85 25.331 12.492.822.054 1.64.08 2.455.08 4.598 0 9.089-.848 13.29-2.48-1.698 14.954 5.912 30.08 20.119 37.209 5.21 2.614 10.836 3.934 16.499 3.934 3.914 0 7.847-.631 11.67-1.902 4.973-1.653 9.445-4.285 13.207-7.712l91.792 100.065c.005.005.018.019.04.04 4.089 3.962 10.592 3.958 14.72.036l.03-.029 91.836-100.113c3.762 3.427 8.234 6.058 13.207 7.712 3.824 1.271 7.755 1.902 11.67 1.902 5.662 0 11.289-1.32 16.499-3.934 14.206-7.128 21.817-22.255 20.119-37.209 4.201 1.632 8.691 2.48 13.29 2.48.815 0 1.634-.026 2.455-.08 9.835-.642 18.83-5.079 25.331-12.493 11.057-12.613 11.962-30.709 3.375-44.197.477.019.955.028 1.432.028 5.662 0 11.29-1.321 16.5-3.935 8.809-4.419 15.371-12.007 18.478-21.365 4.806-14.475.117-29.862-10.659-39.365zm-18.146-49.608c4.491-.292 8.841 1.184 12.229 4.16 3.391 2.979 5.422 7.101 5.716 11.61.607 9.302-6.459 17.364-15.749 17.971-4.492.296-8.841-1.183-12.23-4.159-3.391-2.978-5.421-7.101-5.715-11.609-.606-9.303 6.459-17.366 15.749-17.973zm-212.76 224.088-32.196-38.257 32.196-38.257 32.195 38.257zm10.006-95.702v-24.429l65.927 71.869h-26.004zm-20.011-24.429v24.429l-39.924 47.44h-26.003zm-220.7-88.188c.294-4.507 2.324-8.63 5.716-11.609 3.106-2.728 7.014-4.197 11.109-4.197.371 0 .746.012 1.121.036 9.29.607 16.355 8.67 15.749 17.973-.294 4.507-2.324 8.631-5.715 11.609-3.389 2.974-7.728 4.445-12.23 4.159-9.291-.606-16.357-8.668-15.75-17.971zm16.591 76.684c-4.032-2.023-7.036-5.497-8.459-9.783-2.937-8.849 1.863-18.438 10.7-21.377 1.749-.581 3.547-.87 5.337-.87 2.59 0 5.163.604 7.546 1.8 4.031 2.023 7.036 5.496 8.459 9.783 2.937 8.849-1.863 18.438-10.701 21.377-4.278 1.422-8.854 1.093-12.882-.93zm51.2 54.354c-3.389 2.977-7.74 4.454-12.23 4.16-4.499-.294-8.614-2.324-11.588-5.716-6.145-7.01-5.447-17.715 1.557-23.864 3.105-2.728 7.013-4.197 11.107-4.197.373 0 .747.012 1.123.036 4.499.294 8.614 2.324 11.588 5.716 6.142 7.011 5.445 17.717-1.557 23.865zm44.184 41.98c-4.28 1.422-8.854 1.093-12.882-.929-8.327-4.177-11.704-14.358-7.528-22.695 2.022-4.035 5.491-7.042 9.77-8.465 1.749-.581 3.546-.87 5.336-.87 2.59 0 5.164.604 7.547 1.8 8.326 4.177 11.704 14.357 7.528 22.694-2.021 4.036-5.492 7.042-9.771 8.465zm68.801 7.05 39.924 47.44v24.429l-65.927-71.869zm59.935 71.869v-24.429l39.923-47.44h26.004zm121.606-79.848c-4.029 2.023-8.604 2.352-12.882.929-4.279-1.423-7.749-4.429-9.771-8.465-4.175-8.337-.797-18.517 7.528-22.694 4.03-2.022 8.604-2.354 12.883-.93 4.279 1.423 7.748 4.429 9.77 8.465 4.176 8.337.799 18.518-7.528 22.695zm55.122-42.607c-2.974 3.392-7.09 5.423-11.588 5.717-4.488.293-8.841-1.183-12.229-4.16-.001 0-.001 0-.001 0-7.003-6.149-7.699-16.855-1.556-23.863 2.974-3.392 7.09-5.423 11.588-5.717.375-.024.749-.036 1.123-.036 4.094 0 8.001 1.469 11.108 4.197 7.002 6.148 7.699 16.853 1.555 23.862zm35.839-62.581c-1.423 4.286-4.426 7.76-8.459 9.783-4.03 2.023-8.604 2.353-12.882.93-8.838-2.939-13.638-12.528-10.7-21.378 1.422-4.285 4.426-7.759 8.458-9.782 4.03-2.023 8.604-2.353 12.882-.93 8.838 2.94 13.638 12.529 10.701 21.377z\"><\/path><\/g><\/g><\/svg>","heading_info_1":"PHONE","content_info_1":"<p>(1900)1300 100 423<\/p>","heading_info_2":"CUSTOMER SERVICE","content_info_2":"<p>Monday to Friday<\/p><p>8:00am – 4:00pm Sydney, NSW time (UTC +10)<\/p><p>Saturday and Sunday closed<\/p>","heading_info_3":"RETURNS","content_info_3":"<p>For information on Returns and Refunds, please click <a href=\"https:\/\/wpbingosite.com\/wordpress\/mojuri\/contact\/?show_page_title_bg=true#\">here.<\/a><\/p>"}},"contact-form":{"type":"contact-form","settings":{"bg_image":"shopify:\/\/shop_images\/7-1.jpg","bg_fixed":false,"bg_position":"center","bg_size":"cover","bg_width":"full","max_width":"960px","fullwidth":false,"padding":"65px 15px 75px","margin":"0 0 -60px","heading":"Send Us Your Questions!","sub_heading":"We’ll get back to you within two days."}},"about-heading":{"type":"about-heading","settings":{"show":true,"bg_image":"shopify:\/\/shop_images\/bg-about.jpg","bg_fixed":true,"bg_position":"center","bg_size":"cover","bg_width":"full","max_width":"","fullwidth":false,"padding":"300px 0 285px | 200px 0 160px | | 100px 0 100px","margin":"0 0 80px","heading":"Our Story","color_heading":"#ffffff","font_heading":"80px | | | 50px","sub_heading":"STUNNING, STYLISH AND WITHIN REACH","color_subheading":"#ffffff","font_subheading":"13px | | | 11px","align_text":"center"}},"featured-banner":{"type":"featured-banner","blocks":{"0f55dd53-955b-41d4-b81e-af3fac2aa9c3":{"type":"image","settings":{"url":"\/","image":"shopify:\/\/shop_images\/img-1-1.jpg","sub_title":"","color_sub_title":"#000000","title":"","color_title":"#000000","description":"","color_description":"#000000","button":"","style_button":"style_1","vertical_position":"middle","horizontal_position":"center","text_align":"center","padding_content":"0","padding_image":"0 15px  | 0 7.5px | | 0 7.5px 15px","width_image":"33.333% | | | 100%"}},"90f05686-74bd-401d-839b-8be282011b45":{"type":"image","settings":{"url":"\/","image":"shopify:\/\/shop_images\/img-2-1.jpg","sub_title":"","color_sub_title":"#000000","title":"","color_title":"#000000","description":"","color_description":"#000000","button":"","style_button":"style_1","vertical_position":"middle","horizontal_position":"center","text_align":"center","padding_content":"0","padding_image":"0 15px  | 0 7.5px | | 0 7.5px 15px","width_image":"33.333% | | | 100%"}},"0bdad0a2-b8e8-4e66-a7ce-2f9c091d0c96":{"type":"image","settings":{"url":"\/","image":"shopify:\/\/shop_images\/img-3-1.jpg","sub_title":"","color_sub_title":"#000000","title":"","color_title":"#000000","description":"","color_description":"#000000","button":"","style_button":"style_1","vertical_position":"middle","horizontal_position":"center","text_align":"center","padding_content":"0","padding_image":"0 15px  | 0 7.5px | | 0 7.5px 15px","width_image":"33.333% | | | 100%"}}},"block_order":["0f55dd53-955b-41d4-b81e-af3fac2aa9c3","90f05686-74bd-401d-839b-8be282011b45","0bdad0a2-b8e8-4e66-a7ce-2f9c091d0c96"],"settings":{"show":true,"max_width":"1440px","fullwidth":false,"padding":"0 15px | 0 7.5px","margin":"0 0 80px","effect":"effect-three","layout":"layout-1"}},"featured-newsletter":{"type":"featured-newsletter","settings":{"max_width":"630px","fullwidth":false,"padding":"0 15px","margin":"","mailchimp":true,"form_action":""}},"featured-brands":{"type":"featured-brands","blocks":{"6d1d2751-b806-42d1-8ad0-fa976a979877":{"type":"brand","settings":{"image":"shopify:\/\/shop_images\/brand-1.jpg","name":"Brand","url":"shopify:\/\/collections\/all"}},"5691a8bc-3339-4107-bb28-56fc7eba7cf9":{"type":"brand","settings":{"image":"shopify:\/\/shop_images\/brand-2.jpg","name":"Brand","url":"shopify:\/\/collections\/all"}},"38561d9f-362f-4667-9743-f7338f274628":{"type":"brand","settings":{"image":"shopify:\/\/shop_images\/brand-3.jpg","name":"Brand","url":"shopify:\/\/collections\/all"}},"51f78a64-03e6-4a6e-84f6-bc9cad196c49":{"type":"brand","settings":{"image":"shopify:\/\/shop_images\/brand-4.jpg","name":"Brand","url":"shopify:\/\/collections\/all"}},"4caaafd4-a654-4013-a228-2fd5c7ed7ca1":{"type":"brand","settings":{"image":"shopify:\/\/shop_images\/brand-5.jpg","name":"Brand","url":"shopify:\/\/collections\/all"}}},"block_order":["6d1d2751-b806-42d1-8ad0-fa976a979877","5691a8bc-3339-4107-bb28-56fc7eba7cf9","38561d9f-362f-4667-9743-f7338f274628","51f78a64-03e6-4a6e-84f6-bc9cad196c49","4caaafd4-a654-4013-a228-2fd5c7ed7ca1"],"settings":{"show":true,"max_width":"","fullwidth":false,"padding":"","margin":"0 0 -60px","title":"","navigation":true,"infinite":true,"autoplay":false,"autoplay_speed":"10000","columns":5,"column1440":4,"column1":4,"column2":3,"column3":2,"column4":1}},"featured-testimonials":{"type":"featured-testimonials","blocks":{"f7021690-8b0c-4eda-90e5-d6145bb6c8c1":{"type":"testimonial","settings":{"image":"shopify:\/\/shop_images\/tesm-1.jpg","name":"ANN SMITH","review":"<h5>“Amazing piece of history”<\/h5>Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep...","rating":"5"}},"e68fece1-2b67-4c5d-b2d1-26a2fa4059e2":{"type":"testimonial","settings":{"image":"shopify:\/\/shop_images\/tesm-2.jpg","name":"SAITAMA ONE","review":"<h5>“Fabulous Grounds”<\/h5>Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep...","rating":"5"}},"67304f68-8de5-436d-9b3b-77a14a6c4f04":{"type":"testimonial","settings":{"image":"shopify:\/\/shop_images\/tesm-3.jpg","name":"SARA COLINTON","review":"<h5>“Fabulous Grounds”<\/h5>Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep...","rating":"5"}},"e8d2e11f-bd7b-4d68-9e08-657ad039b90a":{"type":"testimonial","settings":{"image":"shopify:\/\/shop_images\/tes-4.jpg","name":"SHETTY JAMIE","review":"<h5>“Stunning Design”<\/h5>Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep...","rating":"5"}}},"block_order":["f7021690-8b0c-4eda-90e5-d6145bb6c8c1","e68fece1-2b67-4c5d-b2d1-26a2fa4059e2","67304f68-8de5-436d-9b3b-77a14a6c4f04","e8d2e11f-bd7b-4d68-9e08-657ad039b90a"],"settings":{"show":true,"bg_fixed":false,"bg_position":"center","bg_size":"cover","bg_width":"full","max_width":"","fullwidth":false,"padding":"","margin":"0 0 75px","title":"","navigation":true,"infinite":true,"autoplay":false,"autoplay_speed":"10000","columns":3,"column1440":3,"column1":2,"column2":2,"column3":1,"column4":1}},"about-icon-box":{"type":"about-icon-box","settings":{"show":true,"max_width":"930px","fullwidth":false,"padding":"0 15px","margin":"0 0 75px","heading":"Where It All Began","color_heading":"#000000","font_heading":"50px | | | 30px","sub_heading":"Aenean imperdiet. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Vestibulum fringilla pede sit amet augue. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Fusce fermentum odio nec arcu.Suspendisse faucibus, nunc et pellentesque egestas, lacus ante convallis tellus, vitae iaculis lacus elit id tortor. Sed cursus turpis vitae tortor. Vestibulum eu odio. Sed in libero ut nibh placerat accumsan. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.","color_subheading":"#868686","font_subheading":"14px","poli_svg":"<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Capa_1\" viewbox=\"0 0 512.001 512.001\"><g><g><g><g><path d=\"m479.371 131.029c-3.099 0-6.154-1.436-8.11-4.139-3.236-4.475-2.233-10.727 2.241-13.963l22.638-16.376c4.475-3.239 10.727-2.233 13.964 2.241 3.236 4.475 2.233 10.727-2.241 13.963l-22.638 16.376c-1.772 1.281-3.823 1.898-5.854 1.898z\"><\/path><\/g><\/g><g><g><path d=\"m32.63 131.029c-2.032 0-4.082-.617-5.854-1.898l-22.637-16.376c-4.475-3.237-5.478-9.488-2.241-13.963 3.238-4.474 9.49-5.478 13.964-2.241l22.638 16.375c4.475 3.237 5.478 9.488 2.241 13.963-1.956 2.703-5.012 4.14-8.111 4.14z\"><\/path><\/g><\/g><g><g><path d=\"m256.001 49.025c-5.522 0-10-4.477-10-10v-23.867c0-5.523 4.478-10 10-10s10 4.477 10 10v23.866c0 5.523-4.478 10.001-10 10.001z\"><\/path><\/g><\/g><g><path d=\"m492.647 215.277-77.499-133.949c-1.787-3.09-5.086-4.992-8.655-4.992h-300.986c-3.569 0-6.868 1.902-8.655 4.992l-77.498 133.949c-2.092 3.614-1.717 8.147.939 11.369l227.991 276.558c1.899 2.305 4.729 3.639 7.716 3.639s5.816-1.334 7.716-3.639l85.631-103.871 1.009.399 22.572 57.368c1.505 3.824 5.196 6.338 9.306 6.338s7.801-2.514 9.306-6.338l22.572-57.368 57.228-22.623c3.817-1.509 6.324-5.196 6.324-9.3s-2.507-7.791-6.323-9.3l-57.229-22.623-4.026-10.231 81.621-99.009c2.657-3.222 3.032-7.754.94-11.369zm-25.994-4.992h-113.904l53.737-103.991zm-210.652 248.864-67.465-228.863h22.259c5.522 0 10-4.477 10-10s-4.478-10-10-10h-17.303l62.508-102.427 62.508 102.426h-17.301c-5.522 0-10 4.477-10 10s4.478 10 10 10h22.26zm79.601-259.246-63.204-103.567h116.722zm-167.918 30.382 65.943 223.697-184.414-223.697zm8.713-30.382-53.517-103.567h116.722zm-70.883-93.609 53.736 103.991h-113.902zm172.86 347.689 21.836-74.074 29.588 11.696zm162.089-86.174-37.741 14.919c-2.577 1.019-4.615 3.06-5.63 5.638l-14.857 37.76-14.857-37.76c-1.015-2.578-3.053-4.62-5.63-5.638l-37.741-14.919 37.742-14.92c2.576-1.019 4.614-3.06 5.629-5.638l14.857-37.76 14.857 37.76c1.015 2.578 3.053 4.62 5.629 5.638zm-48.923-89.291c-1.505-3.824-5.196-6.338-9.306-6.338s-7.801 2.514-9.306 6.338l-22.572 57.368-42.071 16.631 36.032-122.232h118.47l-61.075 74.087z\"><\/path><g><path d=\"m256.18 230.291c-4.12 0-7.897-2.638-9.35-6.483-1.491-3.948-.269-8.58 3.006-11.255 3.235-2.643 7.897-2.987 11.481-.842 3.583 2.144 5.496 6.426 4.674 10.529-.924 4.61-5.103 8.051-9.811 8.051z\"><\/path><\/g><\/g><\/g><\/g><\/svg>","color_svg":"#000000","font_icon":"50px","align_text":"center"}},"about-newsletter":{"type":"about-newsletter","settings":{"show":true,"max_width":"690px","fullwidth":false,"padding":"75px 15px 80px","margin":"","title":"LATEST FROM MOJURI!","sub_title":"Sign-up to receive 10% off your next purchase. Plus hear about new arrivals and offers.","mailchimp":true,"form_action":""}},"about-image-content":{"type":"about-image-content","settings":{"show":true,"bg_image":"shopify:\/\/shop_images\/7-1.jpg","bg_fixed":false,"bg_position":"center","bg_size":"cover","bg_width":"full","max_width":"","fullwidth":false,"padding":"100px 0 | 20px 0 100px | 70px 0","margin":"0 0 80px","heading":"WE KNOW JEWELLERY – <br>& WE KNOW OUR CUSTOMERS","color_heading":"#000000","font_heading":"30px | | 25px","sub_heading":"Cenean imperdiet. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Vestibulum fringilla pede sit amet augue. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Fusce fermentum odio nec arcu.","color_subheading":"#868686","font_subheading":"14px","image_1":"shopify:\/\/shop_images\/img-4-1.jpg","image_2":"shopify:\/\/shop_images\/img-5-1.jpg","effect":"effect-three","align_text":"left"}},"about-policy":{"type":"about-policy","blocks":{"cd46337f-a8d4-4001-baf8-e575e7239b5a":{"type":"image","settings":{"style_image":"svg","poli_svg":"<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Capa_1\" x=\"0px\" y=\"0px\" viewbox=\"0 0 511.998 511.998\" style=\"enable-background:new 0 0 511.998 511.998;\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M256.013,59.844c-108.193,0-196.218,88.025-196.218,196.218c0,108.201,88.025,196.218,196.218,196.218    S452.23,364.263,452.23,256.061C452.23,147.869,364.206,59.844,256.013,59.844z M256.013,435.217    c-98.791,0-179.155-80.372-179.155-179.155c0-98.791,80.364-179.155,179.155-179.155s179.155,80.364,179.155,179.155    C435.168,354.844,354.804,435.217,256.013,435.217z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M256.013,281.655h-68.25c-4.709,0-8.531,3.813-8.531,8.531v42.656c0,2.849,1.425,5.511,3.796,7.098l21.797,14.529v38.092    c0,3.489,2.124,6.629,5.358,7.925l42.656,17.062c1.032,0.409,2.107,0.606,3.174,0.606c1.689,0,3.353-0.503,4.786-1.467    c2.338-1.587,3.745-4.231,3.745-7.064V290.186C264.544,285.468,260.722,281.655,256.013,281.655z M247.482,397.022l-25.594-10.237    v-36.88c0-2.849-1.425-5.511-3.796-7.098l-21.797-14.529v-29.561h51.187V397.022z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M262.044,190.311l-42.656-42.656c-2.448-2.44-6.108-3.174-9.299-1.851c-3.182,1.322-5.264,4.436-5.264,7.883v17.062    h-17.062V85.437h-17.062v93.843c0,4.709,3.822,8.531,8.531,8.531h34.125c4.709,0,8.531-3.822,8.531-8.531v-4.999l25.594,25.594    v30.593h-59.718c-4.709,0-8.531,3.822-8.531,8.531v33.434l-25.594-20.466v-47.092c0-4.709-3.822-8.531-8.531-8.531h-68.25v17.062    h59.718v42.656c0,2.585,1.177,5.042,3.199,6.663l42.656,34.125c1.544,1.237,3.43,1.868,5.332,1.868    c1.263,0,2.525-0.273,3.694-0.845c2.96-1.425,4.837-4.402,4.837-7.687V247.53h59.718c4.709,0,8.531-3.822,8.531-8.531v-42.656    C264.544,194.082,263.648,191.915,262.044,190.311z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M343.824,87.937l-62.218,62.218l-17.062-17.062V68.375h-17.062v68.25c0,2.261,0.896,4.428,2.5,6.032l25.594,25.594    c1.595,1.604,3.762,2.5,6.032,2.5c2.261,0,4.428-0.896,6.032-2.5l68.25-68.25L343.824,87.937z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M442.829,243.785c-1.433-2.926-4.402-4.786-7.661-4.786h-25.594v-76.781c0-4.709-3.813-8.531-8.531-8.531h-51.187    c-2.269,0-4.428,0.896-6.032,2.5l-42.656,42.656c-3.336,3.336-3.336,8.727,0,12.063l31.625,31.625v81.78    c0,4.718,3.813,8.531,8.531,8.531h34.125c2.628,0,5.11-1.22,6.731-3.293l59.718-76.781    C443.895,250.2,444.262,246.711,442.829,243.785z M371.278,315.78h-21.422v-76.781c0-2.261-0.896-4.428-2.5-6.032l-28.093-28.093    l34.125-34.125h39.124v76.781c0,4.709,3.813,8.531,8.531,8.531h16.678L371.278,315.78z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M297.21,491.386c-13.582,2.355-27.445,3.549-41.197,3.549c-0.026,0-0.051,0-0.077,0    c-63.771,0-123.737-24.826-168.85-69.913c-45.139-45.096-70.007-105.079-70.024-168.884c-0.008-34.364,7.192-67.644,21.405-98.919    l-15.527-7.055C7.704,183.674-0.009,219.335,0,256.138c0.017,68.361,26.669,132.635,75.015,180.955    c48.338,48.304,112.586,74.904,180.921,74.904c0.026,0,0.051,0,0.085,0c14.725,0,29.561-1.271,44.106-3.796L297.21,491.386z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M346.623,477.147c-9.162,3.762-18.641,6.979-28.161,9.546l4.445,16.482c10.212-2.764,20.364-6.211,30.2-10.246    L346.623,477.147z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M506.506,202.895C477.235,64.843,341.146-23.694,203.06,5.602l3.54,16.687C335.43-5.027,462.502,77.589,489.81,206.435    c10.528,49.583,4.752,102.315-16.252,148.468l15.527,7.064C511.591,312.521,517.767,256.027,506.506,202.895z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M185.528,10.312c-8.983,2.44-17.898,5.417-26.506,8.838l6.296,15.859c8.019-3.182,16.32-5.955,24.681-8.233    L185.528,10.312z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M151.13,45.264c-17.54-17.455-45.795-18.274-64.325-1.868L39.491,85.437H8.608c-3.447,0-6.56,2.073-7.883,5.264    S0.136,97.56,2.576,100l42.656,42.656c1.664,1.664,3.848,2.5,6.032,2.5c2.056,0,4.112-0.734,5.742-2.227l93.843-85.312    c1.732-1.57,2.739-3.779,2.79-6.117C153.69,49.171,152.785,46.911,151.13,45.264z M51.546,124.843L29.202,102.5h13.531    c2.09,0,4.104-0.759,5.665-2.15l49.728-44.183c9.444-8.369,22.864-9.7,33.57-4.189L51.546,124.843z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M509.441,412.123l-42.656-42.656c-3.208-3.233-8.395-3.336-11.773-0.282l-93.843,85.312    c-1.723,1.578-2.73,3.796-2.79,6.125c-0.051,2.329,0.862,4.59,2.517,6.236c9.12,9.077,21.132,13.65,33.169,13.65    c11.116,0,22.266-3.907,31.156-11.79l47.306-42.033h30.883c3.447,0,6.569-2.073,7.883-5.264    C512.614,418.231,511.881,414.563,509.441,412.123z M469.293,409.623c-2.09,0-4.104,0.768-5.665,2.158l-49.72,44.175    c-9.444,8.352-22.864,9.7-33.579,4.189l80.151-72.865l22.343,22.343H469.293z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<\/svg>","font_icon":"50px","color_svg":"#000000","poli_title":"SHIPPING WORLDWIDE","color_poli_title":"#000000","poli_description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit","color_poli_description":"#868686","padding_image":"0 15px  | 0 7.5px | | 0 7.5px 50px","width_image":"33.333% | | | 100%"}},"4f2f25ba-49ef-4c2d-8128-2ee36d980b16":{"type":"image","settings":{"style_image":"svg","poli_svg":"<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Capa_1\" x=\"0px\" y=\"0px\" viewbox=\"0 0 508 508\" style=\"enable-background:new 0 0 508 508;\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M254,0C128.3,0,26.1,102.2,26.1,227.9c0,122.9,97.9,223.4,219.8,227.7V508l60.3-60.3l-60.3-60.3v52    c-113-4.4-203.5-97.5-203.5-211.5c0-116.7,94.9-211.6,211.6-211.6s211.6,94.9,211.6,211.6h16.3C481.9,102.2,379.7,0,254,0z     M262.1,426.6l21,21l-21,21V426.6z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M131.9,105.8V350h244.2V105.8H131.9z M229.6,122.1L229.6,122.1h48.8v32.6h-48.8V122.1z M359.8,333.7H148.2V122.1h65.1    v48.8h81.4v-48.8h65.1V333.7z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<polygon points=\"319.1,248.2 291.2,279.5 303.4,290.3 311,281.8 311,317.4 327.3,317.4 327.3,281.8 334.8,290.3 347,279.5   \"><\/polygon>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<polygon points=\"251.4,248.2 223.5,279.5 235.7,290.3 243.2,281.8 243.2,317.4 259.5,317.4 259.5,281.8 267.1,290.3 279.2,279.5       \"><\/polygon>\n\t<\/g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<\/svg>","font_icon":"50px","color_svg":"#000000","poli_title":"14 DAYS RETURN","color_poli_title":"#000000","poli_description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit","color_poli_description":"#868686","padding_image":"0 15px  | 0 7.5px | | 0 7.5px 50px","width_image":"33.333% | | | 100%"}},"01269867-d6de-40a6-8695-37dfcf8987e5":{"type":"image","settings":{"style_image":"svg","poli_svg":"<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Capa_1\" x=\"0px\" y=\"0px\" viewbox=\"0 0 512 512\" style=\"enable-background:new 0 0 512 512;\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M457.987,31.531c-2.688-6.997-13.013-8.533-17.749-3.499c-21.44,18.88-48.939,29.248-77.547,29.248    c-39.424,0-75.989-19.627-97.771-52.501C262.937,1.792,259.609,0,256.025,0c-3.563,0-6.912,1.792-8.875,4.757    c-21.845,32.875-58.411,52.501-97.835,52.501c-28.928,0-56.704-10.603-78.208-29.867c-3.136-2.816-7.616-3.499-11.477-1.792    c-3.84,1.707-6.315,5.525-6.315,9.728v231.317c0,133.205,189.44,239.552,197.504,244.011c1.6,0.896,3.392,1.344,5.163,1.344    c1.771,0,3.563-0.448,5.163-1.301c8.064-4.459,197.504-110.827,197.504-244.011v-230.4    C458.777,34.688,458.563,33.067,457.987,31.531z M437.315,266.667c0,109.163-151.232,204.459-181.333,222.336    C225.859,471.125,74.649,375.936,74.649,266.667V56.811c22.165,14.165,48,21.803,74.667,21.803    c41.579,0,80.469-18.496,106.667-50.091c26.24,31.616,65.131,50.091,106.709,50.091c26.645,0,52.48-7.637,74.624-21.781V266.667z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M327.577,195.136c-4.16-4.16-10.923-4.16-15.083,0l-77.845,77.781l-35.072-35.115c-4.16-4.16-10.923-4.16-15.083,0    c-4.16,4.139-4.16,10.923,0,15.083l42.581,42.667c2.005,1.984,4.715,3.115,7.552,3.115s5.547-1.131,7.531-3.115l85.419-85.333    C331.737,206.059,331.737,199.296,327.577,195.136z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<\/svg>","font_icon":"50px","color_svg":"#000000","poli_title":"SECURITY PAYMENT","color_poli_title":"#000000","poli_description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit","color_poli_description":"#868686","padding_image":"0 15px","width_image":"33.333% | | | 100%"}}},"block_order":["cd46337f-a8d4-4001-baf8-e575e7239b5a","4f2f25ba-49ef-4c2d-8128-2ee36d980b16","01269867-d6de-40a6-8695-37dfcf8987e5"],"settings":{"show":true,"bg_fixed":false,"bg_position":"center","bg_size":"cover","bg_width":"full","max_width":"","fullwidth":false,"padding":"","margin":"0 0 75px","align_text":"center"}},"about-image-content2":{"type":"about-image-content2","settings":{"show":true,"bg_color":"#fdf6f2","bg_fixed":false,"bg_position":"center","bg_size":"cover","bg_width":"full","max_width":"","fullwidth":false,"padding":"75px 0","margin":"0 0 75px","heading":"TOP JEWELLERS AT ICE ONLINE","color_heading":"#000000","font_heading":"30px | | 25px","sub_heading":"Cenean imperdiet. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Vestibulum fringilla pede sit amet augue. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Fusce fermentum odio nec arcu.","color_subheading":"#868686","font_subheading":"14px","image":"shopify:\/\/shop_images\/img-6.jpg","effect":"effect-three","align_text":"left"}},"faq-template":{"type":"faq-template","blocks":{"b0ee95f9-a491-4ee7-b4df-d17e9163c68f":{"type":"faq","settings":{"title":"01.The order","content":"<p><strong>When do I receive my order?<\/strong><br\/>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<br\/><br\/><strong>I now see the longer delivery time of (a part of) my order. How can I cancel it?<\/strong><br\/>If the order has a longer delivery time than you had previously seen, it is of course possible to cancel (a part of) the order. For this you can contact our customer service. They will cancel the order for you. The purchase amount will be back on your bank account within two working days. When an order has already been shipped, it can no longer be cancelled.<\/p><p><br\/><strong>When will I receive the invoice for my order?<\/strong><br\/>When you have paid for the order, you will not automatically receive an invoice for your order. If you wish to receive an invoice, this can be done in two ways.The first way is through your account at our store. When you log in to your account you can see your orders and download the invoice.<\/p>","width":"50% | | | 100%","padding":"0 15px"}},"e0973b19-7458-4486-b7b0-6786c38b8dd0":{"type":"faq","settings":{"title":"02. Shipment","content":"<p><strong>When do I receive my order?<\/strong><br\/>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<br\/><br\/><strong>I now see the longer delivery time of (a part of) my order. How can I cancel it?<\/strong><br\/>If the order has a longer delivery time than you had previously seen, it is of course possible to cancel (a part of) the order. For this you can contact our customer service. They will cancel the order for you. The purchase amount will be back on your bank account within two working days. When an order has already been shipped, it can no longer be cancelled.<\/p><p><br\/><strong>When will I receive the invoice for my order?<\/strong><br\/>When you have paid for the order, you will not automatically receive an invoice for your order. If you wish to receive an invoice, this can be done in two ways.The first way is through your account at our store. When you log in to your account you can see your orders and download the invoice.<\/p>","width":"50% | | | 100%","padding":"0 15px"}},"1b943bbd-3c41-4d20-b1ba-5154c3f784d7":{"type":"faq","settings":{"title":"03. The order","content":"<p><strong>When do I receive my order?<\/strong><br\/>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<br\/><br\/><strong>I now see the longer delivery time of (a part of) my order. How can I cancel it?<\/strong><br\/>If the order has a longer delivery time than you had previously seen, it is of course possible to cancel (a part of) the order. For this you can contact our customer service. They will cancel the order for you. The purchase amount will be back on your bank account within two working days. When an order has already been shipped, it can no longer be cancelled.<\/p><p><br\/><strong>When will I receive the invoice for my order?<\/strong><br\/>When you have paid for the order, you will not automatically receive an invoice for your order. If you wish to receive an invoice, this can be done in two ways.The first way is through your account at our store. When you log in to your account you can see your orders and download the invoice.<\/p>","width":"50% | | | 100%","padding":"0 15px"}},"91f8c21c-0dd4-49ce-a52b-35de564327e4":{"type":"faq","settings":{"title":"04. Returns, exchanges and complaints","content":"<p><strong>When do I receive my order?<\/strong><br\/>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<br\/><br\/><strong>I now see the longer delivery time of (a part of) my order. How can I cancel it?<\/strong><br\/>If the order has a longer delivery time than you had previously seen, it is of course possible to cancel (a part of) the order. For this you can contact our customer service. They will cancel the order for you. The purchase amount will be back on your bank account within two working days. When an order has already been shipped, it can no longer be cancelled.<\/p><p><br\/><strong>When will I receive the invoice for my order?<\/strong><br\/>When you have paid for the order, you will not automatically receive an invoice for your order. If you wish to receive an invoice, this can be done in two ways.The first way is through your account at our store. When you log in to your account you can see your orders and download the invoice.<\/p>","width":"50% | | | 100%","padding":"0 15px"}}},"block_order":["b0ee95f9-a491-4ee7-b4df-d17e9163c68f","e0973b19-7458-4486-b7b0-6786c38b8dd0","1b943bbd-3c41-4d20-b1ba-5154c3f784d7","91f8c21c-0dd4-49ce-a52b-35de564327e4"],"settings":{}},"16487788622d3b4782":{"type":"featured-products","settings":{"max_width":"","fullwidth":false,"padding":"","margin":"70px 0 20px 0 | | 60px 0 5px 0","title":"Jewellery Favourites","title_color":"#000000","sub_title":"DISCOVER THIS WEEK’S","sub_title_color":"#000000","featured_products":"furniture","limit":8,"navigation":true,"infinite":true,"autoplay":false,"autoplay_speed":"10000","columns":4,"column1440":4,"column1":3,"column2":2,"column3":2,"column4":2}},"1648778869bb2cae88":{"type":"featured-banner","blocks":{"05433cde-1145-4ee5-b0cf-1dd86224d998":{"type":"image","settings":{"url":"\/","image":"shopify:\/\/shop_images\/banner-10.jpg","sub_title":"","color_sub_title":"#000000","title":"EAR STACK MAGIC","color_title":"#000000","description":"Elevate your ear party with a choice of mix and matched stacks or striking\nsolo statements. The choice is yours!","color_description":"#868686","button":"shop now","style_button":"style_1","vertical_position":"bottom","horizontal_position":"center","text_align":"center","padding_content":"","padding_image":"0 15px | 0 7.5px | | 0 7.5px 40px","width_image":"50% | | | 100%"}},"35bbc76d-4625-408e-bf77-176e0d60e928":{"type":"image","settings":{"url":"\/","image":"shopify:\/\/shop_images\/banner-11.jpg","sub_title":"","color_sub_title":"#000000","title":"JOIN THE LAYERING GANG","color_title":"#000000","description":"Love to layer? Us too! Transition your outfits from day to night in one easy step with the\npower of a unique, luxe layered look.","color_description":"#868686","button":"shop now","style_button":"style_1","vertical_position":"bottom","horizontal_position":"center","text_align":"center","padding_content":"","padding_image":"0 15px | 0 7.5px","width_image":"50% | | | 100%"}}},"block_order":["05433cde-1145-4ee5-b0cf-1dd86224d998","35bbc76d-4625-408e-bf77-176e0d60e928"],"settings":{"show":true,"bg_fixed":false,"bg_position":"center","bg_size":"cover","bg_width":"full","max_width":"","fullwidth":false,"padding":"0 0 75px | 0 0 60px","margin":"50px 0 0 0 | | 60px 0 0 0","title":"","title_color":"#000000","sub_title":"","sub_title_color":"#000000","effect":"none","layout":"layout-2"}},"16505277673708c752":{"type":"featured-video","settings":{"max_width":"","fullwidth":true,"padding":"230px 15px 255px 15px | | | 150px 15px 180px 15px","margin":"","sub_title":"","color_sub_title":"#000000","title":"Stand Out In Style","color_title":"#ffffff","description":"","color_description":"#000000","button_video":"DISCOVER NOW","url_button":"#","text_align":"center","video_url":"https:\/\/www.youtube.com\/watch?v=PRgGRgtAvJ0"}},"165052784050c92ce5":{"type":"featured-products","settings":{"max_width":"","fullwidth":false,"padding":"","margin":"70px 0 40px 0 | | 60px 0 25px 0","title":"The Hot List","title_color":"#000000","sub_title":"ON TREND HOT JEWELLERY","sub_title_color":"#000000","featured_products":"frontpage","limit":8,"navigation":true,"infinite":true,"autoplay":false,"autoplay_speed":"10000","columns":4,"column1440":4,"column1":4,"column2":3,"column3":2,"column4":2}},"1650529657399ae6fb":{"type":"featured-blog","settings":{"max_width":"","fullwidth":false,"padding":"","margin":"70px 0 0 0 | | 60px 0 0 0","title":"Jewellery Style Files","title_color":"#000000","sub_title":"NEWS & Inspired","sub_title_color":"#000000","button":"read more","link_button":"","style_button":"style_2","blog":"necklaces","post_limit":8,"blog_show_date":true,"blog_show_author":false,"blog_show_image":true,"blog_show_excerpt":false,"show_view_all":false,"navigation":true,"infinite":true,"autoplay":false,"autoplay_speed":"10000","columns":3,"column1440":3,"column1":3,"column2":2,"column3":1,"column4":1}},"165061040218565a1c":{"type":"featured-policy","blocks":{"b11bd3ea-1933-44b1-92e9-a854aa9ef68c":{"type":"image","settings":{"style_image":"svg","poli_svg":"<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Capa_1\" x=\"0px\" y=\"0px\" viewbox=\"0 0 511.998 511.998\" style=\"enable-background:new 0 0 511.998 511.998;\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M256.013,59.844c-108.193,0-196.218,88.025-196.218,196.218c0,108.201,88.025,196.218,196.218,196.218    S452.23,364.263,452.23,256.061C452.23,147.869,364.206,59.844,256.013,59.844z M256.013,435.217    c-98.791,0-179.155-80.372-179.155-179.155c0-98.791,80.364-179.155,179.155-179.155s179.155,80.364,179.155,179.155    C435.168,354.844,354.804,435.217,256.013,435.217z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M256.013,281.655h-68.25c-4.709,0-8.531,3.813-8.531,8.531v42.656c0,2.849,1.425,5.511,3.796,7.098l21.797,14.529v38.092    c0,3.489,2.124,6.629,5.358,7.925l42.656,17.062c1.032,0.409,2.107,0.606,3.174,0.606c1.689,0,3.353-0.503,4.786-1.467    c2.338-1.587,3.745-4.231,3.745-7.064V290.186C264.544,285.468,260.722,281.655,256.013,281.655z M247.482,397.022l-25.594-10.237    v-36.88c0-2.849-1.425-5.511-3.796-7.098l-21.797-14.529v-29.561h51.187V397.022z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M262.044,190.311l-42.656-42.656c-2.448-2.44-6.108-3.174-9.299-1.851c-3.182,1.322-5.264,4.436-5.264,7.883v17.062    h-17.062V85.437h-17.062v93.843c0,4.709,3.822,8.531,8.531,8.531h34.125c4.709,0,8.531-3.822,8.531-8.531v-4.999l25.594,25.594    v30.593h-59.718c-4.709,0-8.531,3.822-8.531,8.531v33.434l-25.594-20.466v-47.092c0-4.709-3.822-8.531-8.531-8.531h-68.25v17.062    h59.718v42.656c0,2.585,1.177,5.042,3.199,6.663l42.656,34.125c1.544,1.237,3.43,1.868,5.332,1.868    c1.263,0,2.525-0.273,3.694-0.845c2.96-1.425,4.837-4.402,4.837-7.687V247.53h59.718c4.709,0,8.531-3.822,8.531-8.531v-42.656    C264.544,194.082,263.648,191.915,262.044,190.311z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M343.824,87.937l-62.218,62.218l-17.062-17.062V68.375h-17.062v68.25c0,2.261,0.896,4.428,2.5,6.032l25.594,25.594    c1.595,1.604,3.762,2.5,6.032,2.5c2.261,0,4.428-0.896,6.032-2.5l68.25-68.25L343.824,87.937z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M442.829,243.785c-1.433-2.926-4.402-4.786-7.661-4.786h-25.594v-76.781c0-4.709-3.813-8.531-8.531-8.531h-51.187    c-2.269,0-4.428,0.896-6.032,2.5l-42.656,42.656c-3.336,3.336-3.336,8.727,0,12.063l31.625,31.625v81.78    c0,4.718,3.813,8.531,8.531,8.531h34.125c2.628,0,5.11-1.22,6.731-3.293l59.718-76.781    C443.895,250.2,444.262,246.711,442.829,243.785z M371.278,315.78h-21.422v-76.781c0-2.261-0.896-4.428-2.5-6.032l-28.093-28.093    l34.125-34.125h39.124v76.781c0,4.709,3.813,8.531,8.531,8.531h16.678L371.278,315.78z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M297.21,491.386c-13.582,2.355-27.445,3.549-41.197,3.549c-0.026,0-0.051,0-0.077,0    c-63.771,0-123.737-24.826-168.85-69.913c-45.139-45.096-70.007-105.079-70.024-168.884c-0.008-34.364,7.192-67.644,21.405-98.919    l-15.527-7.055C7.704,183.674-0.009,219.335,0,256.138c0.017,68.361,26.669,132.635,75.015,180.955    c48.338,48.304,112.586,74.904,180.921,74.904c0.026,0,0.051,0,0.085,0c14.725,0,29.561-1.271,44.106-3.796L297.21,491.386z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M346.623,477.147c-9.162,3.762-18.641,6.979-28.161,9.546l4.445,16.482c10.212-2.764,20.364-6.211,30.2-10.246    L346.623,477.147z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M506.506,202.895C477.235,64.843,341.146-23.694,203.06,5.602l3.54,16.687C335.43-5.027,462.502,77.589,489.81,206.435    c10.528,49.583,4.752,102.315-16.252,148.468l15.527,7.064C511.591,312.521,517.767,256.027,506.506,202.895z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M185.528,10.312c-8.983,2.44-17.898,5.417-26.506,8.838l6.296,15.859c8.019-3.182,16.32-5.955,24.681-8.233    L185.528,10.312z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M151.13,45.264c-17.54-17.455-45.795-18.274-64.325-1.868L39.491,85.437H8.608c-3.447,0-6.56,2.073-7.883,5.264    S0.136,97.56,2.576,100l42.656,42.656c1.664,1.664,3.848,2.5,6.032,2.5c2.056,0,4.112-0.734,5.742-2.227l93.843-85.312    c1.732-1.57,2.739-3.779,2.79-6.117C153.69,49.171,152.785,46.911,151.13,45.264z M51.546,124.843L29.202,102.5h13.531    c2.09,0,4.104-0.759,5.665-2.15l49.728-44.183c9.444-8.369,22.864-9.7,33.57-4.189L51.546,124.843z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M509.441,412.123l-42.656-42.656c-3.208-3.233-8.395-3.336-11.773-0.282l-93.843,85.312    c-1.723,1.578-2.73,3.796-2.79,6.125c-0.051,2.329,0.862,4.59,2.517,6.236c9.12,9.077,21.132,13.65,33.169,13.65    c11.116,0,22.266-3.907,31.156-11.79l47.306-42.033h30.883c3.447,0,6.569-2.073,7.883-5.264    C512.614,418.231,511.881,414.563,509.441,412.123z M469.293,409.623c-2.09,0-4.104,0.768-5.665,2.158l-49.72,44.175    c-9.444,8.352-22.864,9.7-33.579,4.189l80.151-72.865l22.343,22.343H469.293z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<\/svg>","color_svg":"#000000","text_align":"center","poli_title":"Shipping Worldwide","color_poli_title":"#000000","poli_description":"Lorem ipsum dolor sit amet, consectetur\n<br>\nadipiscing elit","color_poli_description":"#868686","padding_image":"0 15px | | | 15px 0","width_image":"33.33333% | | | 100%"}},"a54c333a-fd67-40e4-b3d3-af7d900f0992":{"type":"image","settings":{"style_image":"svg","poli_svg":"<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Capa_1\" x=\"0px\" y=\"0px\" viewbox=\"0 0 508 508\" style=\"enable-background:new 0 0 508 508;\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M254,0C128.3,0,26.1,102.2,26.1,227.9c0,122.9,97.9,223.4,219.8,227.7V508l60.3-60.3l-60.3-60.3v52    c-113-4.4-203.5-97.5-203.5-211.5c0-116.7,94.9-211.6,211.6-211.6s211.6,94.9,211.6,211.6h16.3C481.9,102.2,379.7,0,254,0z     M262.1,426.6l21,21l-21,21V426.6z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M131.9,105.8V350h244.2V105.8H131.9z M229.6,122.1L229.6,122.1h48.8v32.6h-48.8V122.1z M359.8,333.7H148.2V122.1h65.1    v48.8h81.4v-48.8h65.1V333.7z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<polygon points=\"319.1,248.2 291.2,279.5 303.4,290.3 311,281.8 311,317.4 327.3,317.4 327.3,281.8 334.8,290.3 347,279.5   \"><\/polygon>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<polygon points=\"251.4,248.2 223.5,279.5 235.7,290.3 243.2,281.8 243.2,317.4 259.5,317.4 259.5,281.8 267.1,290.3 279.2,279.5       \"><\/polygon>\n\t<\/g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<\/svg>","color_svg":"#000000","text_align":"center","poli_title":"14 Days Return","color_poli_title":"#000000","poli_description":"Lorem ipsum dolor sit amet, consectetur\n<br>\nadipiscing elit","color_poli_description":"#868686","padding_image":"0 15px | | | 15px 0","width_image":"33.33333% | | | 100%"}},"3e677e15-62d7-49b7-b39b-92004edfeb0b":{"type":"image","settings":{"style_image":"svg","poli_svg":"<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Capa_1\" x=\"0px\" y=\"0px\" viewbox=\"0 0 512 512\" style=\"enable-background:new 0 0 512 512;\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M457.987,31.531c-2.688-6.997-13.013-8.533-17.749-3.499c-21.44,18.88-48.939,29.248-77.547,29.248    c-39.424,0-75.989-19.627-97.771-52.501C262.937,1.792,259.609,0,256.025,0c-3.563,0-6.912,1.792-8.875,4.757    c-21.845,32.875-58.411,52.501-97.835,52.501c-28.928,0-56.704-10.603-78.208-29.867c-3.136-2.816-7.616-3.499-11.477-1.792    c-3.84,1.707-6.315,5.525-6.315,9.728v231.317c0,133.205,189.44,239.552,197.504,244.011c1.6,0.896,3.392,1.344,5.163,1.344    c1.771,0,3.563-0.448,5.163-1.301c8.064-4.459,197.504-110.827,197.504-244.011v-230.4    C458.777,34.688,458.563,33.067,457.987,31.531z M437.315,266.667c0,109.163-151.232,204.459-181.333,222.336    C225.859,471.125,74.649,375.936,74.649,266.667V56.811c22.165,14.165,48,21.803,74.667,21.803    c41.579,0,80.469-18.496,106.667-50.091c26.24,31.616,65.131,50.091,106.709,50.091c26.645,0,52.48-7.637,74.624-21.781V266.667z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M327.577,195.136c-4.16-4.16-10.923-4.16-15.083,0l-77.845,77.781l-35.072-35.115c-4.16-4.16-10.923-4.16-15.083,0    c-4.16,4.139-4.16,10.923,0,15.083l42.581,42.667c2.005,1.984,4.715,3.115,7.552,3.115s5.547-1.131,7.531-3.115l85.419-85.333    C331.737,206.059,331.737,199.296,327.577,195.136z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<\/svg>","color_svg":"#000000","text_align":"center","poli_title":"Security Payment","color_poli_title":"#000000","poli_description":"Lorem ipsum dolor sit amet, consectetur\n<br>\nadipiscing elit","color_poli_description":"#868686","padding_image":"0 15px | | | 15px 0 0","width_image":"33.33333% | | | 100%"}}},"block_order":["b11bd3ea-1933-44b1-92e9-a854aa9ef68c","a54c333a-fd67-40e4-b3d3-af7d900f0992","3e677e15-62d7-49b7-b39b-92004edfeb0b"],"settings":{"bg_image":"shopify:\/\/shop_images\/5_9a09cec3-8642-4f35-b3f6-d27652502edc.jpg","bg_fixed":false,"bg_position":"center","bg_size":"cover","bg_width":"full","max_width":"","fullwidth":false,"padding":"20px 0 30px 0 | 45px 0 0 0","margin":"75px 0 0 0 | | 60px 0 0 0","title":"","button":"","link_button":"","style_button":"style_2","width_content_image":"","width_content_policy":"100%"}},"165173433499f9812a":{"type":"featured-banner","blocks":{"ed2bb7b2-a3df-436d-a368-377a04984254":{"type":"image","settings":{"url":"\/","image":"shopify:\/\/shop_images\/banner-22.jpg","sub_title":"","color_sub_title":"#000000","title":"","color_title":"#000000","description":"","color_description":"#000000","button":"Shop Bracelets","style_button":"style_3","vertical_position":"bottom","horizontal_position":"center","text_align":"center","padding_content":"0 15px","padding_image":"0 5px","width_image":"20% | | 33.33333% | 100%"}},"d4917bec-11ea-43b0-8f17-5ddf49875ab6":{"type":"image","settings":{"url":"\/","image":"shopify:\/\/shop_images\/banner-23.jpg","sub_title":"","color_sub_title":"#000000","title":"","color_title":"#000000","description":"","color_description":"#000000","button":"Shop Charms","style_button":"style_3","vertical_position":"bottom","horizontal_position":"center","text_align":"center","padding_content":"0 15px","padding_image":"0 5px","width_image":"20% | | 33.33333% | 100%"}},"12fb526d-f6a5-48e8-ac16-8f4ebaa4a685":{"type":"image","settings":{"url":"\/","image":"shopify:\/\/shop_images\/banner-24.jpg","sub_title":"","color_sub_title":"#000000","title":"","color_title":"#000000","description":"","color_description":"#000000","button":"Shop Earrings","style_button":"style_3","vertical_position":"bottom","horizontal_position":"center","text_align":"center","padding_content":"0 15px","padding_image":"0 5px","width_image":"20% | | 33.33333% | 100%"}},"06e1b671-0d8f-4459-8081-047e48f53201":{"type":"image","settings":{"url":"\/","image":"shopify:\/\/shop_images\/banner-25.jpg","sub_title":"","color_sub_title":"#000000","title":"","color_title":"#000000","description":"","color_description":"#000000","button":"Shop Necklaces","style_button":"style_3","vertical_position":"bottom","horizontal_position":"center","text_align":"center","padding_content":"0 15px","padding_image":"0 5px","width_image":"20% | | 33.33333% | 100%"}},"5ebedbf2-55ad-4025-ac21-5d42940a7fe0":{"type":"image","settings":{"url":"\/","image":"shopify:\/\/shop_images\/banner-26.jpg","sub_title":"","color_sub_title":"#000000","title":"","color_title":"#000000","description":"","color_description":"#000000","button":"Shop Rings","style_button":"style_3","vertical_position":"bottom","horizontal_position":"center","text_align":"center","padding_content":"0 15px","padding_image":"0 5px","width_image":"20% | | 33.33333% | 100%"}}},"block_order":["ed2bb7b2-a3df-436d-a368-377a04984254","d4917bec-11ea-43b0-8f17-5ddf49875ab6","12fb526d-f6a5-48e8-ac16-8f4ebaa4a685","06e1b671-0d8f-4459-8081-047e48f53201","5ebedbf2-55ad-4025-ac21-5d42940a7fe0"],"settings":{"show":true,"bg_image":"shopify:\/\/shop_images\/4_2915ea30-5c84-4cf1-865e-caa1e13db903.jpg","bg_fixed":false,"bg_position":"center","bg_size":"cover","bg_width":"full","max_width":"","fullwidth":false,"padding":"45px 0 100px 0 | | | 45px 0 45px 0","margin":"","title":"Explore the Range","title_color":"#000000","sub_title":"WE’VE GOT YOU COVERED","sub_title_color":"#000000","effect":"none","layout":"layout-1"}}},"content_for_index":["164463561378a9b8a5","165173433499f9812a","1648778869bb2cae88","16487788622d3b4782","16505277673708c752","165052784050c92ce5","16449184201e02756c","1650529657399ae6fb","165061040218565a1c"]}}
+{
+    "current": {
+      "theme-color": "#ad906f",
+      "color_secondary": "#8d9e74",
+      "gray-dark": "#2b2b2b",
+      "text-color": "#868686",
+      "color_border": "#d5dadd",
+      "color_header_text": "#2f2f2f",
+      "color_footer_heading": "#2f2f2f",
+      "color_footer_text": "#5a5a5a",
+      "color_footer_bottom_bg": "#2b2b2b",
+      "color_menu_text": "#2b2b2b",
+      "color_menu_text_hover": "#ad906f",
+      "color_submenu_text": "#5a5a5a",
+      "color_submenu_text_hover": "#ad906f",
+      "select-font-second": "google",
+      "font-family-second-google-link": "<link href=\"https:\/\/fonts.googleapis.com\/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap\" rel=\"stylesheet\">",
+      "font-family-second-google": "Cormorant Garamond",
+      "font-family-base": "lato_n4",
+      "shop_full": false,
+      "layout_filter": "sidebar",
+      "sidebar_enable": true,
+      "select_columns": "grid-4",
+      "sortby_enable": true,
+      "select_pagination": "loadmore",
+      "hover_style": "hover_style_1",
+      "product_vendor_enable": false,
+      "product_card_review": true,
+      "quickview_enable": true,
+      "quickview_availability": true,
+      "quickview_quantity_selector": "text",
+      "quickview_variant_selector": "radio",
+      "show_size_chart": false,
+      "style_option": "circle",
+      "filter_name_1": "Afmeting",
+      "filter_name_2": "Kleur",
+      "select_filter_2": "color",
+      "filter_name_3": "Image",
+      "select_filter_3": "image",
+      "cart_type": "drawer",
+      "cart_notes_enable": true,
+      "cart_coupon_enable": true,
+      "cart_shipping_enable": true,
+      "sidebar_position": "left",
+      "layout_blog": "modern",
+      "layout_article": "simple_title",
+      "social_facebook_link": "#",
+      "social_twitter_link": "#",
+      "social_instagram_link": "#",
+      "social_youtube_link": "#",
+      "favicon": "shopify:\/\/shop_images\/cropped-80x80-1-192x192.png",
+      "newsletter_popup_image": "shopify:\/\/shop_images\/newsletter-image.jpg",
+      "checkout_logo_image": "shopify:\/\/shop_images\/logo_6c2c83c7-d9df-4e56-bdfb-2f8cda3894ce.png",
+      "checkout_logo_size": "small",
+      "sections": {
+        "header": {
+          "type": "header",
+          "blocks": {
+            "dfb5649e-1bea-4b69-b96e-f8857c612922": {
+              "type": "menu",
+              "settings": {
+                "title": "Shop",
+                "menu1": true,
+                "menu_col_1": "20",
+                "menu_heading_1": "Shop",
+                "menu_link_list_1": "main-menu",
+                "menu2": true,
+                "menu_col_2": "20",
+                "menu_heading_2": "Filter Layout",
+                "menu_link_list_2": "",
+                "menu3": true,
+                "menu_col_3": "20",
+                "menu_heading_3": "Shop Loader",
+                "menu_link_list_3": "",
+                "widget": true,
+                "banner": "image",
+                "banner_col": "40",
+                "banner_title": "JOIN THE LAYERING GANG",
+                "banner_subtitle": "Suspendisse faucibus nunc et pellentesque",
+                "banner_button": "Shop now",
+                "banner_link": "shopify:\/\/collections\/all",
+                "collection_widget": "",
+                "blog_widget": ""
+              }
+            },
+            "45d1c512-239e-487b-b9e8-cc414eb63a14": {
+              "type": "menu",
+              "settings": {
+                "title": "Product",
+                "menu1": true,
+                "menu_col_1": "20",
+                "menu_heading_1": "Product Featured",
+                "menu_link_list_1": "",
+                "menu2": true,
+                "menu_col_2": "20",
+                "menu_heading_2": "Product Type",
+                "menu_link_list_2": "",
+                "menu3": true,
+                "menu_col_3": "20",
+                "menu_heading_3": "Product Gallery",
+                "menu_link_list_3": "",
+                "widget": true,
+                "banner": "product",
+                "banner_col": "40",
+                "banner_title": "Best seller",
+                "banner_subtitle": "",
+                "banner_button": "",
+                "banner_link": "",
+                "collection_widget": "furniture",
+                "blog_widget": ""
+              }
+            },
+            "82d437e4-5ebd-4678-9443-0aee1819b8ec": {
+              "type": "menu",
+              "settings": {
+                "title": "Blog",
+                "menu1": true,
+                "menu_col_1": "20",
+                "menu_heading_1": "Blog Layout",
+                "menu_link_list_1": "",
+                "menu2": true,
+                "menu_col_2": "20",
+                "menu_heading_2": "Blog Style",
+                "menu_link_list_2": "",
+                "menu3": true,
+                "menu_col_3": "20",
+                "menu_heading_3": "Post Layout",
+                "menu_link_list_3": "",
+                "widget": true,
+                "banner": "blog",
+                "banner_col": "40",
+                "banner_title": "",
+                "banner_subtitle": "",
+                "banner_button": "",
+                "banner_link": "",
+                "collection_widget": "",
+                "blog_widget": "necklaces"
+              }
+            }
+          },
+          "block_order": [
+            "dfb5649e-1bea-4b69-b96e-f8857c612922",
+            "45d1c512-239e-487b-b9e8-cc414eb63a14",
+            "82d437e4-5ebd-4678-9443-0aee1819b8ec"
+          ],
+          "settings": {
+            "padding": "20px 0",
+            "select_header": "header-1",
+            "padding-headerbottom": "",
+            "margin-headerbottom": "",
+            "color_headerbottom_bg": "#cb8161",
+            "header_sticky": false,
+            "header_absolute": false,
+            "color_homepage_text": "#ffffff",
+            "logo_max_width": 90,
+            "headertop_enable": true,
+            "color_headertop_text": "#ffffff",
+            "color_headertop_bg": "#1b1b1b",
+            "headertop_text": "",
+            "headertop_text2": "",
+            "headertop_link_list": "",
+            "show_currency_selector": true,
+            "show_locale_selector": true,
+            "show_header_search": true,
+            "show_header_wishlist": true,
+            "show_header_user": true,
+            "header_user_title": "Account",
+            "header_user_link_list": "",
+            "show_header_cart": true,
+            "menu_enable": true,
+            "menu_link_list": "main-menu",
+            "menu_link_list2": "",
+            "menu_link_mobile": "main-menu",
+            "menu_title": "Main Menu"
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "settings": {
+            "show_information": true,
+            "information_title": "OUR NEWSLETTER",
+            "information_code": "<span>Sign up for the latest Ice offers and exclusives.<\/span>",
+            "show_social": true,
+            "show_newsletter": true,
+            "footer_link_title": "CUSTOMER SERVICES",
+            "footer_link_list": "footer",
+            "footer_link_title_2": "ABOUT US",
+            "footer_link_list_2": "",
+            "url": "\/",
+            "footer_link_title_3": "CATALOG",
+            "footer_link_list_3": "",
+            "show_copyright": true,
+            "copyright": "Copyright © 2022 DANY-MAY"
+          }
+        },
+        "product-breadcrumb": {
+          "type": "product-breadcrumb",
+          "settings": {
+            "enable": true,
+            "bgimage": false
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "show_breadcrumb": true,
+            "product_reviews_enable": true,
+            "product_available_enable": true,
+            "product_type_enable": false,
+            "product_vendor_enable": true,
+            "product_sku_enable": true,
+            "social_sharing_products": true,
+            "show_sticky_cart": false,
+            "media_layout": "thumbnails",
+            "position_thumbnails": "outside",
+            "thumbnail_count": 4,
+            "enable_video_looping": false,
+            "product_selector": "radio",
+            "quantity_enabled": true,
+            "quantity_selector": "text",
+            "enable_payment_button": true,
+            "product_collection_enable": true,
+            "product_collection_title": "Categories:",
+            "product_coll_limit": 4,
+            "product_tags_enable": true,
+            "product_tags_title": "Tags:",
+            "product_tags_limit": 6,
+            "product_share_title": "Share:"
+          }
+        },
+        "product-information": {
+          "type": "product-information",
+          "settings": {
+            "enable": true,
+            "tab_bundler": "Frequently Bought Together",
+            "tab_title1": "Description",
+            "tab_enable_2": false,
+            "tab_title2": "Tab 2",
+            "tab_content2": "",
+            "tab_enable_3": false,
+            "tab_title3": "Tab 3",
+            "tab_content3": "",
+            "tab_title4": "Review"
+          }
+        },
+        "product-recommendations": {
+          "type": "product-recommendations",
+          "settings": {
+            "show_product_recommendations": true,
+            "heading": "You may also like",
+            "navigation": true,
+            "infinite": true,
+            "autoplay": false,
+            "autoplay_speed": "10000",
+            "columns": 4,
+            "column1440": 4,
+            "column1": 4,
+            "column2": 3,
+            "column3": 1,
+            "column4": 1
+          }
+        },
+        "collection-breadcrumb": {
+          "type": "collection-breadcrumb",
+          "settings": {
+            "enable": true,
+            "bgimage": true,
+            "enable_collection": false,
+            "navigation": true,
+            "infinite": false,
+            "autoplay": false,
+            "autoplay_speed": "10000",
+            "columns": 4,
+            "column1440": 4,
+            "column1": 4,
+            "column2": 3,
+            "column3": 1,
+            "column4": 1
+          }
+        },
+        "collection-sidebartop": {
+          "type": "collection-sidebartop",
+          "settings": {
+            "categories_enable": true,
+            "categories_title": "Categorieën",
+            "show_count": true,
+            "enable_filtering": true
+          }
+        },
+        "collection-sidebarbottom": {
+          "type": "collection-sidebarbottom",
+          "settings": {
+            "products_enbale": false,
+            "products_title": "FEATURE PRODUCT",
+            "collection_handle": "furniture",
+            "products_limit": "3",
+            "sidebar_banner_enable": false,
+            "link": "\/"
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "page_item": 24,
+            "numproduct_enable": true
+          }
+        },
+        "customer-variant": {
+          "type": "customer-variant",
+          "blocks": {
+            "0fbeb7b2-b117-47a8-8dea-73ee4c3416a2": {
+              "type": "item",
+              "settings": {
+                "color_name": "Antique",
+                "is_label": false,
+                "select_color_1": "#d4937d",
+                "select_color_2": "",
+                "show_image": false
+              }
+            },
+            "1178deca-7595-4fd0-b71f-85e57fa9daa5": {
+              "type": "item",
+              "settings": {
+                "color_name": "Bone",
+                "is_label": false,
+                "select_color_1": "#e5d4c2",
+                "select_color_2": "",
+                "show_image": false
+              }
+            },
+            "eb1a4f30-9787-4fd0-8d9f-70b78c8443cc": {
+              "type": "item",
+              "settings": {
+                "color_name": "Chestnut",
+                "is_label": false,
+                "select_color_1": "#9d443e",
+                "select_color_2": "",
+                "show_image": false
+              }
+            },
+            "ff2fa5d3-2abd-43a1-af36-60633e5f3c1b": {
+              "type": "item",
+              "settings": {
+                "color_name": "Eggshell",
+                "is_label": false,
+                "select_color_1": "#f1ead7",
+                "select_color_2": "",
+                "show_image": false
+              }
+            },
+            "acda3872-ad3a-4969-bccb-03b5ad3b11c3": {
+              "type": "item",
+              "settings": {
+                "color_name": "PineTree",
+                "is_label": false,
+                "select_color_1": "#2c2f1e",
+                "select_color_2": "",
+                "show_image": false
+              }
+            },
+            "fafbf59b-1bb1-40d2-8bc5-b37358e7ad58": {
+              "type": "item",
+              "settings": {
+                "color_name": "Gadien",
+                "is_label": false,
+                "select_color_1": "#a19d80",
+                "select_color_2": "#f1ead7",
+                "show_image": false
+              }
+            },
+            "f35a5b07-84b6-4b75-aef2-44119068ef5c": {
+              "type": "item",
+              "settings": {
+                "color_name": "Golden",
+                "is_label": false,
+                "select_color_1": "",
+                "select_color_2": "",
+                "show_image": true
+              }
+            },
+            "bb277eac-78f5-46bd-ad76-948ad1344598": {
+              "type": "item",
+              "settings": {
+                "color_name": "Crimson",
+                "is_label": false,
+                "select_color_1": "",
+                "select_color_2": "",
+                "show_image": true
+              }
+            },
+            "dca75787-328d-4604-916d-772cf517c367": {
+              "type": "item",
+              "settings": {
+                "color_name": "Grullo",
+                "is_label": false,
+                "select_color_1": "#a19d80",
+                "select_color_2": "",
+                "show_image": false
+              }
+            }
+          },
+          "block_order": [
+            "0fbeb7b2-b117-47a8-8dea-73ee4c3416a2",
+            "1178deca-7595-4fd0-b71f-85e57fa9daa5",
+            "eb1a4f30-9787-4fd0-8d9f-70b78c8443cc",
+            "ff2fa5d3-2abd-43a1-af36-60633e5f3c1b",
+            "acda3872-ad3a-4969-bccb-03b5ad3b11c3",
+            "fafbf59b-1bb1-40d2-8bc5-b37358e7ad58",
+            "f35a5b07-84b6-4b75-aef2-44119068ef5c",
+            "bb277eac-78f5-46bd-ad76-948ad1344598",
+            "dca75787-328d-4604-916d-772cf517c367"
+          ],
+          "settings": {
+          }
+        },
+        "main-search": {
+          "type": "main-search",
+          "settings": {
+            "page_item": 12
+          }
+        },
+        "search-breadcrumb": {
+          "type": "search-breadcrumb",
+          "settings": {
+            "enable": true,
+            "bgimage": true,
+            "image": "shopify:\/\/shop_images\/bg-breadcrumb.jpg"
+          }
+        },
+        "blog-breadcrumb": {
+          "type": "blog-breadcrumb",
+          "settings": {
+            "enable": true,
+            "bgimage": true,
+            "image": "shopify:\/\/shop_images\/bg-breadcrumb.jpg"
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "limit": 2,
+            "limit-coloumn": 3
+          }
+        },
+        "blog-sidebar": {
+          "type": "blog-sidebar",
+          "settings": {
+            "search_enable": true,
+            "categories_enable": true,
+            "categories_title": "Categories",
+            "menu_categories": "categories-blog",
+            "relatedarticles_enable": true,
+            "relatedarticles_title": "Related Posts",
+            "relatedarticles_limit": 6,
+            "tags_enable": true,
+            "tags_title": "Tags",
+            "tags_limit": 10
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "show_article_tags": true,
+            "social_sharing_blog": true,
+            "show_prev_next": true
+          }
+        },
+        "article-breadcrumb": {
+          "type": "article-breadcrumb",
+          "settings": {
+            "enable": true
+          }
+        },
+        "blog-sidebar-search": {
+          "type": "blog-sidebar-search",
+          "settings": {
+            "search_enable": true,
+            "categories_enable": true,
+            "categories_title": "Categories",
+            "menu_categories": "categories-blog",
+            "relatedarticles_enable": true,
+            "relatedarticles_title": "Related Articles",
+            "relatedarticles_limit": 6
+          }
+        },
+        "blog-template-search": {
+          "type": "blog-template-search",
+          "settings": {
+            "limit": 5
+          }
+        },
+        "164463561378a9b8a5": {
+          "type": "slideshow",
+          "blocks": {
+            "4952ae0f-04d3-4451-b4e8-09ee1ab5f7cd": {
+              "type": "image",
+              "settings": {
+                "link": "",
+                "alignment": "center",
+                "align_text": "center",
+                "effect": "leftright",
+                "title": "Now up to 70% off*",
+                "slide_subheading": "MID YEAR SALE",
+                "button_label": "Explore Bestseller",
+                "button_link": "#",
+                "bg_button": "rgba(0,0,0,0)",
+                "color_button": "#ffffff",
+                "slide_heading_color": "#ffffff",
+                "slide_subheading_color": "#ffffff"
+              }
+            },
+            "cac82e3f-c382-4555-bdab-84630efb7808": {
+              "type": "image",
+              "settings": {
+                "link": "",
+                "alignment": "center",
+                "align_text": "center",
+                "effect": "leftright",
+                "title": "Oh, Hello Newness!",
+                "slide_subheading": "MID YEAR SALE",
+                "button_label": "Explore Bestseller",
+                "button_link": "shopify:\/\/collections",
+                "bg_button": "rgba(0,0,0,0)",
+                "color_button": "#ffffff",
+                "slide_heading_color": "#ffffff",
+                "slide_subheading_color": "#ffffff"
+              }
+            },
+            "e9a18693-c847-4d26-b62e-22a7f9eed045": {
+              "type": "image",
+              "settings": {
+                "link": "",
+                "alignment": "center",
+                "align_text": "center",
+                "effect": "leftright",
+                "title": "Best of the Best",
+                "slide_subheading": "MID YEAR SALE",
+                "button_label": "Explore Bestseller",
+                "button_link": "shopify:\/\/collections\/all",
+                "bg_button": "rgba(0,0,0,0)",
+                "color_button": "#ffffff",
+                "slide_heading_color": "#ffffff",
+                "slide_subheading_color": "#ffffff"
+              }
+            }
+          },
+          "block_order": [
+            "4952ae0f-04d3-4451-b4e8-09ee1ab5f7cd",
+            "cac82e3f-c382-4555-bdab-84630efb7808",
+            "e9a18693-c847-4d26-b62e-22a7f9eed045"
+          ],
+          "settings": {
+            "navigation": true,
+            "pagination": true,
+            "fade": true,
+            "autoplay": false,
+            "autoplay_speed": "8000",
+            "min_height_slider": "700px | 600px | 500px | 400px",
+            "bg_button_hover": "#cb8161",
+            "border_arrow": "1px",
+            "border_radius_arrow": "50%",
+            "bg_arrow": "rgba(0,0,0,0)",
+            "border_color_arrow": "#ffffff",
+            "color_arrow": "#ffffff",
+            "bg_arrow_hover": "#cb8161",
+            "border_color_arrow_hover": "#cb8161",
+            "color_arrow_hover": "#ffffff",
+            "border_dots": "0",
+            "border_radius_dots": "50%",
+            "bg_dots": "#8e8e8e",
+            "border_color_dots": "#000000",
+            "bg_dots_hover": "#ffffff",
+            "border_color_dots_hover": "#000000"
+          }
+        },
+        "16449184201e02756c": {
+          "type": "featured-policy",
+          "blocks": {
+            "4903fc68-d7e9-4f8c-91eb-d60c40c69279": {
+              "type": "image",
+              "settings": {
+                "style_image": "svg",
+                "poli_svg": "",
+                "color_svg": "#ffffff",
+                "text_align": "left",
+                "poli_title": "",
+                "color_poli_title": "#000000",
+                "poli_description": "Behind our 15-year success is our panel of expert jewellers who have been scouring the entire globe in pursuit of the best and most stunning jewellery that can be offered at affordable price for you.",
+                "color_poli_description": "#868686",
+                "padding_image": "0 0 5px 0",
+                "width_image": "100%"
+              }
+            },
+            "06d326d6-7670-4dfc-af39-e5e8d8ab8ae2": {
+              "type": "image",
+              "settings": {
+                "style_image": "svg",
+                "poli_svg": "",
+                "color_svg": "#ffffff",
+                "text_align": "left",
+                "poli_title": "",
+                "color_poli_title": "#000000",
+                "poli_description": "Visit our online catalogue and shop for the finest earrings, rings, bracelets, watches, silver, and the most luxurious gemstones.",
+                "color_poli_description": "#868686",
+                "padding_image": "0 0 35px 0",
+                "width_image": "100%"
+              }
+            }
+          },
+          "block_order": [
+            "4903fc68-d7e9-4f8c-91eb-d60c40c69279",
+            "06d326d6-7670-4dfc-af39-e5e8d8ab8ae2"
+          ],
+          "settings": {
+            "bg_fixed": false,
+            "bg_position": "center",
+            "bg_size": "cover",
+            "bg_width": "full",
+            "max_width": "",
+            "fullwidth": false,
+            "padding": "75px 0 | | 60px 0",
+            "margin": "",
+            "title": "Jewellery Online <br> at the Most Affordable Price",
+            "button": "READ MORE",
+            "link_button": "shopify:\/\/collections",
+            "style_button": "style_1",
+            "width_content_image": "50% | | | 100%",
+            "width_content_policy": "50% | | | 100%"
+          }
+        },
+        "map": {
+          "type": "map",
+          "settings": {
+            "max_width": "960px",
+            "fullwidth": false,
+            "padding": "0 15px",
+            "margin": "0 0 30px",
+            "api_key": "",
+            "html_map": "<iframe src=\"https:\/\/www.google.com\/maps\/embed?pb=!1m18!1m12!1m3!1d158857.7281086143!2d-0.24167978096635917!3d51.52877184031897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2zTHXDom4gxJDDtG4sIFbGsMahbmcgUXXhu5FjIEFuaA!5e0!3m2!1svi!2s!4v1648610183581!5m2!1svi!2s\" width=\"auto\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"><\/iframe>"
+          }
+        },
+        "contact-info": {
+          "type": "contact-info",
+          "settings": {
+            "max_width": "",
+            "fullwidth": false,
+            "padding": "",
+            "margin": "0 0 65px",
+            "heading": "Need Help?",
+            "svg_icon": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 511.985 511.985\"><g><g><path d=\"m256.002 19.995c-4.193 0-8.038-2.714-9.438-6.667-1.415-3.996-.091-8.565 3.231-11.192 3.218-2.545 7.81-2.846 11.333-.741 3.587 2.144 5.493 6.408 4.697 10.512-.902 4.643-5.097 8.088-9.823 8.088z\"><\/path><path d=\"m486.898 258.449c12.552-6.567 20.748-20.113 19.768-35.14-.641-9.838-5.073-18.839-12.478-25.343-4.91-4.312-10.737-7.185-16.974-8.444-14.109-91.307-83.346-165.063-174.016-184.544-5.399-1.16-10.723 2.277-11.883 7.68-1.162 5.402 2.278 10.723 7.68 11.884 82.042 17.628 144.813 84.063 158.199 166.49-14.984 5.483-25.248 20.366-24.158 37.083.64 9.831 5.066 18.824 12.46 25.326-8.551 4.454-14.918 11.927-17.963 21.102-3.64 10.962-1.835 22.447 3.935 31.503-1.269-.047-2.548-.03-3.833.054-9.835.642-18.83 5.079-25.331 12.493-7.141 8.146-10.047 18.579-8.897 28.58-.57-.221-1.148-.429-1.732-.623-9.356-3.111-19.359-2.388-28.169 2.032-8.947 4.489-15.278 12.151-18.315 20.944l-81.746-89.114-.161-.16c-4.044-4.041-10.602-4.025-14.626.035l-.032.032c-.002.002-81.832 89.207-81.832 89.207-3.037-8.793-9.368-16.455-18.315-20.944-8.81-4.42-18.817-5.144-28.169-2.032-.584.194-1.162.402-1.732.623 1.15-10.002-1.756-20.435-8.897-28.581-6.501-7.413-15.496-11.85-25.331-12.492-1.284-.085-2.563-.103-3.831-.056 5.769-9.056 7.574-20.539 3.935-31.5-3.046-9.176-9.413-16.649-17.964-21.103 7.394-6.502 11.819-15.495 12.46-25.326 1.09-16.717-9.173-31.6-24.157-37.083 13.363-82.19 76.353-148.774 157.896-166.426 5.366-1.162 9.066-6.345 8.026-11.735-1.066-5.526-6.455-9.066-11.928-7.893-90.28 19.398-159.919 93.388-174.016 184.542-6.234 1.26-12.064 4.135-16.973 8.446-7.405 6.504-11.838 15.504-12.479 25.343-.98 15.028 7.216 28.573 19.768 35.14-10.777 9.503-15.465 24.89-10.66 39.366 3.107 9.358 9.668 16.946 18.478 21.365 5.21 2.614 10.837 3.935 16.5 3.935.477 0 .955-.01 1.433-.028-8.588 13.487-7.683 31.584 3.374 44.198 6.501 7.413 15.496 11.85 25.331 12.492.822.054 1.64.08 2.455.08 4.598 0 9.089-.848 13.29-2.48-1.698 14.954 5.912 30.08 20.119 37.209 5.21 2.614 10.836 3.934 16.499 3.934 3.914 0 7.847-.631 11.67-1.902 4.973-1.653 9.445-4.285 13.207-7.712l91.792 100.065c.005.005.018.019.04.04 4.089 3.962 10.592 3.958 14.72.036l.03-.029 91.836-100.113c3.762 3.427 8.234 6.058 13.207 7.712 3.824 1.271 7.755 1.902 11.67 1.902 5.662 0 11.289-1.32 16.499-3.934 14.206-7.128 21.817-22.255 20.119-37.209 4.201 1.632 8.691 2.48 13.29 2.48.815 0 1.634-.026 2.455-.08 9.835-.642 18.83-5.079 25.331-12.493 11.057-12.613 11.962-30.709 3.375-44.197.477.019.955.028 1.432.028 5.662 0 11.29-1.321 16.5-3.935 8.809-4.419 15.371-12.007 18.478-21.365 4.806-14.475.117-29.862-10.659-39.365zm-18.146-49.608c4.491-.292 8.841 1.184 12.229 4.16 3.391 2.979 5.422 7.101 5.716 11.61.607 9.302-6.459 17.364-15.749 17.971-4.492.296-8.841-1.183-12.23-4.159-3.391-2.978-5.421-7.101-5.715-11.609-.606-9.303 6.459-17.366 15.749-17.973zm-212.76 224.088-32.196-38.257 32.196-38.257 32.195 38.257zm10.006-95.702v-24.429l65.927 71.869h-26.004zm-20.011-24.429v24.429l-39.924 47.44h-26.003zm-220.7-88.188c.294-4.507 2.324-8.63 5.716-11.609 3.106-2.728 7.014-4.197 11.109-4.197.371 0 .746.012 1.121.036 9.29.607 16.355 8.67 15.749 17.973-.294 4.507-2.324 8.631-5.715 11.609-3.389 2.974-7.728 4.445-12.23 4.159-9.291-.606-16.357-8.668-15.75-17.971zm16.591 76.684c-4.032-2.023-7.036-5.497-8.459-9.783-2.937-8.849 1.863-18.438 10.7-21.377 1.749-.581 3.547-.87 5.337-.87 2.59 0 5.163.604 7.546 1.8 4.031 2.023 7.036 5.496 8.459 9.783 2.937 8.849-1.863 18.438-10.701 21.377-4.278 1.422-8.854 1.093-12.882-.93zm51.2 54.354c-3.389 2.977-7.74 4.454-12.23 4.16-4.499-.294-8.614-2.324-11.588-5.716-6.145-7.01-5.447-17.715 1.557-23.864 3.105-2.728 7.013-4.197 11.107-4.197.373 0 .747.012 1.123.036 4.499.294 8.614 2.324 11.588 5.716 6.142 7.011 5.445 17.717-1.557 23.865zm44.184 41.98c-4.28 1.422-8.854 1.093-12.882-.929-8.327-4.177-11.704-14.358-7.528-22.695 2.022-4.035 5.491-7.042 9.77-8.465 1.749-.581 3.546-.87 5.336-.87 2.59 0 5.164.604 7.547 1.8 8.326 4.177 11.704 14.357 7.528 22.694-2.021 4.036-5.492 7.042-9.771 8.465zm68.801 7.05 39.924 47.44v24.429l-65.927-71.869zm59.935 71.869v-24.429l39.923-47.44h26.004zm121.606-79.848c-4.029 2.023-8.604 2.352-12.882.929-4.279-1.423-7.749-4.429-9.771-8.465-4.175-8.337-.797-18.517 7.528-22.694 4.03-2.022 8.604-2.354 12.883-.93 4.279 1.423 7.748 4.429 9.77 8.465 4.176 8.337.799 18.518-7.528 22.695zm55.122-42.607c-2.974 3.392-7.09 5.423-11.588 5.717-4.488.293-8.841-1.183-12.229-4.16-.001 0-.001 0-.001 0-7.003-6.149-7.699-16.855-1.556-23.863 2.974-3.392 7.09-5.423 11.588-5.717.375-.024.749-.036 1.123-.036 4.094 0 8.001 1.469 11.108 4.197 7.002 6.148 7.699 16.853 1.555 23.862zm35.839-62.581c-1.423 4.286-4.426 7.76-8.459 9.783-4.03 2.023-8.604 2.353-12.882.93-8.838-2.939-13.638-12.528-10.7-21.378 1.422-4.285 4.426-7.759 8.458-9.782 4.03-2.023 8.604-2.353 12.882-.93 8.838 2.94 13.638 12.529 10.701 21.377z\"><\/path><\/g><\/g><\/svg>",
+            "heading_info_1": "PHONE",
+            "content_info_1": "<p>(1900)1300 100 423<\/p>",
+            "heading_info_2": "CUSTOMER SERVICE",
+            "content_info_2": "<p>Monday to Friday<\/p><p>8:00am – 4:00pm Sydney, NSW time (UTC +10)<\/p><p>Saturday and Sunday closed<\/p>",
+            "heading_info_3": "RETURNS",
+            "content_info_3": "<p>For information on Returns and Refunds, please click <a href=\"https:\/\/wpbingosite.com\/wordpress\/mojuri\/contact\/?show_page_title_bg=true#\">here.<\/a><\/p>"
+          }
+        },
+        "contact-form": {
+          "type": "contact-form",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/7-1.jpg",
+            "bg_fixed": false,
+            "bg_position": "center",
+            "bg_size": "cover",
+            "bg_width": "full",
+            "max_width": "960px",
+            "fullwidth": false,
+            "padding": "65px 15px 75px",
+            "margin": "0 0 -60px",
+            "heading": "Send Us Your Questions!",
+            "sub_heading": "We’ll get back to you within two days."
+          }
+        },
+        "about-heading": {
+          "type": "about-heading",
+          "settings": {
+            "show": true,
+            "bg_image": "shopify:\/\/shop_images\/bg-about.jpg",
+            "bg_fixed": true,
+            "bg_position": "center",
+            "bg_size": "cover",
+            "bg_width": "full",
+            "max_width": "",
+            "fullwidth": false,
+            "padding": "300px 0 285px | 200px 0 160px | | 100px 0 100px",
+            "margin": "0 0 80px",
+            "heading": "Our Story",
+            "color_heading": "#ffffff",
+            "font_heading": "80px | | | 50px",
+            "sub_heading": "STUNNING, STYLISH AND WITHIN REACH",
+            "color_subheading": "#ffffff",
+            "font_subheading": "13px | | | 11px",
+            "align_text": "center"
+          }
+        },
+        "featured-banner": {
+          "type": "featured-banner",
+          "blocks": {
+            "0f55dd53-955b-41d4-b81e-af3fac2aa9c3": {
+              "type": "image",
+              "settings": {
+                "url": "\/",
+                "image": "shopify:\/\/shop_images\/img-1-1.jpg",
+                "sub_title": "",
+                "color_sub_title": "#000000",
+                "title": "",
+                "color_title": "#000000",
+                "description": "",
+                "color_description": "#000000",
+                "button": "",
+                "style_button": "style_1",
+                "vertical_position": "middle",
+                "horizontal_position": "center",
+                "text_align": "center",
+                "padding_content": "0",
+                "padding_image": "0 15px  | 0 7.5px | | 0 7.5px 15px",
+                "width_image": "33.333% | | | 100%"
+              }
+            },
+            "90f05686-74bd-401d-839b-8be282011b45": {
+              "type": "image",
+              "settings": {
+                "url": "\/",
+                "image": "shopify:\/\/shop_images\/img-2-1.jpg",
+                "sub_title": "",
+                "color_sub_title": "#000000",
+                "title": "",
+                "color_title": "#000000",
+                "description": "",
+                "color_description": "#000000",
+                "button": "",
+                "style_button": "style_1",
+                "vertical_position": "middle",
+                "horizontal_position": "center",
+                "text_align": "center",
+                "padding_content": "0",
+                "padding_image": "0 15px  | 0 7.5px | | 0 7.5px 15px",
+                "width_image": "33.333% | | | 100%"
+              }
+            },
+            "0bdad0a2-b8e8-4e66-a7ce-2f9c091d0c96": {
+              "type": "image",
+              "settings": {
+                "url": "\/",
+                "image": "shopify:\/\/shop_images\/img-3-1.jpg",
+                "sub_title": "",
+                "color_sub_title": "#000000",
+                "title": "",
+                "color_title": "#000000",
+                "description": "",
+                "color_description": "#000000",
+                "button": "",
+                "style_button": "style_1",
+                "vertical_position": "middle",
+                "horizontal_position": "center",
+                "text_align": "center",
+                "padding_content": "0",
+                "padding_image": "0 15px  | 0 7.5px | | 0 7.5px 15px",
+                "width_image": "33.333% | | | 100%"
+              }
+            }
+          },
+          "block_order": [
+            "0f55dd53-955b-41d4-b81e-af3fac2aa9c3",
+            "90f05686-74bd-401d-839b-8be282011b45",
+            "0bdad0a2-b8e8-4e66-a7ce-2f9c091d0c96"
+          ],
+          "settings": {
+            "show": true,
+            "max_width": "1440px",
+            "fullwidth": false,
+            "padding": "0 15px | 0 7.5px",
+            "margin": "0 0 80px",
+            "effect": "effect-three",
+            "layout": "layout-1"
+          }
+        },
+        "featured-newsletter": {
+          "type": "featured-newsletter",
+          "settings": {
+            "max_width": "630px",
+            "fullwidth": false,
+            "padding": "0 15px",
+            "margin": "",
+            "mailchimp": true,
+            "form_action": ""
+          }
+        },
+        "featured-brands": {
+          "type": "featured-brands",
+          "blocks": {
+            "6d1d2751-b806-42d1-8ad0-fa976a979877": {
+              "type": "brand",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/brand-1.jpg",
+                "name": "Brand",
+                "url": "shopify:\/\/collections\/all"
+              }
+            },
+            "5691a8bc-3339-4107-bb28-56fc7eba7cf9": {
+              "type": "brand",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/brand-2.jpg",
+                "name": "Brand",
+                "url": "shopify:\/\/collections\/all"
+              }
+            },
+            "38561d9f-362f-4667-9743-f7338f274628": {
+              "type": "brand",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/brand-3.jpg",
+                "name": "Brand",
+                "url": "shopify:\/\/collections\/all"
+              }
+            },
+            "51f78a64-03e6-4a6e-84f6-bc9cad196c49": {
+              "type": "brand",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/brand-4.jpg",
+                "name": "Brand",
+                "url": "shopify:\/\/collections\/all"
+              }
+            },
+            "4caaafd4-a654-4013-a228-2fd5c7ed7ca1": {
+              "type": "brand",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/brand-5.jpg",
+                "name": "Brand",
+                "url": "shopify:\/\/collections\/all"
+              }
+            }
+          },
+          "block_order": [
+            "6d1d2751-b806-42d1-8ad0-fa976a979877",
+            "5691a8bc-3339-4107-bb28-56fc7eba7cf9",
+            "38561d9f-362f-4667-9743-f7338f274628",
+            "51f78a64-03e6-4a6e-84f6-bc9cad196c49",
+            "4caaafd4-a654-4013-a228-2fd5c7ed7ca1"
+          ],
+          "settings": {
+            "show": true,
+            "max_width": "",
+            "fullwidth": false,
+            "padding": "",
+            "margin": "0 0 -60px",
+            "title": "",
+            "navigation": true,
+            "infinite": true,
+            "autoplay": false,
+            "autoplay_speed": "10000",
+            "columns": 5,
+            "column1440": 4,
+            "column1": 4,
+            "column2": 3,
+            "column3": 2,
+            "column4": 1
+          }
+        },
+        "featured-testimonials": {
+          "type": "featured-testimonials",
+          "blocks": {
+            "f7021690-8b0c-4eda-90e5-d6145bb6c8c1": {
+              "type": "testimonial",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/tesm-1.jpg",
+                "name": "ANN SMITH",
+                "review": "<h5>“Amazing piece of history”<\/h5>Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep...",
+                "rating": "5"
+              }
+            },
+            "e68fece1-2b67-4c5d-b2d1-26a2fa4059e2": {
+              "type": "testimonial",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/tesm-2.jpg",
+                "name": "SAITAMA ONE",
+                "review": "<h5>“Fabulous Grounds”<\/h5>Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep...",
+                "rating": "5"
+              }
+            },
+            "67304f68-8de5-436d-9b3b-77a14a6c4f04": {
+              "type": "testimonial",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/tesm-3.jpg",
+                "name": "SARA COLINTON",
+                "review": "<h5>“Fabulous Grounds”<\/h5>Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep...",
+                "rating": "5"
+              }
+            },
+            "e8d2e11f-bd7b-4d68-9e08-657ad039b90a": {
+              "type": "testimonial",
+              "settings": {
+                "image": "shopify:\/\/shop_images\/tes-4.jpg",
+                "name": "SHETTY JAMIE",
+                "review": "<h5>“Stunning Design”<\/h5>Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep...",
+                "rating": "5"
+              }
+            }
+          },
+          "block_order": [
+            "f7021690-8b0c-4eda-90e5-d6145bb6c8c1",
+            "e68fece1-2b67-4c5d-b2d1-26a2fa4059e2",
+            "67304f68-8de5-436d-9b3b-77a14a6c4f04",
+            "e8d2e11f-bd7b-4d68-9e08-657ad039b90a"
+          ],
+          "settings": {
+            "show": true,
+            "bg_fixed": false,
+            "bg_position": "center",
+            "bg_size": "cover",
+            "bg_width": "full",
+            "max_width": "",
+            "fullwidth": false,
+            "padding": "",
+            "margin": "0 0 75px",
+            "title": "",
+            "navigation": true,
+            "infinite": true,
+            "autoplay": false,
+            "autoplay_speed": "10000",
+            "columns": 3,
+            "column1440": 3,
+            "column1": 2,
+            "column2": 2,
+            "column3": 1,
+            "column4": 1
+          }
+        },
+        "about-icon-box": {
+          "type": "about-icon-box",
+          "settings": {
+            "show": true,
+            "max_width": "930px",
+            "fullwidth": false,
+            "padding": "0 15px",
+            "margin": "0 0 75px",
+            "heading": "Where It All Began",
+            "color_heading": "#000000",
+            "font_heading": "50px | | | 30px",
+            "sub_heading": "Aenean imperdiet. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Vestibulum fringilla pede sit amet augue. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Fusce fermentum odio nec arcu.Suspendisse faucibus, nunc et pellentesque egestas, lacus ante convallis tellus, vitae iaculis lacus elit id tortor. Sed cursus turpis vitae tortor. Vestibulum eu odio. Sed in libero ut nibh placerat accumsan. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+            "color_subheading": "#868686",
+            "font_subheading": "14px",
+            "poli_svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Capa_1\" viewbox=\"0 0 512.001 512.001\"><g><g><g><g><path d=\"m479.371 131.029c-3.099 0-6.154-1.436-8.11-4.139-3.236-4.475-2.233-10.727 2.241-13.963l22.638-16.376c4.475-3.239 10.727-2.233 13.964 2.241 3.236 4.475 2.233 10.727-2.241 13.963l-22.638 16.376c-1.772 1.281-3.823 1.898-5.854 1.898z\"><\/path><\/g><\/g><g><g><path d=\"m32.63 131.029c-2.032 0-4.082-.617-5.854-1.898l-22.637-16.376c-4.475-3.237-5.478-9.488-2.241-13.963 3.238-4.474 9.49-5.478 13.964-2.241l22.638 16.375c4.475 3.237 5.478 9.488 2.241 13.963-1.956 2.703-5.012 4.14-8.111 4.14z\"><\/path><\/g><\/g><g><g><path d=\"m256.001 49.025c-5.522 0-10-4.477-10-10v-23.867c0-5.523 4.478-10 10-10s10 4.477 10 10v23.866c0 5.523-4.478 10.001-10 10.001z\"><\/path><\/g><\/g><g><path d=\"m492.647 215.277-77.499-133.949c-1.787-3.09-5.086-4.992-8.655-4.992h-300.986c-3.569 0-6.868 1.902-8.655 4.992l-77.498 133.949c-2.092 3.614-1.717 8.147.939 11.369l227.991 276.558c1.899 2.305 4.729 3.639 7.716 3.639s5.816-1.334 7.716-3.639l85.631-103.871 1.009.399 22.572 57.368c1.505 3.824 5.196 6.338 9.306 6.338s7.801-2.514 9.306-6.338l22.572-57.368 57.228-22.623c3.817-1.509 6.324-5.196 6.324-9.3s-2.507-7.791-6.323-9.3l-57.229-22.623-4.026-10.231 81.621-99.009c2.657-3.222 3.032-7.754.94-11.369zm-25.994-4.992h-113.904l53.737-103.991zm-210.652 248.864-67.465-228.863h22.259c5.522 0 10-4.477 10-10s-4.478-10-10-10h-17.303l62.508-102.427 62.508 102.426h-17.301c-5.522 0-10 4.477-10 10s4.478 10 10 10h22.26zm79.601-259.246-63.204-103.567h116.722zm-167.918 30.382 65.943 223.697-184.414-223.697zm8.713-30.382-53.517-103.567h116.722zm-70.883-93.609 53.736 103.991h-113.902zm172.86 347.689 21.836-74.074 29.588 11.696zm162.089-86.174-37.741 14.919c-2.577 1.019-4.615 3.06-5.63 5.638l-14.857 37.76-14.857-37.76c-1.015-2.578-3.053-4.62-5.63-5.638l-37.741-14.919 37.742-14.92c2.576-1.019 4.614-3.06 5.629-5.638l14.857-37.76 14.857 37.76c1.015 2.578 3.053 4.62 5.629 5.638zm-48.923-89.291c-1.505-3.824-5.196-6.338-9.306-6.338s-7.801 2.514-9.306 6.338l-22.572 57.368-42.071 16.631 36.032-122.232h118.47l-61.075 74.087z\"><\/path><g><path d=\"m256.18 230.291c-4.12 0-7.897-2.638-9.35-6.483-1.491-3.948-.269-8.58 3.006-11.255 3.235-2.643 7.897-2.987 11.481-.842 3.583 2.144 5.496 6.426 4.674 10.529-.924 4.61-5.103 8.051-9.811 8.051z\"><\/path><\/g><\/g><\/g><\/g><\/svg>",
+            "color_svg": "#000000",
+            "font_icon": "50px",
+            "align_text": "center"
+          }
+        },
+        "about-newsletter": {
+          "type": "about-newsletter",
+          "settings": {
+            "show": true,
+            "max_width": "690px",
+            "fullwidth": false,
+            "padding": "75px 15px 80px",
+            "margin": "",
+            "title": "LATEST FROM MOJURI!",
+            "sub_title": "Sign-up to receive 10% off your next purchase. Plus hear about new arrivals and offers.",
+            "mailchimp": true,
+            "form_action": ""
+          }
+        },
+        "about-image-content": {
+          "type": "about-image-content",
+          "settings": {
+            "show": true,
+            "bg_image": "shopify:\/\/shop_images\/7-1.jpg",
+            "bg_fixed": false,
+            "bg_position": "center",
+            "bg_size": "cover",
+            "bg_width": "full",
+            "max_width": "",
+            "fullwidth": false,
+            "padding": "100px 0 | 20px 0 100px | 70px 0",
+            "margin": "0 0 80px",
+            "heading": "WE KNOW JEWELLERY – <br>& WE KNOW OUR CUSTOMERS",
+            "color_heading": "#000000",
+            "font_heading": "30px | | 25px",
+            "sub_heading": "Cenean imperdiet. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Vestibulum fringilla pede sit amet augue. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Fusce fermentum odio nec arcu.",
+            "color_subheading": "#868686",
+            "font_subheading": "14px",
+            "image_1": "shopify:\/\/shop_images\/img-4-1.jpg",
+            "image_2": "shopify:\/\/shop_images\/img-5-1.jpg",
+            "effect": "effect-three",
+            "align_text": "left"
+          }
+        },
+        "about-policy": {
+          "type": "about-policy",
+          "blocks": {
+            "cd46337f-a8d4-4001-baf8-e575e7239b5a": {
+              "type": "image",
+              "settings": {
+                "style_image": "svg",
+                "poli_svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Capa_1\" x=\"0px\" y=\"0px\" viewbox=\"0 0 511.998 511.998\" style=\"enable-background:new 0 0 511.998 511.998;\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M256.013,59.844c-108.193,0-196.218,88.025-196.218,196.218c0,108.201,88.025,196.218,196.218,196.218    S452.23,364.263,452.23,256.061C452.23,147.869,364.206,59.844,256.013,59.844z M256.013,435.217    c-98.791,0-179.155-80.372-179.155-179.155c0-98.791,80.364-179.155,179.155-179.155s179.155,80.364,179.155,179.155    C435.168,354.844,354.804,435.217,256.013,435.217z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M256.013,281.655h-68.25c-4.709,0-8.531,3.813-8.531,8.531v42.656c0,2.849,1.425,5.511,3.796,7.098l21.797,14.529v38.092    c0,3.489,2.124,6.629,5.358,7.925l42.656,17.062c1.032,0.409,2.107,0.606,3.174,0.606c1.689,0,3.353-0.503,4.786-1.467    c2.338-1.587,3.745-4.231,3.745-7.064V290.186C264.544,285.468,260.722,281.655,256.013,281.655z M247.482,397.022l-25.594-10.237    v-36.88c0-2.849-1.425-5.511-3.796-7.098l-21.797-14.529v-29.561h51.187V397.022z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M262.044,190.311l-42.656-42.656c-2.448-2.44-6.108-3.174-9.299-1.851c-3.182,1.322-5.264,4.436-5.264,7.883v17.062    h-17.062V85.437h-17.062v93.843c0,4.709,3.822,8.531,8.531,8.531h34.125c4.709,0,8.531-3.822,8.531-8.531v-4.999l25.594,25.594    v30.593h-59.718c-4.709,0-8.531,3.822-8.531,8.531v33.434l-25.594-20.466v-47.092c0-4.709-3.822-8.531-8.531-8.531h-68.25v17.062    h59.718v42.656c0,2.585,1.177,5.042,3.199,6.663l42.656,34.125c1.544,1.237,3.43,1.868,5.332,1.868    c1.263,0,2.525-0.273,3.694-0.845c2.96-1.425,4.837-4.402,4.837-7.687V247.53h59.718c4.709,0,8.531-3.822,8.531-8.531v-42.656    C264.544,194.082,263.648,191.915,262.044,190.311z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M343.824,87.937l-62.218,62.218l-17.062-17.062V68.375h-17.062v68.25c0,2.261,0.896,4.428,2.5,6.032l25.594,25.594    c1.595,1.604,3.762,2.5,6.032,2.5c2.261,0,4.428-0.896,6.032-2.5l68.25-68.25L343.824,87.937z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M442.829,243.785c-1.433-2.926-4.402-4.786-7.661-4.786h-25.594v-76.781c0-4.709-3.813-8.531-8.531-8.531h-51.187    c-2.269,0-4.428,0.896-6.032,2.5l-42.656,42.656c-3.336,3.336-3.336,8.727,0,12.063l31.625,31.625v81.78    c0,4.718,3.813,8.531,8.531,8.531h34.125c2.628,0,5.11-1.22,6.731-3.293l59.718-76.781    C443.895,250.2,444.262,246.711,442.829,243.785z M371.278,315.78h-21.422v-76.781c0-2.261-0.896-4.428-2.5-6.032l-28.093-28.093    l34.125-34.125h39.124v76.781c0,4.709,3.813,8.531,8.531,8.531h16.678L371.278,315.78z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M297.21,491.386c-13.582,2.355-27.445,3.549-41.197,3.549c-0.026,0-0.051,0-0.077,0    c-63.771,0-123.737-24.826-168.85-69.913c-45.139-45.096-70.007-105.079-70.024-168.884c-0.008-34.364,7.192-67.644,21.405-98.919    l-15.527-7.055C7.704,183.674-0.009,219.335,0,256.138c0.017,68.361,26.669,132.635,75.015,180.955    c48.338,48.304,112.586,74.904,180.921,74.904c0.026,0,0.051,0,0.085,0c14.725,0,29.561-1.271,44.106-3.796L297.21,491.386z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M346.623,477.147c-9.162,3.762-18.641,6.979-28.161,9.546l4.445,16.482c10.212-2.764,20.364-6.211,30.2-10.246    L346.623,477.147z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M506.506,202.895C477.235,64.843,341.146-23.694,203.06,5.602l3.54,16.687C335.43-5.027,462.502,77.589,489.81,206.435    c10.528,49.583,4.752,102.315-16.252,148.468l15.527,7.064C511.591,312.521,517.767,256.027,506.506,202.895z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M185.528,10.312c-8.983,2.44-17.898,5.417-26.506,8.838l6.296,15.859c8.019-3.182,16.32-5.955,24.681-8.233    L185.528,10.312z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M151.13,45.264c-17.54-17.455-45.795-18.274-64.325-1.868L39.491,85.437H8.608c-3.447,0-6.56,2.073-7.883,5.264    S0.136,97.56,2.576,100l42.656,42.656c1.664,1.664,3.848,2.5,6.032,2.5c2.056,0,4.112-0.734,5.742-2.227l93.843-85.312    c1.732-1.57,2.739-3.779,2.79-6.117C153.69,49.171,152.785,46.911,151.13,45.264z M51.546,124.843L29.202,102.5h13.531    c2.09,0,4.104-0.759,5.665-2.15l49.728-44.183c9.444-8.369,22.864-9.7,33.57-4.189L51.546,124.843z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M509.441,412.123l-42.656-42.656c-3.208-3.233-8.395-3.336-11.773-0.282l-93.843,85.312    c-1.723,1.578-2.73,3.796-2.79,6.125c-0.051,2.329,0.862,4.59,2.517,6.236c9.12,9.077,21.132,13.65,33.169,13.65    c11.116,0,22.266-3.907,31.156-11.79l47.306-42.033h30.883c3.447,0,6.569-2.073,7.883-5.264    C512.614,418.231,511.881,414.563,509.441,412.123z M469.293,409.623c-2.09,0-4.104,0.768-5.665,2.158l-49.72,44.175    c-9.444,8.352-22.864,9.7-33.579,4.189l80.151-72.865l22.343,22.343H469.293z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<\/svg>",
+                "font_icon": "50px",
+                "color_svg": "#000000",
+                "poli_title": "SHIPPING WORLDWIDE",
+                "color_poli_title": "#000000",
+                "poli_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "color_poli_description": "#868686",
+                "padding_image": "0 15px  | 0 7.5px | | 0 7.5px 50px",
+                "width_image": "33.333% | | | 100%"
+              }
+            },
+            "4f2f25ba-49ef-4c2d-8128-2ee36d980b16": {
+              "type": "image",
+              "settings": {
+                "style_image": "svg",
+                "poli_svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Capa_1\" x=\"0px\" y=\"0px\" viewbox=\"0 0 508 508\" style=\"enable-background:new 0 0 508 508;\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M254,0C128.3,0,26.1,102.2,26.1,227.9c0,122.9,97.9,223.4,219.8,227.7V508l60.3-60.3l-60.3-60.3v52    c-113-4.4-203.5-97.5-203.5-211.5c0-116.7,94.9-211.6,211.6-211.6s211.6,94.9,211.6,211.6h16.3C481.9,102.2,379.7,0,254,0z     M262.1,426.6l21,21l-21,21V426.6z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M131.9,105.8V350h244.2V105.8H131.9z M229.6,122.1L229.6,122.1h48.8v32.6h-48.8V122.1z M359.8,333.7H148.2V122.1h65.1    v48.8h81.4v-48.8h65.1V333.7z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<polygon points=\"319.1,248.2 291.2,279.5 303.4,290.3 311,281.8 311,317.4 327.3,317.4 327.3,281.8 334.8,290.3 347,279.5   \"><\/polygon>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<polygon points=\"251.4,248.2 223.5,279.5 235.7,290.3 243.2,281.8 243.2,317.4 259.5,317.4 259.5,281.8 267.1,290.3 279.2,279.5       \"><\/polygon>\n\t<\/g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<\/svg>",
+                "font_icon": "50px",
+                "color_svg": "#000000",
+                "poli_title": "14 DAYS RETURN",
+                "color_poli_title": "#000000",
+                "poli_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "color_poli_description": "#868686",
+                "padding_image": "0 15px  | 0 7.5px | | 0 7.5px 50px",
+                "width_image": "33.333% | | | 100%"
+              }
+            },
+            "01269867-d6de-40a6-8695-37dfcf8987e5": {
+              "type": "image",
+              "settings": {
+                "style_image": "svg",
+                "poli_svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Capa_1\" x=\"0px\" y=\"0px\" viewbox=\"0 0 512 512\" style=\"enable-background:new 0 0 512 512;\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M457.987,31.531c-2.688-6.997-13.013-8.533-17.749-3.499c-21.44,18.88-48.939,29.248-77.547,29.248    c-39.424,0-75.989-19.627-97.771-52.501C262.937,1.792,259.609,0,256.025,0c-3.563,0-6.912,1.792-8.875,4.757    c-21.845,32.875-58.411,52.501-97.835,52.501c-28.928,0-56.704-10.603-78.208-29.867c-3.136-2.816-7.616-3.499-11.477-1.792    c-3.84,1.707-6.315,5.525-6.315,9.728v231.317c0,133.205,189.44,239.552,197.504,244.011c1.6,0.896,3.392,1.344,5.163,1.344    c1.771,0,3.563-0.448,5.163-1.301c8.064-4.459,197.504-110.827,197.504-244.011v-230.4    C458.777,34.688,458.563,33.067,457.987,31.531z M437.315,266.667c0,109.163-151.232,204.459-181.333,222.336    C225.859,471.125,74.649,375.936,74.649,266.667V56.811c22.165,14.165,48,21.803,74.667,21.803    c41.579,0,80.469-18.496,106.667-50.091c26.24,31.616,65.131,50.091,106.709,50.091c26.645,0,52.48-7.637,74.624-21.781V266.667z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M327.577,195.136c-4.16-4.16-10.923-4.16-15.083,0l-77.845,77.781l-35.072-35.115c-4.16-4.16-10.923-4.16-15.083,0    c-4.16,4.139-4.16,10.923,0,15.083l42.581,42.667c2.005,1.984,4.715,3.115,7.552,3.115s5.547-1.131,7.531-3.115l85.419-85.333    C331.737,206.059,331.737,199.296,327.577,195.136z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<\/svg>",
+                "font_icon": "50px",
+                "color_svg": "#000000",
+                "poli_title": "SECURITY PAYMENT",
+                "color_poli_title": "#000000",
+                "poli_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+                "color_poli_description": "#868686",
+                "padding_image": "0 15px",
+                "width_image": "33.333% | | | 100%"
+              }
+            }
+          },
+          "block_order": [
+            "cd46337f-a8d4-4001-baf8-e575e7239b5a",
+            "4f2f25ba-49ef-4c2d-8128-2ee36d980b16",
+            "01269867-d6de-40a6-8695-37dfcf8987e5"
+          ],
+          "settings": {
+            "show": true,
+            "bg_fixed": false,
+            "bg_position": "center",
+            "bg_size": "cover",
+            "bg_width": "full",
+            "max_width": "",
+            "fullwidth": false,
+            "padding": "",
+            "margin": "0 0 75px",
+            "align_text": "center"
+          }
+        },
+        "about-image-content2": {
+          "type": "about-image-content2",
+          "settings": {
+            "show": true,
+            "bg_color": "#fdf6f2",
+            "bg_fixed": false,
+            "bg_position": "center",
+            "bg_size": "cover",
+            "bg_width": "full",
+            "max_width": "",
+            "fullwidth": false,
+            "padding": "75px 0",
+            "margin": "0 0 75px",
+            "heading": "TOP JEWELLERS AT ICE ONLINE",
+            "color_heading": "#000000",
+            "font_heading": "30px | | 25px",
+            "sub_heading": "Cenean imperdiet. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Vestibulum fringilla pede sit amet augue. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Fusce fermentum odio nec arcu.",
+            "color_subheading": "#868686",
+            "font_subheading": "14px",
+            "image": "shopify:\/\/shop_images\/img-6.jpg",
+            "effect": "effect-three",
+            "align_text": "left"
+          }
+        },
+        "faq-template": {
+          "type": "faq-template",
+          "blocks": {
+            "b0ee95f9-a491-4ee7-b4df-d17e9163c68f": {
+              "type": "faq",
+              "settings": {
+                "title": "01.The order",
+                "content": "<p><strong>When do I receive my order?<\/strong><br\/>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<br\/><br\/><strong>I now see the longer delivery time of (a part of) my order. How can I cancel it?<\/strong><br\/>If the order has a longer delivery time than you had previously seen, it is of course possible to cancel (a part of) the order. For this you can contact our customer service. They will cancel the order for you. The purchase amount will be back on your bank account within two working days. When an order has already been shipped, it can no longer be cancelled.<\/p><p><br\/><strong>When will I receive the invoice for my order?<\/strong><br\/>When you have paid for the order, you will not automatically receive an invoice for your order. If you wish to receive an invoice, this can be done in two ways.The first way is through your account at our store. When you log in to your account you can see your orders and download the invoice.<\/p>",
+                "width": "50% | | | 100%",
+                "padding": "0 15px"
+              }
+            },
+            "e0973b19-7458-4486-b7b0-6786c38b8dd0": {
+              "type": "faq",
+              "settings": {
+                "title": "02. Shipment",
+                "content": "<p><strong>When do I receive my order?<\/strong><br\/>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<br\/><br\/><strong>I now see the longer delivery time of (a part of) my order. How can I cancel it?<\/strong><br\/>If the order has a longer delivery time than you had previously seen, it is of course possible to cancel (a part of) the order. For this you can contact our customer service. They will cancel the order for you. The purchase amount will be back on your bank account within two working days. When an order has already been shipped, it can no longer be cancelled.<\/p><p><br\/><strong>When will I receive the invoice for my order?<\/strong><br\/>When you have paid for the order, you will not automatically receive an invoice for your order. If you wish to receive an invoice, this can be done in two ways.The first way is through your account at our store. When you log in to your account you can see your orders and download the invoice.<\/p>",
+                "width": "50% | | | 100%",
+                "padding": "0 15px"
+              }
+            },
+            "1b943bbd-3c41-4d20-b1ba-5154c3f784d7": {
+              "type": "faq",
+              "settings": {
+                "title": "03. The order",
+                "content": "<p><strong>When do I receive my order?<\/strong><br\/>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<br\/><br\/><strong>I now see the longer delivery time of (a part of) my order. How can I cancel it?<\/strong><br\/>If the order has a longer delivery time than you had previously seen, it is of course possible to cancel (a part of) the order. For this you can contact our customer service. They will cancel the order for you. The purchase amount will be back on your bank account within two working days. When an order has already been shipped, it can no longer be cancelled.<\/p><p><br\/><strong>When will I receive the invoice for my order?<\/strong><br\/>When you have paid for the order, you will not automatically receive an invoice for your order. If you wish to receive an invoice, this can be done in two ways.The first way is through your account at our store. When you log in to your account you can see your orders and download the invoice.<\/p>",
+                "width": "50% | | | 100%",
+                "padding": "0 15px"
+              }
+            },
+            "91f8c21c-0dd4-49ce-a52b-35de564327e4": {
+              "type": "faq",
+              "settings": {
+                "title": "04. Returns, exchanges and complaints",
+                "content": "<p><strong>When do I receive my order?<\/strong><br\/>When placing the order, a day of shipment is indicated. After the order has been placed, the same delivery time will also be stated on the order confirmation. It is therefore never possible that during the order, the shipping day on the website, is different than on the order confirmation.<br\/><br\/><strong>I now see the longer delivery time of (a part of) my order. How can I cancel it?<\/strong><br\/>If the order has a longer delivery time than you had previously seen, it is of course possible to cancel (a part of) the order. For this you can contact our customer service. They will cancel the order for you. The purchase amount will be back on your bank account within two working days. When an order has already been shipped, it can no longer be cancelled.<\/p><p><br\/><strong>When will I receive the invoice for my order?<\/strong><br\/>When you have paid for the order, you will not automatically receive an invoice for your order. If you wish to receive an invoice, this can be done in two ways.The first way is through your account at our store. When you log in to your account you can see your orders and download the invoice.<\/p>",
+                "width": "50% | | | 100%",
+                "padding": "0 15px"
+              }
+            }
+          },
+          "block_order": [
+            "b0ee95f9-a491-4ee7-b4df-d17e9163c68f",
+            "e0973b19-7458-4486-b7b0-6786c38b8dd0",
+            "1b943bbd-3c41-4d20-b1ba-5154c3f784d7",
+            "91f8c21c-0dd4-49ce-a52b-35de564327e4"
+          ],
+          "settings": {
+          }
+        },
+        "16487788622d3b4782": {
+          "type": "featured-products",
+          "settings": {
+            "max_width": "",
+            "fullwidth": false,
+            "padding": "",
+            "margin": "70px 0 20px 0 | | 60px 0 5px 0",
+            "title": "Jewellery Favourites",
+            "title_color": "#000000",
+            "sub_title": "DISCOVER THIS WEEK’S",
+            "sub_title_color": "#000000",
+            "featured_products": "furniture",
+            "limit": 8,
+            "navigation": true,
+            "infinite": true,
+            "autoplay": false,
+            "autoplay_speed": "10000",
+            "columns": 4,
+            "column1440": 4,
+            "column1": 3,
+            "column2": 2,
+            "column3": 2,
+            "column4": 2
+          }
+        },
+        "1648778869bb2cae88": {
+          "type": "featured-banner",
+          "blocks": {
+            "05433cde-1145-4ee5-b0cf-1dd86224d998": {
+              "type": "image",
+              "settings": {
+                "url": "\/",
+                "sub_title": "",
+                "color_sub_title": "#000000",
+                "title": "EAR STACK MAGIC",
+                "color_title": "#000000",
+                "description": "Elevate your ear party with a choice of mix and matched stacks or striking\nsolo statements. The choice is yours!",
+                "color_description": "#868686",
+                "button": "shop now",
+                "style_button": "style_1",
+                "vertical_position": "bottom",
+                "horizontal_position": "center",
+                "text_align": "center",
+                "padding_content": "",
+                "padding_image": "0 15px | 0 7.5px | | 0 7.5px 40px",
+                "width_image": "50% | | | 100%"
+              }
+            },
+            "35bbc76d-4625-408e-bf77-176e0d60e928": {
+              "type": "image",
+              "settings": {
+                "url": "\/",
+                "sub_title": "",
+                "color_sub_title": "#000000",
+                "title": "JOIN THE LAYERING GANG",
+                "color_title": "#000000",
+                "description": "Love to layer? Us too! Transition your outfits from day to night in one easy step with the\npower of a unique, luxe layered look.",
+                "color_description": "#868686",
+                "button": "shop now",
+                "style_button": "style_1",
+                "vertical_position": "bottom",
+                "horizontal_position": "center",
+                "text_align": "center",
+                "padding_content": "",
+                "padding_image": "0 15px | 0 7.5px",
+                "width_image": "50% | | | 100%"
+              }
+            }
+          },
+          "block_order": [
+            "05433cde-1145-4ee5-b0cf-1dd86224d998",
+            "35bbc76d-4625-408e-bf77-176e0d60e928"
+          ],
+          "settings": {
+            "show": true,
+            "bg_fixed": false,
+            "bg_position": "center",
+            "bg_size": "cover",
+            "bg_width": "full",
+            "max_width": "",
+            "fullwidth": false,
+            "padding": "0 0 75px | 0 0 60px",
+            "margin": "50px 0 0 0 | | 60px 0 0 0",
+            "title": "",
+            "title_color": "#000000",
+            "sub_title": "",
+            "sub_title_color": "#000000",
+            "effect": "none",
+            "layout": "layout-2"
+          }
+        },
+        "16505277673708c752": {
+          "type": "featured-video",
+          "settings": {
+            "max_width": "",
+            "fullwidth": true,
+            "padding": "230px 15px 255px 15px | | | 150px 15px 180px 15px",
+            "margin": "",
+            "sub_title": "",
+            "color_sub_title": "#000000",
+            "title": "Stand Out In Style",
+            "color_title": "#ffffff",
+            "description": "",
+            "color_description": "#000000",
+            "button_video": "DISCOVER NOW",
+            "url_button": "#",
+            "text_align": "center",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=PRgGRgtAvJ0"
+          }
+        },
+        "165052784050c92ce5": {
+          "type": "featured-products",
+          "settings": {
+            "max_width": "",
+            "fullwidth": false,
+            "padding": "",
+            "margin": "70px 0 40px 0 | | 60px 0 25px 0",
+            "title": "The Hot List",
+            "title_color": "#000000",
+            "sub_title": "ON TREND HOT JEWELLERY",
+            "sub_title_color": "#000000",
+            "featured_products": "frontpage",
+            "limit": 8,
+            "navigation": true,
+            "infinite": true,
+            "autoplay": false,
+            "autoplay_speed": "10000",
+            "columns": 4,
+            "column1440": 4,
+            "column1": 4,
+            "column2": 3,
+            "column3": 2,
+            "column4": 2
+          }
+        },
+        "1650529657399ae6fb": {
+          "type": "featured-blog",
+          "settings": {
+            "max_width": "",
+            "fullwidth": false,
+            "padding": "",
+            "margin": "70px 0 0 0 | | 60px 0 0 0",
+            "title": "Jewellery Style Files",
+            "title_color": "#000000",
+            "sub_title": "NEWS & Inspired",
+            "sub_title_color": "#000000",
+            "button": "read more",
+            "link_button": "",
+            "style_button": "style_2",
+            "blog": "necklaces",
+            "post_limit": 8,
+            "blog_show_date": true,
+            "blog_show_author": false,
+            "blog_show_image": true,
+            "blog_show_excerpt": false,
+            "show_view_all": false,
+            "navigation": true,
+            "infinite": true,
+            "autoplay": false,
+            "autoplay_speed": "10000",
+            "columns": 3,
+            "column1440": 3,
+            "column1": 3,
+            "column2": 2,
+            "column3": 1,
+            "column4": 1
+          }
+        },
+        "165061040218565a1c": {
+          "type": "featured-policy",
+          "blocks": {
+            "b11bd3ea-1933-44b1-92e9-a854aa9ef68c": {
+              "type": "image",
+              "settings": {
+                "style_image": "svg",
+                "poli_svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Capa_1\" x=\"0px\" y=\"0px\" viewbox=\"0 0 511.998 511.998\" style=\"enable-background:new 0 0 511.998 511.998;\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M256.013,59.844c-108.193,0-196.218,88.025-196.218,196.218c0,108.201,88.025,196.218,196.218,196.218    S452.23,364.263,452.23,256.061C452.23,147.869,364.206,59.844,256.013,59.844z M256.013,435.217    c-98.791,0-179.155-80.372-179.155-179.155c0-98.791,80.364-179.155,179.155-179.155s179.155,80.364,179.155,179.155    C435.168,354.844,354.804,435.217,256.013,435.217z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M256.013,281.655h-68.25c-4.709,0-8.531,3.813-8.531,8.531v42.656c0,2.849,1.425,5.511,3.796,7.098l21.797,14.529v38.092    c0,3.489,2.124,6.629,5.358,7.925l42.656,17.062c1.032,0.409,2.107,0.606,3.174,0.606c1.689,0,3.353-0.503,4.786-1.467    c2.338-1.587,3.745-4.231,3.745-7.064V290.186C264.544,285.468,260.722,281.655,256.013,281.655z M247.482,397.022l-25.594-10.237    v-36.88c0-2.849-1.425-5.511-3.796-7.098l-21.797-14.529v-29.561h51.187V397.022z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M262.044,190.311l-42.656-42.656c-2.448-2.44-6.108-3.174-9.299-1.851c-3.182,1.322-5.264,4.436-5.264,7.883v17.062    h-17.062V85.437h-17.062v93.843c0,4.709,3.822,8.531,8.531,8.531h34.125c4.709,0,8.531-3.822,8.531-8.531v-4.999l25.594,25.594    v30.593h-59.718c-4.709,0-8.531,3.822-8.531,8.531v33.434l-25.594-20.466v-47.092c0-4.709-3.822-8.531-8.531-8.531h-68.25v17.062    h59.718v42.656c0,2.585,1.177,5.042,3.199,6.663l42.656,34.125c1.544,1.237,3.43,1.868,5.332,1.868    c1.263,0,2.525-0.273,3.694-0.845c2.96-1.425,4.837-4.402,4.837-7.687V247.53h59.718c4.709,0,8.531-3.822,8.531-8.531v-42.656    C264.544,194.082,263.648,191.915,262.044,190.311z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M343.824,87.937l-62.218,62.218l-17.062-17.062V68.375h-17.062v68.25c0,2.261,0.896,4.428,2.5,6.032l25.594,25.594    c1.595,1.604,3.762,2.5,6.032,2.5c2.261,0,4.428-0.896,6.032-2.5l68.25-68.25L343.824,87.937z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M442.829,243.785c-1.433-2.926-4.402-4.786-7.661-4.786h-25.594v-76.781c0-4.709-3.813-8.531-8.531-8.531h-51.187    c-2.269,0-4.428,0.896-6.032,2.5l-42.656,42.656c-3.336,3.336-3.336,8.727,0,12.063l31.625,31.625v81.78    c0,4.718,3.813,8.531,8.531,8.531h34.125c2.628,0,5.11-1.22,6.731-3.293l59.718-76.781    C443.895,250.2,444.262,246.711,442.829,243.785z M371.278,315.78h-21.422v-76.781c0-2.261-0.896-4.428-2.5-6.032l-28.093-28.093    l34.125-34.125h39.124v76.781c0,4.709,3.813,8.531,8.531,8.531h16.678L371.278,315.78z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M297.21,491.386c-13.582,2.355-27.445,3.549-41.197,3.549c-0.026,0-0.051,0-0.077,0    c-63.771,0-123.737-24.826-168.85-69.913c-45.139-45.096-70.007-105.079-70.024-168.884c-0.008-34.364,7.192-67.644,21.405-98.919    l-15.527-7.055C7.704,183.674-0.009,219.335,0,256.138c0.017,68.361,26.669,132.635,75.015,180.955    c48.338,48.304,112.586,74.904,180.921,74.904c0.026,0,0.051,0,0.085,0c14.725,0,29.561-1.271,44.106-3.796L297.21,491.386z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M346.623,477.147c-9.162,3.762-18.641,6.979-28.161,9.546l4.445,16.482c10.212-2.764,20.364-6.211,30.2-10.246    L346.623,477.147z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M506.506,202.895C477.235,64.843,341.146-23.694,203.06,5.602l3.54,16.687C335.43-5.027,462.502,77.589,489.81,206.435    c10.528,49.583,4.752,102.315-16.252,148.468l15.527,7.064C511.591,312.521,517.767,256.027,506.506,202.895z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M185.528,10.312c-8.983,2.44-17.898,5.417-26.506,8.838l6.296,15.859c8.019-3.182,16.32-5.955,24.681-8.233    L185.528,10.312z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M151.13,45.264c-17.54-17.455-45.795-18.274-64.325-1.868L39.491,85.437H8.608c-3.447,0-6.56,2.073-7.883,5.264    S0.136,97.56,2.576,100l42.656,42.656c1.664,1.664,3.848,2.5,6.032,2.5c2.056,0,4.112-0.734,5.742-2.227l93.843-85.312    c1.732-1.57,2.739-3.779,2.79-6.117C153.69,49.171,152.785,46.911,151.13,45.264z M51.546,124.843L29.202,102.5h13.531    c2.09,0,4.104-0.759,5.665-2.15l49.728-44.183c9.444-8.369,22.864-9.7,33.57-4.189L51.546,124.843z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M509.441,412.123l-42.656-42.656c-3.208-3.233-8.395-3.336-11.773-0.282l-93.843,85.312    c-1.723,1.578-2.73,3.796-2.79,6.125c-0.051,2.329,0.862,4.59,2.517,6.236c9.12,9.077,21.132,13.65,33.169,13.65    c11.116,0,22.266-3.907,31.156-11.79l47.306-42.033h30.883c3.447,0,6.569-2.073,7.883-5.264    C512.614,418.231,511.881,414.563,509.441,412.123z M469.293,409.623c-2.09,0-4.104,0.768-5.665,2.158l-49.72,44.175    c-9.444,8.352-22.864,9.7-33.579,4.189l80.151-72.865l22.343,22.343H469.293z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<\/svg>",
+                "color_svg": "#000000",
+                "text_align": "center",
+                "poli_title": "Shipping Worldwide",
+                "color_poli_title": "#000000",
+                "poli_description": "Lorem ipsum dolor sit amet, consectetur\n<br>\nadipiscing elit",
+                "color_poli_description": "#868686",
+                "padding_image": "0 15px | | | 15px 0",
+                "width_image": "33.33333% | | | 100%"
+              }
+            },
+            "a54c333a-fd67-40e4-b3d3-af7d900f0992": {
+              "type": "image",
+              "settings": {
+                "style_image": "svg",
+                "poli_svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Capa_1\" x=\"0px\" y=\"0px\" viewbox=\"0 0 508 508\" style=\"enable-background:new 0 0 508 508;\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M254,0C128.3,0,26.1,102.2,26.1,227.9c0,122.9,97.9,223.4,219.8,227.7V508l60.3-60.3l-60.3-60.3v52    c-113-4.4-203.5-97.5-203.5-211.5c0-116.7,94.9-211.6,211.6-211.6s211.6,94.9,211.6,211.6h16.3C481.9,102.2,379.7,0,254,0z     M262.1,426.6l21,21l-21,21V426.6z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M131.9,105.8V350h244.2V105.8H131.9z M229.6,122.1L229.6,122.1h48.8v32.6h-48.8V122.1z M359.8,333.7H148.2V122.1h65.1    v48.8h81.4v-48.8h65.1V333.7z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<polygon points=\"319.1,248.2 291.2,279.5 303.4,290.3 311,281.8 311,317.4 327.3,317.4 327.3,281.8 334.8,290.3 347,279.5   \"><\/polygon>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<polygon points=\"251.4,248.2 223.5,279.5 235.7,290.3 243.2,281.8 243.2,317.4 259.5,317.4 259.5,281.8 267.1,290.3 279.2,279.5       \"><\/polygon>\n\t<\/g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<\/svg>",
+                "color_svg": "#000000",
+                "text_align": "center",
+                "poli_title": "14 Days Return",
+                "color_poli_title": "#000000",
+                "poli_description": "Lorem ipsum dolor sit amet, consectetur\n<br>\nadipiscing elit",
+                "color_poli_description": "#868686",
+                "padding_image": "0 15px | | | 15px 0",
+                "width_image": "33.33333% | | | 100%"
+              }
+            },
+            "3e677e15-62d7-49b7-b39b-92004edfeb0b": {
+              "type": "image",
+              "settings": {
+                "style_image": "svg",
+                "poli_svg": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" id=\"Capa_1\" x=\"0px\" y=\"0px\" viewbox=\"0 0 512 512\" style=\"enable-background:new 0 0 512 512;\" xmlns:xlink=\"http:\/\/www.w3.org\/1999\/xlink\" xml:space=\"preserve\">\n<g>\n\t<g>\n\t\t<path d=\"M457.987,31.531c-2.688-6.997-13.013-8.533-17.749-3.499c-21.44,18.88-48.939,29.248-77.547,29.248    c-39.424,0-75.989-19.627-97.771-52.501C262.937,1.792,259.609,0,256.025,0c-3.563,0-6.912,1.792-8.875,4.757    c-21.845,32.875-58.411,52.501-97.835,52.501c-28.928,0-56.704-10.603-78.208-29.867c-3.136-2.816-7.616-3.499-11.477-1.792    c-3.84,1.707-6.315,5.525-6.315,9.728v231.317c0,133.205,189.44,239.552,197.504,244.011c1.6,0.896,3.392,1.344,5.163,1.344    c1.771,0,3.563-0.448,5.163-1.301c8.064-4.459,197.504-110.827,197.504-244.011v-230.4    C458.777,34.688,458.563,33.067,457.987,31.531z M437.315,266.667c0,109.163-151.232,204.459-181.333,222.336    C225.859,471.125,74.649,375.936,74.649,266.667V56.811c22.165,14.165,48,21.803,74.667,21.803    c41.579,0,80.469-18.496,106.667-50.091c26.24,31.616,65.131,50.091,106.709,50.091c26.645,0,52.48-7.637,74.624-21.781V266.667z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n\t<g>\n\t\t<path d=\"M327.577,195.136c-4.16-4.16-10.923-4.16-15.083,0l-77.845,77.781l-35.072-35.115c-4.16-4.16-10.923-4.16-15.083,0    c-4.16,4.139-4.16,10.923,0,15.083l42.581,42.667c2.005,1.984,4.715,3.115,7.552,3.115s5.547-1.131,7.531-3.115l85.419-85.333    C331.737,206.059,331.737,199.296,327.577,195.136z\"><\/path>\n\t<\/g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<g>\n<\/g>\n<\/svg>",
+                "color_svg": "#000000",
+                "text_align": "center",
+                "poli_title": "Security Payment",
+                "color_poli_title": "#000000",
+                "poli_description": "Lorem ipsum dolor sit amet, consectetur\n<br>\nadipiscing elit",
+                "color_poli_description": "#868686",
+                "padding_image": "0 15px | | | 15px 0 0",
+                "width_image": "33.33333% | | | 100%"
+              }
+            }
+          },
+          "block_order": [
+            "b11bd3ea-1933-44b1-92e9-a854aa9ef68c",
+            "a54c333a-fd67-40e4-b3d3-af7d900f0992",
+            "3e677e15-62d7-49b7-b39b-92004edfeb0b"
+          ],
+          "settings": {
+            "bg_fixed": false,
+            "bg_position": "center",
+            "bg_size": "cover",
+            "bg_width": "full",
+            "max_width": "",
+            "fullwidth": false,
+            "padding": "20px 0 30px 0 | 45px 0 0 0",
+            "margin": "75px 0 0 0 | | 60px 0 0 0",
+            "title": "",
+            "button": "",
+            "link_button": "",
+            "style_button": "style_2",
+            "width_content_image": "",
+            "width_content_policy": "100%"
+          }
+        },
+        "165173433499f9812a": {
+          "type": "featured-banner",
+          "blocks": {
+            "ed2bb7b2-a3df-436d-a368-377a04984254": {
+              "type": "image",
+              "settings": {
+                "url": "\/",
+                "sub_title": "",
+                "color_sub_title": "#000000",
+                "title": "",
+                "color_title": "#000000",
+                "description": "",
+                "color_description": "#000000",
+                "button": "Shop Bracelets",
+                "style_button": "style_3",
+                "vertical_position": "bottom",
+                "horizontal_position": "center",
+                "text_align": "center",
+                "padding_content": "0 15px",
+                "padding_image": "0 5px",
+                "width_image": "20% | | 33.33333% | 100%"
+              }
+            },
+            "d4917bec-11ea-43b0-8f17-5ddf49875ab6": {
+              "type": "image",
+              "settings": {
+                "url": "\/",
+                "sub_title": "",
+                "color_sub_title": "#000000",
+                "title": "",
+                "color_title": "#000000",
+                "description": "",
+                "color_description": "#000000",
+                "button": "Shop Charms",
+                "style_button": "style_3",
+                "vertical_position": "bottom",
+                "horizontal_position": "center",
+                "text_align": "center",
+                "padding_content": "0 15px",
+                "padding_image": "0 5px",
+                "width_image": "20% | | 33.33333% | 100%"
+              }
+            },
+            "12fb526d-f6a5-48e8-ac16-8f4ebaa4a685": {
+              "type": "image",
+              "settings": {
+                "url": "\/",
+                "sub_title": "",
+                "color_sub_title": "#000000",
+                "title": "",
+                "color_title": "#000000",
+                "description": "",
+                "color_description": "#000000",
+                "button": "Shop Earrings",
+                "style_button": "style_3",
+                "vertical_position": "bottom",
+                "horizontal_position": "center",
+                "text_align": "center",
+                "padding_content": "0 15px",
+                "padding_image": "0 5px",
+                "width_image": "20% | | 33.33333% | 100%"
+              }
+            },
+            "06e1b671-0d8f-4459-8081-047e48f53201": {
+              "type": "image",
+              "settings": {
+                "url": "\/",
+                "sub_title": "",
+                "color_sub_title": "#000000",
+                "title": "",
+                "color_title": "#000000",
+                "description": "",
+                "color_description": "#000000",
+                "button": "Shop Necklaces",
+                "style_button": "style_3",
+                "vertical_position": "bottom",
+                "horizontal_position": "center",
+                "text_align": "center",
+                "padding_content": "0 15px",
+                "padding_image": "0 5px",
+                "width_image": "20% | | 33.33333% | 100%"
+              }
+            },
+            "5ebedbf2-55ad-4025-ac21-5d42940a7fe0": {
+              "type": "image",
+              "settings": {
+                "url": "\/",
+                "sub_title": "",
+                "color_sub_title": "#000000",
+                "title": "",
+                "color_title": "#000000",
+                "description": "",
+                "color_description": "#000000",
+                "button": "Shop Rings",
+                "style_button": "style_3",
+                "vertical_position": "bottom",
+                "horizontal_position": "center",
+                "text_align": "center",
+                "padding_content": "0 15px",
+                "padding_image": "0 5px",
+                "width_image": "20% | | 33.33333% | 100%"
+              }
+            }
+          },
+          "block_order": [
+            "ed2bb7b2-a3df-436d-a368-377a04984254",
+            "d4917bec-11ea-43b0-8f17-5ddf49875ab6",
+            "12fb526d-f6a5-48e8-ac16-8f4ebaa4a685",
+            "06e1b671-0d8f-4459-8081-047e48f53201",
+            "5ebedbf2-55ad-4025-ac21-5d42940a7fe0"
+          ],
+          "settings": {
+            "show": true,
+            "bg_fixed": false,
+            "bg_position": "center",
+            "bg_size": "cover",
+            "bg_width": "full",
+            "max_width": "",
+            "fullwidth": false,
+            "padding": "45px 0 100px 0 | | | 45px 0 45px 0",
+            "margin": "",
+            "title": "Explore the Range",
+            "title_color": "#000000",
+            "sub_title": "WE’VE GOT YOU COVERED",
+            "sub_title_color": "#000000",
+            "effect": "none",
+            "layout": "layout-1"
+          }
+        }
+      },
+      "content_for_index": [
+        "164463561378a9b8a5",
+        "165173433499f9812a",
+        "1648778869bb2cae88",
+        "16487788622d3b4782",
+        "16505277673708c752",
+        "165052784050c92ce5",
+        "16449184201e02756c",
+        "1650529657399ae6fb",
+        "165061040218565a1c"
+      ]
+    }
+  }
