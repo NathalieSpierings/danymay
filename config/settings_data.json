@@ -658,7 +658,6 @@
       "contact-form": {
         "type": "contact-form",
         "settings": {
-          "bg_image": "shopify:\/\/shop_images\/7-1.jpg",
           "bg_fixed": false,
           "bg_position": "center",
           "bg_size": "cover",
@@ -675,7 +674,6 @@
         "type": "about-heading",
         "settings": {
           "show": true,
-          "bg_image": "shopify:\/\/shop_images\/bg-about.jpg",
           "bg_fixed": true,
           "bg_position": "center",
           "bg_size": "cover",
@@ -700,7 +698,6 @@
             "type": "image",
             "settings": {
               "url": "\/",
-              "image": "shopify:\/\/shop_images\/img-1-1.jpg",
               "sub_title": "",
               "color_sub_title": "#000000",
               "title": "",
@@ -721,7 +718,6 @@
             "type": "image",
             "settings": {
               "url": "\/",
-              "image": "shopify:\/\/shop_images\/img-2-1.jpg",
               "sub_title": "",
               "color_sub_title": "#000000",
               "title": "",
@@ -742,7 +738,6 @@
             "type": "image",
             "settings": {
               "url": "\/",
-              "image": "shopify:\/\/shop_images\/img-3-1.jpg",
               "sub_title": "",
               "color_sub_title": "#000000",
               "title": "",
@@ -767,10 +762,18 @@
         ],
         "settings": {
           "show": true,
+          "bg_fixed": false,
+          "bg_position": "center",
+          "bg_size": "cover",
+          "bg_width": "full",
           "max_width": "1440px",
           "fullwidth": false,
           "padding": "0 15px | 0 7.5px",
           "margin": "0 0 80px",
+          "title": "Top Categories",
+          "title_color": "#000",
+          "sub_title": "Top Categories",
+          "sub_title_color": "#000",
           "effect": "effect-three",
           "layout": "layout-1"
         }
@@ -792,7 +795,6 @@
           "6d1d2751-b806-42d1-8ad0-fa976a979877": {
             "type": "brand",
             "settings": {
-              "image": "shopify:\/\/shop_images\/brand-1.jpg",
               "name": "Brand",
               "url": "shopify:\/\/collections\/all"
             }
@@ -800,7 +802,6 @@
           "5691a8bc-3339-4107-bb28-56fc7eba7cf9": {
             "type": "brand",
             "settings": {
-              "image": "shopify:\/\/shop_images\/brand-2.jpg",
               "name": "Brand",
               "url": "shopify:\/\/collections\/all"
             }
@@ -808,7 +809,6 @@
           "38561d9f-362f-4667-9743-f7338f274628": {
             "type": "brand",
             "settings": {
-              "image": "shopify:\/\/shop_images\/brand-3.jpg",
               "name": "Brand",
               "url": "shopify:\/\/collections\/all"
             }
@@ -816,7 +816,6 @@
           "51f78a64-03e6-4a6e-84f6-bc9cad196c49": {
             "type": "brand",
             "settings": {
-              "image": "shopify:\/\/shop_images\/brand-4.jpg",
               "name": "Brand",
               "url": "shopify:\/\/collections\/all"
             }
@@ -824,7 +823,6 @@
           "4caaafd4-a654-4013-a228-2fd5c7ed7ca1": {
             "type": "brand",
             "settings": {
-              "image": "shopify:\/\/shop_images\/brand-5.jpg",
               "name": "Brand",
               "url": "shopify:\/\/collections\/all"
             }
@@ -862,7 +860,6 @@
           "f7021690-8b0c-4eda-90e5-d6145bb6c8c1": {
             "type": "testimonial",
             "settings": {
-              "image": "shopify:\/\/shop_images\/tesm-1.jpg",
               "name": "ANN SMITH",
               "review": "<h5>“Amazing piece of history”<\/h5>Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep...",
               "rating": "5"
@@ -871,7 +868,6 @@
           "e68fece1-2b67-4c5d-b2d1-26a2fa4059e2": {
             "type": "testimonial",
             "settings": {
-              "image": "shopify:\/\/shop_images\/tesm-2.jpg",
               "name": "SAITAMA ONE",
               "review": "<h5>“Fabulous Grounds”<\/h5>Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep...",
               "rating": "5"
@@ -880,7 +876,6 @@
           "67304f68-8de5-436d-9b3b-77a14a6c4f04": {
             "type": "testimonial",
             "settings": {
-              "image": "shopify:\/\/shop_images\/tesm-3.jpg",
               "name": "SARA COLINTON",
               "review": "<h5>“Fabulous Grounds”<\/h5>Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep...",
               "rating": "5"
@@ -889,7 +884,6 @@
           "e8d2e11f-bd7b-4d68-9e08-657ad039b90a": {
             "type": "testimonial",
             "settings": {
-              "image": "shopify:\/\/shop_images\/tes-4.jpg",
               "name": "SHETTY JAMIE",
               "review": "<h5>“Stunning Design”<\/h5>Blood bank canine teeth larynx occupational therapist oncologist optician plaque spinal tap stat strep...",
               "rating": "5"
@@ -963,7 +957,6 @@
         "type": "about-image-content",
         "settings": {
           "show": true,
-          "bg_image": "shopify:\/\/shop_images\/7-1.jpg",
           "bg_fixed": false,
           "bg_position": "center",
           "bg_size": "cover",
@@ -978,8 +971,6 @@
           "sub_heading": "Cenean imperdiet. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Vestibulum fringilla pede sit amet augue. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Fusce fermentum odio nec arcu.",
           "color_subheading": "#868686",
           "font_subheading": "14px",
-          "image_1": "shopify:\/\/shop_images\/img-4-1.jpg",
-          "image_2": "shopify:\/\/shop_images\/img-5-1.jpg",
           "effect": "effect-three",
           "align_text": "left"
         }
@@ -1070,7 +1061,6 @@
           "sub_heading": "Cenean imperdiet. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Vestibulum fringilla pede sit amet augue. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Fusce fermentum odio nec arcu.",
           "color_subheading": "#868686",
           "font_subheading": "14px",
-          "image": "shopify:\/\/shop_images\/img-6.jpg",
           "effect": "effect-three",
           "align_text": "left"
         }
@@ -1517,6 +1507,17 @@
           "social_message": "Spread the word",
           "show_copyright": true,
           "copyright": "Copyright &copy; 2022 DANYMAY. Alle rechten voorbehouden"
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "settings": {
+          "display_type": "all",
+          "sort": "alphabetical",
+          "column1": 4,
+          "column2": 4,
+          "column3": 3,
+          "column4": 2
         }
       }
     },
