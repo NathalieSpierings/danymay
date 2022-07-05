@@ -1505,8 +1505,8 @@
       "password-template": {
         "type": "password-template",
         "settings": {
+          "image": "shopify:\/\/shop_images\/image_1080x_47235ccc-e3ba-42fb-98d0-18cc7791e607.webp",
           "title": "Opening Soon",
-          "logo_retina": "shopify:\/\/shop_images\/ezgif-5-27896e0092.png",
           "logo_max_width": 135,
           "newsletter_enable": true,
           "newsletter_form_heading": "Wees de eerste die weet wanneer we lanceren.",
