@@ -4,7 +4,9 @@
 {%- assign font-family-base = settings.font-family-base -%}
 {%- assign font-family-second = settings.font-family-second -%}
 {%- if settings.font-family-base.family == 'Lato' -%}
-  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+ 
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 {%- else -%}
   {{ font-family-base | font_face }}
 {%- endif -%}
