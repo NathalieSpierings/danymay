@@ -1,12 +1,15 @@
-@import '//cdn.shopify.com/s/files/1/0013/2661/2531/t/48/assets/bootstrap.min.css?v=590406394553346998';
-@import '//cdn.shopify.com/s/files/1/0013/2661/2531/t/48/assets/vendor.css?v=2634437305221666887';@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');@font-face {
+@import 'bootstrap.min.css';
+@import 'vendor.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@font-face {
   font-family: Roboto;
   font-weight: 400;
   font-style: normal;
   src: url("https://fonts.shopifycdn.com/roboto/roboto_n4.da808834c2315f31dd3910e2ae6b1a895d7f73f5.woff2?&hmac=fc93048d67b5919b29c4e947343d0a9599adb89fe18272b77057db493cffc489") format("woff2"),
        url("https://fonts.shopifycdn.com/roboto/roboto_n4.a512c7b68cd7f12c72e1a5fd58e7f7315c552e93.woff?&hmac=be64ada5dc9e0332d117b70bf19b9fefd0340f9022a8349b78d28787f6783825") format("woff");
 }
-
 
 @font-face {
   font-family: Roboto;
