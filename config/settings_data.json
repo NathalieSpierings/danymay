@@ -423,8 +423,7 @@
         "type": "search-breadcrumb",
         "settings": {
           "enable": true,
-          "bgimage": true,
-          "image": "shopify:\/\/shop_images\/bg-breadcrumb.jpg"
+          "bgimage": true
         }
       },
       "blog-breadcrumb": {
@@ -474,12 +473,12 @@
       "blog-sidebar-search": {
         "type": "blog-sidebar-search",
         "settings": {
-          "search_enable": true,
-          "categories_enable": true,
-          "categories_title": "Categories",
-          "menu_categories": "categories-blog",
-          "relatedarticles_enable": true,
-          "relatedarticles_title": "Related Articles",
+          "search_enable": false,
+          "categories_enable": false,
+          "categories_title": "Categorieën",
+          "menu_categories": "",
+          "relatedarticles_enable": false,
+          "relatedarticles_title": "Gerelateerde artikelen",
           "relatedarticles_limit": 6
         }
       },
