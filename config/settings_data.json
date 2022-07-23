@@ -1496,14 +1496,14 @@
         "type": "password-template",
         "settings": {
           "image": "shopify:\/\/shop_images\/image_1080x_47235ccc-e3ba-42fb-98d0-18cc7791e607.webp",
-          "title": "Opening Soon",
+          "title": "Binnenkort geopend",
           "logo_max_width": 135,
           "newsletter_enable": true,
           "newsletter_form_heading": "Wees de eerste die weet wanneer we lanceren.",
           "newsletter_form_subheading": "<p>Wij laten u per e-mail weten wanneer wij onze winkel openen.<\/p>",
           "newsletter_placeholder": "E-mailadres",
           "newsletter_button_text": "Verzenden",
-          "show_share_buttons": true,
+          "show_share_buttons": false,
           "social_message": "Spread the word",
           "show_copyright": true,
           "copyright": "Copyright &copy; 2022 DANYMAY. Alle rechten voorbehouden"
